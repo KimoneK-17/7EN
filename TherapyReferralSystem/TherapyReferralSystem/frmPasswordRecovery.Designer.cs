@@ -30,11 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPasswordRecovery));
             this.lblSecurityQuestion = new System.Windows.Forms.Label();
-            this.txtSecurityQuestion = new System.Windows.Forms.TextBox();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.lblAnswer = new System.Windows.Forms.Label();
-            this.txtAnswer = new System.Windows.Forms.TextBox();
             this.btnOk2 = new System.Windows.Forms.Button();
             this.grpBxForgotAnswer = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@
             this.MENU = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbxSecurityQuestion = new System.Windows.Forms.ComboBox();
+            this.cmbxAnswer = new System.Windows.Forms.ComboBox();
             this.grpBxForgotAnswer.SuspendLayout();
             this.MENU.SuspendLayout();
             this.SuspendLayout();
@@ -65,13 +65,6 @@
             this.lblSecurityQuestion.Size = new System.Drawing.Size(152, 22);
             this.lblSecurityQuestion.TabIndex = 0;
             this.lblSecurityQuestion.Text = "SECURITY QUESTION";
-            // 
-            // txtSecurityQuestion
-            // 
-            this.txtSecurityQuestion.Location = new System.Drawing.Point(66, 87);
-            this.txtSecurityQuestion.Name = "txtSecurityQuestion";
-            this.txtSecurityQuestion.Size = new System.Drawing.Size(197, 20);
-            this.txtSecurityQuestion.TabIndex = 1;
             // 
             // btnChange
             // 
@@ -105,13 +98,6 @@
             this.lblAnswer.Size = new System.Drawing.Size(71, 22);
             this.lblAnswer.TabIndex = 4;
             this.lblAnswer.Text = "ANSWER";
-            // 
-            // txtAnswer
-            // 
-            this.txtAnswer.Location = new System.Drawing.Point(397, 87);
-            this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(197, 20);
-            this.txtAnswer.TabIndex = 5;
             // 
             // btnOk2
             // 
@@ -270,6 +256,22 @@
             this.returnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.returnToolStripMenuItem.Text = "Return";
             // 
+            // cmbxSecurityQuestion
+            // 
+            this.cmbxSecurityQuestion.FormattingEnabled = true;
+            this.cmbxSecurityQuestion.Location = new System.Drawing.Point(66, 87);
+            this.cmbxSecurityQuestion.Name = "cmbxSecurityQuestion";
+            this.cmbxSecurityQuestion.Size = new System.Drawing.Size(195, 21);
+            this.cmbxSecurityQuestion.TabIndex = 17;
+            // 
+            // cmbxAnswer
+            // 
+            this.cmbxAnswer.FormattingEnabled = true;
+            this.cmbxAnswer.Location = new System.Drawing.Point(399, 87);
+            this.cmbxAnswer.Name = "cmbxAnswer";
+            this.cmbxAnswer.Size = new System.Drawing.Size(195, 21);
+            this.cmbxAnswer.TabIndex = 18;
+            // 
             // frmPasswordRecovery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +280,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(673, 407);
+            this.Controls.Add(this.cmbxAnswer);
+            this.Controls.Add(this.cmbxSecurityQuestion);
             this.Controls.Add(this.btnOK4);
             this.Controls.Add(this.btnOK3);
             this.Controls.Add(this.radSMS2);
@@ -288,11 +292,9 @@
             this.Controls.Add(this.radEmail);
             this.Controls.Add(this.grpBxForgotAnswer);
             this.Controls.Add(this.btnOk2);
-            this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnChange);
-            this.Controls.Add(this.txtSecurityQuestion);
             this.Controls.Add(this.lblSecurityQuestion);
             this.Controls.Add(this.MENU);
             this.MainMenuStrip = this.MENU;
@@ -310,11 +312,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblSecurityQuestion;
-        private System.Windows.Forms.TextBox txtSecurityQuestion;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblAnswer;
-        private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Button btnOk2;
         private System.Windows.Forms.GroupBox grpBxForgotAnswer;
         private System.Windows.Forms.Label label1;
@@ -329,5 +329,7 @@
         private System.Windows.Forms.MenuStrip MENU;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbxSecurityQuestion;
+        private System.Windows.Forms.ComboBox cmbxAnswer;
     }
 }
