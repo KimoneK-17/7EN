@@ -1,4 +1,4 @@
-﻿namespace TherapyReferralSystem
+﻿namespace frmLogin
 {
     partial class Form1
     {
