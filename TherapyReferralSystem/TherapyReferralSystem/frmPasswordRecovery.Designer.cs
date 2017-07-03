@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPasswordRecovery));
             this.lblSecurityQuestion = new System.Windows.Forms.Label();
             this.txtSecurityQuestion = new System.Windows.Forms.TextBox();
             this.btnChange = new System.Windows.Forms.Button();
@@ -244,7 +245,7 @@
             // 
             // MENU
             // 
-            this.MENU.BackColor = System.Drawing.Color.White;
+            this.MENU.BackColor = System.Drawing.Color.DimGray;
             this.MENU.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MENU.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
@@ -258,8 +259,9 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.returnToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // returnToolStripMenuItem
@@ -273,6 +275,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(673, 407);
             this.Controls.Add(this.btnOK4);
