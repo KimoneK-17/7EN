@@ -58,6 +58,12 @@
     <Compile Include="frmPasswordRecovery.Designer.cs">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTherapyReferral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTherapyReferral.Designer.cs">
+      <DependentUpon>frmTherapyReferral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPasswordRecovery.resx">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTherapyReferral.resx">
+      <DependentUpon>frmTherapyReferral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Texture1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form - Texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Form - Texture1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
