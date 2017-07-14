@@ -58,27 +58,27 @@
             this.lblSecurityQuestion.AutoSize = true;
             this.lblSecurityQuestion.BackColor = System.Drawing.Color.White;
             this.lblSecurityQuestion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblSecurityQuestion.Font = new System.Drawing.Font("Myriad Pro Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecurityQuestion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecurityQuestion.ForeColor = System.Drawing.Color.DarkRed;
             this.lblSecurityQuestion.Location = new System.Drawing.Point(89, 50);
             this.lblSecurityQuestion.Name = "lblSecurityQuestion";
-            this.lblSecurityQuestion.Size = new System.Drawing.Size(152, 22);
+            this.lblSecurityQuestion.Size = new System.Drawing.Size(185, 20);
             this.lblSecurityQuestion.TabIndex = 0;
             this.lblSecurityQuestion.Text = "SECURITY QUESTION";
             // 
             // btnChange
             // 
-            this.btnChange.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.Location = new System.Drawing.Point(44, 129);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(75, 28);
+            this.btnChange.Size = new System.Drawing.Size(85, 28);
             this.btnChange.TabIndex = 2;
             this.btnChange.Text = "CHANGE";
             this.btnChange.UseVisualStyleBackColor = true;
             // 
             // btnOk
             // 
-            this.btnOk.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(234, 129);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(47, 28);
@@ -91,17 +91,17 @@
             this.lblAnswer.AutoSize = true;
             this.lblAnswer.BackColor = System.Drawing.Color.White;
             this.lblAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAnswer.Font = new System.Drawing.Font("Myriad Pro Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnswer.ForeColor = System.Drawing.Color.DarkRed;
             this.lblAnswer.Location = new System.Drawing.Point(462, 52);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(71, 22);
+            this.lblAnswer.Size = new System.Drawing.Size(81, 20);
             this.lblAnswer.TabIndex = 4;
             this.lblAnswer.Text = "ANSWER";
             // 
             // btnOk2
             // 
-            this.btnOk2.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk2.Location = new System.Drawing.Point(475, 122);
             this.btnOk2.Name = "btnOk2";
             this.btnOk2.Size = new System.Drawing.Size(47, 28);
@@ -113,11 +113,11 @@
             // 
             this.grpBxForgotAnswer.BackColor = System.Drawing.Color.Transparent;
             this.grpBxForgotAnswer.Controls.Add(this.label1);
-            this.grpBxForgotAnswer.Font = new System.Drawing.Font("Myriad Pro Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpBxForgotAnswer.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBxForgotAnswer.ForeColor = System.Drawing.Color.DarkRed;
             this.grpBxForgotAnswer.Location = new System.Drawing.Point(66, 226);
             this.grpBxForgotAnswer.Name = "grpBxForgotAnswer";
-            this.grpBxForgotAnswer.Size = new System.Drawing.Size(257, 90);
+            this.grpBxForgotAnswer.Size = new System.Drawing.Size(295, 90);
             this.grpBxForgotAnswer.TabIndex = 7;
             this.grpBxForgotAnswer.TabStop = false;
             this.grpBxForgotAnswer.Text = "Forgot Answer?";
@@ -126,10 +126,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Myriad Pro Light", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 30);
+            this.label1.Size = new System.Drawing.Size(262, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "(Skip this step if you remember the answer. \r\nIf not then select one)";
             // 
@@ -138,10 +138,11 @@
             this.radEmail.AutoSize = true;
             this.radEmail.BackColor = System.Drawing.Color.Transparent;
             this.radEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radEmail.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEmail.ForeColor = System.Drawing.Color.DarkRed;
             this.radEmail.Location = new System.Drawing.Point(113, 335);
             this.radEmail.Name = "radEmail";
-            this.radEmail.Size = new System.Drawing.Size(109, 17);
+            this.radEmail.Size = new System.Drawing.Size(120, 17);
             this.radEmail.TabIndex = 8;
             this.radEmail.TabStop = true;
             this.radEmail.Text = "SEND VIA EMAIL";
@@ -152,10 +153,11 @@
             this.radSMS.AutoSize = true;
             this.radSMS.BackColor = System.Drawing.Color.Transparent;
             this.radSMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radSMS.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSMS.ForeColor = System.Drawing.Color.DarkRed;
             this.radSMS.Location = new System.Drawing.Point(113, 358);
             this.radSMS.Name = "radSMS";
-            this.radSMS.Size = new System.Drawing.Size(100, 17);
+            this.radSMS.Size = new System.Drawing.Size(110, 17);
             this.radSMS.TabIndex = 9;
             this.radSMS.TabStop = true;
             this.radSMS.Text = "SEND VIA SMS";
@@ -166,11 +168,11 @@
             this.lblYourPassword.AutoSize = true;
             this.lblYourPassword.BackColor = System.Drawing.Color.White;
             this.lblYourPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblYourPassword.Font = new System.Drawing.Font("Myriad Pro Light", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYourPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYourPassword.ForeColor = System.Drawing.Color.DarkRed;
             this.lblYourPassword.Location = new System.Drawing.Point(431, 226);
             this.lblYourPassword.Name = "lblYourPassword";
-            this.lblYourPassword.Size = new System.Drawing.Size(132, 22);
+            this.lblYourPassword.Size = new System.Drawing.Size(157, 20);
             this.lblYourPassword.TabIndex = 10;
             this.lblYourPassword.Text = "YOUR PASSWORD";
             // 
@@ -186,10 +188,11 @@
             this.radSMS2.AutoSize = true;
             this.radSMS2.BackColor = System.Drawing.Color.Transparent;
             this.radSMS2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radSMS2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSMS2.ForeColor = System.Drawing.Color.DarkRed;
             this.radSMS2.Location = new System.Drawing.Point(454, 358);
             this.radSMS2.Name = "radSMS2";
-            this.radSMS2.Size = new System.Drawing.Size(100, 17);
+            this.radSMS2.Size = new System.Drawing.Size(110, 17);
             this.radSMS2.TabIndex = 13;
             this.radSMS2.TabStop = true;
             this.radSMS2.Text = "SEND VIA SMS";
@@ -200,10 +203,11 @@
             this.radEmail2.AutoSize = true;
             this.radEmail2.BackColor = System.Drawing.Color.Transparent;
             this.radEmail2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radEmail2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEmail2.ForeColor = System.Drawing.Color.DarkRed;
             this.radEmail2.Location = new System.Drawing.Point(454, 335);
             this.radEmail2.Name = "radEmail2";
-            this.radEmail2.Size = new System.Drawing.Size(109, 17);
+            this.radEmail2.Size = new System.Drawing.Size(120, 17);
             this.radEmail2.TabIndex = 12;
             this.radEmail2.TabStop = true;
             this.radEmail2.Text = "SEND VIA EMAIL";
@@ -211,7 +215,7 @@
             // 
             // btnOK3
             // 
-            this.btnOK3.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK3.Location = new System.Drawing.Point(252, 340);
             this.btnOK3.Name = "btnOK3";
             this.btnOK3.Size = new System.Drawing.Size(47, 28);
@@ -221,7 +225,7 @@
             // 
             // btnOK4
             // 
-            this.btnOK4.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK4.Location = new System.Drawing.Point(585, 340);
             this.btnOK4.Name = "btnOK4";
             this.btnOK4.Size = new System.Drawing.Size(47, 28);
@@ -253,7 +257,7 @@
             // returnToolStripMenuItem
             // 
             this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.returnToolStripMenuItem.Text = "Return";
             // 
             // cmbxSecurityQuestion

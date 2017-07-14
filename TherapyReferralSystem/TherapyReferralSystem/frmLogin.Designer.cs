@@ -42,11 +42,11 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsername.Font = new System.Drawing.Font("Myriad Pro Light", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblUsername.Location = new System.Drawing.Point(60, 62);
+            this.lblUsername.Location = new System.Drawing.Point(60, 64);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(136, 29);
+            this.lblUsername.Size = new System.Drawing.Size(126, 23);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "USERNAME:";
             // 
@@ -55,11 +55,11 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPassword.Font = new System.Drawing.Font("Myriad Pro Light", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPassword.Location = new System.Drawing.Point(60, 107);
+            this.lblPassword.Location = new System.Drawing.Point(56, 108);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(137, 29);
+            this.lblPassword.Size = new System.Drawing.Size(131, 23);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "PASSWORD:";
             // 
@@ -93,10 +93,10 @@
             // 
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.Location = new System.Drawing.Point(398, 168);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(121, 18);
+            this.lblForgotPassword.Size = new System.Drawing.Size(143, 18);
             this.lblForgotPassword.TabIndex = 5;
             this.lblForgotPassword.Text = "Forgot Password?";
             // 
