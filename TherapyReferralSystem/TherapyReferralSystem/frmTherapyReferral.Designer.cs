@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTherapyReferral));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.dtpDateEnd = new System.Windows.Forms.DateTimePicker();
             this.nudSess = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.rtxtDetails = new System.Windows.Forms.RichTextBox();
             this.rtxtResult = new System.Windows.Forms.RichTextBox();
             this.cmbReport = new System.Windows.Forms.ComboBox();
             this.cmbTherapist = new System.Windows.Forms.ComboBox();
@@ -60,7 +62,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnAddRef = new System.Windows.Forms.Button();
-            this.rtxtDetails = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -70,65 +71,84 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(406, 67);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(471, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.Size = new System.Drawing.Size(152, 16);
             this.label7.TabIndex = 31;
             this.label7.Text = "Select Date Referred:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(406, 29);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(471, 29);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.Size = new System.Drawing.Size(90, 16);
             this.label8.TabIndex = 30;
             this.label8.Text = "Referred By:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(8, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.Size = new System.Drawing.Size(105, 16);
             this.label6.TabIndex = 29;
             this.label6.Text = "Select Session";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Select Status";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 27;
             this.label4.Text = "Select Reason:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(8, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 13);
+            this.label3.Size = new System.Drawing.Size(225, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "Enter Childs Diagnosis/Condition:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblChildNumber
             // 
             this.lblChildNumber.AutoSize = true;
+            this.lblChildNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblChildNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildNumber.Location = new System.Drawing.Point(8, 29);
             this.lblChildNumber.Name = "lblChildNumber";
-            this.lblChildNumber.Size = new System.Drawing.Size(106, 13);
+            this.lblChildNumber.Size = new System.Drawing.Size(146, 16);
             this.lblChildNumber.TabIndex = 25;
             this.lblChildNumber.Text = "Select Child Number:";
+            this.lblChildNumber.Click += new System.EventHandler(this.lblChildNumber_Click);
             // 
             // panel1
             // 
@@ -138,7 +158,7 @@
             this.panel1.Controls.Add(this.cmbReason);
             this.panel1.Controls.Add(this.cmbStatus);
             this.panel1.Controls.Add(this.cbmSess);
-            this.panel1.Location = new System.Drawing.Point(174, 12);
+            this.panel1.Location = new System.Drawing.Point(239, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 226);
             this.panel1.TabIndex = 32;
@@ -197,7 +217,7 @@
             this.panel2.Controls.Add(this.dtpDateStart);
             this.panel2.Controls.Add(this.dtpDateEnd);
             this.panel2.Controls.Add(this.nudSess);
-            this.panel2.Location = new System.Drawing.Point(549, 12);
+            this.panel2.Location = new System.Drawing.Point(667, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 226);
             this.panel2.TabIndex = 33;
@@ -244,10 +264,18 @@
             this.panel3.Controls.Add(this.rtxtResult);
             this.panel3.Controls.Add(this.cmbReport);
             this.panel3.Controls.Add(this.cmbTherapist);
-            this.panel3.Location = new System.Drawing.Point(174, 268);
+            this.panel3.Location = new System.Drawing.Point(239, 268);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(226, 226);
             this.panel3.TabIndex = 34;
+            // 
+            // rtxtDetails
+            // 
+            this.rtxtDetails.Location = new System.Drawing.Point(15, 17);
+            this.rtxtDetails.Name = "rtxtDetails";
+            this.rtxtDetails.Size = new System.Drawing.Size(188, 57);
+            this.rtxtDetails.TabIndex = 43;
+            this.rtxtDetails.Text = "";
             // 
             // rtxtResult
             // 
@@ -276,88 +304,102 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(406, 162);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(471, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 35;
             this.label1.Text = "Select End Date:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(406, 114);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(471, 114);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.Size = new System.Drawing.Size(131, 16);
             this.label9.TabIndex = 36;
             this.label9.Text = "Select Start Date:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(406, 212);
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(471, 212);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 13);
+            this.label10.Size = new System.Drawing.Size(190, 16);
             this.label10.TabIndex = 37;
             this.label10.Text = "Select Number of Sessions:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(8, 285);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.Size = new System.Drawing.Size(98, 16);
             this.label11.TabIndex = 38;
             this.label11.Text = "Enter Details:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(7, 366);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.Size = new System.Drawing.Size(123, 16);
             this.label12.TabIndex = 39;
             this.label12.Text = "Select Therapist:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(8, 401);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 13);
+            this.label13.Size = new System.Drawing.Size(104, 16);
             this.label13.TabIndex = 40;
             this.label13.Text = "Select Report:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(8, 434);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 13);
+            this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 41;
             this.label14.Text = "Enter Result:";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // btnAddRef
             // 
+            this.btnAddRef.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddRef.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRef.Location = new System.Drawing.Point(10, 517);
             this.btnAddRef.Name = "btnAddRef";
             this.btnAddRef.Size = new System.Drawing.Size(75, 23);
             this.btnAddRef.TabIndex = 42;
             this.btnAddRef.Text = "Add Referral";
-            this.btnAddRef.UseVisualStyleBackColor = true;
-            // 
-            // rtxtDetails
-            // 
-            this.rtxtDetails.Location = new System.Drawing.Point(15, 17);
-            this.rtxtDetails.Name = "rtxtDetails";
-            this.rtxtDetails.Size = new System.Drawing.Size(188, 57);
-            this.rtxtDetails.TabIndex = 43;
-            this.rtxtDetails.Text = "";
+            this.btnAddRef.UseVisualStyleBackColor = false;
+            this.btnAddRef.Click += new System.EventHandler(this.btnAddRef_Click);
             // 
             // frmTherapyReferral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 543);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(931, 543);
             this.Controls.Add(this.btnAddRef);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -378,6 +420,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "frmTherapyReferral";
             this.Text = "Therapy Referral";
+            this.Load += new System.EventHandler(this.frmTherapyReferral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
