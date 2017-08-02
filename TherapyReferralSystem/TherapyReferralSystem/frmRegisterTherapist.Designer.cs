@@ -134,9 +134,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(291, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 16);
+            this.label8.Size = new System.Drawing.Size(106, 16);
             this.label8.TabIndex = 6;
-            this.label8.Text = "I/E:";
+            this.label8.Text = "Internal/External:";
             // 
             // txtID
             // 
@@ -182,7 +182,7 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(392, 197);
+            this.txtPass.Location = new System.Drawing.Point(392, 234);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(121, 20);
@@ -234,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(545, 361);
+            this.ClientSize = new System.Drawing.Size(594, 373);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReg);
@@ -256,6 +256,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmRegisterTherapist";
             this.Text = "Register Therapist";
+            this.Load += new System.EventHandler(this.frmRegisterTherapist_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

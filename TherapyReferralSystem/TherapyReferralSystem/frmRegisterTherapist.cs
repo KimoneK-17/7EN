@@ -16,5 +16,35 @@ namespace TherapyReferralSystem
         {
             InitializeComponent();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltype_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRegisterTherapist_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmRegisterTherapist_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
