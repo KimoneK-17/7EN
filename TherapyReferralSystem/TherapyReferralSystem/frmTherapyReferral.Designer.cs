@@ -37,13 +37,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblChildNumber = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbmCNum = new System.Windows.Forms.ComboBox();
+            this.cmbCNum = new System.Windows.Forms.ComboBox();
             this.lblDsplyName = new System.Windows.Forms.Label();
             this.txtCondition = new System.Windows.Forms.TextBox();
             this.cmbReason = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cbmSess = new System.Windows.Forms.ComboBox();
+            this.cmbSess = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chkWaitingList = new System.Windows.Forms.CheckBox();
             this.cmbRefBy = new System.Windows.Forms.ComboBox();
             this.dtpDateRef = new System.Windows.Forms.DateTimePicker();
             this.dtpDateStart = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +63,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnAddRef = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -100,7 +102,6 @@
             this.label6.Size = new System.Drawing.Size(105, 16);
             this.label6.TabIndex = 29;
             this.label6.Text = "Select Session";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -112,7 +113,6 @@
             this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Select Status";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -124,7 +124,6 @@
             this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 27;
             this.label4.Text = "Select Reason:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -136,7 +135,6 @@
             this.label3.Size = new System.Drawing.Size(225, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "Enter Childs Diagnosis/Condition:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblChildNumber
             // 
@@ -148,28 +146,27 @@
             this.lblChildNumber.Size = new System.Drawing.Size(146, 16);
             this.lblChildNumber.TabIndex = 25;
             this.lblChildNumber.Text = "Select Child Number:";
-            this.lblChildNumber.Click += new System.EventHandler(this.lblChildNumber_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cbmCNum);
+            this.panel1.Controls.Add(this.cmbCNum);
             this.panel1.Controls.Add(this.lblDsplyName);
             this.panel1.Controls.Add(this.txtCondition);
             this.panel1.Controls.Add(this.cmbReason);
             this.panel1.Controls.Add(this.cmbStatus);
-            this.panel1.Controls.Add(this.cbmSess);
+            this.panel1.Controls.Add(this.cmbSess);
             this.panel1.Location = new System.Drawing.Point(239, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 226);
             this.panel1.TabIndex = 32;
             // 
-            // cbmCNum
+            // cmbCNum
             // 
-            this.cbmCNum.FormattingEnabled = true;
-            this.cbmCNum.Location = new System.Drawing.Point(12, 9);
-            this.cbmCNum.Name = "cbmCNum";
-            this.cbmCNum.Size = new System.Drawing.Size(121, 21);
-            this.cbmCNum.TabIndex = 0;
+            this.cmbCNum.FormattingEnabled = true;
+            this.cmbCNum.Location = new System.Drawing.Point(12, 9);
+            this.cmbCNum.Name = "cmbCNum";
+            this.cmbCNum.Size = new System.Drawing.Size(121, 21);
+            this.cmbCNum.TabIndex = 0;
             // 
             // lblDsplyName
             // 
@@ -202,25 +199,34 @@
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbStatus.TabIndex = 8;
             // 
-            // cbmSess
+            // cmbSess
             // 
-            this.cbmSess.FormattingEnabled = true;
-            this.cbmSess.Location = new System.Drawing.Point(12, 198);
-            this.cbmSess.Name = "cbmSess";
-            this.cbmSess.Size = new System.Drawing.Size(121, 21);
-            this.cbmSess.TabIndex = 10;
+            this.cmbSess.FormattingEnabled = true;
+            this.cmbSess.Location = new System.Drawing.Point(12, 198);
+            this.cmbSess.Name = "cmbSess";
+            this.cmbSess.Size = new System.Drawing.Size(121, 21);
+            this.cmbSess.TabIndex = 10;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.chkWaitingList);
             this.panel2.Controls.Add(this.cmbRefBy);
             this.panel2.Controls.Add(this.dtpDateRef);
             this.panel2.Controls.Add(this.dtpDateStart);
             this.panel2.Controls.Add(this.dtpDateEnd);
-            this.panel2.Controls.Add(this.nudSess);
             this.panel2.Location = new System.Drawing.Point(667, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 226);
+            this.panel2.Size = new System.Drawing.Size(232, 226);
             this.panel2.TabIndex = 33;
+            // 
+            // chkWaitingList
+            // 
+            this.chkWaitingList.AutoSize = true;
+            this.chkWaitingList.Location = new System.Drawing.Point(12, 109);
+            this.chkWaitingList.Name = "chkWaitingList";
+            this.chkWaitingList.Size = new System.Drawing.Size(15, 14);
+            this.chkWaitingList.TabIndex = 17;
+            this.chkWaitingList.UseVisualStyleBackColor = true;
             // 
             // cmbRefBy
             // 
@@ -239,21 +245,21 @@
             // 
             // dtpDateStart
             // 
-            this.dtpDateStart.Location = new System.Drawing.Point(12, 102);
+            this.dtpDateStart.Location = new System.Drawing.Point(12, 152);
             this.dtpDateStart.Name = "dtpDateStart";
             this.dtpDateStart.Size = new System.Drawing.Size(200, 20);
             this.dtpDateStart.TabIndex = 15;
             // 
             // dtpDateEnd
             // 
-            this.dtpDateEnd.Location = new System.Drawing.Point(12, 150);
+            this.dtpDateEnd.Location = new System.Drawing.Point(12, 195);
             this.dtpDateEnd.Name = "dtpDateEnd";
             this.dtpDateEnd.Size = new System.Drawing.Size(200, 20);
             this.dtpDateEnd.TabIndex = 16;
             // 
             // nudSess
             // 
-            this.nudSess.Location = new System.Drawing.Point(12, 199);
+            this.nudSess.Location = new System.Drawing.Point(12, 9);
             this.nudSess.Name = "nudSess";
             this.nudSess.Size = new System.Drawing.Size(120, 20);
             this.nudSess.TabIndex = 0;
@@ -264,14 +270,15 @@
             this.panel3.Controls.Add(this.rtxtResult);
             this.panel3.Controls.Add(this.cmbReport);
             this.panel3.Controls.Add(this.cmbTherapist);
+            this.panel3.Controls.Add(this.nudSess);
             this.panel3.Location = new System.Drawing.Point(239, 268);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 226);
+            this.panel3.Size = new System.Drawing.Size(226, 257);
             this.panel3.TabIndex = 34;
             // 
             // rtxtDetails
             // 
-            this.rtxtDetails.Location = new System.Drawing.Point(15, 17);
+            this.rtxtDetails.Location = new System.Drawing.Point(12, 52);
             this.rtxtDetails.Name = "rtxtDetails";
             this.rtxtDetails.Size = new System.Drawing.Size(188, 57);
             this.rtxtDetails.TabIndex = 43;
@@ -279,7 +286,7 @@
             // 
             // rtxtResult
             // 
-            this.rtxtResult.Location = new System.Drawing.Point(15, 166);
+            this.rtxtResult.Location = new System.Drawing.Point(12, 201);
             this.rtxtResult.Name = "rtxtResult";
             this.rtxtResult.Size = new System.Drawing.Size(188, 53);
             this.rtxtResult.TabIndex = 42;
@@ -288,7 +295,7 @@
             // cmbReport
             // 
             this.cmbReport.FormattingEnabled = true;
-            this.cmbReport.Location = new System.Drawing.Point(15, 125);
+            this.cmbReport.Location = new System.Drawing.Point(12, 160);
             this.cmbReport.Name = "cmbReport";
             this.cmbReport.Size = new System.Drawing.Size(121, 21);
             this.cmbReport.TabIndex = 20;
@@ -296,7 +303,7 @@
             // cmbTherapist
             // 
             this.cmbTherapist.FormattingEnabled = true;
-            this.cmbTherapist.Location = new System.Drawing.Point(15, 90);
+            this.cmbTherapist.Location = new System.Drawing.Point(12, 125);
             this.cmbTherapist.Name = "cmbTherapist";
             this.cmbTherapist.Size = new System.Drawing.Size(121, 21);
             this.cmbTherapist.TabIndex = 19;
@@ -306,7 +313,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 162);
+            this.label1.Location = new System.Drawing.Point(471, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 35;
@@ -317,7 +324,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(471, 114);
+            this.label9.Location = new System.Drawing.Point(471, 168);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(131, 16);
             this.label9.TabIndex = 36;
@@ -328,7 +335,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(471, 212);
+            this.label10.Location = new System.Drawing.Point(7, 277);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 16);
             this.label10.TabIndex = 37;
@@ -339,48 +346,44 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 285);
+            this.label11.Location = new System.Drawing.Point(8, 321);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 16);
             this.label11.TabIndex = 38;
             this.label11.Text = "Enter Details:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(7, 366);
+            this.label12.Location = new System.Drawing.Point(7, 402);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 16);
             this.label12.TabIndex = 39;
             this.label12.Text = "Select Therapist:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 401);
+            this.label13.Location = new System.Drawing.Point(8, 437);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 16);
             this.label13.TabIndex = 40;
             this.label13.Text = "Select Report:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(8, 434);
+            this.label14.Location = new System.Drawing.Point(8, 470);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 41;
             this.label14.Text = "Enter Result:";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // btnAddRef
             // 
@@ -389,19 +392,34 @@
             this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddRef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRef.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.btnAddRef.Location = new System.Drawing.Point(12, 529);
+=======
             this.btnAddRef.Location = new System.Drawing.Point(10, 500);
+>>>>>>> 86bb77afcc9dd3744d2ea523f1b30db2736cdd8a
             this.btnAddRef.Name = "btnAddRef";
             this.btnAddRef.Size = new System.Drawing.Size(75, 35);
             this.btnAddRef.TabIndex = 42;
             this.btnAddRef.UseVisualStyleBackColor = false;
-            this.btnAddRef.Click += new System.EventHandler(this.btnAddRef_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label2.Location = new System.Drawing.Point(471, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Waiting List:";
             // 
             // frmTherapyReferral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(931, 543);
+            this.ClientSize = new System.Drawing.Size(912, 554);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAddRef);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -422,10 +440,10 @@
             this.Controls.Add(this.panel3);
             this.Name = "frmTherapyReferral";
             this.Text = "Therapy Referral";
-            this.Load += new System.EventHandler(this.frmTherapyReferral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -443,12 +461,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblChildNumber;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbmCNum;
+        private System.Windows.Forms.ComboBox cmbCNum;
         private System.Windows.Forms.Label lblDsplyName;
         private System.Windows.Forms.TextBox txtCondition;
         private System.Windows.Forms.ComboBox cmbReason;
         private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.ComboBox cbmSess;
+        private System.Windows.Forms.ComboBox cmbSess;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cmbRefBy;
         private System.Windows.Forms.DateTimePicker dtpDateRef;
@@ -468,5 +486,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnAddRef;
         private System.Windows.Forms.RichTextBox rtxtDetails;
+        private System.Windows.Forms.CheckBox chkWaitingList;
+        private System.Windows.Forms.Label label2;
     }
 }
