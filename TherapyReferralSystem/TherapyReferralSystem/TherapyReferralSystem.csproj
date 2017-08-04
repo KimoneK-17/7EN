@@ -128,11 +128,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Login-Button1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Form - Texture.jpg" />
+    <Content Include="Resources\Add-Button.jpg" />
+    <Content Include="Resources\Back-Button.jpg" />
+    <Content Include="Resources\Change-Button.jpg" />
+    <Content Include="Resources\Clear-Button.jpg" />
+    <Content Include="Resources\Form----Texture.jpg" />
+    <Content Include="Resources\Form---Texture.jpg" />
+    <Content Include="Resources\Login-Button.jpg" />
+    <Content Include="Resources\OK-Button.jpg" />
+    <Content Include="Resources\Register-Button.jpg" />
+    <Content Include="Resources\Submit-Button.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
