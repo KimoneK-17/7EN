@@ -42,7 +42,7 @@
             this.txtCondition = new System.Windows.Forms.TextBox();
             this.cmbReason = new System.Windows.Forms.ComboBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cmbSess = new System.Windows.Forms.ComboBox();
+            this.cmbType = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chkWaitingList = new System.Windows.Forms.CheckBox();
             this.cmbRefBy = new System.Windows.Forms.ComboBox();
@@ -99,9 +99,9 @@
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(8, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 16);
+            this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 29;
-            this.label6.Text = "Select Session";
+            this.label6.Text = "Select Type:";
             // 
             // label5
             // 
@@ -154,7 +154,7 @@
             this.panel1.Controls.Add(this.txtCondition);
             this.panel1.Controls.Add(this.cmbReason);
             this.panel1.Controls.Add(this.cmbStatus);
-            this.panel1.Controls.Add(this.cmbSess);
+            this.panel1.Controls.Add(this.cmbType);
             this.panel1.Location = new System.Drawing.Point(239, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 226);
@@ -162,6 +162,7 @@
             // 
             // cmbCNum
             // 
+            this.cmbCNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCNum.FormattingEnabled = true;
             this.cmbCNum.Location = new System.Drawing.Point(12, 9);
             this.cmbCNum.Name = "cmbCNum";
@@ -185,6 +186,7 @@
             // 
             // cmbReason
             // 
+            this.cmbReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReason.FormattingEnabled = true;
             this.cmbReason.Location = new System.Drawing.Point(12, 100);
             this.cmbReason.Name = "cmbReason";
@@ -193,19 +195,21 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(12, 148);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbStatus.TabIndex = 8;
             // 
-            // cmbSess
+            // cmbType
             // 
-            this.cmbSess.FormattingEnabled = true;
-            this.cmbSess.Location = new System.Drawing.Point(12, 198);
-            this.cmbSess.Name = "cmbSess";
-            this.cmbSess.Size = new System.Drawing.Size(121, 21);
-            this.cmbSess.TabIndex = 10;
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(12, 198);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(121, 21);
+            this.cmbType.TabIndex = 10;
             // 
             // panel2
             // 
@@ -230,6 +234,7 @@
             // 
             // cmbRefBy
             // 
+            this.cmbRefBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRefBy.FormattingEnabled = true;
             this.cmbRefBy.Location = new System.Drawing.Point(12, 9);
             this.cmbRefBy.Name = "cmbRefBy";
@@ -294,6 +299,7 @@
             // 
             // cmbReport
             // 
+            this.cmbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReport.FormattingEnabled = true;
             this.cmbReport.Location = new System.Drawing.Point(12, 160);
             this.cmbReport.Name = "cmbReport";
@@ -302,6 +308,7 @@
             // 
             // cmbTherapist
             // 
+            this.cmbTherapist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTherapist.FormattingEnabled = true;
             this.cmbTherapist.Location = new System.Drawing.Point(12, 125);
             this.cmbTherapist.Name = "cmbTherapist";
@@ -392,15 +399,12 @@
             this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddRef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRef.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.btnAddRef.Location = new System.Drawing.Point(12, 529);
-=======
             this.btnAddRef.Location = new System.Drawing.Point(10, 500);
->>>>>>> 86bb77afcc9dd3744d2ea523f1b30db2736cdd8a
             this.btnAddRef.Name = "btnAddRef";
             this.btnAddRef.Size = new System.Drawing.Size(75, 35);
             this.btnAddRef.TabIndex = 42;
             this.btnAddRef.UseVisualStyleBackColor = false;
+            this.btnAddRef.Click += new System.EventHandler(this.btnAddRef_Click);
             // 
             // label2
             // 
@@ -466,7 +470,7 @@
         private System.Windows.Forms.TextBox txtCondition;
         private System.Windows.Forms.ComboBox cmbReason;
         private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.ComboBox cmbSess;
+        private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cmbRefBy;
         private System.Windows.Forms.DateTimePicker dtpDateRef;
