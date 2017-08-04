@@ -68,22 +68,26 @@
             // 
             // btnChange
             // 
+            this.btnChange.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnChange.BackgroundImage")));
+            this.btnChange.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.Location = new System.Drawing.Point(44, 129);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(85, 28);
+            this.btnChange.Size = new System.Drawing.Size(63, 31);
             this.btnChange.TabIndex = 2;
-            this.btnChange.Text = "CHANGE";
             this.btnChange.UseVisualStyleBackColor = true;
             // 
             // btnOk
             // 
+            this.btnOk.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOk.BackgroundImage")));
+            this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.Location = new System.Drawing.Point(234, 129);
+            this.btnOk.Location = new System.Drawing.Point(218, 129);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(47, 28);
+            this.btnOk.Size = new System.Drawing.Size(64, 31);
             this.btnOk.TabIndex = 3;
-            this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
             // 
             // lblAnswer
@@ -101,12 +105,14 @@
             // 
             // btnOk2
             // 
+            this.btnOk2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOk2.BackgroundImage")));
+            this.btnOk2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOk2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk2.Location = new System.Drawing.Point(475, 122);
+            this.btnOk2.Location = new System.Drawing.Point(472, 129);
             this.btnOk2.Name = "btnOk2";
-            this.btnOk2.Size = new System.Drawing.Size(47, 28);
+            this.btnOk2.Size = new System.Drawing.Size(68, 31);
             this.btnOk2.TabIndex = 6;
-            this.btnOk2.Text = "OK";
             this.btnOk2.UseVisualStyleBackColor = true;
             // 
             // grpBxForgotAnswer
@@ -215,22 +221,26 @@
             // 
             // btnOK3
             // 
+            this.btnOK3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK3.BackgroundImage")));
+            this.btnOK3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK3.Location = new System.Drawing.Point(252, 340);
+            this.btnOK3.Location = new System.Drawing.Point(256, 339);
             this.btnOK3.Name = "btnOK3";
-            this.btnOK3.Size = new System.Drawing.Size(47, 28);
+            this.btnOK3.Size = new System.Drawing.Size(64, 31);
             this.btnOK3.TabIndex = 14;
-            this.btnOK3.Text = "OK";
             this.btnOK3.UseVisualStyleBackColor = true;
             // 
             // btnOK4
             // 
+            this.btnOK4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOK4.BackgroundImage")));
+            this.btnOK4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOK4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOK4.Location = new System.Drawing.Point(585, 340);
+            this.btnOK4.Location = new System.Drawing.Point(581, 339);
             this.btnOK4.Name = "btnOK4";
-            this.btnOK4.Size = new System.Drawing.Size(47, 28);
+            this.btnOK4.Size = new System.Drawing.Size(68, 31);
             this.btnOK4.TabIndex = 15;
-            this.btnOK4.Text = "OK";
             this.btnOK4.UseVisualStyleBackColor = true;
             // 
             // MENU
