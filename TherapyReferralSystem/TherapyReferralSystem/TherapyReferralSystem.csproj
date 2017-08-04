@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPasswordRecovery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,9 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPasswordRecovery.resx">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
     </EmbeddedResource>
