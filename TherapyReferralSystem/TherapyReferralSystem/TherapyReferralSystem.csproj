@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLogin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin1.Designer.cs">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPasswordRecovery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,14 +82,20 @@
     <Compile Include="frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="frmTherapyReferral.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTherapyReferral.Designer.cs">
       <DependentUpon>frmTherapyReferral.cs</DependentUpon>
     </Compile>
+>>>>>>> d55d15d90091ddb5cef9ec2446351d02662f2a51
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin1.resx">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPasswordRecovery.resx">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
     </EmbeddedResource>
