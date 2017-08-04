@@ -82,12 +82,15 @@
     <Compile Include="frmReports.Designer.cs">
       <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="frmTherapyReferral.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTherapyReferral.Designer.cs">
       <DependentUpon>frmTherapyReferral.cs</DependentUpon>
     </Compile>
+>>>>>>> d55d15d90091ddb5cef9ec2446351d02662f2a51
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin1.resx">
