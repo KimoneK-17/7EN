@@ -385,12 +385,14 @@
             // btnAddRef
             // 
             this.btnAddRef.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddRef.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddRef.BackgroundImage")));
+            this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddRef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRef.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRef.Location = new System.Drawing.Point(10, 517);
+            this.btnAddRef.Location = new System.Drawing.Point(10, 500);
             this.btnAddRef.Name = "btnAddRef";
-            this.btnAddRef.Size = new System.Drawing.Size(75, 23);
+            this.btnAddRef.Size = new System.Drawing.Size(75, 35);
             this.btnAddRef.TabIndex = 42;
-            this.btnAddRef.Text = "Add Referral";
             this.btnAddRef.UseVisualStyleBackColor = false;
             this.btnAddRef.Click += new System.EventHandler(this.btnAddRef_Click);
             // 

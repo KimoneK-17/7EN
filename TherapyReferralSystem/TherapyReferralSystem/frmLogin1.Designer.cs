@@ -1,6 +1,6 @@
 ﻿namespace TherapyReferralSystem
 {
-    partial class frmLogin
+    partial class frmLogin1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin1));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();

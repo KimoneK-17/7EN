@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TherapyReferralSystem
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin1 : Form
     {
-        public frmLogin()
+        public frmLogin1()
         {
             InitializeComponent();
         }
