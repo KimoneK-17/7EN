@@ -52,6 +52,12 @@
     <Compile Include="frmPasswordRecovery.Designer.cs">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegisterChild.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="frmRegisterTherapist.Designer.cs">
       <DependentUpon>frmRegisterTherapist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTherapyReferral.cs">
       <SubType>Form</SubType>
@@ -81,11 +93,17 @@
     <EmbeddedResource Include="frmPasswordRecovery.resx">
       <DependentUpon>frmPasswordRecovery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterChild.resx">
       <DependentUpon>frmRegisterChild.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterTherapist.resx">
       <DependentUpon>frmRegisterTherapist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTherapyReferral.resx">
       <DependentUpon>frmTherapyReferral.cs</DependentUpon>
