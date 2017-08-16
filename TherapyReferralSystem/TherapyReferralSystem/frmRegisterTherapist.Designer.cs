@@ -48,6 +48,18 @@
             this.btnReg = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.therapyReferralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerChildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -229,11 +241,100 @@
             this.btnClear.TabIndex = 18;
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.viewToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.formToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(594, 26);
+            this.menuStrip1.TabIndex = 54;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportsToolStripMenuItem});
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // formToolStripMenuItem
+            // 
+            this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.therapyReferralToolStripMenuItem,
+            this.registerUserToolStripMenuItem,
+            this.registerChildToolStripMenuItem});
+            this.formToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.formToolStripMenuItem.Name = "formToolStripMenuItem";
+            this.formToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
+            this.formToolStripMenuItem.Text = "Form";
+            // 
+            // therapyReferralToolStripMenuItem
+            // 
+            this.therapyReferralToolStripMenuItem.Name = "therapyReferralToolStripMenuItem";
+            this.therapyReferralToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.therapyReferralToolStripMenuItem.Text = "Therapy Referral";
+            // 
+            // registerUserToolStripMenuItem
+            // 
+            this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
+            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registerUserToolStripMenuItem.Text = "Register User";
+            // 
+            // registerChildToolStripMenuItem
+            // 
+            this.registerChildToolStripMenuItem.Name = "registerChildToolStripMenuItem";
+            this.registerChildToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registerChildToolStripMenuItem.Text = "Register Child";
+            // 
             // frmRegisterTherapist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 373);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnReg);
@@ -256,6 +357,8 @@
             this.Name = "frmRegisterTherapist";
             this.Text = "Register Therapist";
             this.Load += new System.EventHandler(this.frmRegisterTherapist_Load_1);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +385,16 @@
         private System.Windows.Forms.Button btnReg;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem therapyReferralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerChildToolStripMenuItem;
     }
 }

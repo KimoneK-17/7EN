@@ -55,6 +55,17 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtNumber = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.therapyReferralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
@@ -63,7 +74,7 @@
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Location = new System.Drawing.Point(440, 354);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnClear.Size = new System.Drawing.Size(56, 27);
@@ -78,7 +89,7 @@
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Location = new System.Drawing.Point(440, 386);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(56, 27);
             this.btnSubmit.TabIndex = 50;
@@ -88,7 +99,7 @@
             // rtbxSpecCon
             // 
             this.rtbxSpecCon.Location = new System.Drawing.Point(171, 353);
-            this.rtbxSpecCon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbxSpecCon.Margin = new System.Windows.Forms.Padding(2);
             this.rtbxSpecCon.Name = "rtbxSpecCon";
             this.rtbxSpecCon.Size = new System.Drawing.Size(252, 79);
             this.rtbxSpecCon.TabIndex = 49;
@@ -109,7 +120,7 @@
             // dtpDOA
             // 
             this.dtpDOA.Location = new System.Drawing.Point(171, 324);
-            this.dtpDOA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDOA.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDOA.Name = "dtpDOA";
             this.dtpDOA.Size = new System.Drawing.Size(151, 20);
             this.dtpDOA.TabIndex = 47;
@@ -129,7 +140,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(171, 295);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(152, 20);
             this.txtID.TabIndex = 45;
@@ -150,7 +161,7 @@
             // 
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Location = new System.Drawing.Point(171, 264);
-            this.cmbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGender.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(152, 21);
             this.cmbGender.TabIndex = 43;
@@ -171,7 +182,7 @@
             // 
             this.cmbBSF.FormattingEnabled = true;
             this.cmbBSF.Location = new System.Drawing.Point(171, 145);
-            this.cmbBSF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbBSF.Margin = new System.Windows.Forms.Padding(2);
             this.cmbBSF.Name = "cmbBSF";
             this.cmbBSF.Size = new System.Drawing.Size(152, 21);
             this.cmbBSF.TabIndex = 41;
@@ -191,7 +202,7 @@
             // txtLName
             // 
             this.txtLName.Location = new System.Drawing.Point(171, 235);
-            this.txtLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(152, 20);
             this.txtLName.TabIndex = 39;
@@ -211,7 +222,7 @@
             // txtMName
             // 
             this.txtMName.Location = new System.Drawing.Point(171, 206);
-            this.txtMName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMName.Margin = new System.Windows.Forms.Padding(2);
             this.txtMName.Name = "txtMName";
             this.txtMName.Size = new System.Drawing.Size(152, 20);
             this.txtMName.TabIndex = 37;
@@ -219,7 +230,7 @@
             // txtFName
             // 
             this.txtFName.Location = new System.Drawing.Point(171, 176);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(152, 20);
             this.txtFName.TabIndex = 36;
@@ -252,7 +263,7 @@
             // 
             this.cmbHouse.FormattingEnabled = true;
             this.cmbHouse.Location = new System.Drawing.Point(171, 115);
-            this.cmbHouse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbHouse.Margin = new System.Windows.Forms.Padding(2);
             this.cmbHouse.Name = "cmbHouse";
             this.cmbHouse.Size = new System.Drawing.Size(152, 21);
             this.cmbHouse.TabIndex = 33;
@@ -273,7 +284,7 @@
             // 
             this.cmbCluster.FormattingEnabled = true;
             this.cmbCluster.Location = new System.Drawing.Point(171, 84);
-            this.cmbCluster.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCluster.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCluster.Name = "cmbCluster";
             this.cmbCluster.Size = new System.Drawing.Size(152, 21);
             this.cmbCluster.TabIndex = 31;
@@ -294,7 +305,7 @@
             // 
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(171, 53);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(151, 21);
             this.cmbStatus.TabIndex = 29;
@@ -326,16 +337,98 @@
             // txtNumber
             // 
             this.txtNumber.Location = new System.Drawing.Point(171, 24);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(151, 20);
             this.txtNumber.TabIndex = 26;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
+            this.menuStrip1.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.viewToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.formToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(562, 26);
+            this.menuStrip1.TabIndex = 53;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.returnToolStripMenuItem.Text = "Return";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportsToolStripMenuItem});
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // formToolStripMenuItem
+            // 
+            this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.therapyReferralToolStripMenuItem,
+            this.registerUserToolStripMenuItem});
+            this.formToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.formToolStripMenuItem.Name = "formToolStripMenuItem";
+            this.formToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
+            this.formToolStripMenuItem.Text = "Form";
+            // 
+            // therapyReferralToolStripMenuItem
+            // 
+            this.therapyReferralToolStripMenuItem.Name = "therapyReferralToolStripMenuItem";
+            this.therapyReferralToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.therapyReferralToolStripMenuItem.Text = "Therapy Referral";
+            // 
+            // registerUserToolStripMenuItem
+            // 
+            this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
+            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registerUserToolStripMenuItem.Text = "Register User";
             // 
             // frmRegisterChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 462);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rtbxSpecCon);
@@ -362,9 +455,11 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.txtNumber);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegisterChild";
             this.Text = "Register Child";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,5 +493,15 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem therapyReferralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerUserToolStripMenuItem;
     }
 }

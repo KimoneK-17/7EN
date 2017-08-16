@@ -60,47 +60,55 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.DimGray;
+            this.menuStrip2.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.printReportToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(861, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(861, 26);
             this.menuStrip2.TabIndex = 0;
             this.menuStrip2.Text = "menuStrip2";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ezitToolStripMenuItem});
+            this.ezitToolStripMenuItem,
+            this.logoutToolStripMenuItem});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 22);
             this.toolStripMenuItem1.Text = "File";
             // 
             // ezitToolStripMenuItem
             // 
             this.ezitToolStripMenuItem.Name = "ezitToolStripMenuItem";
-            this.ezitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.ezitToolStripMenuItem.Text = "Exit";
+            this.ezitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ezitToolStripMenuItem.Text = "Return";
+            this.ezitToolStripMenuItem.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(44, 20);
-            this.toolStripMenuItem2.Text = "Help";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(98, 22);
+            this.toolStripMenuItem2.Text = "Print Report";
             // 
             // printReportToolStripMenuItem
             // 
+            this.printReportToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.printReportToolStripMenuItem.Name = "printReportToolStripMenuItem";
-            this.printReportToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-            this.printReportToolStripMenuItem.Text = "Print Report";
+            this.printReportToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
+            this.printReportToolStripMenuItem.Text = "Help";
             // 
             // label2
             // 
@@ -346,6 +354,12 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "(pop up day only when month selected)";
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
             // frmReports
             // 
             this.ClientSize = new System.Drawing.Size(861, 619);
@@ -427,5 +441,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
