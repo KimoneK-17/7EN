@@ -16,5 +16,30 @@ namespace TherapyReferralSystem
         {
             InitializeComponent();
         }
+
+        string username;
+        string password;
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(!txtUsername.Equals(""))
+            {
+                username = txtUsername.Text;
+                if(!password.Equals(""))
+                {
+                    password = txtPassword.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Enter Password");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ënter Username");
+            }
+        
+
+            
+        }
     }
 }
