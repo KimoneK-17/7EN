@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Register_Form
 {
-    public partial class Form1 : Form
+    public partial class frmRegisterUser : Form
     {
-        public Form1()
+        public frmRegisterUser()
         {
             InitializeComponent();
         }
@@ -27,6 +27,11 @@ namespace Register_Form
         }
 
         private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_name_Click(object sender, EventArgs e)
         {
 
         }
