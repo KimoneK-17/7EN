@@ -27,6 +27,8 @@ namespace TherapyReferralSystem
                 if(!password.Equals(""))
                 {
                     password = txtPassword.Text;
+
+
                 }
                 else
                 {
