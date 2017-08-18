@@ -15,6 +15,7 @@ namespace TherapyReferralSystem
         String condition;
         String details;
         String result;
+        string t_c_num, t_refby,t_reason, t_report, t_type, t_status, t_therapist,ref_date, start_date, end_date;
         public frmTherapyReferral()
         {
             InitializeComponent();
@@ -164,6 +165,25 @@ namespace TherapyReferralSystem
         private void btnAddRef_Click(object sender, EventArgs e)
         {
             validate();
+            getFields();
+
+            MessageBox.Show(" " + t_c_num + "\n" + t_refby + "\n" + t_report + "\n" + t_type + "\n" + t_status + "\n" + t_therapist + "\n" + ref_date + "\n" + start_date + "\n" + end_date);
+
+        }
+
+        private void getFields()
+        {
+            t_c_num = cmbCNum.SelectedItem.ToString();
+            t_reason = cmbReason.SelectedItem.ToString();
+            t_refby = cmbRefBy.SelectedItem.ToString();
+            t_report = cmbReport.SelectedItem.ToString();
+            t_type = cmbType.SelectedItem.ToString();
+            t_status = cmbStatus.SelectedItem.ToString();
+            t_therapist = cmbTherapist.SelectedItem.ToString();
+            ref_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+            start_date = dtpDateStart.Value.ToString("dd-MM-yyyy");
+            end_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+
         }
     }
 }
