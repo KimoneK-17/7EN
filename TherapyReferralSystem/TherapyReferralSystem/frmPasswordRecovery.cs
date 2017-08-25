@@ -16,5 +16,29 @@ namespace TherapyReferralSystem
         {
             InitializeComponent();
         }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmLogin1 loginForm = new frmLogin1();
+                this.Hide();
+                loginForm.Show();
+            }
+            catch (Exception exc)
+            {
+
+            }
+        }
+
+        private void lblEmailUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPasswordRecovery_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

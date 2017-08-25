@@ -19,6 +19,9 @@ namespace TherapyReferralSystem
 
         string username;
         string password;
+
+        DBConnect objDBConnect = new DBConnect();
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if(!txtUsername.Equals(""))
@@ -38,10 +41,7 @@ namespace TherapyReferralSystem
             else
             {
                 MessageBox.Show("Ënter Username");
-            }
-        
-
-            
+            }      
         }
     }
 }
