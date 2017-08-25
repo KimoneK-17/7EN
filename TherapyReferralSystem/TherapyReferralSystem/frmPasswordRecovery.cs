@@ -27,7 +27,7 @@ namespace TherapyReferralSystem
             }
             catch (Exception exc)
             {
-
+                MessageBox.Show(exc.Message);
             }
         }
 
