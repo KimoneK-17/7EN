@@ -11,9 +11,9 @@ using TherapyReferralSystem;
 
 namespace Register_Form
 {
-    public partial class Form1 : Form
+    public partial class frmRegisterUser : Form
     {
-        public Form1()
+        public frmRegisterUser()
         {
             InitializeComponent();
         }
