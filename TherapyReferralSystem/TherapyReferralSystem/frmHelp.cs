@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace TherapyReferralSystem
 {
-    public partial class frmPasswordRecovery : Form
+    public partial class frmHelp : Form
     {
-        public frmPasswordRecovery()
+        public frmHelp()
         {
             InitializeComponent();
-        }
-
-        private void returnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmLogin1 login = new frmLogin1();
-            login.Show();
-            this.Close();
         }
     }
 }

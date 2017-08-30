@@ -55,6 +55,27 @@ namespace TherapyReferralSystem
                 txtSurname.Text.Remove(txtSurname.Text.Length - 1);
             }
         }
+
+        private void mnuProfileReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Close();
+        }
+
+        private void mnuProfileReports_Click(object sender, EventArgs e)
+        {
+            frmReports rep = new frmReports();
+            rep.Show();
+            this.Close();
+        }
+
+        private void mnuProfileHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Close();
+        }
         //**********************************************************************************************
     }
 }

@@ -21,6 +21,54 @@ namespace TherapyReferralSystem
         string c_num, c_fname, c_mname, c_lname,c_consid,c_admin_date,c_idNum;
         long c_id;
         string c_bsf, c_status, c_cluster, c_house, c_gender;
+
+        private void mnuRegChildHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Close();
+        }
+
+        private void mnuRegChildForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuRegChildTherapyRef_Click(object sender, EventArgs e)
+        {
+            frmTherapyReferral tr = new frmTherapyReferral();
+            tr.Show();
+            this.Close();
+        }
+
+        private void mnuRegChildRegUser_Click(object sender, EventArgs e)
+        {
+            //frmRegisterUser ru = new frmRegisterUser();
+            //ru.Show();
+            //this.Close(); 
+        }
+
+        private void mnuRegChildRegTherapist_Click(object sender, EventArgs e)
+        {
+            frmRegisterTherapist rt = new frmRegisterTherapist();
+            rt.Show();
+            this.Close();
+        }
+
+        private void mnuRegChildReports_Click(object sender, EventArgs e)
+        {
+            frmReports rep = new frmReports();
+            rep.Show();
+            this.Close();
+        }
+
+        private void mnuRegChildReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Close();
+        }
+
         bool c_empty;
         private void btnClear_Click(object sender, EventArgs e)
         {

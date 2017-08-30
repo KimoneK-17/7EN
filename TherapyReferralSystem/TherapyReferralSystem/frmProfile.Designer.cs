@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfile = new System.Windows.Forms.MenuStrip();
+            this.mnuProfileFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileView = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,46 +54,70 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.mnuProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mnuProfile
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.helpToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(450, 26);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuProfile.BackColor = System.Drawing.Color.DimGray;
+            this.mnuProfile.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProfileFile,
+            this.mnuProfileView,
+            this.mnuProfileHelp});
+            this.mnuProfile.Location = new System.Drawing.Point(0, 0);
+            this.mnuProfile.Name = "mnuProfile";
+            this.mnuProfile.Size = new System.Drawing.Size(450, 26);
+            this.mnuProfile.TabIndex = 0;
+            this.mnuProfile.Text = "MENU";
             // 
-            // fileToolStripMenuItem
+            // mnuProfileFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuProfileFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProfileReturn,
+            this.mnuProfileLogout});
+            this.mnuProfileFile.ForeColor = System.Drawing.Color.White;
+            this.mnuProfileFile.Name = "mnuProfileFile";
+            this.mnuProfileFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuProfileFile.Text = "File";
             // 
-            // helpToolStripMenuItem
+            // mnuProfileReturn
             // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportsToolStripMenuItem});
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
-            this.helpToolStripMenuItem.Text = "View";
+            this.mnuProfileReturn.Name = "mnuProfileReturn";
+            this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuProfileReturn.Text = "Return";
+            this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
+            // 
+            // mnuProfileLogout
+            // 
+            this.mnuProfileLogout.Name = "mnuProfileLogout";
+            this.mnuProfileLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuProfileLogout.Text = "Logout";
+            // 
+            // mnuProfileView
+            // 
+            this.mnuProfileView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProfileReports});
+            this.mnuProfileView.ForeColor = System.Drawing.Color.White;
+            this.mnuProfileView.Name = "mnuProfileView";
+            this.mnuProfileView.Size = new System.Drawing.Size(52, 22);
+            this.mnuProfileView.Text = "View";
+            // 
+            // mnuProfileReports
+            // 
+            this.mnuProfileReports.Name = "mnuProfileReports";
+            this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuProfileReports.Text = "Reports";
+            this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
+            // 
+            // mnuProfileHelp
+            // 
+            this.mnuProfileHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuProfileHelp.Name = "mnuProfileHelp";
+            this.mnuProfileHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuProfileHelp.Text = "Help";
+            this.mnuProfileHelp.Click += new System.EventHandler(this.mnuProfileHelp_Click);
             // 
             // label1
             // 
@@ -259,31 +287,6 @@
             this.button2.Text = "Change picture ???";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(51, 22);
-            this.helpToolStripMenuItem1.Text = "Help";
-            // 
-            // returnToolStripMenuItem
-            // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.returnToolStripMenuItem.Text = "Return";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,12 +311,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.mnuProfile);
+            this.MainMenuStrip = this.mnuProfile;
             this.Name = "frmProfile";
             this.Text = "frmProfile";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnuProfile.ResumeLayout(false);
+            this.mnuProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,9 +325,9 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuProfile;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
@@ -344,9 +347,9 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileReturn;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileLogout;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileHelp;
     }
 }

@@ -46,5 +46,47 @@ namespace TherapyReferralSystem
         {
 
         }
+
+        private void mnuRegTherapistTherapyRef_Click(object sender, EventArgs e)
+        {
+            frmTherapyReferral tr = new frmTherapyReferral();
+            tr.Show();
+            this.Close();
+        }
+
+        private void mnuRegTherapistReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Close();
+        }
+
+        private void mnuRegTherapistReports_Click(object sender, EventArgs e)
+        {
+            frmReports rep = new frmReports();
+            rep.Show();
+            this.Close();
+        }
+
+        private void mnuRegTherapistHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Close();
+        }
+
+        private void mnuRegTherapistRegUser_Click(object sender, EventArgs e)
+        {
+            //frmRegisterUser ru = new frmRegisterUser();
+            //ru.Show();
+            //this.Close(); 
+        }
+
+        private void mnuRegTherapistRegChild_Click(object sender, EventArgs e)
+        {
+            frmRegisterChild rc = new frmRegisterChild();
+            rc.Show();
+            this.Close(); 
+        }
     }
 }

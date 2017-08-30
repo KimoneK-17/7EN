@@ -44,13 +44,13 @@
             this.radEmail2 = new System.Windows.Forms.RadioButton();
             this.btnOK3 = new System.Windows.Forms.Button();
             this.btnOK4 = new System.Windows.Forms.Button();
-            this.MENU = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPasRecov = new System.Windows.Forms.MenuStrip();
+            this.mnuPasRecovFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPasRecovReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.cmbxSecurityQuestion = new System.Windows.Forms.ComboBox();
             this.cmbxAnswer = new System.Windows.Forms.ComboBox();
             this.grpBxForgotAnswer.SuspendLayout();
-            this.MENU.SuspendLayout();
+            this.mnuPasRecov.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblSecurityQuestion
@@ -243,32 +243,33 @@
             this.btnOK4.TabIndex = 15;
             this.btnOK4.UseVisualStyleBackColor = true;
             // 
-            // MENU
+            // mnuPasRecov
             // 
-            this.MENU.BackColor = System.Drawing.Color.DimGray;
-            this.MENU.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MENU.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.MENU.Location = new System.Drawing.Point(0, 0);
-            this.MENU.Name = "MENU";
-            this.MENU.Size = new System.Drawing.Size(673, 26);
-            this.MENU.TabIndex = 16;
-            this.MENU.Text = "MENU";
+            this.mnuPasRecov.BackColor = System.Drawing.Color.DimGray;
+            this.mnuPasRecov.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuPasRecov.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPasRecovFile});
+            this.mnuPasRecov.Location = new System.Drawing.Point(0, 0);
+            this.mnuPasRecov.Name = "mnuPasRecov";
+            this.mnuPasRecov.Size = new System.Drawing.Size(673, 26);
+            this.mnuPasRecov.TabIndex = 16;
+            this.mnuPasRecov.Text = "MENU";
             // 
-            // fileToolStripMenuItem
+            // mnuPasRecovFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuPasRecovFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPasRecovReturn});
+            this.mnuPasRecovFile.ForeColor = System.Drawing.Color.White;
+            this.mnuPasRecovFile.Name = "mnuPasRecovFile";
+            this.mnuPasRecovFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuPasRecovFile.Text = "File";
             // 
-            // returnToolStripMenuItem
+            // mnuPasRecovReturn
             // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.returnToolStripMenuItem.Text = "Return";
+            this.mnuPasRecovReturn.Name = "mnuPasRecovReturn";
+            this.mnuPasRecovReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuPasRecovReturn.Text = "Return";
+            this.mnuPasRecovReturn.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
             // 
             // cmbxSecurityQuestion
             // 
@@ -309,14 +310,14 @@
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.lblSecurityQuestion);
-            this.Controls.Add(this.MENU);
-            this.MainMenuStrip = this.MENU;
+            this.Controls.Add(this.mnuPasRecov);
+            this.MainMenuStrip = this.mnuPasRecov;
             this.Name = "frmPasswordRecovery";
             this.Text = "Password Recovery";
             this.grpBxForgotAnswer.ResumeLayout(false);
             this.grpBxForgotAnswer.PerformLayout();
-            this.MENU.ResumeLayout(false);
-            this.MENU.PerformLayout();
+            this.mnuPasRecov.ResumeLayout(false);
+            this.mnuPasRecov.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,9 +340,9 @@
         private System.Windows.Forms.RadioButton radEmail2;
         private System.Windows.Forms.Button btnOK3;
         private System.Windows.Forms.Button btnOK4;
-        private System.Windows.Forms.MenuStrip MENU;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuPasRecov;
+        private System.Windows.Forms.ToolStripMenuItem mnuPasRecovFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuPasRecovReturn;
         private System.Windows.Forms.ComboBox cmbxSecurityQuestion;
         private System.Windows.Forms.ComboBox cmbxAnswer;
     }

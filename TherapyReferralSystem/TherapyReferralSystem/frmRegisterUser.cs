@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TherapyReferralSystem;
 
 namespace Register_Form
 {
@@ -29,6 +30,48 @@ namespace Register_Form
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mnuRegUserReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Close();
+        }
+
+        private void mnuRegUserReports_Click(object sender, EventArgs e)
+        {
+            frmReports rep = new frmReports();
+            rep.Show();
+            this.Close();
+        }
+
+        private void mnuRegUserHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Close();
+        }
+
+        private void mnuRegUserTherapyRef_Click(object sender, EventArgs e)
+        {
+            frmTherapyReferral tr = new frmTherapyReferral();
+            tr.Show();
+            this.Close();
+        }
+
+        private void mnuRegUserRegChild_Click(object sender, EventArgs e)
+        {
+            frmRegisterChild rc = new frmRegisterChild();
+            rc.Show();
+            this.Close();
+        }
+
+        private void mnuRegUserRegTherapist_Click(object sender, EventArgs e)
+        {
+            frmRegisterTherapist rc = new frmRegisterTherapist();
+            rc.Show();
+            this.Close();
         }
     }
 }

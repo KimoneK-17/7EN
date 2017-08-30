@@ -55,17 +55,18 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.txtNumber = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.therapyReferralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.mnuRegChild = new System.Windows.Forms.MenuStrip();
+            this.mnuRegChildFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildView = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildTherapyRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildRegUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChildRegTherapist = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegChild.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
@@ -342,93 +343,107 @@
             this.txtNumber.Size = new System.Drawing.Size(151, 20);
             this.txtNumber.TabIndex = 26;
             // 
-            // menuStrip1
+            // mnuRegChild
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.viewToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.formToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(562, 26);
-            this.menuStrip1.TabIndex = 53;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuRegChild.BackColor = System.Drawing.Color.DimGray;
+            this.mnuRegChild.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuRegChild.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegChildFile,
+            this.mnuRegChildView,
+            this.mnuRegChildHelp,
+            this.mnuRegChildForm});
+            this.mnuRegChild.Location = new System.Drawing.Point(0, 0);
+            this.mnuRegChild.Name = "mnuRegChild";
+            this.mnuRegChild.Size = new System.Drawing.Size(562, 26);
+            this.mnuRegChild.TabIndex = 53;
+            this.mnuRegChild.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // mnuRegChildFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuRegChildFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegChildReturn,
+            this.mnuRegChildLogout});
+            this.mnuRegChildFile.ForeColor = System.Drawing.Color.White;
+            this.mnuRegChildFile.Name = "mnuRegChildFile";
+            this.mnuRegChildFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuRegChildFile.Text = "File";
             // 
-            // returnToolStripMenuItem
+            // mnuRegChildReturn
             // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.returnToolStripMenuItem.Text = "Return";
+            this.mnuRegChildReturn.Name = "mnuRegChildReturn";
+            this.mnuRegChildReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegChildReturn.Text = "Return";
+            this.mnuRegChildReturn.Click += new System.EventHandler(this.mnuRegChildReturn_Click);
             // 
-            // logoutToolStripMenuItem
+            // mnuRegChildLogout
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
+            this.mnuRegChildLogout.Name = "mnuRegChildLogout";
+            this.mnuRegChildLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegChildLogout.Text = "Logout";
             // 
-            // viewToolStripMenuItem
+            // mnuRegChildView
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportsToolStripMenuItem});
-            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
-            this.viewToolStripMenuItem.Text = "View";
+            this.mnuRegChildView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegChildReports});
+            this.mnuRegChildView.ForeColor = System.Drawing.Color.White;
+            this.mnuRegChildView.Name = "mnuRegChildView";
+            this.mnuRegChildView.Size = new System.Drawing.Size(52, 22);
+            this.mnuRegChildView.Text = "View";
             // 
-            // reportsToolStripMenuItem
+            // mnuRegChildReports
             // 
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.reportsToolStripMenuItem.Text = "Reports";
+            this.mnuRegChildReports.Name = "mnuRegChildReports";
+            this.mnuRegChildReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegChildReports.Text = "Reports";
+            this.mnuRegChildReports.Click += new System.EventHandler(this.mnuRegChildReports_Click);
             // 
-            // helpToolStripMenuItem
+            // mnuRegChildHelp
             // 
-            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
-            this.helpToolStripMenuItem.Text = "Help";
+            this.mnuRegChildHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuRegChildHelp.Name = "mnuRegChildHelp";
+            this.mnuRegChildHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuRegChildHelp.Text = "Help";
+            this.mnuRegChildHelp.Click += new System.EventHandler(this.mnuRegChildHelp_Click);
             // 
-            // formToolStripMenuItem
+            // mnuRegChildForm
             // 
-            this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.therapyReferralToolStripMenuItem,
-            this.registerUserToolStripMenuItem});
-            this.formToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.formToolStripMenuItem.Name = "formToolStripMenuItem";
-            this.formToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
-            this.formToolStripMenuItem.Text = "Form";
+            this.mnuRegChildForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegChildTherapyRef,
+            this.mnuRegChildRegUser,
+            this.mnuRegChildRegTherapist});
+            this.mnuRegChildForm.ForeColor = System.Drawing.Color.White;
+            this.mnuRegChildForm.Name = "mnuRegChildForm";
+            this.mnuRegChildForm.Size = new System.Drawing.Size(54, 22);
+            this.mnuRegChildForm.Text = "Form";
+            this.mnuRegChildForm.Click += new System.EventHandler(this.mnuRegChildForm_Click);
             // 
-            // therapyReferralToolStripMenuItem
+            // mnuRegChildTherapyRef
             // 
-            this.therapyReferralToolStripMenuItem.Name = "therapyReferralToolStripMenuItem";
-            this.therapyReferralToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.therapyReferralToolStripMenuItem.Text = "Therapy Referral";
+            this.mnuRegChildTherapyRef.Name = "mnuRegChildTherapyRef";
+            this.mnuRegChildTherapyRef.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegChildTherapyRef.Text = "Therapy Referral";
+            this.mnuRegChildTherapyRef.Click += new System.EventHandler(this.mnuRegChildTherapyRef_Click);
             // 
-            // registerUserToolStripMenuItem
+            // mnuRegChildRegUser
             // 
-            this.registerUserToolStripMenuItem.Name = "registerUserToolStripMenuItem";
-            this.registerUserToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.registerUserToolStripMenuItem.Text = "Register User";
+            this.mnuRegChildRegUser.Name = "mnuRegChildRegUser";
+            this.mnuRegChildRegUser.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegChildRegUser.Text = "Register User";
+            this.mnuRegChildRegUser.Click += new System.EventHandler(this.mnuRegChildRegUser_Click);
+            // 
+            // mnuRegChildRegTherapist
+            // 
+            this.mnuRegChildRegTherapist.Name = "mnuRegChildRegTherapist";
+            this.mnuRegChildRegTherapist.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegChildRegTherapist.Text = "Register Therapist";
+            this.mnuRegChildRegTherapist.Click += new System.EventHandler(this.mnuRegChildRegTherapist_Click);
             // 
             // frmRegisterChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 462);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.mnuRegChild);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rtbxSpecCon);
@@ -458,8 +473,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRegisterChild";
             this.Text = "Register Child";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnuRegChild.ResumeLayout(false);
+            this.mnuRegChild.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,15 +508,16 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.TextBox txtNumber;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem formToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem therapyReferralToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerUserToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuRegChild;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildReturn;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildLogout;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildView;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildTherapyRef;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildRegUser;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegChildRegTherapist;
     }
 }

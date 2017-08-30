@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ezitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.printReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReports = new System.Windows.Forms.MenuStrip();
+            this.mnuReportsFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsPrintRep = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,55 +61,62 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2.SuspendLayout();
+            this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip2
+            // mnuReports
             // 
-            this.menuStrip2.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip2.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.printReportToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(861, 26);
-            this.menuStrip2.TabIndex = 0;
-            this.menuStrip2.Text = "menuStrip2";
+            this.mnuReports.BackColor = System.Drawing.Color.DimGray;
+            this.mnuReports.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuReports.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReportsFile,
+            this.mnuReportsPrintRep,
+            this.mnuReportsHelp});
+            this.mnuReports.Location = new System.Drawing.Point(0, 0);
+            this.mnuReports.Name = "mnuReports";
+            this.mnuReports.Size = new System.Drawing.Size(861, 26);
+            this.mnuReports.TabIndex = 0;
+            this.mnuReports.Text = "Menu";
             // 
-            // toolStripMenuItem1
+            // mnuReportsFile
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ezitToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 22);
-            this.toolStripMenuItem1.Text = "File";
+            this.mnuReportsFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReportsReturn,
+            this.mnuReportsLogout});
+            this.mnuReportsFile.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsFile.Name = "mnuReportsFile";
+            this.mnuReportsFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuReportsFile.Text = "File";
             // 
-            // ezitToolStripMenuItem
+            // mnuReportsReturn
             // 
-            this.ezitToolStripMenuItem.Name = "ezitToolStripMenuItem";
-            this.ezitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ezitToolStripMenuItem.Text = "Return";
-            this.ezitToolStripMenuItem.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
+            this.mnuReportsReturn.Name = "mnuReportsReturn";
+            this.mnuReportsReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuReportsReturn.Text = "Return";
+            this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
+            // mnuReportsLogout
             // 
-            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(98, 22);
-            this.toolStripMenuItem2.Text = "Print Report";
+            this.mnuReportsLogout.Name = "mnuReportsLogout";
+            this.mnuReportsLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuReportsLogout.Text = "Logout";
+            this.mnuReportsLogout.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // printReportToolStripMenuItem
+            // mnuReportsPrintRep
             // 
-            this.printReportToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.printReportToolStripMenuItem.Name = "printReportToolStripMenuItem";
-            this.printReportToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
-            this.printReportToolStripMenuItem.Text = "Help";
+            this.mnuReportsPrintRep.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsPrintRep.Name = "mnuReportsPrintRep";
+            this.mnuReportsPrintRep.Size = new System.Drawing.Size(98, 22);
+            this.mnuReportsPrintRep.Text = "Print Report";
+            // 
+            // mnuReportsHelp
+            // 
+            this.mnuReportsHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsHelp.Name = "mnuReportsHelp";
+            this.mnuReportsHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuReportsHelp.Text = "Help";
+            this.mnuReportsHelp.Click += new System.EventHandler(this.mnuReportsHelp_Click);
             // 
             // label2
             // 
@@ -354,12 +362,6 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "(pop up day only when month selected)";
             // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
             // frmReports
             // 
             this.ClientSize = new System.Drawing.Size(861, 619);
@@ -390,12 +392,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip2;
+            this.Controls.Add(this.mnuReports);
+            this.MainMenuStrip = this.mnuReports;
             this.Name = "frmReports";
             this.Text = "Reports";
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.mnuReports.ResumeLayout(false);
+            this.mnuReports.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -409,15 +411,15 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem ezitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.MenuStrip mnuReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsReturn;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsPrintRep;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripMenuItem printReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsHelp;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label20;
@@ -441,6 +443,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsLogout;
     }
 }

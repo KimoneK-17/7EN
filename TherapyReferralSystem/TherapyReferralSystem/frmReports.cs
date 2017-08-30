@@ -47,7 +47,21 @@ namespace TherapyReferralSystem
 
         private void ezitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Close();
+        }
 
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuReportsHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Close();
         }
 
         //**********************************************************************************

@@ -60,12 +60,24 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.mnuRegUser = new System.Windows.Forms.MenuStrip();
+            this.mnuRegUserFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserView = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserTherapyRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserRegChild = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserRegTherapist = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.mnuRegUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -365,6 +377,14 @@
             this.panel1.Size = new System.Drawing.Size(435, 321);
             this.panel1.TabIndex = 41;
             // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(151, 226);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(195, 30);
+            this.richTextBox3.TabIndex = 35;
+            this.richTextBox3.Text = "";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.textBox1);
@@ -380,13 +400,12 @@
             this.panel2.Size = new System.Drawing.Size(419, 186);
             this.panel2.TabIndex = 42;
             // 
-            // richTextBox3
+            // textBox1
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(151, 226);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(195, 30);
-            this.richTextBox3.TabIndex = 35;
-            this.richTextBox3.Text = "";
+            this.textBox1.Location = new System.Drawing.Point(146, 162);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(142, 20);
+            this.textBox1.TabIndex = 44;
             // 
             // label6
             // 
@@ -397,18 +416,104 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "ID NUMBERS:";
             // 
-            // textBox1
+            // mnuRegUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 162);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 20);
-            this.textBox1.TabIndex = 44;
+            this.mnuRegUser.BackColor = System.Drawing.Color.DimGray;
+            this.mnuRegUser.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuRegUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserFile,
+            this.mnuRegUserView,
+            this.mnuRegUserHelp,
+            this.mnuRegUserForm});
+            this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
+            this.mnuRegUser.Name = "mnuRegUser";
+            this.mnuRegUser.Size = new System.Drawing.Size(911, 26);
+            this.mnuRegUser.TabIndex = 54;
+            this.mnuRegUser.Text = "MENU";
+            // 
+            // mnuRegUserFile
+            // 
+            this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserReturn,
+            this.mnuRegUserLogout});
+            this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserFile.Name = "mnuRegUserFile";
+            this.mnuRegUserFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuRegUserFile.Text = "File";
+            // 
+            // mnuRegUserReturn
+            // 
+            this.mnuRegUserReturn.Name = "mnuRegUserReturn";
+            this.mnuRegUserReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserReturn.Text = "Return";
+            // 
+            // mnuRegUserLogout
+            // 
+            this.mnuRegUserLogout.Name = "mnuRegUserLogout";
+            this.mnuRegUserLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserLogout.Text = "Logout";
+            // 
+            // mnuRegUserView
+            // 
+            this.mnuRegUserView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserReports});
+            this.mnuRegUserView.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserView.Name = "mnuRegUserView";
+            this.mnuRegUserView.Size = new System.Drawing.Size(52, 22);
+            this.mnuRegUserView.Text = "View";
+            // 
+            // mnuRegUserReports
+            // 
+            this.mnuRegUserReports.Name = "mnuRegUserReports";
+            this.mnuRegUserReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserReports.Text = "Reports";
+            // 
+            // mnuRegUserHelp
+            // 
+            this.mnuRegUserHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserHelp.Name = "mnuRegUserHelp";
+            this.mnuRegUserHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuRegUserHelp.Text = "Help";
+            this.mnuRegUserHelp.Click += new System.EventHandler(this.mnuRegUserHelp_Click);
+            // 
+            // mnuRegUserForm
+            // 
+            this.mnuRegUserForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserTherapyRef,
+            this.mnuRegUserRegChild,
+            this.mnuRegUserRegTherapist});
+            this.mnuRegUserForm.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserForm.Name = "mnuRegUserForm";
+            this.mnuRegUserForm.Size = new System.Drawing.Size(54, 22);
+            this.mnuRegUserForm.Text = "Form";
+            // 
+            // mnuRegUserTherapyRef
+            // 
+            this.mnuRegUserTherapyRef.Name = "mnuRegUserTherapyRef";
+            this.mnuRegUserTherapyRef.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegUserTherapyRef.Text = "Therapy Referral";
+            this.mnuRegUserTherapyRef.Click += new System.EventHandler(this.mnuRegUserTherapyRef_Click);
+            // 
+            // mnuRegUserRegChild
+            // 
+            this.mnuRegUserRegChild.Name = "mnuRegUserRegChild";
+            this.mnuRegUserRegChild.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegUserRegChild.Text = "Register Child";
+            this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
+            // 
+            // mnuRegUserRegTherapist
+            // 
+            this.mnuRegUserRegTherapist.Name = "mnuRegUserRegTherapist";
+            this.mnuRegUserRegTherapist.Size = new System.Drawing.Size(194, 22);
+            this.mnuRegUserRegTherapist.Text = "Register Therapist";
+            this.mnuRegUserRegTherapist.Click += new System.EventHandler(this.mnuRegUserRegTherapist_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 540);
+            this.ClientSize = new System.Drawing.Size(911, 561);
+            this.Controls.Add(this.mnuRegUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -417,12 +522,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Register Form";
+            this.Text = "Register User";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.mnuRegUser.ResumeLayout(false);
+            this.mnuRegUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +573,17 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MenuStrip mnuRegUser;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserReturn;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserLogout;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserView;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserTherapyRef;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegChild;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegTherapist;
     }
 }
 
