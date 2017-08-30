@@ -97,7 +97,6 @@
             // 
             // btnRequestReset
             // 
-            this.btnRequestReset.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Request_Reset_Button;
             this.btnRequestReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestReset.Location = new System.Drawing.Point(237, 454);
@@ -123,7 +122,6 @@
             // 
             // btnSubmitAnswer
             // 
-            this.btnSubmitAnswer.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Submit_Answer_Button;
             this.btnSubmitAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmitAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitAnswer.Location = new System.Drawing.Point(237, 320);
@@ -157,7 +155,6 @@
             // 
             // btnGetQuestion
             // 
-            this.btnGetQuestion.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Get_Question_Button;
             this.btnGetQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGetQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetQuestion.Location = new System.Drawing.Point(237, 163);
