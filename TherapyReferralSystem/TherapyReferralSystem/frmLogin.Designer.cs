@@ -88,6 +88,7 @@
             this.btnLogin.Size = new System.Drawing.Size(96, 44);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblForgotPassword
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace TherapyReferralSystem
         String condition;
         String details;
         String result;
+        string t_c_num, t_refby,t_reason, t_report, t_type, t_status, t_therapist,ref_date, start_date, end_date;
+        int t_sessions;
         public frmTherapyReferral()
         {
             InitializeComponent();
@@ -164,6 +167,68 @@ namespace TherapyReferralSystem
         private void btnAddRef_Click(object sender, EventArgs e)
         {
             validate();
+            getFields();
+
+            MessageBox.Show(" " + t_c_num + "\n" + t_refby + "\n" + t_report + "\n" + t_type + "\n" + t_status + "\n" + t_therapist + "\n" + ref_date + "\n" + start_date + "\n" + end_date);
+
+        }
+
+        private void getFields()
+        {
+            t_c_num = cmbCNum.SelectedItem.ToString();
+            t_reason = cmbReason.SelectedItem.ToString();
+            t_refby = cmbRefBy.SelectedItem.ToString();
+            t_report = cmbReport.SelectedItem.ToString();
+            t_type = cmbType.SelectedItem.ToString();
+            t_status = cmbStatus.SelectedItem.ToString();
+            t_therapist = cmbTherapist.SelectedItem.ToString();
+            ref_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+            start_date = dtpDateStart.Value.ToString("dd-MM-yyyy");
+            end_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+            t_sessions =(int)nudSess.Value;
+        }
+
+        private void insertFieldsIntoDB()
+        {
+            DBConnect objDBConnect = new DBConnect();
+
+            try
+            {
+                objDBConnect.OpenConnection();
+
+
+                objDBConnect.sqlCmd = new SqlCommand("INSERT INTO Therapy_Ref VALUES (@R_ID,@R_C_NUMBER,@R_DIAGNOSIS,@R_REASON,@R_STATUS,@R_SESSION,@R_REFFERED_BY,@R_DATE_REFFERED,@R_DATE_START,@R_DATE_ENDED,@R_DETAILS,@R_THERAPIST,@R_REPORT,@R_RESULT)", objDBConnect.sqlConn);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", " ");//auto increment
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_C_NUMBER", t_c_num); 
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DIAGNOSIS", condition);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REASON", t_reason); 
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_STATUS", t_status);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_SESSION", t_sessions);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REFFERED_BY", t_refby);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED DATE",ref_date);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START DATE", start_date);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST DATE", " ");
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED DATE", end_date);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DETAILS", details);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_THERAPIST", t_therapist);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REPORT", t_report);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", result);
+
+                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+
+                MessageBox.Show("Successfully Inserted");
+                objDBConnect.sqlDR.Close();
+                objDBConnect.sqlConn.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error cannot add child details " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Cannot Add child Details: " + ex.Message + ex.Data + ex.StackTrace);
+            }
         }
 
         private void mnuTherapyRefReturn_Click(object sender, EventArgs e)
