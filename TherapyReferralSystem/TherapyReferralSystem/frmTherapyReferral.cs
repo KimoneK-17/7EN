@@ -268,9 +268,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefRegTherapist_Click(object sender, EventArgs e)
         {
-            frmRegisterTherapist rt = new frmRegisterTherapist();
-            rt.Show();
-            this.Close();
+            
         }
     }
 }

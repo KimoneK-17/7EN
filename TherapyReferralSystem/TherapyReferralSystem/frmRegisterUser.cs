@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TherapyReferralSystem;
 
-namespace Register_Form
+namespace TherapyReferralSystem
 {
     public partial class frmRegisterUser : Form
     {
@@ -69,9 +69,7 @@ namespace Register_Form
 
         private void mnuRegUserRegTherapist_Click(object sender, EventArgs e)
         {
-            frmRegisterTherapist rc = new frmRegisterTherapist();
-            rc.Show();
-            this.Close();
+          
         }
     }
 }
