@@ -111,7 +111,7 @@ namespace TherapyReferralSystem
 
                     frmProfile pr = new frmProfile();
                     pr.Show();
-                    this.Close();
+                    this.Dispose();
                 }
                 else
                 {
