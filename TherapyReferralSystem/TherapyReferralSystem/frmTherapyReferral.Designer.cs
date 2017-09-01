@@ -527,7 +527,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form___Texture;
             this.ClientSize = new System.Drawing.Size(912, 554);
             this.Controls.Add(this.mnuTherapyRef);
             this.Controls.Add(this.label2);
