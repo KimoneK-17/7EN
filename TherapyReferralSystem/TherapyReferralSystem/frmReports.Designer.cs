@@ -121,10 +121,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(369, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Reports";
             // 
@@ -147,10 +148,11 @@
             // lblReportSelect
             // 
             this.lblReportSelect.AutoSize = true;
-            this.lblReportSelect.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportSelect.BackColor = System.Drawing.Color.Transparent;
+            this.lblReportSelect.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportSelect.Location = new System.Drawing.Point(49, 78);
             this.lblReportSelect.Name = "lblReportSelect";
-            this.lblReportSelect.Size = new System.Drawing.Size(183, 19);
+            this.lblReportSelect.Size = new System.Drawing.Size(156, 13);
             this.lblReportSelect.TabIndex = 3;
             this.lblReportSelect.Text = "Select your report to view";
             // 
@@ -165,9 +167,11 @@
             // lblTherID
             // 
             this.lblTherID.AutoSize = true;
+            this.lblTherID.BackColor = System.Drawing.Color.Transparent;
+            this.lblTherID.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTherID.Location = new System.Drawing.Point(307, 188);
             this.lblTherID.Name = "lblTherID";
-            this.lblTherID.Size = new System.Drawing.Size(115, 13);
+            this.lblTherID.Size = new System.Drawing.Size(142, 13);
             this.lblTherID.TabIndex = 12;
             this.lblTherID.Text = "Search by therapist ID:";
             this.lblTherID.Visible = false;
@@ -175,9 +179,11 @@
             // lblChildID
             // 
             this.lblChildID.AutoSize = true;
+            this.lblChildID.BackColor = System.Drawing.Color.Transparent;
+            this.lblChildID.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildID.Location = new System.Drawing.Point(307, 214);
             this.lblChildID.Name = "lblChildID";
-            this.lblChildID.Size = new System.Drawing.Size(97, 13);
+            this.lblChildID.Size = new System.Drawing.Size(118, 13);
             this.lblChildID.TabIndex = 11;
             this.lblChildID.Text = "Search by child ID:";
             this.lblChildID.Visible = false;
@@ -185,9 +191,11 @@
             // lblCluster
             // 
             this.lblCluster.AutoSize = true;
+            this.lblCluster.BackColor = System.Drawing.Color.Transparent;
+            this.lblCluster.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCluster.Location = new System.Drawing.Point(307, 83);
             this.lblCluster.Name = "lblCluster";
-            this.lblCluster.Size = new System.Drawing.Size(72, 13);
+            this.lblCluster.Size = new System.Drawing.Size(87, 13);
             this.lblCluster.TabIndex = 22;
             this.lblCluster.Text = "Select Cluster";
             this.lblCluster.Visible = false;
@@ -233,9 +241,11 @@
             // lblHouse
             // 
             this.lblHouse.AutoSize = true;
+            this.lblHouse.BackColor = System.Drawing.Color.Transparent;
+            this.lblHouse.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHouse.Location = new System.Drawing.Point(453, 83);
             this.lblHouse.Name = "lblHouse";
-            this.lblHouse.Size = new System.Drawing.Size(71, 13);
+            this.lblHouse.Size = new System.Drawing.Size(81, 13);
             this.lblHouse.TabIndex = 25;
             this.lblHouse.Text = "Select House";
             this.lblHouse.Visible = false;
@@ -252,9 +262,11 @@
             // lblTherapyType
             // 
             this.lblTherapyType.AutoSize = true;
+            this.lblTherapyType.BackColor = System.Drawing.Color.Transparent;
+            this.lblTherapyType.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTherapyType.Location = new System.Drawing.Point(603, 83);
             this.lblTherapyType.Name = "lblTherapyType";
-            this.lblTherapyType.Size = new System.Drawing.Size(106, 13);
+            this.lblTherapyType.Size = new System.Drawing.Size(124, 13);
             this.lblTherapyType.TabIndex = 27;
             this.lblTherapyType.Text = "Select Therapy Type";
             this.lblTherapyType.Visible = false;
@@ -280,9 +292,11 @@
             // lblDay
             // 
             this.lblDay.AutoSize = true;
+            this.lblDay.BackColor = System.Drawing.Color.Transparent;
+            this.lblDay.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDay.Location = new System.Drawing.Point(604, 138);
             this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(59, 13);
+            this.lblDay.Size = new System.Drawing.Size(69, 13);
             this.lblDay.TabIndex = 34;
             this.lblDay.Text = "Select Day";
             this.lblDay.Visible = false;
@@ -313,9 +327,11 @@
             // lblMonth
             // 
             this.lblMonth.AutoSize = true;
+            this.lblMonth.BackColor = System.Drawing.Color.Transparent;
+            this.lblMonth.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonth.Location = new System.Drawing.Point(453, 138);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(70, 13);
+            this.lblMonth.Size = new System.Drawing.Size(80, 13);
             this.lblMonth.TabIndex = 32;
             this.lblMonth.Text = "Select Month";
             this.lblMonth.Visible = false;
@@ -339,9 +355,11 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
+            this.lblYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblYear.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(307, 138);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(62, 13);
+            this.lblYear.Size = new System.Drawing.Size(71, 13);
             this.lblYear.TabIndex = 30;
             this.lblYear.Text = "Select Year";
             this.lblYear.Visible = false;
@@ -376,12 +394,14 @@
             // cboxRefine
             // 
             this.cboxRefine.AutoSize = true;
+            this.cboxRefine.BackColor = System.Drawing.Color.Transparent;
+            this.cboxRefine.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxRefine.Location = new System.Drawing.Point(48, 134);
             this.cboxRefine.Name = "cboxRefine";
-            this.cboxRefine.Size = new System.Drawing.Size(94, 17);
+            this.cboxRefine.Size = new System.Drawing.Size(106, 17);
             this.cboxRefine.TabIndex = 39;
             this.cboxRefine.Text = "Refine Search";
-            this.cboxRefine.UseVisualStyleBackColor = true;
+            this.cboxRefine.UseVisualStyleBackColor = false;
             this.cboxRefine.CheckedChanged += new System.EventHandler(this.cboxRefine_CheckedChanged);
             // 
             // label4
@@ -413,6 +433,7 @@
             // 
             // frmReports
             // 
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form___Texture;
             this.ClientSize = new System.Drawing.Size(861, 619);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

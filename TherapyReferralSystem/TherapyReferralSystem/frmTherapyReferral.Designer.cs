@@ -290,7 +290,7 @@
             this.panel3.Controls.Add(this.nudSess);
             this.panel3.Location = new System.Drawing.Point(242, 286);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(226, 257);
+            this.panel3.Size = new System.Drawing.Size(226, 267);
             this.panel3.TabIndex = 34;
             // 
             // rtxtDetails
@@ -457,14 +457,14 @@
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(122, 22);
             this.mnuTherapyRefReturn.Text = "Return";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
             // mnuTherapyRefLogout
             // 
             this.mnuTherapyRefLogout.Name = "mnuTherapyRefLogout";
-            this.mnuTherapyRefLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuTherapyRefLogout.Size = new System.Drawing.Size(122, 22);
             this.mnuTherapyRefLogout.Text = "Logout";
             // 
             // mnuTherapyRefView
@@ -479,7 +479,7 @@
             // mnuTherapyRefReports
             // 
             this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
-            this.mnuTherapyRefReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuTherapyRefReports.Size = new System.Drawing.Size(126, 22);
             this.mnuTherapyRefReports.Text = "Reports";
             this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
             // 
@@ -527,6 +527,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form___Texture;
             this.ClientSize = new System.Drawing.Size(912, 554);
             this.Controls.Add(this.mnuTherapyRef);
             this.Controls.Add(this.label2);

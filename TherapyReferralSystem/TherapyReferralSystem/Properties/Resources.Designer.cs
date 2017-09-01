@@ -63,9 +63,29 @@ namespace TherapyReferralSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Form___Texture {
+            get {
+                object obj = ResourceManager.GetObject("Form---Texture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Get_Question_Button {
             get {
                 object obj = ResourceManager.GetObject("Get-Question-Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Get_Question_Button1 {
+            get {
+                object obj = ResourceManager.GetObject("Get-Question-Button1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
