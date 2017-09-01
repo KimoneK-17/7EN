@@ -163,6 +163,7 @@
             this.btnGetQuestion.Size = new System.Drawing.Size(123, 55);
             this.btnGetQuestion.TabIndex = 30;
             this.btnGetQuestion.UseVisualStyleBackColor = true;
+            this.btnGetQuestion.Click += new System.EventHandler(this.btnGetQuestion_Click);
             // 
             // txtSecurityQuestion
             // 
