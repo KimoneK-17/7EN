@@ -1,4 +1,4 @@
-﻿namespace Register_Form
+﻿namespace TherapyReferralSystem
 {
     partial class frmRegisterUser
     {

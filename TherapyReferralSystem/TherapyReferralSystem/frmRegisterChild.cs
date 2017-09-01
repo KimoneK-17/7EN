@@ -51,9 +51,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildRegTherapist_Click(object sender, EventArgs e)
         {
-            frmRegisterTherapist rt = new frmRegisterTherapist();
-            rt.Show();
-            this.Close();
+
         }
 
         private void mnuRegChildReports_Click(object sender, EventArgs e)
@@ -82,7 +80,14 @@ namespace TherapyReferralSystem
         {
 
 
-            checkEmpty();
+            //checkEmpty();
+            IDValidation();
+
+        }
+
+
+        public void insertRecords()
+        {
             if (c_empty == false)
             {
                 IDValidation();
@@ -127,7 +132,6 @@ namespace TherapyReferralSystem
                 //MessageBox.Show("Please enter all fields before proceeding");
             }
         }
-
         public void ClearFields()
         {
             txtNumber.Text = "";
@@ -174,12 +178,17 @@ namespace TherapyReferralSystem
 
         public long IDValidation()
         {
-            if (!c_idNum.Equals(""))
+            if (!txtID.Text.Equals(""))
             {
-                if (c_idNum.Length == 13)
+               
+                if (txtID.Text.Length == 13)
                 {
-                    c_id = long.Parse(c_idNum);
-
+                    c_id = long.Parse(txtID.Text);
+                    checkID();
+                }
+                else
+                {
+                    MessageBox.Show("ID Length must be 10");
                 }
 
 
@@ -187,18 +196,77 @@ namespace TherapyReferralSystem
             return c_id;
         }//ID Validation
 
-
-        public void checkSelected()
+        public void checkID()
         {
-            if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)
+            long n = c_id;
+            n = long.Parse(txtID.Text.Remove(txtID.Text.Length - 1, 1));
+
+            long oddSum = 0, evenSum = 0;
+              int  evenSumP2 = 0;
+
+            int counter = 1;
+            string evenStr = "", oddStr = "";
+            while (n != 0)
             {
-                //get values from comboboxes
-                c_status = cmbStatus.SelectedItem.ToString();
-                c_house = cmbHouse.SelectedItem.ToString();
-                c_cluster = cmbCluster.SelectedItem.ToString();
-                c_bsf = cmbBSF.SelectedItem.ToString();
-                c_gender = cmbGender.SelectedItem.ToString();
+                if (counter % 2 == 0)
+                {
+                    oddSum += n % 10;
+                    oddStr = n % 10 + "" + oddStr;
+                    n /= 10;
+                }
+                else
+                {
+                    evenSum += n % 10;
+                    evenStr = n % 10 + "" + evenStr;
+                    n /= 10;
+
+                }
+                counter++;
             }
+
+           int sum = 0;
+            evenSumP2 = int.Parse(evenStr)*2;
+            while ( evenSumP2!= 0)
+            {
+                sum += evenSumP2 % 10;
+                evenSumP2 /= 10;
+            }
+
+            long addSumandOdd = sum + oddSum;
+            long i = addSumandOdd;
+            long lastdigit = (addSumandOdd % 10);
+
+            long subFromTen = 10 - lastdigit;
+
+
+            MessageBox.Show("Even: " + evenSum + "\nEven String: " + evenStr);
+            MessageBox.Show("Odd: " + oddSum + "\nOdd String: "+oddStr);
+            MessageBox.Show("Even Sum: " + sum);
+            MessageBox.Show("Sum of odd number calc + sum of even number calc = " + addSumandOdd);
+            MessageBox.Show("Last digit of Sum: " + lastdigit);
+            MessageBox.Show("Sub from ten value: "+subFromTen);
+
+            if((c_id%10)==(subFromTen%10))
+            {
+                MessageBox.Show("Valid ID");
+            }
+            else
+            {
+                MessageBox.Show("ID Number is invalid");
+            }
+
+        }
+    public void checkSelected()
+    {
+        if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)
+        {
+            //get values from comboboxes
+            c_status = cmbStatus.SelectedItem.ToString();
+            c_house = cmbHouse.SelectedItem.ToString();
+            c_cluster = cmbCluster.SelectedItem.ToString();
+            c_bsf = cmbBSF.SelectedItem.ToString();
+            c_gender = cmbGender.SelectedItem.ToString();
         }
     }
+}
     }
