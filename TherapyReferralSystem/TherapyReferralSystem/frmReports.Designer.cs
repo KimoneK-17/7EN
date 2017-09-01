@@ -35,29 +35,29 @@
             this.mnuReportsPrintRep = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cboxReport = new System.Windows.Forms.ComboBox();
+            this.lblReportSelect = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblTherID = new System.Windows.Forms.Label();
+            this.lblChildID = new System.Windows.Forms.Label();
+            this.lblCluster = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.cboxCluster = new System.Windows.Forms.ComboBox();
+            this.cboxHouse = new System.Windows.Forms.ComboBox();
+            this.lblHouse = new System.Windows.Forms.Label();
+            this.cboxTherapyType = new System.Windows.Forms.ComboBox();
+            this.lblTherapyType = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.cboxDay = new System.Windows.Forms.ComboBox();
+            this.lblDay = new System.Windows.Forms.Label();
+            this.cboxMonth = new System.Windows.Forms.ComboBox();
+            this.lblMonth = new System.Windows.Forms.Label();
+            this.cboxYear = new System.Windows.Forms.ComboBox();
+            this.lblYear = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.txtTherapistID = new System.Windows.Forms.TextBox();
             this.txtChildID = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cboxRefine = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             // mnuReports
             // 
             this.mnuReports.BackColor = System.Drawing.Color.DimGray;
-            this.mnuReports.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.mnuReports.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuReportsFile,
             this.mnuReportsPrintRep,
@@ -86,20 +86,20 @@
             this.mnuReportsLogout});
             this.mnuReportsFile.ForeColor = System.Drawing.Color.White;
             this.mnuReportsFile.Name = "mnuReportsFile";
-            this.mnuReportsFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuReportsFile.Size = new System.Drawing.Size(47, 22);
             this.mnuReportsFile.Text = "File";
             // 
             // mnuReportsReturn
             // 
             this.mnuReportsReturn.Name = "mnuReportsReturn";
-            this.mnuReportsReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuReportsReturn.Size = new System.Drawing.Size(128, 22);
             this.mnuReportsReturn.Text = "Return";
             this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
             // mnuReportsLogout
             // 
             this.mnuReportsLogout.Name = "mnuReportsLogout";
-            this.mnuReportsLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuReportsLogout.Size = new System.Drawing.Size(128, 22);
             this.mnuReportsLogout.Text = "Logout";
             this.mnuReportsLogout.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -107,14 +107,14 @@
             // 
             this.mnuReportsPrintRep.ForeColor = System.Drawing.Color.White;
             this.mnuReportsPrintRep.Name = "mnuReportsPrintRep";
-            this.mnuReportsPrintRep.Size = new System.Drawing.Size(98, 22);
+            this.mnuReportsPrintRep.Size = new System.Drawing.Size(111, 22);
             this.mnuReportsPrintRep.Text = "Print Report";
             // 
             // mnuReportsHelp
             // 
             this.mnuReportsHelp.ForeColor = System.Drawing.Color.White;
             this.mnuReportsHelp.Name = "mnuReportsHelp";
-            this.mnuReportsHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuReportsHelp.Size = new System.Drawing.Size(54, 22);
             this.mnuReportsHelp.Text = "Help";
             this.mnuReportsHelp.Click += new System.EventHandler(this.mnuReportsHelp_Click);
             // 
@@ -128,10 +128,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Reports";
             // 
-            // comboBox1
+            // cboxReport
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboxReport.FormattingEnabled = true;
+            this.cboxReport.Items.AddRange(new object[] {
             "Theraphy",
             "ADD & ADHD Theraphy",
             "Child Information",
@@ -139,20 +139,20 @@
             "Referals",
             "Interventions",
             "Waiting on outside resource"});
-            this.comboBox1.Location = new System.Drawing.Point(48, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cboxReport.Location = new System.Drawing.Point(48, 100);
+            this.cboxReport.Name = "cboxReport";
+            this.cboxReport.Size = new System.Drawing.Size(184, 21);
+            this.cboxReport.TabIndex = 2;
             // 
-            // label3
+            // lblReportSelect
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Select your report to view";
+            this.lblReportSelect.AutoSize = true;
+            this.lblReportSelect.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportSelect.Location = new System.Drawing.Point(49, 78);
+            this.lblReportSelect.Name = "lblReportSelect";
+            this.lblReportSelect.Size = new System.Drawing.Size(183, 19);
+            this.lblReportSelect.TabIndex = 3;
+            this.lblReportSelect.Text = "Select your report to view";
             // 
             // dataGridView1
             // 
@@ -162,148 +162,194 @@
             this.dataGridView1.Size = new System.Drawing.Size(768, 314);
             this.dataGridView1.TabIndex = 4;
             // 
-            // label11
+            // lblTherID
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(309, 208);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Search by therapist ID:";
+            this.lblTherID.AutoSize = true;
+            this.lblTherID.Location = new System.Drawing.Point(307, 188);
+            this.lblTherID.Name = "lblTherID";
+            this.lblTherID.Size = new System.Drawing.Size(115, 13);
+            this.lblTherID.TabIndex = 12;
+            this.lblTherID.Text = "Search by therapist ID:";
+            this.lblTherID.Visible = false;
             // 
-            // label12
+            // lblChildID
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(309, 234);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Search by child ID:";
+            this.lblChildID.AutoSize = true;
+            this.lblChildID.Location = new System.Drawing.Point(307, 214);
+            this.lblChildID.Name = "lblChildID";
+            this.lblChildID.Size = new System.Drawing.Size(97, 13);
+            this.lblChildID.TabIndex = 11;
+            this.lblChildID.Text = "Search by child ID:";
+            this.lblChildID.Visible = false;
             // 
-            // label20
+            // lblCluster
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(309, 103);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 13);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "Select Cluster";
+            this.lblCluster.AutoSize = true;
+            this.lblCluster.Location = new System.Drawing.Point(307, 83);
+            this.lblCluster.Name = "lblCluster";
+            this.lblCluster.Size = new System.Drawing.Size(72, 13);
+            this.lblCluster.TabIndex = 22;
+            this.lblCluster.Text = "Select Cluster";
+            this.lblCluster.Visible = false;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(372, 82);
+            this.label21.Location = new System.Drawing.Point(317, 68);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(206, 13);
             this.label21.TabIndex = 23;
             this.label21.Text = "(pop up house only when cluster selected)";
             // 
-            // comboBox2
+            // cboxCluster
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(311, 120);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 24;
+            this.cboxCluster.FormattingEnabled = true;
+            this.cboxCluster.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cboxCluster.Location = new System.Drawing.Point(309, 100);
+            this.cboxCluster.Name = "cboxCluster";
+            this.cboxCluster.Size = new System.Drawing.Size(121, 21);
+            this.cboxCluster.TabIndex = 24;
+            this.cboxCluster.Visible = false;
+            this.cboxCluster.SelectedIndexChanged += new System.EventHandler(this.cboxCluster_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cboxHouse
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(457, 120);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 26;
+            this.cboxHouse.FormattingEnabled = true;
+            this.cboxHouse.Location = new System.Drawing.Point(455, 100);
+            this.cboxHouse.Name = "cboxHouse";
+            this.cboxHouse.Size = new System.Drawing.Size(121, 21);
+            this.cboxHouse.TabIndex = 26;
+            this.cboxHouse.Visible = false;
             // 
-            // label22
+            // lblHouse
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(455, 103);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 13);
-            this.label22.TabIndex = 25;
-            this.label22.Text = "Select House";
+            this.lblHouse.AutoSize = true;
+            this.lblHouse.Location = new System.Drawing.Point(453, 83);
+            this.lblHouse.Name = "lblHouse";
+            this.lblHouse.Size = new System.Drawing.Size(71, 13);
+            this.lblHouse.TabIndex = 25;
+            this.lblHouse.Text = "Select House";
+            this.lblHouse.Visible = false;
             // 
-            // comboBox4
+            // cboxTherapyType
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(607, 120);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 28;
+            this.cboxTherapyType.FormattingEnabled = true;
+            this.cboxTherapyType.Location = new System.Drawing.Point(605, 100);
+            this.cboxTherapyType.Name = "cboxTherapyType";
+            this.cboxTherapyType.Size = new System.Drawing.Size(121, 21);
+            this.cboxTherapyType.TabIndex = 28;
+            this.cboxTherapyType.Visible = false;
             // 
-            // label23
+            // lblTherapyType
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(605, 103);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(106, 13);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "Select Therapy Type";
+            this.lblTherapyType.AutoSize = true;
+            this.lblTherapyType.Location = new System.Drawing.Point(603, 83);
+            this.lblTherapyType.Name = "lblTherapyType";
+            this.lblTherapyType.Size = new System.Drawing.Size(106, 13);
+            this.lblTherapyType.TabIndex = 27;
+            this.lblTherapyType.Text = "Select Therapy Type";
+            this.lblTherapyType.Visible = false;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(586, 84);
+            this.label24.Location = new System.Drawing.Point(585, 70);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(151, 13);
             this.label24.TabIndex = 29;
             this.label24.Text = "(pop up only where applicable)";
             // 
-            // comboBox5
+            // cboxDay
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(608, 175);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 35;
+            this.cboxDay.FormattingEnabled = true;
+            this.cboxDay.Location = new System.Drawing.Point(606, 155);
+            this.cboxDay.Name = "cboxDay";
+            this.cboxDay.Size = new System.Drawing.Size(121, 21);
+            this.cboxDay.TabIndex = 35;
+            this.cboxDay.Visible = false;
             // 
-            // label25
+            // lblDay
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(606, 158);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 13);
-            this.label25.TabIndex = 34;
-            this.label25.Text = "Select Day";
+            this.lblDay.AutoSize = true;
+            this.lblDay.Location = new System.Drawing.Point(604, 138);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(59, 13);
+            this.lblDay.TabIndex = 34;
+            this.lblDay.Text = "Select Day";
+            this.lblDay.Visible = false;
             // 
-            // comboBox6
+            // cboxMonth
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(457, 175);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 33;
+            this.cboxMonth.FormattingEnabled = true;
+            this.cboxMonth.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "Desember"});
+            this.cboxMonth.Location = new System.Drawing.Point(455, 155);
+            this.cboxMonth.Name = "cboxMonth";
+            this.cboxMonth.Size = new System.Drawing.Size(121, 21);
+            this.cboxMonth.TabIndex = 33;
+            this.cboxMonth.Visible = false;
+            this.cboxMonth.SelectedIndexChanged += new System.EventHandler(this.cboxMonth_SelectedIndexChanged);
             // 
-            // label26
+            // lblMonth
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(455, 158);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 13);
-            this.label26.TabIndex = 32;
-            this.label26.Text = "Select Month";
+            this.lblMonth.AutoSize = true;
+            this.lblMonth.Location = new System.Drawing.Point(453, 138);
+            this.lblMonth.Name = "lblMonth";
+            this.lblMonth.Size = new System.Drawing.Size(70, 13);
+            this.lblMonth.TabIndex = 32;
+            this.lblMonth.Text = "Select Month";
+            this.lblMonth.Visible = false;
             // 
-            // comboBox7
+            // cboxYear
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(311, 175);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 21);
-            this.comboBox7.TabIndex = 31;
+            this.cboxYear.FormattingEnabled = true;
+            this.cboxYear.Items.AddRange(new object[] {
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005"});
+            this.cboxYear.Location = new System.Drawing.Point(309, 155);
+            this.cboxYear.Name = "cboxYear";
+            this.cboxYear.Size = new System.Drawing.Size(121, 21);
+            this.cboxYear.TabIndex = 31;
+            this.cboxYear.Visible = false;
+            this.cboxYear.SelectedIndexChanged += new System.EventHandler(this.cboxYear_SelectedIndexChanged);
             // 
-            // label27
+            // lblYear
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(309, 158);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(62, 13);
-            this.label27.TabIndex = 30;
-            this.label27.Text = "Select Year";
+            this.lblYear.AutoSize = true;
+            this.lblYear.Location = new System.Drawing.Point(307, 138);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(62, 13);
+            this.lblYear.TabIndex = 30;
+            this.lblYear.Text = "Select Year";
+            this.lblYear.Visible = false;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(663, 199);
+            this.label28.Location = new System.Drawing.Point(661, 179);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(133, 13);
             this.label28.TabIndex = 36;
@@ -311,29 +357,32 @@
             // 
             // txtTherapistID
             // 
-            this.txtTherapistID.Location = new System.Drawing.Point(456, 205);
+            this.txtTherapistID.Location = new System.Drawing.Point(454, 185);
             this.txtTherapistID.Name = "txtTherapistID";
             this.txtTherapistID.Size = new System.Drawing.Size(100, 20);
             this.txtTherapistID.TabIndex = 37;
+            this.txtTherapistID.Visible = false;
             this.txtTherapistID.TextChanged += new System.EventHandler(this.txtTherapistID_TextChanged);
             // 
             // txtChildID
             // 
-            this.txtChildID.Location = new System.Drawing.Point(456, 231);
+            this.txtChildID.Location = new System.Drawing.Point(454, 211);
             this.txtChildID.Name = "txtChildID";
             this.txtChildID.Size = new System.Drawing.Size(100, 20);
             this.txtChildID.TabIndex = 38;
+            this.txtChildID.Visible = false;
             this.txtChildID.TextChanged += new System.EventHandler(this.txtChildID_TextChanged);
             // 
-            // checkBox1
+            // cboxRefine
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(48, 134);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(94, 17);
-            this.checkBox1.TabIndex = 39;
-            this.checkBox1.Text = "Refine Search";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cboxRefine.AutoSize = true;
+            this.cboxRefine.Location = new System.Drawing.Point(48, 134);
+            this.cboxRefine.Name = "cboxRefine";
+            this.cboxRefine.Size = new System.Drawing.Size(94, 17);
+            this.cboxRefine.TabIndex = 39;
+            this.cboxRefine.Text = "Refine Search";
+            this.cboxRefine.UseVisualStyleBackColor = true;
+            this.cboxRefine.CheckedChanged += new System.EventHandler(this.cboxRefine_CheckedChanged);
             // 
             // label4
             // 
@@ -347,7 +396,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(392, 141);
+            this.label5.Location = new System.Drawing.Point(390, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(195, 13);
             this.label5.TabIndex = 41;
@@ -356,7 +405,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(593, 141);
+            this.label6.Location = new System.Drawing.Point(591, 121);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(192, 13);
             this.label6.TabIndex = 42;
@@ -368,29 +417,29 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cboxRefine);
             this.Controls.Add(this.txtChildID);
             this.Controls.Add(this.txtTherapistID);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.label27);
+            this.Controls.Add(this.cboxDay);
+            this.Controls.Add(this.lblDay);
+            this.Controls.Add(this.cboxMonth);
+            this.Controls.Add(this.lblMonth);
+            this.Controls.Add(this.cboxYear);
+            this.Controls.Add(this.lblYear);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboxTherapyType);
+            this.Controls.Add(this.lblTherapyType);
+            this.Controls.Add(this.cboxHouse);
+            this.Controls.Add(this.lblHouse);
+            this.Controls.Add(this.cboxCluster);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblCluster);
+            this.Controls.Add(this.lblTherID);
+            this.Controls.Add(this.lblChildID);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblReportSelect);
+            this.Controls.Add(this.cboxReport);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.mnuReports);
             this.MainMenuStrip = this.mnuReports;
@@ -416,30 +465,30 @@
         private System.Windows.Forms.ToolStripMenuItem mnuReportsReturn;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsPrintRep;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cboxReport;
+        private System.Windows.Forms.Label lblReportSelect;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsHelp;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblTherID;
+        private System.Windows.Forms.Label lblChildID;
+        private System.Windows.Forms.Label lblCluster;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cboxCluster;
+        private System.Windows.Forms.ComboBox cboxHouse;
+        private System.Windows.Forms.Label lblHouse;
+        private System.Windows.Forms.ComboBox cboxTherapyType;
+        private System.Windows.Forms.Label lblTherapyType;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox cboxDay;
+        private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.ComboBox cboxMonth;
+        private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.ComboBox cboxYear;
+        private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtTherapistID;
         private System.Windows.Forms.TextBox txtChildID;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cboxRefine;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

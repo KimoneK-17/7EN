@@ -64,6 +64,46 @@ namespace TherapyReferralSystem
             this.Close();
         }
 
+        private void cboxRefine_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cboxRefine.Checked)
+            {
+                lblCluster.Visible = true;
+                cboxCluster.Visible = true;
+
+                lblYear.Visible = true;
+                cboxYear.Visible = true;
+
+                lblTherID.Visible = true;
+                txtTherapistID.Visible = true;
+
+                lblChildID.Visible = true;
+                txtChildID.Visible = true;
+
+                lblTherapyType.Visible = true;
+                cboxTherapyType.Visible = true;
+            }
+        }
+
+        private void cboxCluster_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblHouse.Visible = true;
+            cboxHouse.Visible = true;
+        }
+
+        private void cboxYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblMonth.Visible = true;
+            cboxMonth.Visible = true;
+        }
+
+        private void cboxMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblDay.Visible = true;
+            cboxDay.Visible = true;
+        }
+
+
         //**********************************************************************************
 
     }
