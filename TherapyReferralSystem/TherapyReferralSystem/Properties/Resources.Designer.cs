@@ -63,9 +63,9 @@ namespace TherapyReferralSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Form___Texture {
+        internal static System.Drawing.Bitmap Form_Texture {
             get {
-                object obj = ResourceManager.GetObject("Form---Texture", resourceCulture);
+                object obj = ResourceManager.GetObject("Form_Texture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace TherapyReferralSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Get_Question_Button {
             get {
-                object obj = ResourceManager.GetObject("Get-Question-Button", resourceCulture);
+                object obj = ResourceManager.GetObject("Get_Question_Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace TherapyReferralSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Get_Question_Button1 {
             get {
-                object obj = ResourceManager.GetObject("Get-Question-Button1", resourceCulture);
+                object obj = ResourceManager.GetObject("Get_Question_Button1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace TherapyReferralSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Login_Button {
             get {
-                object obj = ResourceManager.GetObject("Login-Button", resourceCulture);
+                object obj = ResourceManager.GetObject("Login_Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,7 @@ namespace TherapyReferralSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Request_Reset_Button {
             get {
-                object obj = ResourceManager.GetObject("Request-Reset-Button", resourceCulture);
+                object obj = ResourceManager.GetObject("Request_Reset_Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,7 +115,7 @@ namespace TherapyReferralSystem.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Submit_Answer_Button {
             get {
-                object obj = ResourceManager.GetObject("Submit-Answer-Button", resourceCulture);
+                object obj = ResourceManager.GetObject("Submit_Answer_Button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

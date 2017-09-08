@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form___Texture;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(518, 445);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);
