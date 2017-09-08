@@ -126,6 +126,7 @@
             this.btnSubmitAnswer.Size = new System.Drawing.Size(92, 45);
             this.btnSubmitAnswer.TabIndex = 33;
             this.btnSubmitAnswer.UseVisualStyleBackColor = true;
+            this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click);
             // 
             // txtAnswer
             // 

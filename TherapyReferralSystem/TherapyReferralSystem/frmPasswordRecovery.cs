@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +23,7 @@ namespace TherapyReferralSystem
         string username;
         string password;
         bool found, checkValid;
+        string randomPassword;
 
         DBConnect objDBConnect = new DBConnect();
 
@@ -67,6 +70,39 @@ namespace TherapyReferralSystem
         private void btnGetQuestion_Click(object sender, EventArgs e)
         {
             getSecQuestion();
+        }
+
+        public void getOTP()
+        {
+            randomPassword = Path.GetRandomFileName();
+            randomPassword = randomPassword.Replace(".", "");
+        }
+
+        private void btnSubmitAnswer_Click(object sender, EventArgs e)
+        {
+            getOTP();
+
+            try
+            {
+                MailMessage email = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                email.From = new MailAddress("kimone001@gmail.com");
+                email.To.Add(txtEmailAddress.Text);
+                email.Subject = "Test Mail";
+                email.Body = "Hi user, this is your newly generated password: " + randomPassword;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("username", "password");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(email);
+                MessageBox.Show("Email Sent");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public void getSecQuestion()
