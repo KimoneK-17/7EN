@@ -94,7 +94,6 @@
             // 
             // btnRequestReset
             // 
-            this.btnRequestReset.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Request_Reset_Button;
             this.btnRequestReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestReset.Location = new System.Drawing.Point(178, 369);
@@ -118,7 +117,6 @@
             // 
             // btnSubmitAnswer
             // 
-            this.btnSubmitAnswer.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Submit_Answer_Button;
             this.btnSubmitAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmitAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitAnswer.Location = new System.Drawing.Point(178, 260);
@@ -149,7 +147,6 @@
             // 
             // btnGetQuestion
             // 
-            this.btnGetQuestion.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Get_Question_Button1;
             this.btnGetQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGetQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetQuestion.Location = new System.Drawing.Point(178, 132);
@@ -183,7 +180,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
+=======
+>>>>>>> origin/master
             this.ClientSize = new System.Drawing.Size(518, 445);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);
