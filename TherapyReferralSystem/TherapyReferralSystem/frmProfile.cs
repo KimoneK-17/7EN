@@ -60,21 +60,21 @@ namespace TherapyReferralSystem
         {
             frmLogin1 login = new frmLogin1();
             login.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuProfileReports_Click(object sender, EventArgs e)
         {
             frmReports rep = new frmReports();
             rep.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuProfileHelp_Click(object sender, EventArgs e)
         {
             frmHelp help = new frmHelp();
             help.Show();
-            this.Close();
+            this.Dispose();
         }
         //**********************************************************************************************
     }

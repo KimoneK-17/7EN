@@ -88,6 +88,18 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void mnuLoginLogout_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
+        private void mnuLoginHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Dispose();
+        }
+
         private void CheckValid()
         {
             try

@@ -27,7 +27,7 @@ namespace TherapyReferralSystem
         {
             frmHelp help = new frmHelp();
             help.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuRegChildForm_Click(object sender, EventArgs e)
@@ -39,33 +39,28 @@ namespace TherapyReferralSystem
         {
             frmTherapyReferral tr = new frmTherapyReferral();
             tr.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
-            //frmRegisterUser ru = new frmRegisterUser();
-            //ru.Show();
-            //this.Close(); 
-        }
-
-        private void mnuRegChildRegTherapist_Click(object sender, EventArgs e)
-        {
-
+            frmRegisterUser ru = new frmRegisterUser();
+            ru.Show();
+            this.Close(); 
         }
 
         private void mnuRegChildReports_Click(object sender, EventArgs e)
         {
             frmReports rep = new frmReports();
             rep.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuRegChildReturn_Click(object sender, EventArgs e)
         {
             frmLogin1 login = new frmLogin1();
             login.Show();
-            this.Close();
+            this.Dispose();
         }
 
         bool c_empty;

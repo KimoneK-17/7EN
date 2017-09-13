@@ -49,19 +49,15 @@ namespace TherapyReferralSystem
         {
             frmLogin1 login = new frmLogin1();
             login.Show();
-            this.Close();
+            this.Dispose();
         }
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void mnuReportsHelp_Click(object sender, EventArgs e)
         {
             frmHelp help = new frmHelp();
             help.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void cboxRefine_CheckedChanged(object sender, EventArgs e)

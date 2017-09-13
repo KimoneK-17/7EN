@@ -31,7 +31,6 @@
             this.mnuReports = new System.Windows.Forms.MenuStrip();
             this.mnuReportsFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsReturn = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuReportsLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsPrintRep = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,8 +81,7 @@
             // mnuReportsFile
             // 
             this.mnuReportsFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuReportsReturn,
-            this.mnuReportsLogout});
+            this.mnuReportsReturn});
             this.mnuReportsFile.ForeColor = System.Drawing.Color.White;
             this.mnuReportsFile.Name = "mnuReportsFile";
             this.mnuReportsFile.Size = new System.Drawing.Size(47, 22);
@@ -92,16 +90,9 @@
             // mnuReportsReturn
             // 
             this.mnuReportsReturn.Name = "mnuReportsReturn";
-            this.mnuReportsReturn.Size = new System.Drawing.Size(128, 22);
+            this.mnuReportsReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuReportsReturn.Text = "Return";
             this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
-            // 
-            // mnuReportsLogout
-            // 
-            this.mnuReportsLogout.Name = "mnuReportsLogout";
-            this.mnuReportsLogout.Size = new System.Drawing.Size(128, 22);
-            this.mnuReportsLogout.Text = "Logout";
-            this.mnuReportsLogout.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // mnuReportsPrintRep
             // 
@@ -433,7 +424,6 @@
             // 
             // frmReports
             // 
-
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(861, 619);
             this.Controls.Add(this.label6);
@@ -514,6 +504,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ToolStripMenuItem mnuReportsLogout;
     }
 }

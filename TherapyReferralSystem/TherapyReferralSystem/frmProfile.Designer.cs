@@ -31,7 +31,6 @@
             this.mnuProfile = new System.Windows.Forms.MenuStrip();
             this.mnuProfileFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileReturn = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProfileLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,8 +74,7 @@
             // mnuProfileFile
             // 
             this.mnuProfileFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuProfileReturn,
-            this.mnuProfileLogout});
+            this.mnuProfileReturn});
             this.mnuProfileFile.ForeColor = System.Drawing.Color.White;
             this.mnuProfileFile.Name = "mnuProfileFile";
             this.mnuProfileFile.Size = new System.Drawing.Size(44, 22);
@@ -85,15 +83,9 @@
             // mnuProfileReturn
             // 
             this.mnuProfileReturn.Name = "mnuProfileReturn";
-            this.mnuProfileReturn.Size = new System.Drawing.Size(122, 22);
+            this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuProfileReturn.Text = "Return";
             this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
-            // 
-            // mnuProfileLogout
-            // 
-            this.mnuProfileLogout.Name = "mnuProfileLogout";
-            this.mnuProfileLogout.Size = new System.Drawing.Size(122, 22);
-            this.mnuProfileLogout.Text = "Logout";
             // 
             // mnuProfileView
             // 
@@ -309,9 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
-
             this.ClientSize = new System.Drawing.Size(450, 320);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtPassword);
@@ -369,7 +359,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReturn;
-        private System.Windows.Forms.ToolStripMenuItem mnuProfileLogout;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReports;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileHelp;
     }

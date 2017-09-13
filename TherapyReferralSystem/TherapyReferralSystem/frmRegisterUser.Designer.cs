@@ -67,14 +67,12 @@
             this.mnuRegUser = new System.Windows.Forms.MenuStrip();
             this.mnuRegUserFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReturn = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRegUserLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserForm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserTherapyRef = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserRegChild = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRegUserRegTherapist = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mnuRegUser.SuspendLayout();
@@ -435,8 +433,7 @@
             // mnuRegUserFile
             // 
             this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuRegUserReturn,
-            this.mnuRegUserLogout});
+            this.mnuRegUserReturn});
             this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserFile.Name = "mnuRegUserFile";
             this.mnuRegUserFile.Size = new System.Drawing.Size(47, 22);
@@ -445,14 +442,9 @@
             // mnuRegUserReturn
             // 
             this.mnuRegUserReturn.Name = "mnuRegUserReturn";
-            this.mnuRegUserReturn.Size = new System.Drawing.Size(128, 22);
+            this.mnuRegUserReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuRegUserReturn.Text = "Return";
-            // 
-            // mnuRegUserLogout
-            // 
-            this.mnuRegUserLogout.Name = "mnuRegUserLogout";
-            this.mnuRegUserLogout.Size = new System.Drawing.Size(128, 22);
-            this.mnuRegUserLogout.Text = "Logout";
+            this.mnuRegUserReturn.Click += new System.EventHandler(this.mnuRegUserReturn_Click_1);
             // 
             // mnuRegUserView
             // 
@@ -481,8 +473,7 @@
             // 
             this.mnuRegUserForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegUserTherapyRef,
-            this.mnuRegUserRegChild,
-            this.mnuRegUserRegTherapist});
+            this.mnuRegUserRegChild});
             this.mnuRegUserForm.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserForm.Name = "mnuRegUserForm";
             this.mnuRegUserForm.Size = new System.Drawing.Size(60, 22);
@@ -502,18 +493,11 @@
             this.mnuRegUserRegChild.Text = "Register Child";
             this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
             // 
-            // mnuRegUserRegTherapist
-            // 
-            this.mnuRegUserRegTherapist.Name = "mnuRegUserRegTherapist";
-            this.mnuRegUserRegTherapist.Size = new System.Drawing.Size(214, 22);
-            this.mnuRegUserRegTherapist.Text = "Register Therapist";
-            this.mnuRegUserRegTherapist.Click += new System.EventHandler(this.mnuRegUserRegTherapist_Click);
-            // 
             // frmRegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 577);
+            this.ClientSize = new System.Drawing.Size(911, 604);
             this.Controls.Add(this.mnuRegUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -577,14 +561,12 @@
         private System.Windows.Forms.MenuStrip mnuRegUser;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserFile;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserReturn;
-        private System.Windows.Forms.ToolStripMenuItem mnuRegUserLogout;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserView;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserReports;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserHelp;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserForm;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserTherapyRef;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegChild;
-        private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegTherapist;
     }
 }
 
