@@ -106,6 +106,20 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void mnuPassRecovReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 login = new frmLogin1();
+            login.Show();
+            this.Dispose();
+        }
+
+        private void mnuPassRecovHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Dispose();
+        }
+
         public void getSecQuestion()
         {
             try

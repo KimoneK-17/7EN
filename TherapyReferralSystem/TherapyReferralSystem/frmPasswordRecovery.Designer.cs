@@ -30,9 +30,9 @@
         {
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.lblEmailUsername = new System.Windows.Forms.Label();
-            this.MENU = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPassRecov = new System.Windows.Forms.MenuStrip();
+            this.mnuPassRecovFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPassRecovReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRequestReset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmitAnswer = new System.Windows.Forms.Button();
@@ -41,7 +41,8 @@
             this.btnGetQuestion = new System.Windows.Forms.Button();
             this.txtSecurityQuestion = new System.Windows.Forms.TextBox();
             this.lblSecurityQuestion = new System.Windows.Forms.Label();
-            this.MENU.SuspendLayout();
+            this.mnuPassRecovHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPassRecov.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEmailAddress
@@ -64,33 +65,35 @@
             this.lblEmailUsername.TabIndex = 25;
             this.lblEmailUsername.Text = "Email Address";
             // 
-            // MENU
+            // mnuPassRecov
             // 
-            this.MENU.BackColor = System.Drawing.Color.DimGray;
-            this.MENU.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MENU.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.MENU.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.MENU.Location = new System.Drawing.Point(0, 0);
-            this.MENU.Name = "MENU";
-            this.MENU.Size = new System.Drawing.Size(518, 26);
-            this.MENU.TabIndex = 27;
-            this.MENU.Text = "MENU";
+            this.mnuPassRecov.BackColor = System.Drawing.Color.DimGray;
+            this.mnuPassRecov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuPassRecov.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mnuPassRecov.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPassRecovFile,
+            this.mnuPassRecovHelp});
+            this.mnuPassRecov.Location = new System.Drawing.Point(0, 0);
+            this.mnuPassRecov.Name = "mnuPassRecov";
+            this.mnuPassRecov.Size = new System.Drawing.Size(518, 26);
+            this.mnuPassRecov.TabIndex = 27;
+            this.mnuPassRecov.Text = "MENU";
             // 
-            // fileToolStripMenuItem
+            // mnuPassRecovFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.returnToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuPassRecovFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPassRecovReturn});
+            this.mnuPassRecovFile.ForeColor = System.Drawing.Color.White;
+            this.mnuPassRecovFile.Name = "mnuPassRecovFile";
+            this.mnuPassRecovFile.Size = new System.Drawing.Size(47, 22);
+            this.mnuPassRecovFile.Text = "File";
             // 
-            // returnToolStripMenuItem
+            // mnuPassRecovReturn
             // 
-            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
-            this.returnToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.returnToolStripMenuItem.Text = "Return";
+            this.mnuPassRecovReturn.Name = "mnuPassRecovReturn";
+            this.mnuPassRecovReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuPassRecovReturn.Text = "Return";
+            this.mnuPassRecovReturn.Click += new System.EventHandler(this.mnuPassRecovReturn_Click);
             // 
             // btnRequestReset
             // 
@@ -180,6 +183,14 @@
             this.lblSecurityQuestion.TabIndex = 28;
             this.lblSecurityQuestion.Text = "Security Question";
             // 
+            // mnuPassRecovHelp
+            // 
+            this.mnuPassRecovHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuPassRecovHelp.Name = "mnuPassRecovHelp";
+            this.mnuPassRecovHelp.Size = new System.Drawing.Size(54, 22);
+            this.mnuPassRecovHelp.Text = "Help";
+            this.mnuPassRecovHelp.Click += new System.EventHandler(this.mnuPassRecovHelp_Click);
+            // 
             // frmPasswordRecovery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(518, 445);
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);
-            this.Controls.Add(this.MENU);
+            this.Controls.Add(this.mnuPassRecov);
             this.Controls.Add(this.btnRequestReset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSubmitAnswer);
@@ -200,8 +211,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPasswordRecovery";
             this.Text = "frmPasswordRecovery";
-            this.MENU.ResumeLayout(false);
-            this.MENU.PerformLayout();
+            this.mnuPassRecov.ResumeLayout(false);
+            this.mnuPassRecov.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,9 +222,9 @@
 
         private System.Windows.Forms.TextBox txtEmailAddress;
         private System.Windows.Forms.Label lblEmailUsername;
-        private System.Windows.Forms.MenuStrip MENU;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuPassRecov;
+        private System.Windows.Forms.ToolStripMenuItem mnuPassRecovFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuPassRecovReturn;
         private System.Windows.Forms.Button btnRequestReset;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSubmitAnswer;
@@ -222,5 +233,6 @@
         private System.Windows.Forms.Button btnGetQuestion;
         private System.Windows.Forms.TextBox txtSecurityQuestion;
         private System.Windows.Forms.Label lblSecurityQuestion;
+        private System.Windows.Forms.ToolStripMenuItem mnuPassRecovHelp;
     }
 }

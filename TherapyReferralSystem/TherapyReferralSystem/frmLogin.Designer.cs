@@ -35,6 +35,11 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblForgotPassword = new System.Windows.Forms.Label();
+            this.mnuLogin = new System.Windows.Forms.MenuStrip();
+            this.mnuLoginFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLoginLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLoginHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -101,6 +106,44 @@
             this.lblForgotPassword.TabIndex = 5;
             this.lblForgotPassword.Text = "Forgot Password?";
             // 
+            // mnuLogin
+            // 
+            this.mnuLogin.BackColor = System.Drawing.Color.DimGray;
+            this.mnuLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuLogin.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mnuLogin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLoginFile,
+            this.mnuLoginHelp});
+            this.mnuLogin.Location = new System.Drawing.Point(0, 0);
+            this.mnuLogin.Name = "mnuLogin";
+            this.mnuLogin.Size = new System.Drawing.Size(557, 26);
+            this.mnuLogin.TabIndex = 28;
+            this.mnuLogin.Text = "MENU";
+            // 
+            // mnuLoginFile
+            // 
+            this.mnuLoginFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuLoginLogout});
+            this.mnuLoginFile.ForeColor = System.Drawing.Color.White;
+            this.mnuLoginFile.Name = "mnuLoginFile";
+            this.mnuLoginFile.Size = new System.Drawing.Size(47, 22);
+            this.mnuLoginFile.Text = "File";
+            // 
+            // mnuLoginLogout
+            // 
+            this.mnuLoginLogout.Name = "mnuLoginLogout";
+            this.mnuLoginLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuLoginLogout.Text = "Logout";
+            this.mnuLoginLogout.Click += new System.EventHandler(this.mnuLoginLogout_Click);
+            // 
+            // mnuLoginHelp
+            // 
+            this.mnuLoginHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuLoginHelp.Name = "mnuLoginHelp";
+            this.mnuLoginHelp.Size = new System.Drawing.Size(54, 22);
+            this.mnuLoginHelp.Text = "Help";
+            this.mnuLoginHelp.Click += new System.EventHandler(this.mnuLoginHelp_Click);
+            // 
             // frmLogin1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +151,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(557, 241);
+            this.Controls.Add(this.mnuLogin);
             this.Controls.Add(this.lblForgotPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -117,6 +161,8 @@
             this.Name = "frmLogin1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
+            this.mnuLogin.ResumeLayout(false);
+            this.mnuLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +176,9 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblForgotPassword;
+        private System.Windows.Forms.MenuStrip mnuLogin;
+        private System.Windows.Forms.ToolStripMenuItem mnuLoginFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuLoginLogout;
+        private System.Windows.Forms.ToolStripMenuItem mnuLoginHelp;
     }
 }
