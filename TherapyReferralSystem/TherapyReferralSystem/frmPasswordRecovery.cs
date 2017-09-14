@@ -24,6 +24,7 @@ namespace TherapyReferralSystem
         string password;
         bool found, checkValid;
         string randomPassword;
+        string securityQues;
 
         DBConnect objDBConnect = new DBConnect();
 
@@ -87,13 +88,13 @@ namespace TherapyReferralSystem
                 MailMessage email = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                email.From = new MailAddress("kimone001@gmail.com");
+                email.From = new MailAddress("livotp@gmail.com");
                 email.To.Add(txtEmailAddress.Text);
                 email.Subject = "Test Mail";
                 email.Body = "Hi user, this is your newly generated password: " + randomPassword;
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("username", "password");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("livotp@gmail.com", "passwordrecovery");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(email);
@@ -107,16 +108,27 @@ namespace TherapyReferralSystem
 
         public void getSecQuestion()
         {
-            objDBConnect.OpenConnection();
+            try
+            {
+                objDBConnect.OpenConnection();
 
-            objDBConnect.sqlCmd = new SqlCommand("SELECT u_secQuest FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
-            //query
-            objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
-            
-                   
-                    secQuestion = objDBConnect.sqlCmd.ExecuteScalar().ToString();
+                objDBConnect.sqlCmd = new SqlCommand("SELECT u_sec_Ques FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
+                //query
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
 
-            txtSecurityQuestion.Text = secQuestion;
+
+                secQuestion = (string)objDBConnect.sqlCmd.ExecuteScalar();
+
+                txtSecurityQuestion.Text = secQuestion;
+            }
+            catch(SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            catch(Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
                 }
             }
 
