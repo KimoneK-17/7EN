@@ -121,7 +121,7 @@ namespace TherapyReferralSystem
                     checkValid = true;
                     //in database
 
-                    frmProfile pr = new frmProfile();
+                    frmProfile pr = new frmProfile(username);
                     pr.Show();
                     this.Dispose();
                 }
