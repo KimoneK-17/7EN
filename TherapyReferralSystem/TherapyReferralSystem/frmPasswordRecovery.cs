@@ -25,6 +25,7 @@ namespace TherapyReferralSystem
         bool found, checkValid;
         string randomPassword;
         string securityQues;
+        string answer;
 
         DBConnect objDBConnect = new DBConnect();
 
@@ -143,10 +144,36 @@ namespace TherapyReferralSystem
             {
                 MessageBox.Show(x.Message);
             }
-                }
+
+         }
+
+        public void getAnswer()
+        {
+            try
+            {
+                objDBConnect.OpenConnection();
+
+                objDBConnect.sqlCmd = new SqlCommand("SELECT u_sec_Ans FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
+                //query
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
+
+
+                answer = (string)objDBConnect.sqlCmd.ExecuteScalar();
+
+                txtAnswer.Text = answer;
             }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
 
 
     }
+}
 
 
