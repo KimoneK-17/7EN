@@ -84,6 +84,12 @@ namespace TherapyReferralSystem
         {
             getOTP();
 
+            getAnswer();
+
+        }
+
+        public void sendOTPEmail()
+        {
             try
             {
                 MailMessage email = new MailMessage();
@@ -160,7 +166,14 @@ namespace TherapyReferralSystem
 
                 answer = (string)objDBConnect.sqlCmd.ExecuteScalar();
 
-                txtAnswer.Text = answer;
+                if(txtAnswer.Text == answer)
+                {
+                    sendOTPEmail();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid answer, request password change from admin");
+                }
             }
             catch (SqlException se)
             {
