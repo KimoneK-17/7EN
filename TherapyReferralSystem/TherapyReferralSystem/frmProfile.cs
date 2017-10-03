@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TherapyReferralSystem
 {
@@ -103,18 +104,34 @@ namespace TherapyReferralSystem
             try
             {
                 dbConnect.OpenConnection();
-                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
+                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID, U_IMAGE FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", username);
 
                 dbConnect.sqlDR = dbConnect.sqlCmd.ExecuteReader();
-                while (dbConnect.sqlDR.Read())
+                if (dbConnect.sqlDR.Read())
                 {//gets values and stores them in a variable
                     fname = (string)dbConnect.sqlDR["U_FNAME"];
                     sname = (string)dbConnect.sqlDR["U_SNAME"];
                     phone = (string)dbConnect.sqlDR["U_CONTACT"];
                     type = (string)dbConnect.sqlDR["U_TYPE"];
                     id = (string)dbConnect.sqlDR["U_ID"];
+                    byte[] images = (byte[])dbConnect.sqlDR["U_IMAGE"];
 
+                    if (images == null)
+                    {
+                        picbxProfilePic.Image = null;
+                    }
+
+                    else
+                    {
+                        MemoryStream mStream = new MemoryStream(images);
+                        picbxProfilePic.Image = Image.FromStream(mStream);
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("This data is not available...");
                 }
 
                 dbConnect.sqlConn.Close();
@@ -170,6 +187,40 @@ namespace TherapyReferralSystem
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             updateInfo();
+        }
+
+        string imgLocation = "";
+
+
+        private void btnChangePic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                picbxProfilePic.ImageLocation = imgLocation;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            byte[] images = null;
+            FileStream Stream = new FileStream(imgLocation, FileMode.Open,FileAccess.Read);
+            BinaryReader brs = new BinaryReader(Stream);
+            images = brs.ReadBytes((int)Stream.Length);
+
+            dbConnect.OpenConnection();
+            string sqlQuery = "UPDATE TBL_USER SET U_IMAGE = @U_IMAGE WHERE U_EMAIL LIKE @U_EMAIL";
+            dbConnect.sqlCmd = new SqlCommand(sqlQuery, dbConnect.sqlConn);
+
+            dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_IMAGE", images));
+            dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_EMAIL", username));
+            int N = dbConnect.sqlCmd.ExecuteNonQuery();
+            dbConnect.sqlConn.Close();
+            MessageBox.Show(N.ToString() + "Image Saved Successfully");
+
+            
         }
         //**********************************************************************************************
     }

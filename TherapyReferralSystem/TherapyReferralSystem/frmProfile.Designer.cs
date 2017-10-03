@@ -35,7 +35,7 @@
             this.mnuProfileReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picbxProfilePic = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,9 +50,10 @@
             this.txtWorkID = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnChangePic = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.mnuProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuProfile
@@ -120,14 +121,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Profile";
             // 
-            // pictureBox1
+            // picbxProfilePic
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(278, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 173);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picbxProfilePic.Location = new System.Drawing.Point(278, 70);
+            this.picbxProfilePic.Name = "picbxProfilePic";
+            this.picbxProfilePic.Size = new System.Drawing.Size(133, 173);
+            this.picbxProfilePic.TabIndex = 2;
+            this.picbxProfilePic.TabStop = false;
             // 
             // label2
             // 
@@ -267,14 +268,25 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "pic box";
             // 
-            // button2
+            // btnChangePic
             // 
-            this.button2.Location = new System.Drawing.Point(299, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Change picture ???";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnChangePic.Location = new System.Drawing.Point(299, 259);
+            this.btnChangePic.Name = "btnChangePic";
+            this.btnChangePic.Size = new System.Drawing.Size(112, 23);
+            this.btnChangePic.TabIndex = 19;
+            this.btnChangePic.Text = "Change picture ";
+            this.btnChangePic.UseVisualStyleBackColor = true;
+            this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(299, 285);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmProfile
             // 
@@ -282,7 +294,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(450, 320);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnChangePic);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtWorkID);
@@ -297,7 +310,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picbxProfilePic);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mnuProfile);
             this.MainMenuStrip = this.mnuProfile;
@@ -306,7 +319,7 @@
             this.Load += new System.EventHandler(this.frmProfile_Load);
             this.mnuProfile.ResumeLayout(false);
             this.mnuProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,7 +331,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuProfileFile;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picbxProfilePic;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -333,9 +346,10 @@
         private System.Windows.Forms.TextBox txtWorkID;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnChangePic;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReturn;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReports;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileHelp;
+        private System.Windows.Forms.Button btnSave;
     }
 }
