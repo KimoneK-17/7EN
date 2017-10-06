@@ -41,13 +41,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtWorkID = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnChangePic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -184,17 +182,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "ID";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 16);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Work ID ???";
-            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(131, 72);
@@ -235,16 +222,9 @@
             this.txtID.TabIndex = 13;
             this.txtID.Text = "shouldnt be able to edit";
             // 
-            // txtWorkID
-            // 
-            this.txtWorkID.Location = new System.Drawing.Point(131, 240);
-            this.txtWorkID.Name = "txtWorkID";
-            this.txtWorkID.Size = new System.Drawing.Size(128, 20);
-            this.txtWorkID.TabIndex = 14;
-            this.txtWorkID.Text = "shouldnt be able to edit";
-            // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(28, 285);
@@ -252,11 +232,12 @@
             this.btnUpdate.Size = new System.Drawing.Size(153, 23);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "UPDATE INFORMATION";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnChangePic
             // 
+            this.btnChangePic.BackColor = System.Drawing.SystemColors.Control;
             this.btnChangePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePic.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePic.Location = new System.Drawing.Point(299, 259);
@@ -264,11 +245,12 @@
             this.btnChangePic.Size = new System.Drawing.Size(129, 23);
             this.btnChangePic.TabIndex = 19;
             this.btnChangePic.Text = "CHANGE PICTURE";
-            this.btnChangePic.UseVisualStyleBackColor = true;
+            this.btnChangePic.UseVisualStyleBackColor = false;
             this.btnChangePic.Click += new System.EventHandler(this.btnChangePic_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(299, 285);
@@ -276,25 +258,23 @@
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(450, 320);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnChangePic);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtWorkID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -327,13 +307,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtPosition;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtWorkID;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnChangePic;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReturn;

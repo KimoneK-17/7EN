@@ -40,7 +40,6 @@
             this.lblTherID = new System.Windows.Forms.Label();
             this.lblChildID = new System.Windows.Forms.Label();
             this.lblCluster = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.cboxCluster = new System.Windows.Forms.ComboBox();
             this.cboxHouse = new System.Windows.Forms.ComboBox();
             this.lblHouse = new System.Windows.Forms.Label();
@@ -57,9 +56,10 @@
             this.txtTherapistID = new System.Windows.Forms.TextBox();
             this.txtChildID = new System.Windows.Forms.TextBox();
             this.cboxRefine = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             // mnuReportsReturn
             // 
             this.mnuReportsReturn.Name = "mnuReportsReturn";
-            this.mnuReportsReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuReportsReturn.Size = new System.Drawing.Size(126, 22);
             this.mnuReportsReturn.Text = "Return";
             this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
@@ -190,15 +190,6 @@
             this.lblCluster.TabIndex = 22;
             this.lblCluster.Text = "Select Cluster";
             this.lblCluster.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(317, 68);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(206, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "(pop up house only when cluster selected)";
             // 
             // cboxCluster
             // 
@@ -395,15 +386,6 @@
             this.cboxRefine.UseVisualStyleBackColor = false;
             this.cboxRefine.CheckedChanged += new System.EventHandler(this.cboxRefine_CheckedChanged);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 13);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "(hide all to right untill refine search selected)";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -422,9 +404,26 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "(pop up day only when month selected)";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(317, 68);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(206, 13);
+            this.label21.TabIndex = 23;
+            this.label21.Text = "(pop up house only when cluster selected)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(68, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(212, 13);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "(hide all to right untill refine search selected)";
+            // 
             // frmReports
             // 
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(861, 619);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -484,7 +483,6 @@
         private System.Windows.Forms.Label lblTherID;
         private System.Windows.Forms.Label lblChildID;
         private System.Windows.Forms.Label lblCluster;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox cboxCluster;
         private System.Windows.Forms.ComboBox cboxHouse;
         private System.Windows.Forms.Label lblHouse;
@@ -501,8 +499,9 @@
         private System.Windows.Forms.TextBox txtTherapistID;
         private System.Windows.Forms.TextBox txtChildID;
         private System.Windows.Forms.CheckBox cboxRefine;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label4;
     }
 }

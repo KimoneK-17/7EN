@@ -416,6 +416,7 @@
             // 
             // btnsubmit
             // 
+            this.btnsubmit.BackColor = System.Drawing.SystemColors.Control;
             this.btnsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsubmit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsubmit.Location = new System.Drawing.Point(456, 522);
@@ -424,11 +425,12 @@
             this.btnsubmit.Size = new System.Drawing.Size(74, 23);
             this.btnsubmit.TabIndex = 43;
             this.btnsubmit.Text = "SUBMIT";
-            this.btnsubmit.UseVisualStyleBackColor = true;
+            this.btnsubmit.UseVisualStyleBackColor = false;
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // btnclear
             // 
+            this.btnclear.BackColor = System.Drawing.SystemColors.Control;
             this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.Location = new System.Drawing.Point(456, 483);
@@ -437,7 +439,7 @@
             this.btnclear.Size = new System.Drawing.Size(74, 35);
             this.btnclear.TabIndex = 44;
             this.btnclear.Text = "CLEAR";
-            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 
@@ -477,7 +479,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(558, 574);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsubmit);
