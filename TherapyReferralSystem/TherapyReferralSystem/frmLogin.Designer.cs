@@ -84,14 +84,14 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(246, 163);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 44);
             this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -132,7 +132,7 @@
             // mnuLoginLogout
             // 
             this.mnuLoginLogout.Name = "mnuLoginLogout";
-            this.mnuLoginLogout.Size = new System.Drawing.Size(152, 22);
+            this.mnuLoginLogout.Size = new System.Drawing.Size(128, 22);
             this.mnuLoginLogout.Text = "Logout";
             this.mnuLoginLogout.Click += new System.EventHandler(this.mnuLoginLogout_Click);
             // 

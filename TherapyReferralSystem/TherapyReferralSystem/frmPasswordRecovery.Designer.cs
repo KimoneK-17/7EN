@@ -33,6 +33,7 @@
             this.mnuPassRecov = new System.Windows.Forms.MenuStrip();
             this.mnuPassRecovFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPassRecovReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPassRecovHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRequestReset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmitAnswer = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.btnGetQuestion = new System.Windows.Forms.Button();
             this.txtSecurityQuestion = new System.Windows.Forms.TextBox();
             this.lblSecurityQuestion = new System.Windows.Forms.Label();
-            this.mnuPassRecovHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPassRecov.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,19 +91,28 @@
             // mnuPassRecovReturn
             // 
             this.mnuPassRecovReturn.Name = "mnuPassRecovReturn";
-            this.mnuPassRecovReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuPassRecovReturn.Size = new System.Drawing.Size(126, 22);
             this.mnuPassRecovReturn.Text = "Return";
             this.mnuPassRecovReturn.Click += new System.EventHandler(this.mnuPassRecovReturn_Click);
             // 
+            // mnuPassRecovHelp
+            // 
+            this.mnuPassRecovHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuPassRecovHelp.Name = "mnuPassRecovHelp";
+            this.mnuPassRecovHelp.Size = new System.Drawing.Size(54, 22);
+            this.mnuPassRecovHelp.Text = "Help";
+            this.mnuPassRecovHelp.Click += new System.EventHandler(this.mnuPassRecovHelp_Click);
+            // 
             // btnRequestReset
             // 
-            this.btnRequestReset.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Request_Reset_Button;
             this.btnRequestReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRequestReset.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequestReset.Location = new System.Drawing.Point(178, 369);
             this.btnRequestReset.Name = "btnRequestReset";
-            this.btnRequestReset.Size = new System.Drawing.Size(92, 45);
+            this.btnRequestReset.Size = new System.Drawing.Size(149, 45);
             this.btnRequestReset.TabIndex = 35;
+            this.btnRequestReset.Text = "REQUEST RESET";
             this.btnRequestReset.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -121,13 +130,14 @@
             // 
             // btnSubmitAnswer
             // 
-            this.btnSubmitAnswer.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Submit_Answer_Button;
             this.btnSubmitAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmitAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitAnswer.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitAnswer.Location = new System.Drawing.Point(178, 260);
             this.btnSubmitAnswer.Name = "btnSubmitAnswer";
-            this.btnSubmitAnswer.Size = new System.Drawing.Size(92, 45);
+            this.btnSubmitAnswer.Size = new System.Drawing.Size(149, 45);
             this.btnSubmitAnswer.TabIndex = 33;
+            this.btnSubmitAnswer.Text = "SUBMIT ANSWER";
             this.btnSubmitAnswer.UseVisualStyleBackColor = true;
             this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click);
             // 
@@ -153,13 +163,14 @@
             // 
             // btnGetQuestion
             // 
-            this.btnGetQuestion.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Get_Question_Button;
             this.btnGetQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGetQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetQuestion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetQuestion.Location = new System.Drawing.Point(178, 132);
             this.btnGetQuestion.Name = "btnGetQuestion";
-            this.btnGetQuestion.Size = new System.Drawing.Size(92, 45);
+            this.btnGetQuestion.Size = new System.Drawing.Size(149, 45);
             this.btnGetQuestion.TabIndex = 30;
+            this.btnGetQuestion.Text = "GET QUESTION";
             this.btnGetQuestion.UseVisualStyleBackColor = true;
             this.btnGetQuestion.Click += new System.EventHandler(this.btnGetQuestion_Click);
             // 
@@ -182,14 +193,6 @@
             this.lblSecurityQuestion.Size = new System.Drawing.Size(128, 18);
             this.lblSecurityQuestion.TabIndex = 28;
             this.lblSecurityQuestion.Text = "Security Question";
-            // 
-            // mnuPassRecovHelp
-            // 
-            this.mnuPassRecovHelp.ForeColor = System.Drawing.Color.White;
-            this.mnuPassRecovHelp.Name = "mnuPassRecovHelp";
-            this.mnuPassRecovHelp.Size = new System.Drawing.Size(54, 22);
-            this.mnuPassRecovHelp.Text = "Help";
-            this.mnuPassRecovHelp.Click += new System.EventHandler(this.mnuPassRecovHelp_Click);
             // 
             // frmPasswordRecovery
             // 
