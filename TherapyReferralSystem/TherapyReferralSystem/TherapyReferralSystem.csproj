@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="frmAdminPWordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminPWordReset.Designer.cs">
+      <DependentUpon>frmAdminPWordReset.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHelp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Form - Texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

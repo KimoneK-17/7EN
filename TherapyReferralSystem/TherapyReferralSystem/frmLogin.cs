@@ -100,6 +100,24 @@ namespace TherapyReferralSystem
             this.Dispose();
         }
 
+        private void btnViewPword_Click(object sender, EventArgs e)
+        {
+
+            if (!txtPassword.Equals(""))
+            {
+                if (txtPassword.PasswordChar.Equals('\0'))
+                {
+                    txtPassword.PasswordChar = '*';
+                }
+                else
+                {
+                    txtPassword.PasswordChar = '\0';
+                }
+            }
+
+
+        }
+
         private void CheckValid()
         {
             try
@@ -123,7 +141,7 @@ namespace TherapyReferralSystem
 
                     frmProfile pr = new frmProfile(username);
                     pr.Show();
-                    this.Dispose();
+                    //this.Dispose();
                 }
                 else
                 {

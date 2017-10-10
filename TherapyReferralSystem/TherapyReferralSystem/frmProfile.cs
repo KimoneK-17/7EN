@@ -104,29 +104,32 @@ namespace TherapyReferralSystem
             try
             {
                 dbConnect.OpenConnection();
-                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID, U_IMAGE FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
+                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID,U_IMAGE FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", username);
 
                 dbConnect.sqlDR = dbConnect.sqlCmd.ExecuteReader();
                 if (dbConnect.sqlDR.Read())
                 {//gets values and stores them in a variable
-                    fname = (string)dbConnect.sqlDR["U_FNAME"];
-                    sname = (string)dbConnect.sqlDR["U_SNAME"];
-                    phone = (string)dbConnect.sqlDR["U_CONTACT"];
-                    type = (string)dbConnect.sqlDR["U_TYPE"];
-                    id = (string)dbConnect.sqlDR["U_ID"];
+                    fname = dbConnect.sqlDR["U_FNAME"].ToString();
+                    sname = dbConnect.sqlDR["U_SNAME"].ToString();
+                    phone = dbConnect.sqlDR["U_CONTACT"].ToString();
+                    type = dbConnect.sqlDR["U_TYPE"].ToString();
+                    id = dbConnect.sqlDR["U_ID"].ToString();
                     byte[] images = (byte[])dbConnect.sqlDR["U_IMAGE"];
 
-                    if (images == null)
-                    {
-                        picbxProfilePic.Image = null;
-                    }
+                     if (images == null)
+                     {
+                         picbxProfilePic.Image = null;
+                        
+                     }
 
-                    else
-                    {
-                        MemoryStream mStream = new MemoryStream(images);
-                        picbxProfilePic.Image = Image.FromStream(mStream);
-                    }
+                     else
+                     {
+                         MemoryStream mStream = new MemoryStream(images);
+                         picbxProfilePic.BackgroundImage = Image.FromStream(mStream);
+                       
+                        
+                     }
                 }
 
                 else
@@ -157,6 +160,10 @@ namespace TherapyReferralSystem
 
         public void updateInfo()
         {
+            fname = txtName.Text;
+            sname = txtSurname.Text;
+            phone = txtPhoneNumber.Text;
+            
             try
             {
                 dbConnect.OpenConnection();
@@ -166,10 +173,14 @@ namespace TherapyReferralSystem
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", sname);
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_CONTACT", phone);
+                dbConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", username);
 
-                dbConnect.sqlCmd.ExecuteNonQuery();
+                dbConnect.sqlDR = dbConnect.sqlCmd.ExecuteReader();
+
+                MessageBox.Show("Successfully Updated");
+                dbConnect.sqlDR.Close();
                 dbConnect.sqlConn.Close();
-                MessageBox.Show("Your information had been sucessfully updated");
+                
             }
 
             catch (SqlException se)
@@ -200,6 +211,7 @@ namespace TherapyReferralSystem
             {
                 imgLocation = dialog.FileName.ToString();
                 picbxProfilePic.ImageLocation = imgLocation;
+                
             }
         }
 

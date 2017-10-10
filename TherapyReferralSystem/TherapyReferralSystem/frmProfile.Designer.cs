@@ -56,14 +56,16 @@
             // mnuProfile
             // 
             this.mnuProfile.BackColor = System.Drawing.Color.DimGray;
-            this.mnuProfile.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.mnuProfile.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileFile,
             this.mnuProfileView,
             this.mnuProfileHelp});
             this.mnuProfile.Location = new System.Drawing.Point(0, 0);
             this.mnuProfile.Name = "mnuProfile";
-            this.mnuProfile.Size = new System.Drawing.Size(450, 26);
+            this.mnuProfile.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.mnuProfile.Size = new System.Drawing.Size(600, 32);
             this.mnuProfile.TabIndex = 0;
             this.mnuProfile.Text = "MENU";
             // 
@@ -73,13 +75,13 @@
             this.mnuProfileReturn});
             this.mnuProfileFile.ForeColor = System.Drawing.Color.White;
             this.mnuProfileFile.Name = "mnuProfileFile";
-            this.mnuProfileFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuProfileFile.Size = new System.Drawing.Size(57, 28);
             this.mnuProfileFile.Text = "File";
             // 
             // mnuProfileReturn
             // 
             this.mnuProfileReturn.Name = "mnuProfileReturn";
-            this.mnuProfileReturn.Size = new System.Drawing.Size(121, 22);
+            this.mnuProfileReturn.Size = new System.Drawing.Size(148, 28);
             this.mnuProfileReturn.Text = "Return";
             this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
             // 
@@ -89,13 +91,13 @@
             this.mnuProfileReports});
             this.mnuProfileView.ForeColor = System.Drawing.Color.White;
             this.mnuProfileView.Name = "mnuProfileView";
-            this.mnuProfileView.Size = new System.Drawing.Size(52, 22);
+            this.mnuProfileView.Size = new System.Drawing.Size(68, 28);
             this.mnuProfileView.Text = "View";
             // 
             // mnuProfileReports
             // 
             this.mnuProfileReports.Name = "mnuProfileReports";
-            this.mnuProfileReports.Size = new System.Drawing.Size(126, 22);
+            this.mnuProfileReports.Size = new System.Drawing.Size(158, 28);
             this.mnuProfileReports.Text = "Reports";
             this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
             // 
@@ -103,7 +105,7 @@
             // 
             this.mnuProfileHelp.ForeColor = System.Drawing.Color.White;
             this.mnuProfileHelp.Name = "mnuProfileHelp";
-            this.mnuProfileHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuProfileHelp.Size = new System.Drawing.Size(66, 28);
             this.mnuProfileHelp.Text = "Help";
             this.mnuProfileHelp.Click += new System.EventHandler(this.mnuProfileHelp_Click);
             // 
@@ -112,18 +114,21 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(183, 37);
+            this.label1.Location = new System.Drawing.Point(244, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "PROFILE";
             // 
             // picbxProfilePic
             // 
+            this.picbxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picbxProfilePic.Location = new System.Drawing.Point(278, 70);
+            this.picbxProfilePic.Location = new System.Drawing.Point(371, 86);
+            this.picbxProfilePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picbxProfilePic.Name = "picbxProfilePic";
-            this.picbxProfilePic.Size = new System.Drawing.Size(133, 173);
+            this.picbxProfilePic.Size = new System.Drawing.Size(176, 212);
             this.picbxProfilePic.TabIndex = 2;
             this.picbxProfilePic.TabStop = false;
             // 
@@ -132,9 +137,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 75);
+            this.label2.Location = new System.Drawing.Point(33, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name ";
             // 
@@ -143,9 +149,10 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 100);
+            this.label3.Location = new System.Drawing.Point(33, 123);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 16);
+            this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Surname ";
             // 
@@ -154,9 +161,10 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 127);
+            this.label4.Location = new System.Drawing.Point(33, 156);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 16);
+            this.label4.Size = new System.Drawing.Size(134, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Phone number";
             // 
@@ -165,9 +173,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 184);
+            this.label5.Location = new System.Drawing.Point(33, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Position";
             // 
@@ -176,49 +185,55 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 214);
+            this.label6.Location = new System.Drawing.Point(33, 263);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 16);
+            this.label6.Size = new System.Drawing.Size(30, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "ID";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(131, 72);
+            this.txtName.Location = new System.Drawing.Point(175, 89);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(128, 20);
+            this.txtName.Size = new System.Drawing.Size(169, 22);
             this.txtName.TabIndex = 9;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(131, 98);
+            this.txtSurname.Location = new System.Drawing.Point(175, 121);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(128, 20);
+            this.txtSurname.Size = new System.Drawing.Size(169, 22);
             this.txtSurname.TabIndex = 10;
             this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(131, 124);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(175, 153);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(128, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(169, 22);
             this.txtPhoneNumber.TabIndex = 11;
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(131, 181);
+            this.txtPosition.Location = new System.Drawing.Point(175, 223);
+            this.txtPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(128, 20);
+            this.txtPosition.Size = new System.Drawing.Size(169, 22);
             this.txtPosition.TabIndex = 12;
             this.txtPosition.Text = "shouldnt be able to edit";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(131, 210);
+            this.txtID.Location = new System.Drawing.Point(175, 258);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(128, 20);
+            this.txtID.Size = new System.Drawing.Size(169, 22);
             this.txtID.TabIndex = 13;
             this.txtID.Text = "shouldnt be able to edit";
             // 
@@ -227,9 +242,10 @@
             this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(28, 285);
+            this.btnUpdate.Location = new System.Drawing.Point(37, 351);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(204, 28);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "UPDATE INFORMATION";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -240,9 +256,10 @@
             this.btnChangePic.BackColor = System.Drawing.SystemColors.Control;
             this.btnChangePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePic.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePic.Location = new System.Drawing.Point(299, 259);
+            this.btnChangePic.Location = new System.Drawing.Point(399, 319);
+            this.btnChangePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangePic.Name = "btnChangePic";
-            this.btnChangePic.Size = new System.Drawing.Size(129, 23);
+            this.btnChangePic.Size = new System.Drawing.Size(172, 28);
             this.btnChangePic.TabIndex = 19;
             this.btnChangePic.Text = "CHANGE PICTURE";
             this.btnChangePic.UseVisualStyleBackColor = false;
@@ -253,9 +270,10 @@
             this.btnSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(299, 285);
+            this.btnSave.Location = new System.Drawing.Point(399, 351);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -263,10 +281,10 @@
             // 
             // frmProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(450, 320);
+            this.ClientSize = new System.Drawing.Size(600, 394);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnChangePic);
             this.Controls.Add(this.btnUpdate);
@@ -284,6 +302,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mnuProfile);
             this.MainMenuStrip = this.mnuProfile;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProfile";
             this.Text = "frmProfile";
             this.Load += new System.EventHandler(this.frmProfile_Load);
