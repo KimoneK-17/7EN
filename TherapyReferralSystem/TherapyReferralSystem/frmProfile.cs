@@ -112,31 +112,48 @@ namespace TherapyReferralSystem
             try
             {
                 dbConnect.OpenConnection();
-                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID,U_IMAGE FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
+                dbConnect.sqlCmd = new SqlCommand("SELECT U_FNAME, U_SNAME, U_CONTACT, U_TYPE, U_ID, U_IMAGE FROM TBL_USER WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // gets information by email identification
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", username);
 
                 dbConnect.sqlDR = dbConnect.sqlCmd.ExecuteReader();
                 if (dbConnect.sqlDR.Read())
                 {//gets values and stores them in a variable
-                    fname = dbConnect.sqlDR["U_FNAME"].ToString();
-                    sname = dbConnect.sqlDR["U_SNAME"].ToString();
-                    phone = dbConnect.sqlDR["U_CONTACT"].ToString();
-                    type = dbConnect.sqlDR["U_TYPE"].ToString();
-                    id = dbConnect.sqlDR["U_ID"].ToString();
+                    fname = (string)dbConnect.sqlDR["U_FNAME"];
+                    sname = (string)dbConnect.sqlDR["U_SNAME"];
+                    phone = (string)dbConnect.sqlDR["U_CONTACT"];
+                    type = (string)dbConnect.sqlDR["U_TYPE"];
+                    id = (string)dbConnect.sqlDR["U_ID"];
                     byte[] images = (byte[])dbConnect.sqlDR["U_IMAGE"];
 
                     if (images == null)
                     {
                         picbxProfilePic.Image = null;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
                     }
 
                     else
                     {
                         MemoryStream mStream = new MemoryStream(images);
+<<<<<<< HEAD
                         picbxProfilePic.BackgroundImage = Image.FromStream(mStream);
 
 
+=======
+<<<<<<< HEAD
+                        picbxProfilePic.BackgroundImage = Image.FromStream(mStream);
+
+
+=======
+                        picbxProfilePic.Image = Image.FromStream(mStream);
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
                     }
                 }
 
@@ -168,10 +185,16 @@ namespace TherapyReferralSystem
 
         public void updateInfo()
         {
+<<<<<<< HEAD
             fname = txtName.Text;
             sname = txtSurname.Text;
             phone = txtPhoneNumber.Text;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
             try
             {
                 dbConnect.OpenConnection();
@@ -181,14 +204,18 @@ namespace TherapyReferralSystem
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", sname);
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_CONTACT", phone);
-                dbConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", username);
 
-                dbConnect.sqlDR = dbConnect.sqlCmd.ExecuteReader();
-
-                MessageBox.Show("Successfully Updated");
-                dbConnect.sqlDR.Close();
+                dbConnect.sqlCmd.ExecuteNonQuery();
                 dbConnect.sqlConn.Close();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                MessageBox.Show("Your information had been sucessfully updated");
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
             }
 
             catch (SqlException se)
@@ -219,7 +246,14 @@ namespace TherapyReferralSystem
             {
                 imgLocation = dialog.FileName.ToString();
                 picbxProfilePic.ImageLocation = imgLocation;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
             }
         }
 

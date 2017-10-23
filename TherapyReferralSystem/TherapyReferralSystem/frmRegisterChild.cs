@@ -39,16 +39,14 @@ namespace TherapyReferralSystem
         {
             frmTherapyReferral tr = new frmTherapyReferral();
             tr.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
-            
             frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
-            this.Dispose();
-
+            this.Close(); 
         }
 
         private void mnuRegChildReports_Click(object sender, EventArgs e)
@@ -66,64 +64,7 @@ namespace TherapyReferralSystem
         }
 
         bool c_empty;
-
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            c_num = txtNumber.Text;
-            searchChild();
-        }
-
-        public void searchChild()
-        {
-
-            try
-            {
-                objDBConnect.OpenConnection();
-                string sqlquery = "SELECT C_NUMBER, C_STATUS, C_CLUSTER, C_HOUSE, C_BSF,C_FNAME, C_MNAME, C_SNAME,C_ID,C_GENDER,C_ADM_DATE,C_CONSIDER FROM CHILD WHERE C_NUMBER = @C_NUMBER";
-
-                objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
-                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
-
-                while (objDBConnect.sqlDR.Read())
-                {
-                    txtFName.Text = objDBConnect.sqlDR["C_FNAME"].ToString();
-                    txtLName.Text = objDBConnect.sqlDR["C_SNAME"].ToString();
-                    txtNumber.Text = objDBConnect.sqlDR["C_NUMBER"].ToString();
-                    txtMName.Text = objDBConnect.sqlDR["C_MNAME"].ToString();
-                    txtID.Text = objDBConnect.sqlDR["C_ID"].ToString();
-                    rtbxSpecCon.Text = objDBConnect.sqlDR["C_CONSIDER"].ToString();
-
-                    int iStatus = cmbStatus.Items.IndexOf(objDBConnect.sqlDR["C_STATUS"].ToString());
-                    cmbStatus.SelectedIndex = iStatus;
-                    int iCluster = cmbCluster.Items.IndexOf(objDBConnect.sqlDR["C_CLUSTER"].ToString());
-                    cmbCluster.SelectedIndex = iCluster;
-                    int iHouse = cmbHouse.Items.IndexOf(objDBConnect.sqlDR["C_HOUSE"].ToString());
-                    cmbHouse.SelectedIndex = iHouse;
-                    int iBSF = cmbBSF.Items.IndexOf(objDBConnect.sqlDR["C_BSF"].ToString());
-                    cmbBSF.SelectedIndex = iBSF;
-                    int iGender = cmbGender.Items.IndexOf(objDBConnect.sqlDR["C_GENDER"].ToString());
-                    cmbGender.SelectedIndex = iGender;
-
-                    dtpDOA.Value = Convert.ToDateTime(objDBConnect.sqlDR["C_ADM_DATE"].ToString());
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("fail");
-            }
-
-
-        }
-
         DBConnect objDBConnect = new DBConnect();
-
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            updateChild();
-
-        }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearFields();
@@ -135,15 +76,13 @@ namespace TherapyReferralSystem
 
 
             //checkEmpty();
-            //IDValidation();
-            insertRecords();
+            IDValidation();
 
         }
 
 
         public void insertRecords()
         {
-            checkEmpty();
             if (c_empty == false)
             {
                 IDValidation();
@@ -172,7 +111,6 @@ namespace TherapyReferralSystem
                     MessageBox.Show("Successfully Inserted");
                     objDBConnect.sqlDR.Close();
                     objDBConnect.sqlConn.Close();
-                    ClearFields();
 
                 }
                 catch (SqlException ex)
@@ -196,11 +134,6 @@ namespace TherapyReferralSystem
             txtID.Text = "";
             txtLName.Text = "";
             txtMName.Text = "";
-            cmbBSF.SelectedIndex = -1;
-            cmbCluster.SelectedIndex = -1;
-            cmbGender.SelectedIndex = -1;
-            cmbHouse.SelectedIndex = -1;
-            cmbStatus.SelectedIndex = -1;
         }//clear fields
 
         public void GetFields()
@@ -242,7 +175,7 @@ namespace TherapyReferralSystem
         {
             if (!txtID.Text.Equals(""))
             {
-
+               
                 if (txtID.Text.Length == 13)
                 {
                     c_id = long.Parse(txtID.Text);
@@ -264,7 +197,7 @@ namespace TherapyReferralSystem
             n = long.Parse(txtID.Text.Remove(txtID.Text.Length - 1, 1));
 
             long oddSum = 0, evenSum = 0;
-            int evenSumP2 = 0;
+              int  evenSumP2 = 0;
 
             int counter = 1;
             string evenStr = "", oddStr = "";
@@ -286,9 +219,9 @@ namespace TherapyReferralSystem
                 counter++;
             }
 
-            int sum = 0;
-            evenSumP2 = int.Parse(evenStr) * 2;
-            while (evenSumP2 != 0)
+           int sum = 0;
+            evenSumP2 = int.Parse(evenStr)*2;
+            while ( evenSumP2!= 0)
             {
                 sum += evenSumP2 % 10;
                 evenSumP2 /= 10;
@@ -301,14 +234,14 @@ namespace TherapyReferralSystem
             long subFromTen = 10 - lastdigit;
 
 
-            /*MessageBox.Show("Even: " + evenSum + "\nEven String: " + evenStr);
-            MessageBox.Show("Odd: " + oddSum + "\nOdd String: " + oddStr);
+            MessageBox.Show("Even: " + evenSum + "\nEven String: " + evenStr);
+            MessageBox.Show("Odd: " + oddSum + "\nOdd String: "+oddStr);
             MessageBox.Show("Even Sum: " + sum);
             MessageBox.Show("Sum of odd number calc + sum of even number calc = " + addSumandOdd);
             MessageBox.Show("Last digit of Sum: " + lastdigit);
-            MessageBox.Show("Sub from ten value: " + subFromTen);*/
+            MessageBox.Show("Sub from ten value: "+subFromTen);
 
-            if ((c_id % 10) == (subFromTen % 10))
+            if((c_id%10)==(subFromTen%10))
             {
                 MessageBox.Show("Valid ID");
             }
@@ -318,65 +251,17 @@ namespace TherapyReferralSystem
             }
 
         }
-        public void checkSelected()
+    public void checkSelected()
+    {
+        if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)
         {
-            if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)
-            {
-                //get values from comboboxes
-                c_status = cmbStatus.SelectedItem.ToString();
-                c_house = cmbHouse.SelectedItem.ToString();
-                c_cluster = cmbCluster.SelectedItem.ToString();
-                c_bsf = cmbBSF.SelectedItem.ToString();
-                c_gender = cmbGender.SelectedItem.ToString();
-            }
-        }
-
-        public void updateChild()
-        {
-            checkEmpty();
-            if (c_empty == false)
-            {
-                //IDValidation();
-
-                try
-                {
-                    objDBConnect.OpenConnection();
-
-
-                    objDBConnect.sqlCmd = new SqlCommand("UPDATE Child SET C_STATUS =@C_STATUS, C_CLUSTER = @C_CLUSTER, C_HOUSE=@C_HOUSE, C_BSF = @C_BSF, C_FNAME = @C_FNAME,C_MNAME= @C_MNAME,C_SNAME = @C_SNAME,C_GENDER=@C_GENDER,C_ADM_DATE=@C_ADM_DATE,C_CONSIDER=@C_CONSIDER WHERE C_NUMBER = @C_NUMBER", objDBConnect.sqlConn);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_STATUS", c_status);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_HOUSE", c_house);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CLUSTER", c_cluster);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_BSF", c_bsf);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_FNAME", c_fname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_MNAME", c_mname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_SNAME", c_sname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_GENDER", c_gender);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ADM_DATE", c_admin_date);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CONSIDER", c_consid);
-
-                    objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
-
-                    MessageBox.Show("Successfully Updated");
-                    objDBConnect.sqlDR.Close();
-                    objDBConnect.sqlConn.Close();
-                    ClearFields();
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Error cannot add child details " + ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error Cannot UPDATE child Details: " + ex.Message + ex.Data + ex.StackTrace);
-                }
-            }
-            else
-            {
-                //MessageBox.Show("Please enter all fields before proceeding");
-            }
+            //get values from comboboxes
+            c_status = cmbStatus.SelectedItem.ToString();
+            c_house = cmbHouse.SelectedItem.ToString();
+            c_cluster = cmbCluster.SelectedItem.ToString();
+            c_bsf = cmbBSF.SelectedItem.ToString();
+            c_gender = cmbGender.SelectedItem.ToString();
         }
     }
 }
+    }
