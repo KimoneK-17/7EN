@@ -60,6 +60,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.mnuReportsForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsTherRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsRegChild = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuReportsRegUser = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +75,8 @@
             this.mnuReports.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuReportsFile,
             this.mnuReportsPrintRep,
-            this.mnuReportsHelp});
+            this.mnuReportsHelp,
+            this.mnuReportsForm});
             this.mnuReports.Location = new System.Drawing.Point(0, 0);
             this.mnuReports.Name = "mnuReports";
             this.mnuReports.Size = new System.Drawing.Size(861, 26);
@@ -82,30 +87,34 @@
             // 
             this.mnuReportsFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuReportsReturn});
+            this.mnuReportsFile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuReportsFile.ForeColor = System.Drawing.Color.White;
             this.mnuReportsFile.Name = "mnuReportsFile";
-            this.mnuReportsFile.Size = new System.Drawing.Size(47, 22);
+            this.mnuReportsFile.Size = new System.Drawing.Size(44, 22);
             this.mnuReportsFile.Text = "File";
             // 
             // mnuReportsReturn
             // 
             this.mnuReportsReturn.Name = "mnuReportsReturn";
-            this.mnuReportsReturn.Size = new System.Drawing.Size(126, 22);
+            this.mnuReportsReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuReportsReturn.Text = "Return";
             this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
             // mnuReportsPrintRep
             // 
+            this.mnuReportsPrintRep.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuReportsPrintRep.ForeColor = System.Drawing.Color.White;
             this.mnuReportsPrintRep.Name = "mnuReportsPrintRep";
-            this.mnuReportsPrintRep.Size = new System.Drawing.Size(111, 22);
+            this.mnuReportsPrintRep.Size = new System.Drawing.Size(108, 22);
             this.mnuReportsPrintRep.Text = "Print Report";
+            this.mnuReportsPrintRep.Click += new System.EventHandler(this.mnuReportsPrintRep_Click);
             // 
             // mnuReportsHelp
             // 
+            this.mnuReportsHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuReportsHelp.ForeColor = System.Drawing.Color.White;
             this.mnuReportsHelp.Name = "mnuReportsHelp";
-            this.mnuReportsHelp.Size = new System.Drawing.Size(54, 22);
+            this.mnuReportsHelp.Size = new System.Drawing.Size(52, 22);
             this.mnuReportsHelp.Text = "Help";
             this.mnuReportsHelp.Click += new System.EventHandler(this.mnuReportsHelp_Click);
             // 
@@ -422,6 +431,39 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "(hide all to right untill refine search selected)";
             // 
+            // mnuReportsForm
+            // 
+            this.mnuReportsForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReportsTherRef,
+            this.mnuReportsRegChild,
+            this.mnuReportsRegUser});
+            this.mnuReportsForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuReportsForm.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsForm.Name = "mnuReportsForm";
+            this.mnuReportsForm.Size = new System.Drawing.Size(60, 22);
+            this.mnuReportsForm.Text = "Form";
+            // 
+            // mnuReportsTherRef
+            // 
+            this.mnuReportsTherRef.Name = "mnuReportsTherRef";
+            this.mnuReportsTherRef.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsTherRef.Text = "Therapy Referral";
+            this.mnuReportsTherRef.Click += new System.EventHandler(this.mnuReportsTherRef_Click);
+            // 
+            // mnuReportsRegChild
+            // 
+            this.mnuReportsRegChild.Name = "mnuReportsRegChild";
+            this.mnuReportsRegChild.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegChild.Text = "Register Child";
+            this.mnuReportsRegChild.Click += new System.EventHandler(this.mnuReportsRegChild_Click);
+            // 
+            // mnuReportsRegUser
+            // 
+            this.mnuReportsRegUser.Name = "mnuReportsRegUser";
+            this.mnuReportsRegUser.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegUser.Text = "Register User";
+            this.mnuReportsRegUser.Click += new System.EventHandler(this.mnuReportsRegUser_Click);
+            // 
             // frmReports
             // 
             this.ClientSize = new System.Drawing.Size(861, 619);
@@ -503,5 +545,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsTherRef;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsRegChild;
+        private System.Windows.Forms.ToolStripMenuItem mnuReportsRegUser;
     }
 }

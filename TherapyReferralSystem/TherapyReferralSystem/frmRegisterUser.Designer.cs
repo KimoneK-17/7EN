@@ -65,13 +65,20 @@
             this.lblidnum = new System.Windows.Forms.Label();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUser = new System.Windows.Forms.MenuStrip();
+            this.mnuRegUserFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserSearch = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserView = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserReports = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserTherRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuRegUserRegChild = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.mnuRegUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -441,39 +448,100 @@
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = false;
             // 
-            // menuStrip1
+            // mnuRegUser
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(558, 26);
-            this.menuStrip1.TabIndex = 45;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuRegUser.BackColor = System.Drawing.Color.DimGray;
+            this.mnuRegUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserFile,
+            this.mnuRegUserView,
+            this.mnuRegUserHelp,
+            this.mnuRegUserForm});
+            this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
+            this.mnuRegUser.Name = "mnuRegUser";
+            this.mnuRegUser.Size = new System.Drawing.Size(558, 26);
+            this.mnuRegUser.TabIndex = 45;
             // 
-            // fileToolStripMenuItem
+            // mnuRegUserFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchToolStripMenuItem,
-            this.updateToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserSearch,
+            this.mnuRegUserUpdate,
+            this.mnuRegUserReturn});
+            this.mnuRegUserFile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserFile.Name = "mnuRegUserFile";
+            this.mnuRegUserFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuRegUserFile.Text = "File";
             // 
-            // searchToolStripMenuItem
+            // mnuRegUserSearch
             // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.searchToolStripMenuItem.Text = "Search";
+            this.mnuRegUserSearch.Name = "mnuRegUserSearch";
+            this.mnuRegUserSearch.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserSearch.Text = "Search";
             // 
-            // updateToolStripMenuItem
+            // mnuRegUserUpdate
             // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.updateToolStripMenuItem.Text = "Update";
+            this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
+            this.mnuRegUserUpdate.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserUpdate.Text = "Update";
+            // 
+            // mnuRegUserReturn
+            // 
+            this.mnuRegUserReturn.Name = "mnuRegUserReturn";
+            this.mnuRegUserReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserReturn.Text = "Return";
+            this.mnuRegUserReturn.Click += new System.EventHandler(this.mnuRegUserReturn_Click);
+            // 
+            // mnuRegUserView
+            // 
+            this.mnuRegUserView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserReports});
+            this.mnuRegUserView.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserView.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserView.Name = "mnuRegUserView";
+            this.mnuRegUserView.Size = new System.Drawing.Size(55, 22);
+            this.mnuRegUserView.Text = "View";
+            // 
+            // mnuRegUserReports
+            // 
+            this.mnuRegUserReports.Name = "mnuRegUserReports";
+            this.mnuRegUserReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuRegUserReports.Text = "Reports";
+            this.mnuRegUserReports.Click += new System.EventHandler(this.mnuRegUserReports_Click);
+            // 
+            // mnuRegUserHelp
+            // 
+            this.mnuRegUserHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserHelp.Name = "mnuRegUserHelp";
+            this.mnuRegUserHelp.Size = new System.Drawing.Size(52, 22);
+            this.mnuRegUserHelp.Text = "Help";
+            this.mnuRegUserHelp.Click += new System.EventHandler(this.mnuRegUserHelp_Click);
+            // 
+            // mnuRegUserForm
+            // 
+            this.mnuRegUserForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserTherRef,
+            this.mnuRegUserRegChild});
+            this.mnuRegUserForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserForm.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserForm.Name = "mnuRegUserForm";
+            this.mnuRegUserForm.Size = new System.Drawing.Size(60, 22);
+            this.mnuRegUserForm.Text = "Form";
+            // 
+            // mnuRegUserTherRef
+            // 
+            this.mnuRegUserTherRef.Name = "mnuRegUserTherRef";
+            this.mnuRegUserTherRef.Size = new System.Drawing.Size(198, 22);
+            this.mnuRegUserTherRef.Text = "Therapy Referral";
+            this.mnuRegUserTherRef.Click += new System.EventHandler(this.mnuRegUserTherRef_Click);
+            // 
+            // mnuRegUserRegChild
+            // 
+            this.mnuRegUserRegChild.Name = "mnuRegUserRegChild";
+            this.mnuRegUserRegChild.Size = new System.Drawing.Size(198, 22);
+            this.mnuRegUserRegChild.Text = "Register Child";
+            this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
             // 
             // frmRegisterUser
             // 
@@ -490,16 +558,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.mnuRegUser);
+            this.MainMenuStrip = this.mnuRegUser;
             this.Name = "frmRegisterUser";
             this.Text = "Register Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnuRegUser.ResumeLayout(false);
+            this.mnuRegUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,10 +612,17 @@
         private System.Windows.Forms.Label lblidnum;
         private System.Windows.Forms.Button btnsubmit;
         private System.Windows.Forms.Button btnclear;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip mnuRegUser;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserFile;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserSearch;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserUpdate;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserReturn;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserView;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserReports;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserHelp;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserTherRef;
+        private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegChild;
     }
 }
 
