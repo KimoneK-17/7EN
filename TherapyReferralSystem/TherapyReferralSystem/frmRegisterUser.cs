@@ -263,6 +263,7 @@ namespace TherapyReferralSystem
             email = txtemail.Text;
             password = txtpassword.Text;
             answer = txtanswer.Text;
+            otherTherapyType = rtbOtherTypes.Text;
             other = rictxtother.Text;
 
 

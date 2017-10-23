@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace TherapyReferralSystem
 {
     public partial class frmReports : Form
     {
+        //open connection string to database
+        DBConnect objDBConnect = new DBConnect();
+
         public frmReports()
         {
             InitializeComponent();
@@ -128,6 +132,13 @@ namespace TherapyReferralSystem
             cboxDay.Visible = true;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
+>>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
         private void mnuReportsTherRef_Click(object sender, EventArgs e)
         {
             frmTherapyReferral tf = new frmTherapyReferral();
@@ -152,11 +163,59 @@ namespace TherapyReferralSystem
 
         private void mnuReportsPrintRep_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
         }
 
+=======
+<<<<<<< HEAD
 
+        }
+
+=======
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
+
+        }
+>>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
+
+
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
         //**********************************************************************************
+        //report selection , which report is being selected, and what information should be called from db
+        private void cboxReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DGVReport.DataSource = getReportList();
+        }
+        //**********************************************************************************
+        private DataTable getReportList()
+        {
 
+            DataTable report = new DataTable();
+            objDBConnect.OpenConnection();
+            if (cboxReport.SelectedIndex.ToString() == "Child Information")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM CHILD", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Theraphies")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM ADD_ADHD", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Therapist Information")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT U_ID,U_FNAME,U_SNAME,U_CONTACT,U_EMAIL,T_ID,T_TYPE,T_IE   FROM TBL_USER   WHERE T_ID != null", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Waiting on outside resource")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF   WHERE R_WAITING_LIST < CURRENT_DATE()", objDBConnect.sqlConn);
+
+
+                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+
+                    MessageBox.Show("Successfully Loaded");
+                    objDBConnect.sqlDR.Close();
+                    objDBConnect.sqlConn.Close();
+
+                    return report;
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterChild));
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.rtbxSpecCon = new System.Windows.Forms.RichTextBox();
@@ -56,8 +57,6 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.mnuRegChild = new System.Windows.Forms.MenuStrip();
             this.mnuRegChildFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildReports = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,40 +69,38 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(628, 474);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClear.Location = new System.Drawing.Point(440, 375);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnClear.Size = new System.Drawing.Size(83, 33);
+            this.btnClear.Size = new System.Drawing.Size(56, 27);
             this.btnClear.TabIndex = 51;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSubmit.BackColor = System.Drawing.Color.Transparent;
+            this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Location = new System.Drawing.Point(628, 513);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSubmit.Location = new System.Drawing.Point(440, 407);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(83, 33);
+            this.btnSubmit.Size = new System.Drawing.Size(56, 27);
             this.btnSubmit.TabIndex = 50;
-            this.btnSubmit.Text = "SUBMIT";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // rtbxSpecCon
             // 
-            this.rtbxSpecCon.Location = new System.Drawing.Point(268, 460);
-            this.rtbxSpecCon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtbxSpecCon.Location = new System.Drawing.Point(171, 374);
+            this.rtbxSpecCon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rtbxSpecCon.Name = "rtbxSpecCon";
-            this.rtbxSpecCon.Size = new System.Drawing.Size(335, 96);
+            this.rtbxSpecCon.Size = new System.Drawing.Size(252, 79);
             this.rtbxSpecCon.TabIndex = 49;
             this.rtbxSpecCon.Text = "";
             // 
@@ -112,18 +109,19 @@
             this.lblSpecCon.AutoSize = true;
             this.lblSpecCon.BackColor = System.Drawing.Color.Transparent;
             this.lblSpecCon.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecCon.Location = new System.Drawing.Point(5, 460);
+            this.lblSpecCon.Location = new System.Drawing.Point(9, 375);
+            this.lblSpecCon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSpecCon.Name = "lblSpecCon";
-            this.lblSpecCon.Size = new System.Drawing.Size(258, 20);
+            this.lblSpecCon.Size = new System.Drawing.Size(156, 16);
             this.lblSpecCon.TabIndex = 48;
-            this.lblSpecCon.Text = "SPECIAL CONSIDERATIONS:";
+            this.lblSpecCon.Text = "Special Considerations";
             // 
             // dtpDOA
             // 
-            this.dtpDOA.Location = new System.Drawing.Point(268, 425);
-            this.dtpDOA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDOA.Location = new System.Drawing.Point(171, 345);
+            this.dtpDOA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDOA.Name = "dtpDOA";
-            this.dtpDOA.Size = new System.Drawing.Size(200, 22);
+            this.dtpDOA.Size = new System.Drawing.Size(151, 20);
             this.dtpDOA.TabIndex = 47;
             // 
             // lblDOF
@@ -131,18 +129,19 @@
             this.lblDOF.AutoSize = true;
             this.lblDOF.BackColor = System.Drawing.Color.Transparent;
             this.lblDOF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOF.Location = new System.Drawing.Point(57, 425);
+            this.lblDOF.Location = new System.Drawing.Point(9, 345);
+            this.lblDOF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDOF.Name = "lblDOF";
-            this.lblDOF.Size = new System.Drawing.Size(202, 20);
+            this.lblDOF.Size = new System.Drawing.Size(126, 16);
             this.lblDOF.TabIndex = 46;
-            this.lblDOF.Text = "DATE OF ADMISSION:";
+            this.lblDOF.Text = "Date of Admission";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(268, 389);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(171, 316);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(201, 22);
+            this.txtID.Size = new System.Drawing.Size(152, 20);
             this.txtID.TabIndex = 45;
             // 
             // lblID
@@ -150,22 +149,20 @@
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(145, 394);
+            this.lblID.Location = new System.Drawing.Point(9, 315);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(118, 20);
+            this.lblID.Size = new System.Drawing.Size(76, 16);
             this.lblID.TabIndex = 44;
-            this.lblID.Text = "ID NUMBER:";
+            this.lblID.Text = "ID Number";
             // 
             // cmbGender
             // 
             this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cmbGender.Location = new System.Drawing.Point(268, 351);
-            this.cmbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbGender.Location = new System.Drawing.Point(171, 285);
+            this.cmbGender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(201, 24);
+            this.cmbGender.Size = new System.Drawing.Size(152, 21);
             this.cmbGender.TabIndex = 43;
             // 
             // lblGender
@@ -173,23 +170,20 @@
             this.lblGender.AutoSize = true;
             this.lblGender.BackColor = System.Drawing.Color.Transparent;
             this.lblGender.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(173, 357);
+            this.lblGender.Location = new System.Drawing.Point(9, 285);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(90, 20);
+            this.lblGender.Size = new System.Drawing.Size(54, 16);
             this.lblGender.TabIndex = 42;
-            this.lblGender.Text = "GENDER:";
+            this.lblGender.Text = "Gender";
             // 
             // cmbBSF
             // 
             this.cmbBSF.FormattingEnabled = true;
-            this.cmbBSF.Items.AddRange(new object[] {
-            "B",
-            "S",
-            "F"});
-            this.cmbBSF.Location = new System.Drawing.Point(268, 204);
-            this.cmbBSF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBSF.Location = new System.Drawing.Point(171, 166);
+            this.cmbBSF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbBSF.Name = "cmbBSF";
-            this.cmbBSF.Size = new System.Drawing.Size(201, 24);
+            this.cmbBSF.Size = new System.Drawing.Size(152, 21);
             this.cmbBSF.TabIndex = 41;
             // 
             // lblBSF
@@ -197,18 +191,19 @@
             this.lblBSF.AutoSize = true;
             this.lblBSF.BackColor = System.Drawing.Color.Transparent;
             this.lblBSF.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBSF.Location = new System.Drawing.Point(192, 210);
+            this.lblBSF.Location = new System.Drawing.Point(9, 165);
+            this.lblBSF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBSF.Name = "lblBSF";
-            this.lblBSF.Size = new System.Drawing.Size(67, 20);
+            this.lblBSF.Size = new System.Drawing.Size(45, 16);
             this.lblBSF.TabIndex = 40;
-            this.lblBSF.Text = "B/S/F:";
+            this.lblBSF.Text = "B/S/F";
             // 
             // txtLName
             // 
-            this.txtLName.Location = new System.Drawing.Point(268, 315);
-            this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLName.Location = new System.Drawing.Point(171, 256);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(201, 22);
+            this.txtLName.Size = new System.Drawing.Size(152, 20);
             this.txtLName.TabIndex = 39;
             // 
             // lblLName
@@ -216,26 +211,27 @@
             this.lblLName.AutoSize = true;
             this.lblLName.BackColor = System.Drawing.Color.Transparent;
             this.lblLName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLName.Location = new System.Drawing.Point(140, 320);
+            this.lblLName.Location = new System.Drawing.Point(9, 255);
+            this.lblLName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLName.Name = "lblLName";
-            this.lblLName.Size = new System.Drawing.Size(116, 20);
+            this.lblLName.Size = new System.Drawing.Size(71, 16);
             this.lblLName.TabIndex = 38;
-            this.lblLName.Text = "LAST NAME:";
+            this.lblLName.Text = "Lastname";
             // 
             // txtMName
             // 
-            this.txtMName.Location = new System.Drawing.Point(268, 279);
-            this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMName.Location = new System.Drawing.Point(171, 227);
+            this.txtMName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(201, 22);
+            this.txtMName.Size = new System.Drawing.Size(152, 20);
             this.txtMName.TabIndex = 37;
             // 
             // txtFName
             // 
-            this.txtFName.Location = new System.Drawing.Point(268, 242);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFName.Location = new System.Drawing.Point(171, 197);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(201, 22);
+            this.txtFName.Size = new System.Drawing.Size(152, 20);
             this.txtFName.TabIndex = 36;
             // 
             // lblMName
@@ -243,34 +239,32 @@
             this.lblMName.AutoSize = true;
             this.lblMName.BackColor = System.Drawing.Color.Transparent;
             this.lblMName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMName.Location = new System.Drawing.Point(120, 284);
+            this.lblMName.Location = new System.Drawing.Point(9, 225);
+            this.lblMName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMName.Name = "lblMName";
-            this.lblMName.Size = new System.Drawing.Size(141, 20);
+            this.lblMName.Size = new System.Drawing.Size(90, 16);
             this.lblMName.TabIndex = 35;
-            this.lblMName.Text = "MIDDLE NAME:";
+            this.lblMName.Text = "Middle Name";
             // 
             // lblFName
             // 
             this.lblFName.AutoSize = true;
             this.lblFName.BackColor = System.Drawing.Color.Transparent;
             this.lblFName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFName.Location = new System.Drawing.Point(133, 247);
+            this.lblFName.Location = new System.Drawing.Point(9, 195);
+            this.lblFName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFName.Name = "lblFName";
-            this.lblFName.Size = new System.Drawing.Size(125, 20);
+            this.lblFName.Size = new System.Drawing.Size(72, 16);
             this.lblFName.TabIndex = 34;
-            this.lblFName.Text = "FIRST NAME:";
+            this.lblFName.Text = "Firstname";
             // 
             // cmbHouse
             // 
             this.cmbHouse.FormattingEnabled = true;
-            this.cmbHouse.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cmbHouse.Location = new System.Drawing.Point(268, 167);
-            this.cmbHouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbHouse.Location = new System.Drawing.Point(171, 136);
+            this.cmbHouse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbHouse.Name = "cmbHouse";
-            this.cmbHouse.Size = new System.Drawing.Size(201, 24);
+            this.cmbHouse.Size = new System.Drawing.Size(152, 21);
             this.cmbHouse.TabIndex = 33;
             // 
             // lblHouse
@@ -278,24 +272,20 @@
             this.lblHouse.AutoSize = true;
             this.lblHouse.BackColor = System.Drawing.Color.Transparent;
             this.lblHouse.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHouse.Location = new System.Drawing.Point(181, 174);
+            this.lblHouse.Location = new System.Drawing.Point(9, 135);
+            this.lblHouse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHouse.Name = "lblHouse";
-            this.lblHouse.Size = new System.Drawing.Size(78, 20);
+            this.lblHouse.Size = new System.Drawing.Size(48, 16);
             this.lblHouse.TabIndex = 32;
-            this.lblHouse.Text = "HOUSE:";
+            this.lblHouse.Text = "House";
             // 
             // cmbCluster
             // 
             this.cmbCluster.FormattingEnabled = true;
-            this.cmbCluster.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            ""});
-            this.cmbCluster.Location = new System.Drawing.Point(268, 129);
-            this.cmbCluster.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCluster.Location = new System.Drawing.Point(171, 105);
+            this.cmbCluster.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCluster.Name = "cmbCluster";
-            this.cmbCluster.Size = new System.Drawing.Size(201, 24);
+            this.cmbCluster.Size = new System.Drawing.Size(152, 21);
             this.cmbCluster.TabIndex = 31;
             // 
             // lblCluster
@@ -303,23 +293,20 @@
             this.lblCluster.AutoSize = true;
             this.lblCluster.BackColor = System.Drawing.Color.Transparent;
             this.lblCluster.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCluster.Location = new System.Drawing.Point(163, 135);
+            this.lblCluster.Location = new System.Drawing.Point(9, 105);
+            this.lblCluster.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCluster.Name = "lblCluster";
-            this.lblCluster.Size = new System.Drawing.Size(95, 20);
+            this.lblCluster.Size = new System.Drawing.Size(54, 16);
             this.lblCluster.TabIndex = 30;
-            this.lblCluster.Text = "CLUSTER:";
+            this.lblCluster.Text = "Cluster";
             // 
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C"});
-            this.cmbStatus.Location = new System.Drawing.Point(268, 91);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbStatus.Location = new System.Drawing.Point(171, 74);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(200, 24);
+            this.cmbStatus.Size = new System.Drawing.Size(151, 21);
             this.cmbStatus.TabIndex = 29;
             // 
             // lblStatus
@@ -327,35 +314,37 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(172, 97);
+            this.lblStatus.Location = new System.Drawing.Point(9, 75);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(83, 20);
+            this.lblStatus.Size = new System.Drawing.Size(52, 16);
             this.lblStatus.TabIndex = 28;
-            this.lblStatus.Text = "STATUS:";
+            this.lblStatus.Text = "Status";
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(171, 60);
+            this.lblNumber.Location = new System.Drawing.Point(9, 45);
+            this.lblNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(91, 20);
+            this.lblNumber.Size = new System.Drawing.Size(57, 16);
             this.lblNumber.TabIndex = 27;
-            this.lblNumber.Text = "NUMBER:";
+            this.lblNumber.Text = "Number";
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(268, 55);
-            this.txtNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumber.Location = new System.Drawing.Point(171, 45);
+            this.txtNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(200, 22);
+            this.txtNumber.Size = new System.Drawing.Size(151, 20);
             this.txtNumber.TabIndex = 26;
             // 
             // mnuRegChild
             // 
             this.mnuRegChild.BackColor = System.Drawing.Color.DimGray;
-            this.mnuRegChild.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuRegChild.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.mnuRegChild.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRegChild.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegChildFile,
@@ -364,40 +353,23 @@
             this.mnuRegChildForm});
             this.mnuRegChild.Location = new System.Drawing.Point(0, 0);
             this.mnuRegChild.Name = "mnuRegChild";
-            this.mnuRegChild.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuRegChild.Size = new System.Drawing.Size(749, 31);
+            this.mnuRegChild.Size = new System.Drawing.Size(562, 26);
             this.mnuRegChild.TabIndex = 53;
             this.mnuRegChild.Text = "menuStrip1";
             // 
             // mnuRegChildFile
             // 
             this.mnuRegChildFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchToolStripMenuItem,
-            this.updateToolStripMenuItem,
             this.mnuRegChildReturn});
             this.mnuRegChildFile.ForeColor = System.Drawing.Color.White;
             this.mnuRegChildFile.Name = "mnuRegChildFile";
-            this.mnuRegChildFile.Size = new System.Drawing.Size(56, 27);
+            this.mnuRegChildFile.Size = new System.Drawing.Size(47, 22);
             this.mnuRegChildFile.Text = "File";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.searchToolStripMenuItem.Text = "Search";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // mnuRegChildReturn
             // 
             this.mnuRegChildReturn.Name = "mnuRegChildReturn";
-            this.mnuRegChildReturn.Size = new System.Drawing.Size(181, 28);
+            this.mnuRegChildReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuRegChildReturn.Text = "Return";
             this.mnuRegChildReturn.Click += new System.EventHandler(this.mnuRegChildReturn_Click);
             // 
@@ -407,13 +379,13 @@
             this.mnuRegChildReports});
             this.mnuRegChildView.ForeColor = System.Drawing.Color.White;
             this.mnuRegChildView.Name = "mnuRegChildView";
-            this.mnuRegChildView.Size = new System.Drawing.Size(68, 27);
+            this.mnuRegChildView.Size = new System.Drawing.Size(55, 22);
             this.mnuRegChildView.Text = "View";
             // 
             // mnuRegChildReports
             // 
             this.mnuRegChildReports.Name = "mnuRegChildReports";
-            this.mnuRegChildReports.Size = new System.Drawing.Size(159, 28);
+            this.mnuRegChildReports.Size = new System.Drawing.Size(136, 22);
             this.mnuRegChildReports.Text = "Reports";
             this.mnuRegChildReports.Click += new System.EventHandler(this.mnuRegChildReports_Click);
             // 
@@ -421,7 +393,7 @@
             // 
             this.mnuRegChildHelp.ForeColor = System.Drawing.Color.White;
             this.mnuRegChildHelp.Name = "mnuRegChildHelp";
-            this.mnuRegChildHelp.Size = new System.Drawing.Size(65, 27);
+            this.mnuRegChildHelp.Size = new System.Drawing.Size(54, 22);
             this.mnuRegChildHelp.Text = "Help";
             this.mnuRegChildHelp.Click += new System.EventHandler(this.mnuRegChildHelp_Click);
             // 
@@ -432,30 +404,29 @@
             this.mnuRegChildRegUser});
             this.mnuRegChildForm.ForeColor = System.Drawing.Color.White;
             this.mnuRegChildForm.Name = "mnuRegChildForm";
-            this.mnuRegChildForm.Size = new System.Drawing.Size(71, 27);
+            this.mnuRegChildForm.Size = new System.Drawing.Size(60, 22);
             this.mnuRegChildForm.Text = "Form";
             this.mnuRegChildForm.Click += new System.EventHandler(this.mnuRegChildForm_Click);
             // 
             // mnuRegChildTherapyRef
             // 
             this.mnuRegChildTherapyRef.Name = "mnuRegChildTherapyRef";
-            this.mnuRegChildTherapyRef.Size = new System.Drawing.Size(245, 28);
+            this.mnuRegChildTherapyRef.Size = new System.Drawing.Size(214, 22);
             this.mnuRegChildTherapyRef.Text = "Therapy Referral";
             this.mnuRegChildTherapyRef.Click += new System.EventHandler(this.mnuRegChildTherapyRef_Click);
             // 
             // mnuRegChildRegUser
             // 
             this.mnuRegChildRegUser.Name = "mnuRegChildRegUser";
-            this.mnuRegChildRegUser.Size = new System.Drawing.Size(245, 28);
+            this.mnuRegChildRegUser.Size = new System.Drawing.Size(214, 22);
             this.mnuRegChildRegUser.Text = "Register User";
             this.mnuRegChildRegUser.Click += new System.EventHandler(this.mnuRegChildRegUser_Click);
             // 
             // frmRegisterChild
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(749, 597);
+            this.ClientSize = new System.Drawing.Size(562, 485);
             this.Controls.Add(this.mnuRegChild);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
@@ -483,9 +454,8 @@
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.txtNumber);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmRegisterChild";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Child";
             this.mnuRegChild.ResumeLayout(false);
             this.mnuRegChild.PerformLayout();
@@ -531,7 +501,5 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRegChildForm;
         private System.Windows.Forms.ToolStripMenuItem mnuRegChildTherapyRef;
         private System.Windows.Forms.ToolStripMenuItem mnuRegChildRegUser;
-        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

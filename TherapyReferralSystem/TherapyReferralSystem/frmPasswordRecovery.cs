@@ -26,7 +26,6 @@ namespace TherapyReferralSystem
         string randomPassword;
         string securityQues;
         string answer;
-        string name;
 
         DBConnect objDBConnect = new DBConnect();
 
@@ -88,14 +87,13 @@ namespace TherapyReferralSystem
             getAnswer();
 
         }
-        MailMessage email = new MailMessage();
-        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
         public void sendOTPEmail()
         {
             try
             {
-                
+                MailMessage email = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 email.From = new MailAddress("livotp@gmail.com");
                 email.To.Add(txtEmailAddress.Text);
@@ -154,59 +152,6 @@ namespace TherapyReferralSystem
             }
 
          }
-
-        private void btnRequestReset_Click(object sender, EventArgs e)
-        {
-            sendAdminEmail();
-        }
-
-        public void getName()
-        {
-            try
-            {
-                objDBConnect.OpenConnection();
-
-                objDBConnect.sqlCmd = new SqlCommand("SELECT U_FNAME +' '+ U_SNAME FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
-                //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
-
-
-                name = (string)objDBConnect.sqlCmd.ExecuteScalar();
-
-               
-            }
-            catch (SqlException se)
-            {
-                MessageBox.Show(se.Message);
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show(x.Message);
-            }
-        }
-
-        public void sendAdminEmail()
-        {
-            getName();
-            try
-            {
-                email.From = new MailAddress("livotp@gmail.com");
-                email.To.Add("livotp@gmail.com");
-                email.Subject = "Reset User Password";
-                email.Body = "Hi There\n Kindly reset user: "+name+" password. \n Email Address: "+username;
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("livotp@gmail.com", "passwordrecovery");
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(email);
-                MessageBox.Show("Email Sent");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
 
         public void getAnswer()
         {

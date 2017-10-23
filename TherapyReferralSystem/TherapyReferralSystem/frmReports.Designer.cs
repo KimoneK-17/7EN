@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboxReport = new System.Windows.Forms.ComboBox();
             this.lblReportSelect = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTherID = new System.Windows.Forms.Label();
             this.lblChildID = new System.Windows.Forms.Label();
             this.lblCluster = new System.Windows.Forms.Label();
@@ -45,17 +44,16 @@
             this.lblHouse = new System.Windows.Forms.Label();
             this.cboxTherapyType = new System.Windows.Forms.ComboBox();
             this.lblTherapyType = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.cboxDay = new System.Windows.Forms.ComboBox();
             this.lblDay = new System.Windows.Forms.Label();
             this.cboxMonth = new System.Windows.Forms.ComboBox();
             this.lblMonth = new System.Windows.Forms.Label();
             this.cboxYear = new System.Windows.Forms.ComboBox();
             this.lblYear = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.txtTherapistID = new System.Windows.Forms.TextBox();
             this.txtChildID = new System.Windows.Forms.TextBox();
             this.cboxRefine = new System.Windows.Forms.CheckBox();
+<<<<<<< HEAD
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -64,8 +62,17 @@
             this.mnuReportsTherRef = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsRegChild = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuReportsRegUser = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            this.DGVReport = new System.Windows.Forms.DataGridView();
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
+>>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
             this.mnuReports.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuReports
@@ -79,7 +86,7 @@
             this.mnuReportsForm});
             this.mnuReports.Location = new System.Drawing.Point(0, 0);
             this.mnuReports.Name = "mnuReports";
-            this.mnuReports.Size = new System.Drawing.Size(861, 26);
+            this.mnuReports.Size = new System.Drawing.Size(968, 26);
             this.mnuReports.TabIndex = 0;
             this.mnuReports.Text = "Menu";
             // 
@@ -133,17 +140,17 @@
             // 
             this.cboxReport.FormattingEnabled = true;
             this.cboxReport.Items.AddRange(new object[] {
-            "Theraphy",
+            "Theraphies",
             "ADD & ADHD Theraphy",
             "Child Information",
             "Therapist Information",
-            "Referals",
             "Interventions",
             "Waiting on outside resource"});
             this.cboxReport.Location = new System.Drawing.Point(48, 100);
             this.cboxReport.Name = "cboxReport";
             this.cboxReport.Size = new System.Drawing.Size(184, 21);
             this.cboxReport.TabIndex = 2;
+            this.cboxReport.SelectedIndexChanged += new System.EventHandler(this.cboxReport_SelectedIndexChanged);
             // 
             // lblReportSelect
             // 
@@ -155,14 +162,6 @@
             this.lblReportSelect.Size = new System.Drawing.Size(156, 13);
             this.lblReportSelect.TabIndex = 3;
             this.lblReportSelect.Text = "Select your report to view";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 269);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(768, 314);
-            this.dataGridView1.TabIndex = 4;
             // 
             // lblTherID
             // 
@@ -262,15 +261,6 @@
             this.lblTherapyType.Text = "Select Therapy Type";
             this.lblTherapyType.Visible = false;
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(585, 70);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(151, 13);
-            this.label24.TabIndex = 29;
-            this.label24.Text = "(pop up only where applicable)";
-            // 
             // cboxDay
             // 
             this.cboxDay.FormattingEnabled = true;
@@ -355,15 +345,6 @@
             this.lblYear.Text = "Select Year";
             this.lblYear.Visible = false;
             // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(661, 179);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(133, 13);
-            this.label28.TabIndex = 36;
-            this.label28.Text = "Look at date picker maybe";
-            // 
             // txtTherapistID
             // 
             this.txtTherapistID.Location = new System.Drawing.Point(454, 185);
@@ -395,41 +376,82 @@
             this.cboxRefine.UseVisualStyleBackColor = false;
             this.cboxRefine.CheckedChanged += new System.EventHandler(this.cboxRefine_CheckedChanged);
             // 
-            // label5
+            // DGVReport
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(390, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 13);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "(pop up month only when year selected)";
+            this.DGVReport.AllowUserToAddRows = false;
+            this.DGVReport.AllowUserToDeleteRows = false;
+            this.DGVReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVReport.Location = new System.Drawing.Point(48, 274);
+            this.DGVReport.Name = "DGVReport";
+            this.DGVReport.ReadOnly = true;
+            this.DGVReport.Size = new System.Drawing.Size(870, 268);
+            this.DGVReport.TabIndex = 41;
             // 
-            // label6
+            // mnuReportsForm
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(591, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(192, 13);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "(pop up day only when month selected)";
+            this.mnuReportsForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReportsTherRef,
+            this.mnuReportsRegChild,
+            this.mnuReportsRegUser});
+            this.mnuReportsForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuReportsForm.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsForm.Name = "mnuReportsForm";
+            this.mnuReportsForm.Size = new System.Drawing.Size(60, 22);
+            this.mnuReportsForm.Text = "Form";
             // 
-            // label21
+            // mnuReportsTherRef
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(317, 68);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(206, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "(pop up house only when cluster selected)";
+            this.mnuReportsTherRef.Name = "mnuReportsTherRef";
+            this.mnuReportsTherRef.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsTherRef.Text = "Therapy Referral";
+            this.mnuReportsTherRef.Click += new System.EventHandler(this.mnuReportsTherRef_Click);
             // 
-            // label4
+            // mnuReportsRegChild
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 13);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "(hide all to right untill refine search selected)";
+            this.mnuReportsRegChild.Name = "mnuReportsRegChild";
+            this.mnuReportsRegChild.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegChild.Text = "Register Child";
+            this.mnuReportsRegChild.Click += new System.EventHandler(this.mnuReportsRegChild_Click);
+            // 
+            // mnuReportsRegUser
+            // 
+            this.mnuReportsRegUser.Name = "mnuReportsRegUser";
+            this.mnuReportsRegUser.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegUser.Text = "Register User";
+            this.mnuReportsRegUser.Click += new System.EventHandler(this.mnuReportsRegUser_Click);
+            // 
+            // mnuReportsForm
+            // 
+            this.mnuReportsForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuReportsTherRef,
+            this.mnuReportsRegChild,
+            this.mnuReportsRegUser});
+            this.mnuReportsForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuReportsForm.ForeColor = System.Drawing.Color.White;
+            this.mnuReportsForm.Name = "mnuReportsForm";
+            this.mnuReportsForm.Size = new System.Drawing.Size(60, 22);
+            this.mnuReportsForm.Text = "Form";
+            // 
+            // mnuReportsTherRef
+            // 
+            this.mnuReportsTherRef.Name = "mnuReportsTherRef";
+            this.mnuReportsTherRef.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsTherRef.Text = "Therapy Referral";
+            this.mnuReportsTherRef.Click += new System.EventHandler(this.mnuReportsTherRef_Click);
+            // 
+            // mnuReportsRegChild
+            // 
+            this.mnuReportsRegChild.Name = "mnuReportsRegChild";
+            this.mnuReportsRegChild.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegChild.Text = "Register Child";
+            this.mnuReportsRegChild.Click += new System.EventHandler(this.mnuReportsRegChild_Click);
+            // 
+            // mnuReportsRegUser
+            // 
+            this.mnuReportsRegUser.Name = "mnuReportsRegUser";
+            this.mnuReportsRegUser.Size = new System.Drawing.Size(198, 22);
+            this.mnuReportsRegUser.Text = "Register User";
+            this.mnuReportsRegUser.Click += new System.EventHandler(this.mnuReportsRegUser_Click);
             // 
             // mnuReportsForm
             // 
@@ -466,31 +488,26 @@
             // 
             // frmReports
             // 
-            this.ClientSize = new System.Drawing.Size(861, 619);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
+            this.ClientSize = new System.Drawing.Size(968, 558);
+            this.Controls.Add(this.DGVReport);
             this.Controls.Add(this.cboxRefine);
             this.Controls.Add(this.txtChildID);
             this.Controls.Add(this.txtTherapistID);
-            this.Controls.Add(this.label28);
             this.Controls.Add(this.cboxDay);
             this.Controls.Add(this.lblDay);
             this.Controls.Add(this.cboxMonth);
             this.Controls.Add(this.lblMonth);
             this.Controls.Add(this.cboxYear);
             this.Controls.Add(this.lblYear);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.cboxTherapyType);
             this.Controls.Add(this.lblTherapyType);
             this.Controls.Add(this.cboxHouse);
             this.Controls.Add(this.lblHouse);
             this.Controls.Add(this.cboxCluster);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.lblCluster);
             this.Controls.Add(this.lblTherID);
             this.Controls.Add(this.lblChildID);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblReportSelect);
             this.Controls.Add(this.cboxReport);
             this.Controls.Add(this.label2);
@@ -500,7 +517,7 @@
             this.Text = "Reports";
             this.mnuReports.ResumeLayout(false);
             this.mnuReports.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,7 +537,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboxReport;
         private System.Windows.Forms.Label lblReportSelect;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsHelp;
         private System.Windows.Forms.Label lblTherID;
         private System.Windows.Forms.Label lblChildID;
@@ -530,17 +546,16 @@
         private System.Windows.Forms.Label lblHouse;
         private System.Windows.Forms.ComboBox cboxTherapyType;
         private System.Windows.Forms.Label lblTherapyType;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cboxDay;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.ComboBox cboxMonth;
         private System.Windows.Forms.Label lblMonth;
         private System.Windows.Forms.ComboBox cboxYear;
         private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtTherapistID;
         private System.Windows.Forms.TextBox txtChildID;
         private System.Windows.Forms.CheckBox cboxRefine;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label21;
@@ -549,5 +564,14 @@
         private System.Windows.Forms.ToolStripMenuItem mnuReportsTherRef;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsRegChild;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsRegUser;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        private System.Windows.Forms.DataGridView DGVReport;
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
+>>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
+>>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
     }
 }
