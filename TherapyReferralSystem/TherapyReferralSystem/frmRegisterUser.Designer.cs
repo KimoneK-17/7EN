@@ -60,11 +60,13 @@
             this.rictxtother = new System.Windows.Forms.RichTextBox();
             this.lblother = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rtbOtherTypes = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtid = new System.Windows.Forms.TextBox();
             this.lblidnum = new System.Windows.Forms.Label();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.mnuRegUser = new System.Windows.Forms.MenuStrip();
             this.mnuRegUserFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserSearch = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +81,10 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mnuRegUser.SuspendLayout();
+=======
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             this.SuspendLayout();
             // 
             // label1
@@ -125,7 +131,7 @@
             // 
             this.lbl_fname.AutoSize = true;
             this.lbl_fname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fname.Location = new System.Drawing.Point(79, 16);
+            this.lbl_fname.Location = new System.Drawing.Point(3, 10);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(90, 14);
             this.lbl_fname.TabIndex = 14;
@@ -135,7 +141,7 @@
             // 
             this.lbl_mname.AutoSize = true;
             this.lbl_mname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mname.Location = new System.Drawing.Point(70, 41);
+            this.lbl_mname.Location = new System.Drawing.Point(3, 33);
             this.lbl_mname.Name = "lbl_mname";
             this.lbl_mname.Size = new System.Drawing.Size(99, 14);
             this.lbl_mname.TabIndex = 15;
@@ -145,7 +151,7 @@
             // 
             this.lblsurname.AutoSize = true;
             this.lblsurname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsurname.Location = new System.Drawing.Point(97, 66);
+            this.lblsurname.Location = new System.Drawing.Point(3, 55);
             this.lblsurname.Name = "lblsurname";
             this.lblsurname.Size = new System.Drawing.Size(72, 14);
             this.lblsurname.TabIndex = 16;
@@ -155,7 +161,7 @@
             // 
             this.lblinitials.AutoSize = true;
             this.lblinitials.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinitials.Location = new System.Drawing.Point(103, 92);
+            this.lblinitials.Location = new System.Drawing.Point(3, 83);
             this.lblinitials.Name = "lblinitials";
             this.lblinitials.Size = new System.Drawing.Size(66, 14);
             this.lblinitials.TabIndex = 17;
@@ -163,42 +169,42 @@
             // 
             // txtfname
             // 
-            this.txtfname.Location = new System.Drawing.Point(176, 10);
+            this.txtfname.Location = new System.Drawing.Point(152, 10);
             this.txtfname.Name = "txtfname";
             this.txtfname.Size = new System.Drawing.Size(183, 20);
             this.txtfname.TabIndex = 18;
             // 
             // txtmname
             // 
-            this.txtmname.Location = new System.Drawing.Point(176, 35);
+            this.txtmname.Location = new System.Drawing.Point(152, 33);
             this.txtmname.Name = "txtmname";
             this.txtmname.Size = new System.Drawing.Size(183, 20);
             this.txtmname.TabIndex = 19;
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(176, 139);
+            this.txtemail.Location = new System.Drawing.Point(151, 147);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(184, 20);
             this.txtemail.TabIndex = 20;
             // 
             // txtsurname
             // 
-            this.txtsurname.Location = new System.Drawing.Point(176, 60);
+            this.txtsurname.Location = new System.Drawing.Point(153, 59);
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(184, 20);
             this.txtsurname.TabIndex = 21;
             // 
             // txtinitials
             // 
-            this.txtinitials.Location = new System.Drawing.Point(176, 86);
+            this.txtinitials.Location = new System.Drawing.Point(151, 85);
             this.txtinitials.Name = "txtinitials";
             this.txtinitials.Size = new System.Drawing.Size(184, 20);
             this.txtinitials.TabIndex = 22;
             // 
             // txtcontactnum
             // 
-            this.txtcontactnum.Location = new System.Drawing.Point(176, 112);
+            this.txtcontactnum.Location = new System.Drawing.Point(151, 115);
             this.txtcontactnum.Name = "txtcontactnum";
             this.txtcontactnum.Size = new System.Drawing.Size(184, 20);
             this.txtcontactnum.TabIndex = 23;
@@ -207,17 +213,17 @@
             // 
             this.lblcnum.AutoSize = true;
             this.lblcnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcnum.Location = new System.Drawing.Point(43, 118);
+            this.lblcnum.Location = new System.Drawing.Point(3, 115);
             this.lblcnum.Name = "lblcnum";
-            this.lblcnum.Size = new System.Drawing.Size(126, 14);
+            this.lblcnum.Size = new System.Drawing.Size(131, 14);
             this.lblcnum.TabIndex = 24;
-            this.lblcnum.Text = "CONTACT NUMBER:";
+            this.lblcnum.Text = "CONTACT NUMBER::";
             // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblemail.Location = new System.Drawing.Point(119, 145);
+            this.lblemail.Location = new System.Drawing.Point(6, 145);
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(50, 14);
             this.lblemail.TabIndex = 25;
@@ -227,7 +233,7 @@
             // 
             this.lblpass.AutoSize = true;
             this.lblpass.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpass.Location = new System.Drawing.Point(85, 172);
+            this.lblpass.Location = new System.Drawing.Point(2, 183);
             this.lblpass.Name = "lblpass";
             this.lblpass.Size = new System.Drawing.Size(84, 14);
             this.lblpass.TabIndex = 26;
@@ -237,7 +243,7 @@
             // 
             this.lbltype.AutoSize = true;
             this.lbltype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltype.Location = new System.Drawing.Point(127, 200);
+            this.lbltype.Location = new System.Drawing.Point(7, 207);
             this.lbltype.Name = "lbltype";
             this.lbltype.Size = new System.Drawing.Size(42, 14);
             this.lbltype.TabIndex = 27;
@@ -252,7 +258,7 @@
             "Therapist",
             "Admin",
             "Social worker"});
-            this.cmbtype.Location = new System.Drawing.Point(176, 193);
+            this.cmbtype.Location = new System.Drawing.Point(153, 199);
             this.cmbtype.Name = "cmbtype";
             this.cmbtype.Size = new System.Drawing.Size(184, 21);
             this.cmbtype.TabIndex = 28;
@@ -261,7 +267,7 @@
             // 
             this.lblsecurity.AutoSize = true;
             this.lblsecurity.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsecurity.Location = new System.Drawing.Point(26, 229);
+            this.lblsecurity.Location = new System.Drawing.Point(3, 253);
             this.lblsecurity.Name = "lblsecurity";
             this.lblsecurity.Size = new System.Drawing.Size(143, 14);
             this.lblsecurity.TabIndex = 29;
@@ -279,14 +285,14 @@
             "What is your favourite fruit?",
             "What High School did you attend?",
             "What colour are your eyes?"});
-            this.cmbsecurity.Location = new System.Drawing.Point(175, 222);
+            this.cmbsecurity.Location = new System.Drawing.Point(152, 262);
             this.cmbsecurity.Name = "cmbsecurity";
             this.cmbsecurity.Size = new System.Drawing.Size(183, 21);
             this.cmbsecurity.TabIndex = 30;
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(176, 166);
+            this.txtpassword.Location = new System.Drawing.Point(153, 173);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.Size = new System.Drawing.Size(184, 20);
             this.txtpassword.TabIndex = 31;
@@ -295,7 +301,7 @@
             // 
             this.lblanswer.AutoSize = true;
             this.lblanswer.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblanswer.Location = new System.Drawing.Point(103, 255);
+            this.lblanswer.Location = new System.Drawing.Point(3, 284);
             this.lblanswer.Name = "lblanswer";
             this.lblanswer.Size = new System.Drawing.Size(66, 14);
             this.lblanswer.TabIndex = 32;
@@ -303,7 +309,7 @@
             // 
             // txtanswer
             // 
-            this.txtanswer.Location = new System.Drawing.Point(175, 249);
+            this.txtanswer.Location = new System.Drawing.Point(151, 289);
             this.txtanswer.Name = "txtanswer";
             this.txtanswer.Size = new System.Drawing.Size(182, 20);
             this.txtanswer.TabIndex = 33;
@@ -312,7 +318,7 @@
             // 
             this.lblthetype.AutoSize = true;
             this.lblthetype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblthetype.Location = new System.Drawing.Point(68, 15);
+            this.lblthetype.Location = new System.Drawing.Point(-3, 11);
             this.lblthetype.Name = "lblthetype";
             this.lblthetype.Size = new System.Drawing.Size(101, 14);
             this.lblthetype.TabIndex = 34;
@@ -321,16 +327,16 @@
             // cmtherap
             // 
             this.cmtherap.FormattingEnabled = true;
-            this.cmtherap.Location = new System.Drawing.Point(175, 8);
+            this.cmtherap.Location = new System.Drawing.Point(146, 8);
             this.cmtherap.Name = "cmtherap";
-            this.cmtherap.Size = new System.Drawing.Size(122, 21);
+            this.cmtherap.Size = new System.Drawing.Size(121, 21);
             this.cmtherap.TabIndex = 35;
             // 
             // lblexternal
             // 
             this.lblexternal.AutoSize = true;
             this.lblexternal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblexternal.Location = new System.Drawing.Point(28, 44);
+            this.lblexternal.Location = new System.Drawing.Point(3, 39);
             this.lblexternal.Name = "lblexternal";
             this.lblexternal.Size = new System.Drawing.Size(141, 14);
             this.lblexternal.TabIndex = 36;
@@ -339,14 +345,14 @@
             // cmbinternal
             // 
             this.cmbinternal.FormattingEnabled = true;
-            this.cmbinternal.Location = new System.Drawing.Point(176, 37);
+            this.cmbinternal.Location = new System.Drawing.Point(146, 39);
             this.cmbinternal.Name = "cmbinternal";
             this.cmbinternal.Size = new System.Drawing.Size(121, 21);
             this.cmbinternal.TabIndex = 37;
             // 
             // rictxtother
             // 
-            this.rictxtother.Location = new System.Drawing.Point(176, 65);
+            this.rictxtother.Location = new System.Drawing.Point(167, 66);
             this.rictxtother.Name = "rictxtother";
             this.rictxtother.Size = new System.Drawing.Size(142, 90);
             this.rictxtother.TabIndex = 38;
@@ -356,14 +362,15 @@
             // 
             this.lblother.AutoSize = true;
             this.lblother.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblother.Location = new System.Drawing.Point(115, 70);
+            this.lblother.Location = new System.Drawing.Point(3, 68);
             this.lblother.Name = "lblother";
-            this.lblother.Size = new System.Drawing.Size(54, 14);
+            this.lblother.Size = new System.Drawing.Size(158, 14);
             this.lblother.TabIndex = 40;
-            this.lblother.Text = "OTHER:";
+            this.lblother.Text = "OTHER:PLEASE EXPLAIN";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rtbOtherTypes);
             this.panel1.Controls.Add(this.txtfname);
             this.panel1.Controls.Add(this.lbl_fname);
             this.panel1.Controls.Add(this.txtmname);
@@ -384,10 +391,18 @@
             this.panel1.Controls.Add(this.cmbtype);
             this.panel1.Controls.Add(this.lblemail);
             this.panel1.Controls.Add(this.lblpass);
-            this.panel1.Location = new System.Drawing.Point(6, 36);
+            this.panel1.Location = new System.Drawing.Point(6, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(435, 298);
+            this.panel1.Size = new System.Drawing.Size(435, 321);
             this.panel1.TabIndex = 41;
+            // 
+            // rtbOtherTypes
+            // 
+            this.rtbOtherTypes.Location = new System.Drawing.Point(151, 226);
+            this.rtbOtherTypes.Name = "rtbOtherTypes";
+            this.rtbOtherTypes.Size = new System.Drawing.Size(195, 30);
+            this.rtbOtherTypes.TabIndex = 35;
+            this.rtbOtherTypes.Text = "";
             // 
             // panel2
             // 
@@ -399,14 +414,14 @@
             this.panel2.Controls.Add(this.cmtherap);
             this.panel2.Controls.Add(this.cmbinternal);
             this.panel2.Controls.Add(this.rictxtother);
-            this.panel2.Location = new System.Drawing.Point(6, 360);
+            this.panel2.Location = new System.Drawing.Point(6, 339);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(435, 197);
+            this.panel2.Size = new System.Drawing.Size(419, 186);
             this.panel2.TabIndex = 42;
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(176, 162);
+            this.txtid.Location = new System.Drawing.Point(146, 162);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(142, 20);
             this.txtid.TabIndex = 44;
@@ -415,7 +430,7 @@
             // 
             this.lblidnum.AutoSize = true;
             this.lblidnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidnum.Location = new System.Drawing.Point(80, 168);
+            this.lblidnum.Location = new System.Drawing.Point(13, 162);
             this.lblidnum.Name = "lblidnum";
             this.lblidnum.Size = new System.Drawing.Size(90, 14);
             this.lblidnum.TabIndex = 43;
@@ -423,29 +438,24 @@
             // 
             // btnsubmit
             // 
-            this.btnsubmit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsubmit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.Location = new System.Drawing.Point(456, 522);
+            this.btnsubmit.Location = new System.Drawing.Point(476, 476);
             this.btnsubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(74, 23);
+            this.btnsubmit.Size = new System.Drawing.Size(56, 19);
             this.btnsubmit.TabIndex = 43;
             this.btnsubmit.Text = "SUBMIT";
-            this.btnsubmit.UseVisualStyleBackColor = false;
+            this.btnsubmit.UseVisualStyleBackColor = true;
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclear.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(456, 483);
+            this.btnclear.Location = new System.Drawing.Point(476, 500);
             this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(74, 35);
+            this.btnclear.Size = new System.Drawing.Size(56, 19);
             this.btnclear.TabIndex = 44;
             this.btnclear.Text = "CLEAR";
+<<<<<<< HEAD
             this.btnclear.UseVisualStyleBackColor = false;
             // 
             // mnuRegUser
@@ -542,13 +552,15 @@
             this.mnuRegUserRegChild.Size = new System.Drawing.Size(198, 22);
             this.mnuRegUserRegChild.Text = "Register Child";
             this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
+=======
+            this.btnclear.UseVisualStyleBackColor = true;
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             // 
             // frmRegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(558, 574);
+            this.ClientSize = new System.Drawing.Size(558, 540);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.panel2);
@@ -558,16 +570,22 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.Controls.Add(this.mnuRegUser);
             this.MainMenuStrip = this.mnuRegUser;
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             this.Name = "frmRegisterUser";
             this.Text = "Register Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+<<<<<<< HEAD
             this.mnuRegUser.ResumeLayout(false);
             this.mnuRegUser.PerformLayout();
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -608,10 +626,12 @@
         private System.Windows.Forms.Label lblother;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox rtbOtherTypes;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label lblidnum;
         private System.Windows.Forms.Button btnsubmit;
         private System.Windows.Forms.Button btnclear;
+<<<<<<< HEAD
         private System.Windows.Forms.MenuStrip mnuRegUser;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserFile;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserSearch;
@@ -623,6 +643,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserForm;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserTherRef;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegChild;
+=======
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
     }
 }
 

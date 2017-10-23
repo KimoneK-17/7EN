@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTherapyReferral));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,7 +85,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(512, 88);
+            this.label7.Location = new System.Drawing.Point(474, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 16);
             this.label7.TabIndex = 31;
@@ -95,7 +96,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(574, 44);
+            this.label8.Location = new System.Drawing.Point(474, 47);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 16);
             this.label8.TabIndex = 30;
@@ -106,7 +107,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(143, 234);
+            this.label6.Location = new System.Drawing.Point(11, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 29;
@@ -117,18 +118,18 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 183);
+            this.label5.Location = new System.Drawing.Point(11, 186);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 16);
+            this.label5.Size = new System.Drawing.Size(99, 16);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Select Status:";
+            this.label5.Text = "Select Status";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(128, 135);
+            this.label4.Location = new System.Drawing.Point(11, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 27;
@@ -139,7 +140,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 88);
+            this.label3.Location = new System.Drawing.Point(11, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 16);
             this.label3.TabIndex = 26;
@@ -150,7 +151,7 @@
             this.lblChildNumber.AutoSize = true;
             this.lblChildNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblChildNumber.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChildNumber.Location = new System.Drawing.Point(90, 44);
+            this.lblChildNumber.Location = new System.Drawing.Point(11, 47);
             this.lblChildNumber.Name = "lblChildNumber";
             this.lblChildNumber.Size = new System.Drawing.Size(146, 16);
             this.lblChildNumber.TabIndex = 25;
@@ -235,7 +236,7 @@
             // chkWaitingList
             // 
             this.chkWaitingList.AutoSize = true;
-            this.chkWaitingList.Location = new System.Drawing.Point(12, 105);
+            this.chkWaitingList.Location = new System.Drawing.Point(12, 109);
             this.chkWaitingList.Name = "chkWaitingList";
             this.chkWaitingList.Size = new System.Drawing.Size(15, 14);
             this.chkWaitingList.TabIndex = 17;
@@ -329,7 +330,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(543, 229);
+            this.label1.Location = new System.Drawing.Point(474, 233);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 16);
             this.label1.TabIndex = 35;
@@ -340,7 +341,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(533, 186);
+            this.label9.Location = new System.Drawing.Point(474, 186);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(131, 16);
             this.label9.TabIndex = 36;
@@ -351,7 +352,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(46, 299);
+            this.label10.Location = new System.Drawing.Point(10, 295);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 16);
             this.label10.TabIndex = 37;
@@ -362,7 +363,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(138, 340);
+            this.label11.Location = new System.Drawing.Point(11, 339);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 16);
             this.label11.TabIndex = 38;
@@ -373,7 +374,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(113, 416);
+            this.label12.Location = new System.Drawing.Point(10, 420);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 16);
             this.label12.TabIndex = 39;
@@ -384,7 +385,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(132, 451);
+            this.label13.Location = new System.Drawing.Point(11, 455);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 16);
             this.label13.TabIndex = 40;
@@ -395,7 +396,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(142, 491);
+            this.label14.Location = new System.Drawing.Point(11, 488);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 41;
@@ -403,15 +404,15 @@
             // 
             // btnAddRef
             // 
-            this.btnAddRef.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddRef.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddRef.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddRef.BackgroundImage")));
             this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddRef.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRef.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRef.Location = new System.Drawing.Point(12, 512);
+            this.btnAddRef.Location = new System.Drawing.Point(13, 518);
             this.btnAddRef.Name = "btnAddRef";
             this.btnAddRef.Size = new System.Drawing.Size(75, 35);
             this.btnAddRef.TabIndex = 42;
-            this.btnAddRef.Text = "ADD";
             this.btnAddRef.UseVisualStyleBackColor = false;
             this.btnAddRef.Click += new System.EventHandler(this.btnAddRef_Click);
             // 
@@ -420,7 +421,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.label2.Location = new System.Drawing.Point(574, 135);
+            this.label2.Location = new System.Drawing.Point(474, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 43;
@@ -429,7 +430,7 @@
             // mnuTherapyRef
             // 
             this.mnuTherapyRef.BackColor = System.Drawing.Color.DimGray;
-            this.mnuTherapyRef.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTherapyRef.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
             this.mnuTherapyRef.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuTherapyRefFile,
             this.mnuTherapyRefView,
@@ -494,14 +495,22 @@
             // mnuTherapyRefRegChild
             // 
             this.mnuTherapyRefRegChild.Name = "mnuTherapyRefRegChild";
+<<<<<<< HEAD
             this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(176, 22);
+=======
+            this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(194, 22);
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             this.mnuTherapyRefRegChild.Text = "Register Child";
             this.mnuTherapyRefRegChild.Click += new System.EventHandler(this.mnuTherapyRefRegChild_Click);
             // 
             // mnuTherapyRefRegUser
             // 
             this.mnuTherapyRefRegUser.Name = "mnuTherapyRefRegUser";
+<<<<<<< HEAD
             this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(176, 22);
+=======
+            this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(194, 22);
+>>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
             this.mnuTherapyRefRegUser.Text = "Register User";
             this.mnuTherapyRefRegUser.Click += new System.EventHandler(this.mnuTherapyRefRegUser_Click);
             // 
@@ -509,6 +518,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(912, 554);
             this.Controls.Add(this.mnuTherapyRef);
             this.Controls.Add(this.label2);
