@@ -88,19 +88,19 @@
             // mnuProfileReturn
             // 
             this.mnuProfileReturn.Name = "mnuProfileReturn";
-<<<<<<< HEAD
+ 
             this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
-=======
+ 
             this.mnuProfileReturn.Size = new System.Drawing.Size(121, 22);
->>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
->>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
->>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
+ 
+ 
+ 
             this.mnuProfileReturn.Text = "Return";
             this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
             // 
@@ -117,19 +117,19 @@
             // mnuProfileReports
             // 
             this.mnuProfileReports.Name = "mnuProfileReports";
-<<<<<<< HEAD
+ 
             this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
-=======
+ 
             this.mnuProfileReports.Size = new System.Drawing.Size(126, 22);
->>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
->>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
->>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
+ 
+ 
+ 
             this.mnuProfileReports.Text = "Reports";
             this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
             // 
@@ -138,19 +138,19 @@
             this.mnuProfileHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuProfileHelp.ForeColor = System.Drawing.Color.White;
             this.mnuProfileHelp.Name = "mnuProfileHelp";
-<<<<<<< HEAD
+ 
             this.mnuProfileHelp.Size = new System.Drawing.Size(52, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileHelp.Size = new System.Drawing.Size(52, 22);
-=======
-<<<<<<< HEAD
+ 
+ 
             this.mnuProfileHelp.Size = new System.Drawing.Size(52, 22);
-=======
+ 
             this.mnuProfileHelp.Size = new System.Drawing.Size(51, 22);
->>>>>>> 8737e6938891d1372ec8317e47da98188a71f9b3
->>>>>>> f66427b45e206b20d4191a06d93ccaaaf2f680b8
->>>>>>> 89111465f60f605c1ab622e0446c37bbcea8f855
+ 
+ 
+ 
             this.mnuProfileHelp.Text = "Help";
             this.mnuProfileHelp.Click += new System.EventHandler(this.mnuProfileHelp_Click);
             // 
