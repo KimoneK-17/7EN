@@ -49,6 +49,10 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnChangePic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.mnuProfileForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileTherRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileRegChild = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileRegUser = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +65,8 @@
             this.mnuProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileFile,
             this.mnuProfileView,
-            this.mnuProfileHelp});
+            this.mnuProfileHelp,
+            this.mnuProfileForm});
             this.mnuProfile.Location = new System.Drawing.Point(0, 0);
             this.mnuProfile.Name = "mnuProfile";
             this.mnuProfile.Size = new System.Drawing.Size(450, 26);
@@ -72,15 +77,16 @@
             // 
             this.mnuProfileFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileReturn});
+            this.mnuProfileFile.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuProfileFile.ForeColor = System.Drawing.Color.White;
             this.mnuProfileFile.Name = "mnuProfileFile";
-            this.mnuProfileFile.Size = new System.Drawing.Size(47, 22);
+            this.mnuProfileFile.Size = new System.Drawing.Size(44, 22);
             this.mnuProfileFile.Text = "File";
             // 
             // mnuProfileReturn
             // 
             this.mnuProfileReturn.Name = "mnuProfileReturn";
-            this.mnuProfileReturn.Size = new System.Drawing.Size(126, 22);
+            this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuProfileReturn.Text = "Return";
             this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
             // 
@@ -88,6 +94,7 @@
             // 
             this.mnuProfileView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileReports});
+            this.mnuProfileView.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuProfileView.ForeColor = System.Drawing.Color.White;
             this.mnuProfileView.Name = "mnuProfileView";
             this.mnuProfileView.Size = new System.Drawing.Size(55, 22);
@@ -96,15 +103,16 @@
             // mnuProfileReports
             // 
             this.mnuProfileReports.Name = "mnuProfileReports";
-            this.mnuProfileReports.Size = new System.Drawing.Size(136, 22);
+            this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
             this.mnuProfileReports.Text = "Reports";
             this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
             // 
             // mnuProfileHelp
             // 
+            this.mnuProfileHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
             this.mnuProfileHelp.ForeColor = System.Drawing.Color.White;
             this.mnuProfileHelp.Name = "mnuProfileHelp";
-            this.mnuProfileHelp.Size = new System.Drawing.Size(54, 22);
+            this.mnuProfileHelp.Size = new System.Drawing.Size(52, 22);
             this.mnuProfileHelp.Text = "Help";
             this.mnuProfileHelp.Click += new System.EventHandler(this.mnuProfileHelp_Click);
             // 
@@ -264,6 +272,39 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // mnuProfileForm
+            // 
+            this.mnuProfileForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProfileTherRef,
+            this.mnuProfileRegChild,
+            this.mnuProfileRegUser});
+            this.mnuProfileForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuProfileForm.ForeColor = System.Drawing.Color.White;
+            this.mnuProfileForm.Name = "mnuProfileForm";
+            this.mnuProfileForm.Size = new System.Drawing.Size(60, 22);
+            this.mnuProfileForm.Text = "Form";
+            // 
+            // mnuProfileTherRef
+            // 
+            this.mnuProfileTherRef.Name = "mnuProfileTherRef";
+            this.mnuProfileTherRef.Size = new System.Drawing.Size(198, 22);
+            this.mnuProfileTherRef.Text = "Therapy Referral";
+            this.mnuProfileTherRef.Click += new System.EventHandler(this.mnuProfileTherRef_Click);
+            // 
+            // mnuProfileRegChild
+            // 
+            this.mnuProfileRegChild.Name = "mnuProfileRegChild";
+            this.mnuProfileRegChild.Size = new System.Drawing.Size(198, 22);
+            this.mnuProfileRegChild.Text = "Register Child";
+            this.mnuProfileRegChild.Click += new System.EventHandler(this.mnuProfileRegChild_Click);
+            // 
+            // mnuProfileRegUser
+            // 
+            this.mnuProfileRegUser.Name = "mnuProfileRegUser";
+            this.mnuProfileRegUser.Size = new System.Drawing.Size(198, 22);
+            this.mnuProfileRegUser.Text = "Register User";
+            this.mnuProfileRegUser.Click += new System.EventHandler(this.mnuProfileRegUser_Click);
+            // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,5 +362,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnuProfileReports;
         private System.Windows.Forms.ToolStripMenuItem mnuProfileHelp;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileForm;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileTherRef;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileRegChild;
+        private System.Windows.Forms.ToolStripMenuItem mnuProfileRegUser;
     }
 }
