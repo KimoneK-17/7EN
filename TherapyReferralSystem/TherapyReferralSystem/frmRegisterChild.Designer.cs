@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.rtbxSpecCon = new System.Windows.Forms.RichTextBox();
@@ -58,6 +59,7 @@
             this.mnuRegChildFile = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildReports = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +67,17 @@
             this.mnuRegChildForm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildTherapyRef = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegChildRegUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblRNum = new System.Windows.Forms.Label();
+            this.lblRStatus = new System.Windows.Forms.Label();
+            this.lblRCluster = new System.Windows.Forms.Label();
+            this.lblRID = new System.Windows.Forms.Label();
+            this.lblRGender = new System.Windows.Forms.Label();
+            this.lblRLname = new System.Windows.Forms.Label();
+            this.lblRFname = new System.Windows.Forms.Label();
+            this.lblRBSF = new System.Windows.Forms.Label();
+            this.lblRHouse = new System.Windows.Forms.Label();
+            this.lblRDOA = new System.Windows.Forms.Label();
+            this.ttChild = new System.Windows.Forms.ToolTip(this.components);
             this.mnuRegChild.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,9 +154,11 @@
             // 
             this.txtID.Location = new System.Drawing.Point(268, 389);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.MaxLength = 13;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(201, 22);
             this.txtID.TabIndex = 45;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // lblID
             // 
@@ -374,6 +389,7 @@
             this.mnuRegChildFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.searchToolStripMenuItem,
             this.updateToolStripMenuItem,
+            this.dELETEToolStripMenuItem,
             this.mnuRegChildReturn});
             this.mnuRegChildFile.ForeColor = System.Drawing.Color.White;
             this.mnuRegChildFile.Name = "mnuRegChildFile";
@@ -383,21 +399,29 @@
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
             this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.ToolTipText = "Search using child number or ID Number";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(181, 28);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // dELETEToolStripMenuItem
+            // 
+            this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
+            this.dELETEToolStripMenuItem.Text = "Delete";
+            this.dELETEToolStripMenuItem.Click += new System.EventHandler(this.dELETEToolStripMenuItem_Click);
             // 
             // mnuRegChildReturn
             // 
             this.mnuRegChildReturn.Name = "mnuRegChildReturn";
-            this.mnuRegChildReturn.Size = new System.Drawing.Size(181, 28);
+            this.mnuRegChildReturn.Size = new System.Drawing.Size(153, 28);
             this.mnuRegChildReturn.Text = "Return";
             this.mnuRegChildReturn.Click += new System.EventHandler(this.mnuRegChildReturn_Click);
             // 
@@ -450,12 +474,132 @@
             this.mnuRegChildRegUser.Text = "Register User";
             this.mnuRegChildRegUser.Click += new System.EventHandler(this.mnuRegChildRegUser_Click);
             // 
+            // lblRNum
+            // 
+            this.lblRNum.AutoSize = true;
+            this.lblRNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRNum.ForeColor = System.Drawing.Color.Red;
+            this.lblRNum.Location = new System.Drawing.Point(476, 59);
+            this.lblRNum.Name = "lblRNum";
+            this.lblRNum.Size = new System.Drawing.Size(16, 20);
+            this.lblRNum.TabIndex = 54;
+            this.lblRNum.Text = "*";
+            // 
+            // lblRStatus
+            // 
+            this.lblRStatus.AutoSize = true;
+            this.lblRStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblRStatus.Location = new System.Drawing.Point(476, 95);
+            this.lblRStatus.Name = "lblRStatus";
+            this.lblRStatus.Size = new System.Drawing.Size(16, 20);
+            this.lblRStatus.TabIndex = 55;
+            this.lblRStatus.Text = "*";
+            // 
+            // lblRCluster
+            // 
+            this.lblRCluster.AutoSize = true;
+            this.lblRCluster.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRCluster.ForeColor = System.Drawing.Color.Red;
+            this.lblRCluster.Location = new System.Drawing.Point(476, 133);
+            this.lblRCluster.Name = "lblRCluster";
+            this.lblRCluster.Size = new System.Drawing.Size(16, 20);
+            this.lblRCluster.TabIndex = 56;
+            this.lblRCluster.Text = "*";
+            // 
+            // lblRID
+            // 
+            this.lblRID.AutoSize = true;
+            this.lblRID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRID.ForeColor = System.Drawing.Color.Red;
+            this.lblRID.Location = new System.Drawing.Point(476, 391);
+            this.lblRID.Name = "lblRID";
+            this.lblRID.Size = new System.Drawing.Size(16, 20);
+            this.lblRID.TabIndex = 57;
+            this.lblRID.Text = "*";
+            // 
+            // lblRGender
+            // 
+            this.lblRGender.AutoSize = true;
+            this.lblRGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRGender.ForeColor = System.Drawing.Color.Red;
+            this.lblRGender.Location = new System.Drawing.Point(476, 355);
+            this.lblRGender.Name = "lblRGender";
+            this.lblRGender.Size = new System.Drawing.Size(16, 20);
+            this.lblRGender.TabIndex = 58;
+            this.lblRGender.Text = "*";
+            // 
+            // lblRLname
+            // 
+            this.lblRLname.AutoSize = true;
+            this.lblRLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRLname.ForeColor = System.Drawing.Color.Red;
+            this.lblRLname.Location = new System.Drawing.Point(476, 317);
+            this.lblRLname.Name = "lblRLname";
+            this.lblRLname.Size = new System.Drawing.Size(16, 20);
+            this.lblRLname.TabIndex = 59;
+            this.lblRLname.Text = "*";
+            // 
+            // lblRFname
+            // 
+            this.lblRFname.AutoSize = true;
+            this.lblRFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRFname.ForeColor = System.Drawing.Color.Red;
+            this.lblRFname.Location = new System.Drawing.Point(476, 244);
+            this.lblRFname.Name = "lblRFname";
+            this.lblRFname.Size = new System.Drawing.Size(16, 20);
+            this.lblRFname.TabIndex = 60;
+            this.lblRFname.Text = "*";
+            // 
+            // lblRBSF
+            // 
+            this.lblRBSF.AutoSize = true;
+            this.lblRBSF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRBSF.ForeColor = System.Drawing.Color.Red;
+            this.lblRBSF.Location = new System.Drawing.Point(476, 208);
+            this.lblRBSF.Name = "lblRBSF";
+            this.lblRBSF.Size = new System.Drawing.Size(16, 20);
+            this.lblRBSF.TabIndex = 61;
+            this.lblRBSF.Text = "*";
+            // 
+            // lblRHouse
+            // 
+            this.lblRHouse.AutoSize = true;
+            this.lblRHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRHouse.ForeColor = System.Drawing.Color.Red;
+            this.lblRHouse.Location = new System.Drawing.Point(476, 171);
+            this.lblRHouse.Name = "lblRHouse";
+            this.lblRHouse.Size = new System.Drawing.Size(16, 20);
+            this.lblRHouse.TabIndex = 62;
+            this.lblRHouse.Text = "*";
+            // 
+            // lblRDOA
+            // 
+            this.lblRDOA.AutoSize = true;
+            this.lblRDOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRDOA.ForeColor = System.Drawing.Color.Red;
+            this.lblRDOA.Location = new System.Drawing.Point(476, 427);
+            this.lblRDOA.Name = "lblRDOA";
+            this.lblRDOA.Size = new System.Drawing.Size(16, 20);
+            this.lblRDOA.TabIndex = 63;
+            this.lblRDOA.Text = "*";
+            // 
             // frmRegisterChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(749, 597);
+            this.Controls.Add(this.lblRDOA);
+            this.Controls.Add(this.lblRHouse);
+            this.Controls.Add(this.lblRBSF);
+            this.Controls.Add(this.lblRFname);
+            this.Controls.Add(this.lblRLname);
+            this.Controls.Add(this.lblRGender);
+            this.Controls.Add(this.lblRID);
+            this.Controls.Add(this.lblRCluster);
+            this.Controls.Add(this.lblRStatus);
+            this.Controls.Add(this.lblRNum);
             this.Controls.Add(this.mnuRegChild);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
@@ -533,5 +677,17 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRegChildRegUser;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dELETEToolStripMenuItem;
+        private System.Windows.Forms.Label lblRNum;
+        private System.Windows.Forms.Label lblRStatus;
+        private System.Windows.Forms.Label lblRCluster;
+        private System.Windows.Forms.Label lblRID;
+        private System.Windows.Forms.Label lblRGender;
+        private System.Windows.Forms.Label lblRLname;
+        private System.Windows.Forms.Label lblRFname;
+        private System.Windows.Forms.Label lblRBSF;
+        private System.Windows.Forms.Label lblRHouse;
+        private System.Windows.Forms.Label lblRDOA;
+        private System.Windows.Forms.ToolTip ttChild;
     }
 }

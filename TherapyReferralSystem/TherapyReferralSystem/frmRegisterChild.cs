@@ -19,10 +19,11 @@ namespace TherapyReferralSystem
         }
         //Variable Declaration
 
-        string c_num, c_fname, c_mname, c_sname, c_consid, c_admin_date, c_idNum;
-        long c_id;
+        string c_num, c_fname, c_mname, c_sname, c_consid, c_admin_date, c_idNum, c_id;
         string c_bsf, c_status, c_cluster, c_house, c_gender;
-
+        DBConnect objDBConnect = new DBConnect();
+        SharedMethods sm = new SharedMethods();
+        bool found, validID;
         private void mnuRegChildHelp_Click(object sender, EventArgs e)
         {
             frmHelp help = new frmHelp();
@@ -44,7 +45,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
-            
+
             frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
             this.Dispose();
@@ -69,20 +70,52 @@ namespace TherapyReferralSystem
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            c_num = txtNumber.Text;
-            searchChild();
+            resetRequired();
+            Cursor.Current = Cursors.WaitCursor;
+
+            if (!txtNumber.Text.Equals(""))
+            {
+                c_num = txtNumber.Text;
+                found = sm.CheckExisting("Child", "c_number", c_num);
+                if (found == true)
+                {
+                    searchChild();
+                    
+                }
+                else
+                {
+                    lblRNum.Text = "* Invalid Child Number";
+                }
+
+            }
+            else
+            {
+                if (!txtID.Text.Equals(""))
+                {
+                    c_id = txtID.Text;
+                    searchChild();
+                }
+                else
+                {
+                    MessageBox.Show("Enter Child Number or ID Number to Search");
+                }
+
+            }
+            Cursor.Current = Cursors.Default;
         }
 
         public void searchChild()
         {
 
+
             try
             {
                 objDBConnect.OpenConnection();
-                string sqlquery = "SELECT C_NUMBER, C_STATUS, C_CLUSTER, C_HOUSE, C_BSF,C_FNAME, C_MNAME, C_SNAME,C_ID,C_GENDER,C_ADM_DATE,C_CONSIDER FROM CHILD WHERE C_NUMBER = @C_NUMBER";
+                string sqlquery = "SELECT C_NUMBER, C_STATUS, C_CLUSTER, C_HOUSE, C_BSF,C_FNAME, C_MNAME, C_SNAME,C_ID,C_GENDER,C_ADM_DATE,C_CONSIDER FROM CHILD WHERE C_NUMBER = @C_NUMBER OR C_ID like @C_ID";
 
                 objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ID", txtID.Text);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
                 while (objDBConnect.sqlDR.Read())
@@ -108,20 +141,31 @@ namespace TherapyReferralSystem
                     dtpDOA.Value = Convert.ToDateTime(objDBConnect.sqlDR["C_ADM_DATE"].ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("fail");
+                MessageBox.Show("fail: " + ex.Message);
             }
 
 
         }
 
-        DBConnect objDBConnect = new DBConnect();
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             updateChild();
 
+        }
+
+        private void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteChild();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -133,9 +177,6 @@ namespace TherapyReferralSystem
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
-
-            //checkEmpty();
-            //IDValidation();
             insertRecords();
 
         }
@@ -143,46 +184,69 @@ namespace TherapyReferralSystem
 
         public void insertRecords()
         {
-            checkEmpty();
-            if (c_empty == false)
+            resetRequired();
+            c_empty = checkEmpty();
+
+
+            if (c_empty == true)
             {
-                IDValidation();
-
-                try
+                found = sm.CheckExisting("Child", "C_NUMBER", c_num);
+                if (found == false)
                 {
-                    objDBConnect.OpenConnection();
+
+                    validID = sm.IDValidation(c_id);
+
+                    if (validID == true)
+                    {
+                        try
+                        {
+                            objDBConnect.OpenConnection();
 
 
-                    objDBConnect.sqlCmd = new SqlCommand("INSERT INTO Child VALUES (@C_NUMBER, @C_STATUS, @C_CLUSTER, @C_HOUSE, @C_BSF,@C_FNAME, @C_MNAME, @C_SNAME,@C_ID,@C_GENDER,@C_ADM_DATE,@C_CONSIDER)", objDBConnect.sqlConn);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_STATUS", c_status);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_HOUSE", c_house);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CLUSTER", c_cluster);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_BSF", c_bsf);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_FNAME", c_fname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_MNAME", c_mname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_SNAME", c_sname);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ID", c_id);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_GENDER", c_gender);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ADM_DATE", c_admin_date);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CONSIDER", c_consid);
+                            objDBConnect.sqlCmd = new SqlCommand("INSERT INTO Child VALUES (@C_NUMBER, @C_STATUS, @C_CLUSTER, @C_HOUSE, @C_BSF,@C_FNAME, @C_MNAME, @C_SNAME,@C_ID,@C_GENDER,@C_ADM_DATE,@C_CONSIDER)", objDBConnect.sqlConn);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_STATUS", c_status);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_HOUSE", c_house);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CLUSTER", c_cluster);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_BSF", c_bsf);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_FNAME", c_fname);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_MNAME", c_mname);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_SNAME", c_sname);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ID", c_id);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_GENDER", c_gender);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_ADM_DATE", c_admin_date);
+                            objDBConnect.sqlCmd.Parameters.AddWithValue("@C_CONSIDER", c_consid);
 
-                    objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+                            objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
-                    MessageBox.Show("Successfully Inserted");
-                    objDBConnect.sqlDR.Close();
-                    objDBConnect.sqlConn.Close();
-                    ClearFields();
+                            MessageBox.Show("Successfully Inserted");
+                            objDBConnect.sqlDR.Close();
+                            objDBConnect.sqlConn.Close();
+                            ClearFields();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Error cannot add child details " + ex.Message);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error Cannot Add child Details: " + ex.Message + ex.Data + ex.StackTrace);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid ID to continue");
+                        lblRID.Text = "* Enter Valid ID";
+                    }
+
 
                 }
-                catch (SqlException ex)
+                else
                 {
-                    MessageBox.Show("Error cannot add child details " + ex.Message);
+                    MessageBox.Show("This Number already exists in database");
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error Cannot Add child Details: " + ex.Message + ex.Data + ex.StackTrace);
-                }
+
             }
             else
             {
@@ -196,16 +260,37 @@ namespace TherapyReferralSystem
             txtID.Text = "";
             txtLName.Text = "";
             txtMName.Text = "";
+            rtbxSpecCon.Text = "";
             cmbBSF.SelectedIndex = -1;
             cmbCluster.SelectedIndex = -1;
             cmbGender.SelectedIndex = -1;
             cmbHouse.SelectedIndex = -1;
             cmbStatus.SelectedIndex = -1;
+            dtpDOA.Value = DateTime.Today;
+
+            resetRequired();
+
+
         }//clear fields
+
+        private void resetRequired()
+        {
+            lblRBSF.Text = "*";
+            lblRCluster.Text = "*";
+            lblRDOA.Text = "*";
+            lblRFname.Text = "*";
+            lblRGender.Text = "*";
+            lblRHouse.Text = "*";
+            lblRID.Text = "*";
+            lblRLname.Text = "*";
+            lblRNum.Text = "*";
+            lblRStatus.Text = "*";
+        }
 
         public void GetFields()
         {
             //get values from text box
+            c_id = txtID.Text;
             c_num = txtNumber.Text;
             c_fname = txtFName.Text;
             c_mname = txtMName.Text;
@@ -216,37 +301,76 @@ namespace TherapyReferralSystem
 
             checkSelected();
             //get date from datepicker
-            c_admin_date = dtpDOA.Value.ToString("dd-MM-yyyy");
+            c_admin_date = dtpDOA.Value.ToString("yyyy-MM-dd");
 
         }//assign fields to variables
 
-        public void checkEmpty()
+        public bool checkEmpty()
         {
 
             GetFields();
-            if (c_num.Equals("") || c_fname.Equals("") || c_sname.Equals("") ||
-              c_status.Equals("") || c_idNum.Equals(""))
-            {
 
-                c_empty = true;
-                MessageBox.Show("Please fill out required details");
-            }
-            else
+            bool required = true;
+            if (txtNumber.Text.Equals(""))
             {
-                c_empty = false;
+                lblRNum.Text = "* REQUIRED";
+                required = false;
             }
+
+            if (txtID.Text.Equals(""))
+            {
+                lblRID.Text = "* REQUIRED";
+                required = false;
+            }
+            if (txtFName.Text.Equals(""))
+            {
+                lblRFname.Text = "* REQUIRED";
+                required = false;
+            }
+            if (txtLName.Text.Equals(""))
+            {
+                lblRLname.Text = "* REQUIRED";
+                required = false;
+            }
+
+            if (cmbStatus.SelectedIndex < 0)
+            {
+                lblRStatus.Text = "* REQUIRED";
+                required = false;
+            }
+            if (cmbHouse.SelectedIndex < 0)
+            {
+                lblRHouse.Text = "* REQUIRED";
+                required = false;
+            }
+            if (cmbGender.SelectedIndex < 0)
+            {
+                lblRGender.Text = "* REQUIRED";
+                required = false;
+            }
+            if (cmbCluster.SelectedIndex < 0)
+            {
+                lblRCluster.Text = "* REQUIRED";
+                required = false;
+            }
+            if (cmbBSF.SelectedIndex < 0)
+            {
+                lblRBSF.Text = "* REQUIRED";
+                required = false;
+            }
+
+            return required;
         }//check if variables have values
 
 
-        public long IDValidation()
+        /*public long IDValidation()
         {
             if (!txtID.Text.Equals(""))
             {
 
                 if (txtID.Text.Length == 13)
                 {
-                    c_id = long.Parse(txtID.Text);
-                    checkID();
+                    sm.IDValidation(txtID.Text);
                 }
                 else
                 {
@@ -260,27 +384,27 @@ namespace TherapyReferralSystem
 
         public void checkID()
         {
-            long n = c_id;
-            n = long.Parse(txtID.Text.Remove(txtID.Text.Length - 1, 1));
+            long tempID = c_id;
+            tempID = long.Parse(txtID.Text.Remove(txtID.Text.Length - 1, 1));
 
             long oddSum = 0, evenSum = 0;
             int evenSumP2 = 0;
 
             int counter = 1;
             string evenStr = "", oddStr = "";
-            while (n != 0)
+            while (tempID != 0)
             {
                 if (counter % 2 == 0)
                 {
-                    oddSum += n % 10;
-                    oddStr = n % 10 + "" + oddStr;
-                    n /= 10;
+                    oddSum += tempID % 10;
+                    oddStr = tempID % 10 + "" + oddStr;
+                    tempID /= 10;
                 }
                 else
                 {
-                    evenSum += n % 10;
-                    evenStr = n % 10 + "" + evenStr;
-                    n /= 10;
+                    evenSum += tempID % 10;
+                    evenStr = tempID % 10 + "" + evenStr;
+                    tempID /= 10;
 
                 }
                 counter++;
@@ -308,16 +432,17 @@ namespace TherapyReferralSystem
             MessageBox.Show("Last digit of Sum: " + lastdigit);
             MessageBox.Show("Sub from ten value: " + subFromTen);*/
 
-            if ((c_id % 10) == (subFromTen % 10))
-            {
-                MessageBox.Show("Valid ID");
-            }
-            else
-            {
-                MessageBox.Show("ID Number is invalid");
-            }
+        /* if ((c_id % 10) == (subFromTen % 10))
+         {
+             validID = true;
+         }
+         else
+         {
+             validID = false;
 
-        }
+         }
+
+     }*/
         public void checkSelected()
         {
             if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)
@@ -336,7 +461,7 @@ namespace TherapyReferralSystem
             checkEmpty();
             if (c_empty == false)
             {
-                //IDValidation();
+
 
                 try
                 {
@@ -377,6 +502,39 @@ namespace TherapyReferralSystem
             {
                 //MessageBox.Show("Please enter all fields before proceeding");
             }
+        }
+
+        public void DeleteChild()
+        {
+            if (!txtNumber.Text.Equals(""))
+            {
+                c_num = txtNumber.Text;
+                searchChild();
+                objDBConnect.OpenConnection();
+                try
+                {
+                    objDBConnect.sqlCmd = new SqlCommand("DELETE FROM Child WHERE C_NUMBER = @C_NUMBER", objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@C_NUMBER", c_num);
+
+
+                    objDBConnect.sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Child Deleted");
+                    ClearFields();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    objDBConnect.sqlConn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Child Number To Delete");
+            }
+
         }
     }
 }

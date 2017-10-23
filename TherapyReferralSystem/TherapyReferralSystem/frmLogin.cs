@@ -23,7 +23,7 @@ namespace TherapyReferralSystem
         bool found, checkValid;
 
         DBConnect objDBConnect = new DBConnect();
-
+        SharedMethods sm = new SharedMethods();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!txtUsername.Text.Equals(""))
@@ -34,7 +34,12 @@ namespace TherapyReferralSystem
                     if (!txtPassword.Text.Equals(""))
                     {
                         password = txtPassword.Text;
-                        CheckExisting();
+                      found =  sm.CheckExisting("tbl_user","u_email",username);
+
+                        if(found == true)
+                        {
+                            CheckValid();
+                        }
 
                     }
                     else
@@ -50,7 +55,7 @@ namespace TherapyReferralSystem
             }
         }
 
-        private void CheckExisting()
+        /*private void CheckExisting()
         {
             try
             {
@@ -86,7 +91,7 @@ namespace TherapyReferralSystem
             {
                 MessageBox.Show("Error Cannot Check If User  Exists In Database: " + ex.Message); // Shows an error message
             }
-        }
+        }*/
 
         private void mnuLoginLogout_Click(object sender, EventArgs e)
         {
@@ -141,6 +146,7 @@ namespace TherapyReferralSystem
 
                     frmProfile pr = new frmProfile(username);
                     pr.Show();
+
                     //this.Dispose();
                 }
                 else

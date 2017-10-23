@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SharedMethods.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="frmAdminPWordReset.cs">
       <SubType>Form</SubType>
