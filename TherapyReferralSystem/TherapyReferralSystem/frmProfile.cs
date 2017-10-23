@@ -18,7 +18,7 @@ namespace TherapyReferralSystem
 
         public frmProfile()
         {
-            
+
         }
 
         public frmProfile(string username)
@@ -97,6 +97,14 @@ namespace TherapyReferralSystem
         private void frmProfile_Load(object sender, EventArgs e)
         {
             getFromDatabase();
+            if (type.Equals("Social Worker"))
+            {
+                mnuProfileRegChild.Enabled = true;
+            }
+            else
+            {
+                mnuProfileRegChild.Enabled = false;
+            }
         }
         //method gets information from the database table user and displays in form
         public void getFromDatabase()
@@ -117,19 +125,19 @@ namespace TherapyReferralSystem
                     id = dbConnect.sqlDR["U_ID"].ToString();
                     byte[] images = (byte[])dbConnect.sqlDR["U_IMAGE"];
 
-                     if (images == null)
-                     {
-                         picbxProfilePic.Image = null;
-                        
-                     }
+                    if (images == null)
+                    {
+                        picbxProfilePic.Image = null;
 
-                     else
-                     {
-                         MemoryStream mStream = new MemoryStream(images);
-                         picbxProfilePic.BackgroundImage = Image.FromStream(mStream);
-                       
-                        
-                     }
+                    }
+
+                    else
+                    {
+                        MemoryStream mStream = new MemoryStream(images);
+                        picbxProfilePic.BackgroundImage = Image.FromStream(mStream);
+
+
+                    }
                 }
 
                 else
@@ -156,19 +164,19 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Error" + ex.Message);
             }
         }
-            
+
 
         public void updateInfo()
         {
             fname = txtName.Text;
             sname = txtSurname.Text;
             phone = txtPhoneNumber.Text;
-            
+
             try
             {
                 dbConnect.OpenConnection();
                 dbConnect.sqlCmd = new SqlCommand("UPDATE TBL_USER SET U_FNAME = @U_FNAME, U_SNAME = @U_SNAME, U_CONTACT = @U_CONTACT WHERE U_EMAIL LIKE @U_EMAIL", dbConnect.sqlConn); // updates information by email identification
-                
+
                 //updates these fields in the database
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
                 dbConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", sname);
@@ -180,18 +188,18 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Successfully Updated");
                 dbConnect.sqlDR.Close();
                 dbConnect.sqlConn.Close();
-                
+
             }
 
             catch (SqlException se)
             {
                 MessageBox.Show("SQL Error" + se.Message);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error" + ex.Message);
             }
-            
+
 
         }
 
@@ -211,14 +219,14 @@ namespace TherapyReferralSystem
             {
                 imgLocation = dialog.FileName.ToString();
                 picbxProfilePic.ImageLocation = imgLocation;
-                
+
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             byte[] images = null;
-            FileStream Stream = new FileStream(imgLocation, FileMode.Open,FileAccess.Read);
+            FileStream Stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(Stream);
             images = brs.ReadBytes((int)Stream.Length);
 
@@ -232,7 +240,31 @@ namespace TherapyReferralSystem
             dbConnect.sqlConn.Close();
             MessageBox.Show(N.ToString() + "Image Saved Successfully");
 
-            
+
+        }
+
+        private void mnuProfileTherRef_Click(object sender, EventArgs e)
+        {
+            frmTherapyReferral tf = new frmTherapyReferral();
+            tf.Show();
+            this.Dispose();
+        }
+
+        private void mnuProfileRegChild_Click(object sender, EventArgs e)
+        {
+
+            frmRegisterChild rc = new frmRegisterChild();
+            rc.Show();
+            this.Dispose();
+
+
+        }
+
+        private void mnuProfileRegUser_Click(object sender, EventArgs e)
+        {
+            frmRegisterUser ru = new frmRegisterUser();
+            ru.Show();
+            this.Dispose();
         }
         //**********************************************************************************************
     }

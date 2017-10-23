@@ -453,7 +453,7 @@
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(121, 22);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(152, 22);
             this.mnuTherapyRefReturn.Text = "Return";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
@@ -463,13 +463,13 @@
             this.mnuTherapyRefReports});
             this.mnuTherapyRefView.ForeColor = System.Drawing.Color.White;
             this.mnuTherapyRefView.Name = "mnuTherapyRefView";
-            this.mnuTherapyRefView.Size = new System.Drawing.Size(52, 22);
+            this.mnuTherapyRefView.Size = new System.Drawing.Size(55, 22);
             this.mnuTherapyRefView.Text = "View";
             // 
             // mnuTherapyRefReports
             // 
             this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
-            this.mnuTherapyRefReports.Size = new System.Drawing.Size(126, 22);
+            this.mnuTherapyRefReports.Size = new System.Drawing.Size(152, 22);
             this.mnuTherapyRefReports.Text = "Reports";
             this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
             // 
@@ -477,7 +477,7 @@
             // 
             this.mnuTherapyRefHelp.ForeColor = System.Drawing.Color.White;
             this.mnuTherapyRefHelp.Name = "mnuTherapyRefHelp";
-            this.mnuTherapyRefHelp.Size = new System.Drawing.Size(51, 22);
+            this.mnuTherapyRefHelp.Size = new System.Drawing.Size(52, 22);
             this.mnuTherapyRefHelp.Text = "Help";
             this.mnuTherapyRefHelp.Click += new System.EventHandler(this.mnuTherapyRefHelp_Click);
             // 
@@ -488,20 +488,20 @@
             this.mnuTherapyRefRegUser});
             this.mnuTherapyRefForm.ForeColor = System.Drawing.Color.White;
             this.mnuTherapyRefForm.Name = "mnuTherapyRefForm";
-            this.mnuTherapyRefForm.Size = new System.Drawing.Size(54, 22);
+            this.mnuTherapyRefForm.Size = new System.Drawing.Size(60, 22);
             this.mnuTherapyRefForm.Text = "Form";
             // 
             // mnuTherapyRefRegChild
             // 
             this.mnuTherapyRefRegChild.Name = "mnuTherapyRefRegChild";
-            this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(168, 22);
+            this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(176, 22);
             this.mnuTherapyRefRegChild.Text = "Register Child";
             this.mnuTherapyRefRegChild.Click += new System.EventHandler(this.mnuTherapyRefRegChild_Click);
             // 
             // mnuTherapyRefRegUser
             // 
             this.mnuTherapyRefRegUser.Name = "mnuTherapyRefRegUser";
-            this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(168, 22);
+            this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(176, 22);
             this.mnuTherapyRefRegUser.Text = "Register User";
             this.mnuTherapyRefRegUser.Click += new System.EventHandler(this.mnuTherapyRefRegUser_Click);
             // 
