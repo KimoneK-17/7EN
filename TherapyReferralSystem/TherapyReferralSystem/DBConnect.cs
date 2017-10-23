@@ -22,7 +22,7 @@ namespace TherapyReferralSystem
                     sqlConn = new SqlConnection();
                     sqlConn.ConnectionString = ("Server=tcp:livserver.database.windows.net,1433;Initial Catalog=LIVDatabase;Persist Security Info=False;User ID=LIV;Password=abcd1234$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
                     sqlConn.Open();
-                MessageBox.Show("Success");
+                //MessageBox.Show("Success");
                 }
                 catch (Exception ex)
                 {

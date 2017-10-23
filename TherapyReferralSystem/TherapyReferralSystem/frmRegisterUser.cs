@@ -135,6 +135,7 @@ namespace TherapyReferralSystem
         {
             fname = txtfname.Text;
             middlename = txtmname.Text;
+            contactnumber = txtcontactnum.Text;
             surname = txtsurname.Text;
             initials = txtinitials.Text;
             email = txtemail.Text;
@@ -150,8 +151,8 @@ namespace TherapyReferralSystem
 
                 type = cmbtype.SelectedItem.ToString();
                 squestion = cmbtype.SelectedItem.ToString();
-                TherapyT = cmbtype.SelectedItem.ToString();
-                IE = cmbinternal.SelectedItem.ToString();
+                //TherapyT = cmbtype.SelectedItem.ToString();
+                //IE = cmbinternal.SelectedItem.ToString();
 
             }
             else
@@ -164,23 +165,24 @@ namespace TherapyReferralSystem
         public void insertNewUser()
 
         {
+            ValidateUser();
             try
             {
 
 
                 objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand(" INSERT INTO Register_User Values (@U_FNAME, @U_SNAME,@U_CONTACT,@U_EMAIL,@U_PWORD,@U_TYPE,@T_ID,@T_TYPE,@T_IE,@U_SEC_QUES,@U_SEC_ANS)", objDBConnect.sqlConn);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", " ");//auto increment
+                objDBConnect.sqlCmd = new SqlCommand(" insert into tbl_user values(@U_ID,@U_FNAME,@U_SNAME,@U_CONTACT,@U_EMAIL,@U_PWORD,@U_TYPE,NULLIF(@T_ID,''),NULLIF(@T_TYPE,''),NULLIF(@T_IE,''),@U_SEC_QUES,@U_SEC_ANS,null)", objDBConnect.sqlConn);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", idnum);//make it numeric value
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", surname);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_CONTACT", contactnumber);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", password);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_TYPE", type);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", idnum);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@T_TYPE", type);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_IE", IE);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_ID", 10);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_IE", "I");
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SEC_QUES", squestion);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SEC_ANS", answer);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
