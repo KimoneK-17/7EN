@@ -29,7 +29,9 @@ namespace TherapyReferralSystem
         string name;
 
         DBConnect objDBConnect = new DBConnect();
-
+        SharedMethods sm = new SharedMethods();
+        MailMessage email = new MailMessage();
+        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
         string secQuestion;
            
         private void CheckExisting()
@@ -75,45 +77,17 @@ namespace TherapyReferralSystem
             getSecQuestion();
         }
 
-        public void getOTP()
-        {
-            randomPassword = Path.GetRandomFileName();
-            randomPassword = randomPassword.Replace(".", "");
-        }
+       
 
         private void btnSubmitAnswer_Click(object sender, EventArgs e)
         {
-            getOTP();
+            randomPassword=sm.getOTP();
 
             getAnswer();
 
         }
-        MailMessage email = new MailMessage();
-        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-        public void sendOTPEmail()
-        {
-            try
-            {
-                
-
-                email.From = new MailAddress("livotp@gmail.com");
-                email.To.Add(txtEmailAddress.Text);
-                email.Subject = "Test Mail";
-                email.Body = "Hi user, this is your newly generated password: " + randomPassword;
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("livotp@gmail.com", "passwordrecovery");
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(email);
-                MessageBox.Show("Email Sent");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
+        
+        
 
         private void mnuPassRecovReturn_Click(object sender, EventArgs e)
         {
@@ -200,7 +174,7 @@ namespace TherapyReferralSystem
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(email);
-                MessageBox.Show("Email Sent");
+                MessageBox.Show("Please check your email");
             }
             catch (Exception ex)
             {
@@ -223,7 +197,8 @@ namespace TherapyReferralSystem
 
                 if(txtAnswer.Text == answer)
                 {
-                    sendOTPEmail();
+                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your newly generated password: #" + randomPassword );
+                    sm.updatePassword(txtEmailAddress.Text, randomPassword);
                 }
                 else
                 {
@@ -239,6 +214,8 @@ namespace TherapyReferralSystem
                 MessageBox.Show(x.Message);
             }
         }
+
+       
 
 
     }
