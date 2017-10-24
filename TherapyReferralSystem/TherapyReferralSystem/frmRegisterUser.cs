@@ -73,129 +73,6 @@ namespace TherapyReferralSystem
             return validTherapist;
         }
 
-
-        /* public bool checkText(String fname, String middlename, String surname, String email, String password, String answer, String otherTherapist, String other)
-         {
-
-             bool validText = false;
-             Boolean validfname = false;
-             Boolean validmiddlename = false;
-             Boolean validsurname = false;
-             Boolean validinitials = false;
-             Boolean validemail = false;
-             Boolean validpassword = false;
-             Boolean validanswer = false;
-             Boolean validother = false;
-             Boolean validTherapistOther = false;
-
-             if (!fname.Any(char.IsLetter) || fname.Any(char.IsDigit) || fname.Equals(""))
-             {
-                 validfname = false;
-                 MessageBox.Show("Enter a valid First Name");
-             }
-             else
-             {
-                 validfname = true;
-             }
-
-             if (!middlename.Any(char.IsLetter) || middlename.Any(char.IsDigit))
-             {
-                 validmiddlename = false;
-                 MessageBox.Show("Enter valid Middle Name");
-             }
-             else
-             {
-                 validmiddlename = true;
-             }
-             if (!surname.Any(char.IsLetter) || surname.Any(char.IsDigit) || surname.Equals(""))
-             {
-                 validsurname = false;
-                 MessageBox.Show("Enter valid Surname");
-             }
-             else
-             {
-                 validsurname = true;
-             }
-             if (!initials.Any(char.IsLetter) || initials.Any(char.IsDigit) || initials.Equals(""))
-             {
-                 validinitials = false;
-                 MessageBox.Show("Enter valid initials");
-             }
-             else
-             {
-                 validinitials = true;
-             }
-
-             if (!email.Any(char.IsLetter) || email.Any(char.IsDigit) || email.Equals(""))
-             {
-                 validemail = false;
-                 MessageBox.Show("Enter a valid email");
-             }
-             else
-             {
-                 validemail = true;
-             }
-
-
-             if (!password.Any(char.IsLetter) || password.Any(char.IsDigit) || password.Equals(""))
-             {
-                 validpassword = false;
-                 MessageBox.Show("Enter valid a password");
-             }
-             else
-             {
-                 validpassword = true;
-             }
-
-
-
-             if (!answer.Any(char.IsLetter) || answer.Any(char.IsDigit) || answer.Equals(""))
-             {
-                 validanswer = false;
-                 MessageBox.Show("Enter valid answer");
-             }
-             else
-             {
-                 validanswer = true;
-             }
-
-             if (!otherTherapist.Any(char.IsLetter) || otherTherapist.Any(char.IsDigit))
-             {
-                 validTherapistOther = false;
-                 MessageBox.Show("Enter a valid other therapy type");
-             }
-             else
-             {
-                 validTherapistOther = true;
-             }
-
-             if (!other.Any(char.IsLetter) || other.Any(char.IsDigit) || other.Equals(""))
-             {
-                 validother = false;
-                 MessageBox.Show("Enter other details");
-             }
-             else
-             {
-                 validother = true;
-
-             }
-
-
-             if (validfname == false || validmiddlename == false || validsurname == false || validinitials == false || validemail == false || validpassword == false ||  validanswer == false || validother == false||validTherapistOther == false)
-             {
-                 validText = false;
-                 return validText;
-             }
-             else
-             {
-                 validText = true;
-                 return validText;
-             }
-
-
-         }*/
-
-
         public void checkEmptyFields()
         {
             if (!txtfname.Text.Equals(""))
@@ -258,13 +135,14 @@ namespace TherapyReferralSystem
         {
             fname = txtfname.Text;
             middlename = txtmname.Text;
+            contactnumber = txtcontactnum.Text;
             surname = txtsurname.Text;
             initials = txtinitials.Text;
             email = txtemail.Text;
             password = txtpassword.Text;
             answer = txtanswer.Text;
-            otherTherapyType = rtbOtherTypes.Text;
             other = rictxtother.Text;
+            idnum = long.Parse(txtid.Text);
 
 
             if (checkCMBSelected() == false)
@@ -273,8 +151,8 @@ namespace TherapyReferralSystem
 
                 type = cmbtype.SelectedItem.ToString();
                 squestion = cmbtype.SelectedItem.ToString();
-                TherapyT = cmbtype.SelectedItem.ToString();
-                IE = cmbinternal.SelectedItem.ToString();
+                //TherapyT = cmbtype.SelectedItem.ToString();
+                //IE = cmbinternal.SelectedItem.ToString();
 
             }
             else
@@ -287,23 +165,24 @@ namespace TherapyReferralSystem
         public void insertNewUser()
 
         {
+            ValidateUser();
             try
             {
 
 
                 objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand(" INSERT INTO Register_User Values @U_FNAME, @U_SNAME,@U_CONTACT,@U_EMAIL,@U_PWORD,@U_TYPE,@T_ID,@T_TYPE,@T_IE,@U_SEC_QUES,@U_SEC_ANS)", objDBConnect.sqlConn);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", " ");//auto increment
+                objDBConnect.sqlCmd = new SqlCommand(" insert into tbl_user values(@U_ID,@U_FNAME,@U_SNAME,@U_CONTACT,@U_EMAIL,@U_PWORD,@U_TYPE,NULLIF(@T_ID,''),NULLIF(@T_TYPE,''),NULLIF(@T_IE,''),@U_SEC_QUES,@U_SEC_ANS,null)", objDBConnect.sqlConn);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", idnum);//make it numeric value
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", surname);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_CONTACT", contactnumber);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", password);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_TYPE", type);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", idnum);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@T_TYPE", type);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_IE", IE);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_ID", 10);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@T_IE", "I");
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SEC_QUES", squestion);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SEC_ANS", answer);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
@@ -327,18 +206,55 @@ namespace TherapyReferralSystem
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
-            ValidateUser();
-            IDValidation();
+            //ValidateUser();
+            //IDValidation();
 
 
-            if (validID == true)
+            /*if (validID == true)
             {
                 insertNewUser();
             }
             else
             {
                 //do nothing
-            }
+            }*/
+
+            insertNewUser();
+        }
+
+        private void mnuRegUserReturn_Click(object sender, EventArgs e)
+        {
+            frmLogin1 log = new frmLogin1();
+            log.Show();
+            this.Dispose();
+        }
+
+        private void mnuRegUserReports_Click(object sender, EventArgs e)
+        {
+            frmReports rep = new frmReports();
+            rep.Show();
+            this.Dispose();
+        }
+
+        private void mnuRegUserHelp_Click(object sender, EventArgs e)
+        {
+            frmHelp help = new frmHelp();
+            help.Show();
+            this.Dispose();
+        }
+
+        private void mnuRegUserTherRef_Click(object sender, EventArgs e)
+        {
+            frmTherapyReferral tf = new frmTherapyReferral();
+            tf.Show();
+            this.Dispose();
+        }
+
+        private void mnuRegUserRegChild_Click(object sender, EventArgs e)
+        {
+            frmRegisterChild rc = new frmRegisterChild();
+            rc.Show();
+            this.Dispose();
         }
     }
 }
