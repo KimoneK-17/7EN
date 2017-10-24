@@ -1,7 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +17,9 @@ namespace TherapyReferralSystem
     {
         DBConnect objDBConnect = new DBConnect();
         bool found,valid;
+        string randomPassword;
+        MailMessage email = new MailMessage();
+        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
         public  bool CheckExisting(string table, string item, string variable)
         {
 
@@ -115,5 +123,67 @@ namespace TherapyReferralSystem
             return valid;
         }
 
+        public string getOTP()
+        {
+            
+            randomPassword = Path.GetRandomFileName();
+            randomPassword = randomPassword.Replace(".", "");
+
+            return randomPassword;
+        }
+
+        public void sendOTPEmail(string emailAdd,string message)
+        {
+            try
+            {
+
+
+                email.From = new MailAddress("livotp@gmail.com");
+                email.To.Add(emailAdd);
+                email.Subject = "Password Recovery LIV Therapy Referral System";
+                email.Body = message;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("livotp@gmail.com", "passwordrecovery");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(email);
+                MessageBox.Show("Email Sent");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void updatePassword(string email,string pword)
+        {
+
+            
+            try
+            {
+                objDBConnect.OpenConnection();
+                objDBConnect.sqlCmd = new SqlCommand("UPDATE TBL_USER SET U_PWORD = @U_PWORD where U_EMAIL LIKE @U_EMAIL", objDBConnect.sqlConn); // updates information by email identification
+
+                //updates these fields in the database
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", pword);
+                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+
+                MessageBox.Show("Successfully Updated");
+                objDBConnect.sqlDR.Close();
+                objDBConnect.sqlConn.Close();
+
+            }
+
+            catch (SqlException se)
+            {
+                MessageBox.Show("SQL Error" + se.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
     }
 }
