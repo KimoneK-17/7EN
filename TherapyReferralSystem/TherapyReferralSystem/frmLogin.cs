@@ -100,6 +100,11 @@ namespace TherapyReferralSystem
             this.Dispose();
         }
 
+        private void frmLogin1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void CheckValid()
         {
             try

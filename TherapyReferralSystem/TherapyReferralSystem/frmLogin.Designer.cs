@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin1));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -84,6 +83,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +92,7 @@
             this.btnLogin.Size = new System.Drawing.Size(96, 44);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "LOGIN";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblForgotPassword
@@ -108,7 +108,7 @@
             // 
             // mnuLogin
             // 
-            this.mnuLogin.BackColor = System.Drawing.Color.DimGray;
+            this.mnuLogin.BackColor = System.Drawing.Color.LightSlateGray;
             this.mnuLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuLogin.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuLogin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -148,7 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(557, 241);
             this.Controls.Add(this.mnuLogin);
@@ -161,6 +162,7 @@
             this.Name = "frmLogin1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
+            this.Load += new System.EventHandler(this.frmLogin1_Load);
             this.mnuLogin.ResumeLayout(false);
             this.mnuLogin.PerformLayout();
             this.ResumeLayout(false);
