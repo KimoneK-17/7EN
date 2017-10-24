@@ -105,11 +105,12 @@ namespace TherapyReferralSystem
             this.Dispose();
         }
 
-<<<<<<< HEAD
+
         private void frmLogin1_Load(object sender, EventArgs e)
         {
+        }
 
-=======
+ 
         private void btnViewPword_Click(object sender, EventArgs e)
         {
 
@@ -126,7 +127,7 @@ namespace TherapyReferralSystem
             }
 
 
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
         }
 
         private void CheckValid()

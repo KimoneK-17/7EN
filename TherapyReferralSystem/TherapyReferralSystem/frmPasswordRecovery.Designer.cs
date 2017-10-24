@@ -118,12 +118,12 @@
             this.btnRequestReset.Size = new System.Drawing.Size(199, 55);
             this.btnRequestReset.TabIndex = 35;
             this.btnRequestReset.Text = "REQUEST RESET";
-<<<<<<< HEAD
+ 
             this.btnRequestReset.UseVisualStyleBackColor = false;
-=======
+ 
             this.btnRequestReset.UseVisualStyleBackColor = true;
             this.btnRequestReset.Click += new System.EventHandler(this.btnRequestReset_Click);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             // 
             // label1
             // 
@@ -217,14 +217,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+ 
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
             this.ClientSize = new System.Drawing.Size(518, 445);
-=======
+
+
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(691, 548);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);
             this.Controls.Add(this.mnuPassRecov);

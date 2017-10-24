@@ -48,28 +48,29 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnChangePic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-<<<<<<< HEAD
+ 
             this.picbxProfilePic = new System.Windows.Forms.PictureBox();
-=======
+ 
             this.mnuProfileForm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileTherRef = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileRegChild = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileRegUser = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.mnuProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuProfile
             // 
-<<<<<<< HEAD
+ 
             this.mnuProfile.BackColor = System.Drawing.Color.LightSlateGray;
             this.mnuProfile.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
-=======
+ 
             this.mnuProfile.BackColor = System.Drawing.Color.DimGray;
             this.mnuProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.mnuProfile.ImageScalingSize = new System.Drawing.Size(20, 20);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
+
             this.mnuProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileFile,
             this.mnuProfileView,
@@ -135,8 +136,8 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "PROFILE";
             // 
-<<<<<<< HEAD
-=======
+ 
+ 
             // picbxProfilePic
             // 
             this.picbxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -148,7 +149,7 @@
             this.picbxProfilePic.TabIndex = 2;
             this.picbxProfilePic.TabStop = false;
             // 
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -281,7 +282,7 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-<<<<<<< HEAD
+ 
             // picbxProfilePic
             // 
             this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -290,7 +291,7 @@
             this.picbxProfilePic.Size = new System.Drawing.Size(150, 173);
             this.picbxProfilePic.TabIndex = 2;
             this.picbxProfilePic.TabStop = false;
-=======
+ 
             // mnuProfileForm
             // 
             this.mnuProfileForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -323,7 +324,7 @@
             this.mnuProfileRegUser.Size = new System.Drawing.Size(198, 22);
             this.mnuProfileRegUser.Text = "Register User";
             this.mnuProfileRegUser.Click += new System.EventHandler(this.mnuProfileRegUser_Click);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             // 
             // frmProfile
             // 

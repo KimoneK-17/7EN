@@ -130,12 +130,13 @@
             // 
             this.lbl_fname.AutoSize = true;
             this.lbl_fname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
+
             this.lbl_fname.Location = new System.Drawing.Point(21, 15);
-=======
+ 
             this.lbl_fname.Location = new System.Drawing.Point(105, 20);
             this.lbl_fname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(111, 18);
             this.lbl_fname.TabIndex = 14;
@@ -145,12 +146,12 @@
             // 
             this.lbl_mname.AutoSize = true;
             this.lbl_mname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lbl_mname.Location = new System.Drawing.Point(24, 41);
-=======
+ 
             this.lbl_mname.Location = new System.Drawing.Point(93, 50);
             this.lbl_mname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lbl_mname.Name = "lbl_mname";
             this.lbl_mname.Size = new System.Drawing.Size(120, 18);
             this.lbl_mname.TabIndex = 15;
@@ -160,12 +161,12 @@
             // 
             this.lblsurname.AutoSize = true;
             this.lblsurname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblsurname.Location = new System.Drawing.Point(24, 67);
-=======
+ 
             this.lblsurname.Location = new System.Drawing.Point(129, 81);
             this.lblsurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblsurname.Name = "lblsurname";
             this.lblsurname.Size = new System.Drawing.Size(89, 18);
             this.lblsurname.TabIndex = 16;
@@ -175,12 +176,12 @@
             // 
             this.lblinitials.AutoSize = true;
             this.lblinitials.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblinitials.Location = new System.Drawing.Point(24, 93);
-=======
+ 
             this.lblinitials.Location = new System.Drawing.Point(137, 113);
             this.lblinitials.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblinitials.Name = "lblinitials";
             this.lblinitials.Size = new System.Drawing.Size(78, 18);
             this.lblinitials.TabIndex = 17;
@@ -191,94 +192,94 @@
             this.txtfname.Location = new System.Drawing.Point(235, 12);
             this.txtfname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtfname.Name = "txtfname";
-<<<<<<< HEAD
+ 
             this.txtfname.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtfname.Size = new System.Drawing.Size(243, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtfname.TabIndex = 18;
             // 
             // txtmname
             // 
-<<<<<<< HEAD
+ 
             this.txtmname.Location = new System.Drawing.Point(176, 36);
             this.txtmname.Name = "txtmname";
             this.txtmname.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtmname.Location = new System.Drawing.Point(235, 43);
             this.txtmname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmname.Name = "txtmname";
             this.txtmname.Size = new System.Drawing.Size(243, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtmname.TabIndex = 19;
             // 
             // txtemail
             // 
-<<<<<<< HEAD
+ 
             this.txtemail.Location = new System.Drawing.Point(176, 140);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtemail.Location = new System.Drawing.Point(235, 171);
             this.txtemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(244, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtemail.TabIndex = 20;
             // 
             // txtsurname
             // 
-<<<<<<< HEAD
+ 
             this.txtsurname.Location = new System.Drawing.Point(176, 62);
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtsurname.Location = new System.Drawing.Point(235, 74);
             this.txtsurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsurname.Name = "txtsurname";
             this.txtsurname.Size = new System.Drawing.Size(244, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtsurname.TabIndex = 21;
             // 
             // txtinitials
             // 
-<<<<<<< HEAD
+ 
             this.txtinitials.Location = new System.Drawing.Point(176, 88);
             this.txtinitials.Name = "txtinitials";
             this.txtinitials.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtinitials.Location = new System.Drawing.Point(235, 106);
             this.txtinitials.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtinitials.Name = "txtinitials";
             this.txtinitials.Size = new System.Drawing.Size(244, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtinitials.TabIndex = 22;
             // 
             // txtcontactnum
             // 
-<<<<<<< HEAD
+ 
             this.txtcontactnum.Location = new System.Drawing.Point(176, 114);
             this.txtcontactnum.Name = "txtcontactnum";
             this.txtcontactnum.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtcontactnum.Location = new System.Drawing.Point(235, 138);
             this.txtcontactnum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtcontactnum.MaxLength = 10;
             this.txtcontactnum.Name = "txtcontactnum";
             this.txtcontactnum.Size = new System.Drawing.Size(244, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtcontactnum.TabIndex = 23;
             // 
             // lblcnum
             // 
             this.lblcnum.AutoSize = true;
             this.lblcnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblcnum.Location = new System.Drawing.Point(24, 119);
-=======
+ 
             this.lblcnum.Location = new System.Drawing.Point(57, 145);
             this.lblcnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblcnum.Name = "lblcnum";
             this.lblcnum.Size = new System.Drawing.Size(156, 18);
             this.lblcnum.TabIndex = 24;
@@ -288,12 +289,12 @@
             // 
             this.lblemail.AutoSize = true;
             this.lblemail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblemail.Location = new System.Drawing.Point(24, 145);
-=======
+ 
             this.lblemail.Location = new System.Drawing.Point(159, 178);
             this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(60, 18);
             this.lblemail.TabIndex = 25;
@@ -303,12 +304,12 @@
             // 
             this.lblpass.AutoSize = true;
             this.lblpass.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblpass.Location = new System.Drawing.Point(24, 171);
-=======
+ 
             this.lblpass.Location = new System.Drawing.Point(113, 212);
             this.lblpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblpass.Name = "lblpass";
             this.lblpass.Size = new System.Drawing.Size(102, 18);
             this.lblpass.TabIndex = 26;
@@ -318,12 +319,12 @@
             // 
             this.lbltype.AutoSize = true;
             this.lbltype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lbltype.Location = new System.Drawing.Point(24, 197);
-=======
+ 
             this.lbltype.Location = new System.Drawing.Point(169, 246);
             this.lbltype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lbltype.Name = "lbltype";
             this.lbltype.Size = new System.Drawing.Size(51, 18);
             this.lbltype.TabIndex = 27;
@@ -338,28 +339,28 @@
             "Therapist",
             "Admin",
             "Social worker"});
-<<<<<<< HEAD
+ 
             this.cmbtype.Location = new System.Drawing.Point(176, 192);
             this.cmbtype.Name = "cmbtype";
             this.cmbtype.Size = new System.Drawing.Size(198, 21);
-=======
+ 
             this.cmbtype.Location = new System.Drawing.Point(235, 238);
             this.cmbtype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbtype.Name = "cmbtype";
             this.cmbtype.Size = new System.Drawing.Size(244, 24);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.cmbtype.TabIndex = 28;
             // 
             // lblsecurity
             // 
             this.lblsecurity.AutoSize = true;
             this.lblsecurity.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblsecurity.Location = new System.Drawing.Point(24, 223);
-=======
+ 
             this.lblsecurity.Location = new System.Drawing.Point(35, 282);
             this.lblsecurity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblsecurity.Name = "lblsecurity";
             this.lblsecurity.Size = new System.Drawing.Size(173, 18);
             this.lblsecurity.TabIndex = 29;
@@ -377,16 +378,16 @@
             "What is your favourite fruit?",
             "What High School did you attend?",
             "What colour are your eyes?"});
-<<<<<<< HEAD
+ 
             this.cmbsecurity.Location = new System.Drawing.Point(175, 219);
             this.cmbsecurity.Name = "cmbsecurity";
             this.cmbsecurity.Size = new System.Drawing.Size(198, 21);
-=======
+ 
             this.cmbsecurity.Location = new System.Drawing.Point(233, 273);
             this.cmbsecurity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbsecurity.Name = "cmbsecurity";
             this.cmbsecurity.Size = new System.Drawing.Size(243, 24);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.cmbsecurity.TabIndex = 30;
             // 
             // txtpassword
@@ -394,23 +395,23 @@
             this.txtpassword.Location = new System.Drawing.Point(235, 204);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
-<<<<<<< HEAD
+ 
             this.txtpassword.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtpassword.Size = new System.Drawing.Size(244, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtpassword.TabIndex = 31;
             // 
             // lblanswer
             // 
             this.lblanswer.AutoSize = true;
             this.lblanswer.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblanswer.Location = new System.Drawing.Point(24, 249);
-=======
+ 
             this.lblanswer.Location = new System.Drawing.Point(137, 314);
             this.lblanswer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblanswer.Name = "lblanswer";
             this.lblanswer.Size = new System.Drawing.Size(80, 18);
             this.lblanswer.TabIndex = 32;
@@ -418,28 +419,28 @@
             // 
             // txtanswer
             // 
-<<<<<<< HEAD
+ 
             this.txtanswer.Location = new System.Drawing.Point(175, 246);
             this.txtanswer.Name = "txtanswer";
             this.txtanswer.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtanswer.Location = new System.Drawing.Point(233, 306);
             this.txtanswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtanswer.Name = "txtanswer";
             this.txtanswer.Size = new System.Drawing.Size(241, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtanswer.TabIndex = 33;
             // 
             // lblthetype
             // 
             this.lblthetype.AutoSize = true;
             this.lblthetype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblthetype.Location = new System.Drawing.Point(24, 15);
-=======
+ 
             this.lblthetype.Location = new System.Drawing.Point(91, 18);
             this.lblthetype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblthetype.Name = "lblthetype";
             this.lblthetype.Size = new System.Drawing.Size(123, 18);
             this.lblthetype.TabIndex = 34;
@@ -451,23 +452,23 @@
             this.cmtherap.Location = new System.Drawing.Point(233, 10);
             this.cmtherap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmtherap.Name = "cmtherap";
-<<<<<<< HEAD
+ 
             this.cmtherap.Size = new System.Drawing.Size(198, 21);
-=======
+ 
             this.cmtherap.Size = new System.Drawing.Size(161, 24);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.cmtherap.TabIndex = 35;
             // 
             // lblexternal
             // 
             this.lblexternal.AutoSize = true;
             this.lblexternal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblexternal.Location = new System.Drawing.Point(24, 42);
-=======
+ 
             this.lblexternal.Location = new System.Drawing.Point(37, 54);
             this.lblexternal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblexternal.Name = "lblexternal";
             this.lblexternal.Size = new System.Drawing.Size(171, 18);
             this.lblexternal.TabIndex = 36;
@@ -476,30 +477,30 @@
             // cmbinternal
             // 
             this.cmbinternal.FormattingEnabled = true;
-<<<<<<< HEAD
+ 
             this.cmbinternal.Location = new System.Drawing.Point(176, 36);
             this.cmbinternal.Name = "cmbinternal";
             this.cmbinternal.Size = new System.Drawing.Size(198, 21);
-=======
+ 
             this.cmbinternal.Location = new System.Drawing.Point(235, 46);
             this.cmbinternal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbinternal.Name = "cmbinternal";
             this.cmbinternal.Size = new System.Drawing.Size(160, 24);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.cmbinternal.TabIndex = 37;
             // 
             // rictxtother
             // 
-<<<<<<< HEAD
+ 
             this.rictxtother.Location = new System.Drawing.Point(176, 64);
             this.rictxtother.Name = "rictxtother";
             this.rictxtother.Size = new System.Drawing.Size(198, 91);
-=======
+ 
             this.rictxtother.Location = new System.Drawing.Point(235, 80);
             this.rictxtother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rictxtother.Name = "rictxtother";
             this.rictxtother.Size = new System.Drawing.Size(188, 110);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.rictxtother.TabIndex = 38;
             this.rictxtother.Text = "";
             // 
@@ -507,12 +508,12 @@
             // 
             this.lblother.AutoSize = true;
             this.lblother.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblother.Location = new System.Drawing.Point(24, 69);
-=======
+ 
             this.lblother.Location = new System.Drawing.Point(153, 86);
             this.lblother.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblother.Name = "lblother";
             this.lblother.Size = new System.Drawing.Size(66, 18);
             this.lblother.TabIndex = 40;
@@ -546,11 +547,11 @@
             this.panel1.Location = new System.Drawing.Point(8, 44);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-<<<<<<< HEAD
+ 
             this.panel1.Size = new System.Drawing.Size(435, 308);
-=======
+ 
             this.panel1.Size = new System.Drawing.Size(580, 367);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -570,33 +571,33 @@
             // 
             // txtid
             // 
-<<<<<<< HEAD
+ 
             this.txtid.Location = new System.Drawing.Point(175, 272);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(198, 20);
-=======
+ 
             this.txtid.Location = new System.Drawing.Point(235, 199);
             this.txtid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(188, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.txtid.TabIndex = 44;
             // 
             // lblidnum
             // 
             this.lblidnum.AutoSize = true;
             this.lblidnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+ 
             this.lblidnum.Location = new System.Drawing.Point(23, 275);
             this.lblidnum.Name = "lblidnum";
             this.lblidnum.Size = new System.Drawing.Size(82, 14);
-=======
+ 
             this.lblidnum.Location = new System.Drawing.Point(107, 207);
             this.lblidnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblidnum.Name = "lblidnum";
             this.lblidnum.Size = new System.Drawing.Size(110, 18);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.lblidnum.TabIndex = 43;
             this.lblidnum.Text = "ID NUMBER:";
             // 
@@ -627,41 +628,41 @@
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
-            // menuStrip1
+ 
+            // mnuRegUser
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(558, 26);
-            this.menuStrip1.TabIndex = 45;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuRegUser.BackColor = System.Drawing.Color.LightSlateGray;
+            this.mnuRegUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserFile});
+            this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
+            this.mnuRegUser.Name = "mnuRegUser";
+            this.mnuRegUser.Size = new System.Drawing.Size(558, 26);
+            this.mnuRegUser.TabIndex = 45;
+            this.mnuRegUser.Text = "mnuRegUser";
             // 
-            // fileToolStripMenuItem
+            // mnuRegUserFile
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchToolStripMenuItem,
-            this.updateToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
-            this.fileToolStripMenuItem.Text = "File";
+            this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuRegUserSearch,
+            this.mnuRegUserUpdate});
+            this.mnuRegUserFile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
+            this.mnuRegUserFile.Name = "mnuRegUserFile";
+            this.mnuRegUserFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuRegUserFile.Text = "File";
             // 
-            // searchToolStripMenuItem
+            // mnuRegUserSearch
             // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.searchToolStripMenuItem.Text = "Search";
+            this.mnuRegUserSearch.Name = "mnuRegUserSearch";
+            this.mnuRegUserSearch.Size = new System.Drawing.Size(129, 22);
+            this.mnuRegUserSearch.Text = "Search";
             // 
-            // updateToolStripMenuItem
+            // mnuRegUserUpdate
             // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.updateToolStripMenuItem.Text = "Update";
-=======
+            this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
+            this.mnuRegUserUpdate.Size = new System.Drawing.Size(129, 22);
+            this.mnuRegUserUpdate.Text = "Update";
+ 
             // mnuRegUser
             // 
             this.mnuRegUser.BackColor = System.Drawing.Color.DimGray;
@@ -758,19 +759,20 @@
             this.mnuRegUserRegChild.Size = new System.Drawing.Size(245, 28);
             this.mnuRegUserRegChild.Text = "Register Child";
             this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             // 
             // frmRegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-<<<<<<< HEAD
+ 
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
             this.ClientSize = new System.Drawing.Size(558, 574);
-=======
+
+
             this.ClientSize = new System.Drawing.Size(744, 706);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.panel2);

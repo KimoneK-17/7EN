@@ -457,11 +457,11 @@
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-<<<<<<< HEAD
+ 
             this.mnuTherapyRefReturn.Size = new System.Drawing.Size(125, 22);
-=======
+ 
             this.mnuTherapyRefReturn.Size = new System.Drawing.Size(152, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.mnuTherapyRefReturn.Text = "Return";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
@@ -477,11 +477,11 @@
             // mnuTherapyRefReports
             // 
             this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
-<<<<<<< HEAD
+ 
             this.mnuTherapyRefReports.Size = new System.Drawing.Size(134, 22);
-=======
+ 
             this.mnuTherapyRefReports.Size = new System.Drawing.Size(152, 22);
->>>>>>> 14bb39d17ea2337d0586df1db6f7413fb5a931fb
+ 
             this.mnuTherapyRefReports.Text = "Reports";
             this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
             // 
