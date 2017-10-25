@@ -154,6 +154,7 @@ namespace TherapyReferralSystem
                 {
                     frmProfile pr = new frmProfile(username);
                     pr.Show();
+                    this.Hide();
                 }
             }
             catch (SqlException se)

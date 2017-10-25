@@ -141,7 +141,7 @@
             // mnuLoginLogout
             // 
             this.mnuLoginLogout.Name = "mnuLoginLogout";
-            this.mnuLoginLogout.Size = new System.Drawing.Size(150, 28);
+            this.mnuLoginLogout.Size = new System.Drawing.Size(181, 28);
             this.mnuLoginLogout.Text = "Logout";
             this.mnuLoginLogout.Click += new System.EventHandler(this.mnuLoginLogout_Click);
             // 
@@ -172,6 +172,7 @@
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(743, 297);
+            this.ControlBox = false;
             this.Controls.Add(this.btnViewPword);
             this.Controls.Add(this.mnuLogin);
             this.Controls.Add(this.lblForgotPassword);
