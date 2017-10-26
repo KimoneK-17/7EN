@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,12 @@ namespace TherapyReferralSystem
 {
     public partial class frmReports : Form
     {
+<<<<<<< HEAD
         private string type;
 
+=======
+        DBConnect objDBConnect = new DBConnect();
+>>>>>>> fdd3965c8767aab833f7aef0f0c861616e44ff15
         public frmReports()
         {
         }
@@ -162,8 +167,43 @@ namespace TherapyReferralSystem
 
         }
 
+        //*********************************************************************************
+        //report selection , which report is being selected, and what information should be called from db
+        private void cboxReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DGVReport.DataSource = getReportList();
+        }
 
         //**********************************************************************************
+        private DataTable getReportList()
+        {
 
+            DataTable report = new DataTable();
+            objDBConnect.OpenConnection();
+            if (cboxReport.SelectedIndex.ToString() == "Child Information")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM CHILD", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Theraphies")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM ADD_ADHD", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Therapist Information")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT U_ID,U_FNAME,U_SNAME,U_CONTACT,U_EMAIL,T_ID,T_TYPE,T_IE   FROM TBL_USER   WHERE T_ID != null", objDBConnect.sqlConn);
+
+            else if (cboxReport.SelectedIndex.ToString() == "Waiting on outside resource")
+                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF   WHERE R_WAITING_LIST < CURRENT_DATE()", objDBConnect.sqlConn);
+
+
+            objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+
+            MessageBox.Show("Successfully Loaded");
+            objDBConnect.sqlDR.Close();
+            objDBConnect.sqlConn.Close();
+
+            return report;
+        }
+        //**********************************************************************************
     }
 }

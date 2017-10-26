@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TherapyReferralSystem
@@ -34,9 +27,9 @@ namespace TherapyReferralSystem
                     if (!txtPassword.Text.Equals(""))
                     {
                         password = txtPassword.Text;
-                      found =  sm.CheckExisting("tbl_user","u_email",username);
+                        found = sm.CheckExisting("tbl_user", "u_email", username);
 
-                        if(found == true)
+                        if (found == true)
                         {
                             CheckValid();
                         }
@@ -55,43 +48,7 @@ namespace TherapyReferralSystem
             }
         }
 
-        /*private void CheckExisting()
-        {
-            try
-            {
-                string existName;
-                //checks to see if patient already exists in database
-                objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
-                //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
-                //parameter
-                existName = objDBConnect.sqlCmd.ExecuteScalar().ToString();
-                //assigning query to variable
-                if (int.Parse(existName) > 0)
-                {
-                    found = true;
-                    //in database
-                    CheckValid();
-
-                }
-                else
-                {
-                    found = false;
-                    //not in database
-                    MessageBox.Show("Email address invalid");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Cannot Check If User  Exists In Database: " + ex.Message); // Shows an error message
-            }
-        }*/
 
         private void mnuLoginLogout_Click(object sender, EventArgs e)
         {
@@ -104,6 +61,12 @@ namespace TherapyReferralSystem
             help.Show();
             this.Dispose();
         }
+
+
+        private void frmLogin1_Load(object sender, EventArgs e)
+        {
+        }
+
 
         private void btnViewPword_Click(object sender, EventArgs e)
         {
@@ -119,8 +82,7 @@ namespace TherapyReferralSystem
                     txtPassword.PasswordChar = '\0';
                 }
             }
-
-
+            
         }
 
         private void CheckValid()
@@ -144,8 +106,7 @@ namespace TherapyReferralSystem
                     checkValid = true;
                     //in database
 
-                    frmProfile pr = new frmProfile(username);
-                    pr.Show();
+                    checkPword();
 
                     //this.Dispose();
                 }
@@ -164,6 +125,53 @@ namespace TherapyReferralSystem
             {
                 MessageBox.Show("Error Cannot Check Validation of Users In Database: " + ex.Message); // Shows an error message
             }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
+            }
+        }
+
+        public void checkPword()
+        {
+            string pword;
+
+            objDBConnect.OpenConnection();
+
+            try
+            {
+                objDBConnect.sqlCmd = new SqlCommand("SELECT u_pword FROM tbl_user WHERE u_email LIKE @u_email", objDBConnect.sqlConn);
+                //query
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
+
+                pword = (string)objDBConnect.sqlCmd.ExecuteScalar();
+
+                if(pword.StartsWith("#"))
+                {
+                    MessageBox.Show("Please change your password");
+
+                }
+                else
+                {
+                    frmProfile pr = new frmProfile(username);
+                    pr.Show();
+                    this.Hide();
+                }
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
+            }
+
+
+
         }
     }
 }

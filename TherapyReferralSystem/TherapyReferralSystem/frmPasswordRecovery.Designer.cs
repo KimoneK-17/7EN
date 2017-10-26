@@ -69,7 +69,7 @@
             // 
             // mnuPassRecov
             // 
-            this.mnuPassRecov.BackColor = System.Drawing.Color.DimGray;
+            this.mnuPassRecov.BackColor = System.Drawing.Color.LightSlateGray;
             this.mnuPassRecov.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuPassRecov.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuPassRecov.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -108,6 +108,7 @@
             // 
             // btnRequestReset
             // 
+            this.btnRequestReset.BackColor = System.Drawing.SystemColors.Control;
             this.btnRequestReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestReset.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,8 +118,12 @@
             this.btnRequestReset.Size = new System.Drawing.Size(199, 55);
             this.btnRequestReset.TabIndex = 35;
             this.btnRequestReset.Text = "REQUEST RESET";
+ 
+            this.btnRequestReset.UseVisualStyleBackColor = false;
+ 
             this.btnRequestReset.UseVisualStyleBackColor = true;
             this.btnRequestReset.Click += new System.EventHandler(this.btnRequestReset_Click);
+ 
             // 
             // label1
             // 
@@ -136,6 +141,7 @@
             // 
             // btnSubmitAnswer
             // 
+            this.btnSubmitAnswer.BackColor = System.Drawing.SystemColors.Control;
             this.btnSubmitAnswer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmitAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitAnswer.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,7 +151,7 @@
             this.btnSubmitAnswer.Size = new System.Drawing.Size(199, 55);
             this.btnSubmitAnswer.TabIndex = 33;
             this.btnSubmitAnswer.Text = "SUBMIT ANSWER";
-            this.btnSubmitAnswer.UseVisualStyleBackColor = true;
+            this.btnSubmitAnswer.UseVisualStyleBackColor = false;
             this.btnSubmitAnswer.Click += new System.EventHandler(this.btnSubmitAnswer_Click);
             // 
             // txtAnswer
@@ -172,6 +178,7 @@
             // 
             // btnGetQuestion
             // 
+            this.btnGetQuestion.BackColor = System.Drawing.SystemColors.Control;
             this.btnGetQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGetQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetQuestion.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,7 +188,7 @@
             this.btnGetQuestion.Size = new System.Drawing.Size(199, 55);
             this.btnGetQuestion.TabIndex = 30;
             this.btnGetQuestion.Text = "GET QUESTION";
-            this.btnGetQuestion.UseVisualStyleBackColor = true;
+            this.btnGetQuestion.UseVisualStyleBackColor = false;
             this.btnGetQuestion.Click += new System.EventHandler(this.btnGetQuestion_Click);
             // 
             // txtSecurityQuestion
@@ -210,8 +217,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+ 
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
+            this.ClientSize = new System.Drawing.Size(518, 445);
+
+
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Form_Texture;
             this.ClientSize = new System.Drawing.Size(691, 548);
+ 
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);
             this.Controls.Add(this.mnuPassRecov);
