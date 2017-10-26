@@ -13,12 +13,11 @@ namespace TherapyReferralSystem
 {
     public partial class frmReports : Form
     {
-<<<<<<< HEAD
+ 
         private string type;
-
-=======
+        
         DBConnect objDBConnect = new DBConnect();
->>>>>>> fdd3965c8767aab833f7aef0f0c861616e44ff15
+
         public frmReports()
         {
         }
