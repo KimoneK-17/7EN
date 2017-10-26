@@ -12,9 +12,16 @@ namespace TherapyReferralSystem
 {
     public partial class frmReports : Form
     {
+        private string type;
+
         public frmReports()
         {
+        }
+
+        public frmReports(string type)
+        {
             InitializeComponent();
+            this.type = type;
         }
 
         //**********************************************************************************

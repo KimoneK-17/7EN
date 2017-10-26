@@ -82,7 +82,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(type);
             rep.Show();
             this.Dispose();
         }
@@ -97,14 +97,24 @@ namespace TherapyReferralSystem
         private void frmProfile_Load(object sender, EventArgs e)
         {
             getFromDatabase();
-            if (type.Equals("Social Worker"))
-            {
-                mnuProfileRegChild.Enabled = true;
-            }
-            else
+            
+            if (type.Equals("Therapist"))
             {
                 mnuProfileRegChild.Enabled = false;
+                mnuProfileRegUser.Enabled = false;
+                mnuProfileTherRef.Enabled = false;
             }
+            else if (type.Equals("Teacher"))
+            {
+                mnuProfileRegChild.Enabled = false;
+                mnuProfileRegUser.Enabled = false;
+            }
+            else if (type.Equals("Clinic"))
+            {
+                mnuProfileRegChild.Enabled = false;
+                mnuProfileRegUser.Enabled = false;
+            }
+            
         }
         //method gets information from the database table user and displays in form
         public void getFromDatabase()
