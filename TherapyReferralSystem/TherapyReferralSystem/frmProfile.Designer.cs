@@ -34,6 +34,10 @@
             this.mnuProfileView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileTherRef = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileRegChild = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuProfileRegUser = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,29 +52,16 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnChangePic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
- 
             this.picbxProfilePic = new System.Windows.Forms.PictureBox();
- 
-            this.mnuProfileForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProfileTherRef = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProfileRegChild = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuProfileRegUser = new System.Windows.Forms.ToolStripMenuItem();
- 
             this.mnuProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuProfile
             // 
- 
-            this.mnuProfile.BackColor = System.Drawing.Color.LightSlateGray;
-            this.mnuProfile.Font = new System.Drawing.Font("Myriad Pro Light", 11.25F, System.Drawing.FontStyle.Bold);
- 
-            this.mnuProfile.BackColor = System.Drawing.Color.DimGray;
+            this.mnuProfile.BackColor = System.Drawing.Color.Teal;
             this.mnuProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.mnuProfile.ImageScalingSize = new System.Drawing.Size(20, 20);
- 
-
             this.mnuProfile.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileFile,
             this.mnuProfileView,
@@ -78,7 +69,7 @@
             this.mnuProfileForm});
             this.mnuProfile.Location = new System.Drawing.Point(0, 0);
             this.mnuProfile.Name = "mnuProfile";
-            this.mnuProfile.Size = new System.Drawing.Size(450, 26);
+            this.mnuProfile.Size = new System.Drawing.Size(450, 24);
             this.mnuProfile.TabIndex = 0;
             this.mnuProfile.Text = "MENU";
             // 
@@ -86,16 +77,16 @@
             // 
             this.mnuProfileFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileReturn});
-            this.mnuProfileFile.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuProfileFile.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuProfileFile.ForeColor = System.Drawing.Color.White;
             this.mnuProfileFile.Name = "mnuProfileFile";
-            this.mnuProfileFile.Size = new System.Drawing.Size(44, 22);
+            this.mnuProfileFile.Size = new System.Drawing.Size(51, 20);
             this.mnuProfileFile.Text = "File";
             // 
             // mnuProfileReturn
             // 
             this.mnuProfileReturn.Name = "mnuProfileReturn";
-            this.mnuProfileReturn.Size = new System.Drawing.Size(152, 22);
+            this.mnuProfileReturn.Size = new System.Drawing.Size(122, 22);
             this.mnuProfileReturn.Text = "Return";
             this.mnuProfileReturn.Click += new System.EventHandler(this.mnuProfileReturn_Click);
             // 
@@ -103,61 +94,80 @@
             // 
             this.mnuProfileView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuProfileReports});
-            this.mnuProfileView.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuProfileView.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuProfileView.ForeColor = System.Drawing.Color.White;
             this.mnuProfileView.Name = "mnuProfileView";
-            this.mnuProfileView.Size = new System.Drawing.Size(55, 22);
+            this.mnuProfileView.Size = new System.Drawing.Size(51, 20);
             this.mnuProfileView.Text = "View";
             // 
             // mnuProfileReports
             // 
             this.mnuProfileReports.Name = "mnuProfileReports";
-            this.mnuProfileReports.Size = new System.Drawing.Size(152, 22);
+            this.mnuProfileReports.Size = new System.Drawing.Size(130, 22);
             this.mnuProfileReports.Text = "Reports";
             this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
             // 
             // mnuProfileHelp
             // 
-            this.mnuProfileHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuProfileHelp.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuProfileHelp.ForeColor = System.Drawing.Color.White;
             this.mnuProfileHelp.Name = "mnuProfileHelp";
-            this.mnuProfileHelp.Size = new System.Drawing.Size(52, 22);
+            this.mnuProfileHelp.Size = new System.Drawing.Size(51, 20);
             this.mnuProfileHelp.Text = "Help";
             this.mnuProfileHelp.Click += new System.EventHandler(this.mnuProfileHelp_Click);
+            // 
+            // mnuProfileForm
+            // 
+            this.mnuProfileForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuProfileTherRef,
+            this.mnuProfileRegChild,
+            this.mnuProfileRegUser});
+            this.mnuProfileForm.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuProfileForm.ForeColor = System.Drawing.Color.White;
+            this.mnuProfileForm.Name = "mnuProfileForm";
+            this.mnuProfileForm.Size = new System.Drawing.Size(51, 20);
+            this.mnuProfileForm.Text = "Form";
+            // 
+            // mnuProfileTherRef
+            // 
+            this.mnuProfileTherRef.Name = "mnuProfileTherRef";
+            this.mnuProfileTherRef.Size = new System.Drawing.Size(202, 22);
+            this.mnuProfileTherRef.Text = "Therapy Referral";
+            this.mnuProfileTherRef.Click += new System.EventHandler(this.mnuProfileTherRef_Click);
+            // 
+            // mnuProfileRegChild
+            // 
+            this.mnuProfileRegChild.Name = "mnuProfileRegChild";
+            this.mnuProfileRegChild.Size = new System.Drawing.Size(202, 22);
+            this.mnuProfileRegChild.Text = "Register Child";
+            this.mnuProfileRegChild.Click += new System.EventHandler(this.mnuProfileRegChild_Click);
+            // 
+            // mnuProfileRegUser
+            // 
+            this.mnuProfileRegUser.Name = "mnuProfileRegUser";
+            this.mnuProfileRegUser.Size = new System.Drawing.Size(202, 22);
+            this.mnuProfileRegUser.Text = "Register User";
+            this.mnuProfileRegUser.Click += new System.EventHandler(this.mnuProfileRegUser_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verily Serif Mono", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(183, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(71, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "PROFILE";
             // 
- 
- 
-            // picbxProfilePic
-            // 
-            this.picbxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picbxProfilePic.Location = new System.Drawing.Point(278, 70);
-            this.picbxProfilePic.Name = "picbxProfilePic";
-            this.picbxProfilePic.Size = new System.Drawing.Size(133, 173);
-            this.picbxProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbxProfilePic.TabIndex = 2;
-            this.picbxProfilePic.TabStop = false;
-            // 
- 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(10, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
+            this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "NAME:";
             // 
@@ -165,10 +175,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(71, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "SURNAME:";
             // 
@@ -176,10 +186,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 16);
+            this.label4.Size = new System.Drawing.Size(119, 15);
             this.label4.TabIndex = 5;
             this.label4.Text = "MOBILE NUMBER:";
             // 
@@ -187,10 +197,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 16);
+            this.label5.Size = new System.Drawing.Size(79, 15);
             this.label5.TabIndex = 6;
             this.label5.Text = "POSITION:";
             // 
@@ -198,10 +208,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(10, 183);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 16);
+            this.label6.Size = new System.Drawing.Size(31, 15);
             this.label6.TabIndex = 7;
             this.label6.Text = "ID:";
             // 
@@ -245,12 +255,11 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.BackColor = System.Drawing.Color.Snow;
+            this.btnUpdate.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(18, 285);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(153, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(176, 23);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "UPDATE INFORMATION";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -258,12 +267,11 @@
             // 
             // btnChangePic
             // 
-            this.btnChangePic.BackColor = System.Drawing.SystemColors.Control;
-            this.btnChangePic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePic.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePic.Location = new System.Drawing.Point(289, 244);
+            this.btnChangePic.BackColor = System.Drawing.Color.Snow;
+            this.btnChangePic.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePic.Location = new System.Drawing.Point(278, 256);
             this.btnChangePic.Name = "btnChangePic";
-            this.btnChangePic.Size = new System.Drawing.Size(129, 23);
+            this.btnChangePic.Size = new System.Drawing.Size(152, 23);
             this.btnChangePic.TabIndex = 19;
             this.btnChangePic.Text = "CHANGE PICTURE";
             this.btnChangePic.UseVisualStyleBackColor = false;
@@ -271,68 +279,37 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(289, 272);
+            this.btnSave.BackColor = System.Drawing.Color.Snow;
+            this.btnSave.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(278, 285);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 23);
+            this.btnSave.Size = new System.Drawing.Size(152, 23);
             this.btnSave.TabIndex = 20;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
- 
             // picbxProfilePic
             // 
+            this.picbxProfilePic.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.DefaultPro;
+            this.picbxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picbxProfilePic.Location = new System.Drawing.Point(278, 61);
             this.picbxProfilePic.Name = "picbxProfilePic";
             this.picbxProfilePic.Size = new System.Drawing.Size(150, 173);
+            this.picbxProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxProfilePic.TabIndex = 2;
             this.picbxProfilePic.TabStop = false;
- 
-            // mnuProfileForm
-            // 
-            this.mnuProfileForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuProfileTherRef,
-            this.mnuProfileRegChild,
-            this.mnuProfileRegUser});
-            this.mnuProfileForm.Font = new System.Drawing.Font("Verdana", 11.25F);
-            this.mnuProfileForm.ForeColor = System.Drawing.Color.White;
-            this.mnuProfileForm.Name = "mnuProfileForm";
-            this.mnuProfileForm.Size = new System.Drawing.Size(60, 22);
-            this.mnuProfileForm.Text = "Form";
-            // 
-            // mnuProfileTherRef
-            // 
-            this.mnuProfileTherRef.Name = "mnuProfileTherRef";
-            this.mnuProfileTherRef.Size = new System.Drawing.Size(198, 22);
-            this.mnuProfileTherRef.Text = "Therapy Referral";
-            this.mnuProfileTherRef.Click += new System.EventHandler(this.mnuProfileTherRef_Click);
-            // 
-            // mnuProfileRegChild
-            // 
-            this.mnuProfileRegChild.Name = "mnuProfileRegChild";
-            this.mnuProfileRegChild.Size = new System.Drawing.Size(198, 22);
-            this.mnuProfileRegChild.Text = "Register Child";
-            this.mnuProfileRegChild.Click += new System.EventHandler(this.mnuProfileRegChild_Click);
-            // 
-            // mnuProfileRegUser
-            // 
-            this.mnuProfileRegUser.Name = "mnuProfileRegUser";
-            this.mnuProfileRegUser.Size = new System.Drawing.Size(198, 22);
-            this.mnuProfileRegUser.Text = "Register User";
-            this.mnuProfileRegUser.Click += new System.EventHandler(this.mnuProfileRegUser_Click);
- 
             // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Profile;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(450, 320);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnChangePic);
             this.Controls.Add(this.btnUpdate);
@@ -351,6 +328,7 @@
             this.Controls.Add(this.mnuProfile);
             this.MainMenuStrip = this.mnuProfile;
             this.Name = "frmProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfile";
             this.Load += new System.EventHandler(this.frmProfile_Load);
             this.mnuProfile.ResumeLayout(false);
