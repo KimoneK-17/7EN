@@ -35,7 +35,7 @@ namespace TherapyReferralSystem
         bool checkempty = false;
         bool validID = false;
         DBConnect objDBConnect = new DBConnect();
-
+        SharedMethods sm = new SharedMethods();
 
         public frmRegisterUser()
         {
