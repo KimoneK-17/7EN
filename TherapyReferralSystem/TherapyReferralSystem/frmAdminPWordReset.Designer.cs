@@ -39,37 +39,28 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmail.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(9, 46);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(12, 56);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(159, 15);
+            this.lblEmail.Size = new System.Drawing.Size(202, 20);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "USER EMAIL ADDRESS:";
             // 
             // txtEmail
             // 
-<<<<<<< HEAD
-            this.txtEmail.Location = new System.Drawing.Point(166, 43);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.txtEmail.Location = new System.Drawing.Point(184, 64);
->>>>>>> aa6ebaccced999404e1a73ed34bad705f36e973d
+            this.txtEmail.Location = new System.Drawing.Point(220, 54);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(155, 20);
+            this.txtEmail.Size = new System.Drawing.Size(205, 22);
             this.txtEmail.TabIndex = 1;
             // 
             // btnReset
             // 
-<<<<<<< HEAD
-            this.btnReset.Font = new System.Drawing.Font("Verily Serif Mono", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(325, 39);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
-=======
-            this.btnReset.Location = new System.Drawing.Point(171, 137);
->>>>>>> aa6ebaccced999404e1a73ed34bad705f36e973d
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(453, 50);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(56, 27);
+            this.btnReset.Size = new System.Drawing.Size(75, 33);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -81,7 +72,8 @@
             this.lblR.BackColor = System.Drawing.Color.Transparent;
             this.lblR.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblR.ForeColor = System.Drawing.Color.Red;
-            this.lblR.Location = new System.Drawing.Point(395, 64);
+            this.lblR.Location = new System.Drawing.Point(432, 54);
+            this.lblR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblR.Name = "lblR";
             this.lblR.Size = new System.Drawing.Size(14, 17);
             this.lblR.TabIndex = 4;
@@ -91,28 +83,25 @@
             // 
             this.lblREmail.AutoSize = true;
             this.lblREmail.ForeColor = System.Drawing.Color.Red;
-            this.lblREmail.Location = new System.Drawing.Point(35, 99);
+            this.lblREmail.Location = new System.Drawing.Point(13, 87);
+            this.lblREmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblREmail.Name = "lblREmail";
             this.lblREmail.Size = new System.Drawing.Size(0, 17);
             this.lblREmail.TabIndex = 5;
             // 
             // frmAdminPWordReset
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.AdminReset;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(407, 140);
-=======
-            this.ClientSize = new System.Drawing.Size(466, 212);
+            this.ClientSize = new System.Drawing.Size(539, 184);
             this.Controls.Add(this.lblREmail);
             this.Controls.Add(this.lblR);
->>>>>>> aa6ebaccced999404e1a73ed34bad705f36e973d
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAdminPWordReset";
             this.Text = "frmAdminPWordReset";
             this.ResumeLayout(false);

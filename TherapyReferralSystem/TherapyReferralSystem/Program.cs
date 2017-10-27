@@ -16,7 +16,7 @@ namespace TherapyReferralSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAdminPWordReset());
+            Application.Run(new frmTherapyReferral());
         }
     }
 }

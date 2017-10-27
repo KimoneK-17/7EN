@@ -117,6 +117,10 @@ namespace TherapyReferralSystem
                 secQuestion = (string)objDBConnect.sqlCmd.ExecuteScalar();
 
                 txtSecurityQuestion.Text = secQuestion;
+
+                lblAnswer.Show();
+                txtAnswer.Show();
+                btnSubmitAnswer.Show();
             }
             catch(SqlException se)
             {
@@ -180,6 +184,13 @@ namespace TherapyReferralSystem
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void frmPasswordRecovery_Load(object sender, EventArgs e)
+        {
+            lblAnswer.Hide();
+            txtAnswer.Hide();
+            btnSubmitAnswer.Hide();
         }
 
         public void getAnswer()

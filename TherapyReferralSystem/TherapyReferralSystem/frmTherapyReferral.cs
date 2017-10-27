@@ -64,31 +64,31 @@ namespace TherapyReferralSystem
 
             if (validCNum == false)
             {
-                MessageBox.Show("Select a childs name");
+                lbl1.Text = "Select a childs name";
             }
             if (validReason == false)
             {
-                MessageBox.Show("Select a reason");
+                lbl3.Text = "Select a reason";
             }
             if (validRef == false)
             {
-                MessageBox.Show("Select a reference");
+                lbl9.Text = "Select a reference";
             }
             if (validReport == false)
             {
-                MessageBox.Show("Select a Report");
+                lbl8.Text = "Select a Report";
             }
             if (validType == false)
             {
-                MessageBox.Show("Select a session");
+                lbl5.Text = "Select a session";
             }
             if (validStatus == false)
             {
-                MessageBox.Show("Select a status");
+                lbl4.Text = "Select a status";
             }
             if (validTherapist == false)
             {
-                MessageBox.Show("Select a Therapist");
+                lbl7.Text = "Select a Therapist";
             }
 
             if (validCNum == true && validReason == true && validRef == true && validReport == true && validType == true && validStatus == true && validTherapist == true)
@@ -111,7 +111,7 @@ namespace TherapyReferralSystem
             if (!con.Any(char.IsLetter) || con.Any(char.IsDigit) || con.Equals(""))
             {
                 validCon = false;
-                MessageBox.Show("Enter a valid Condition");
+                lbl2.Text = "Enter a valid Condition";
             }
             else
             {
@@ -121,7 +121,7 @@ namespace TherapyReferralSystem
             if (!det.Any(char.IsLetter) || det.Any(char.IsDigit) || det.Equals(""))
             {
                 validDet = false;
-                MessageBox.Show("Enter valid Details");
+                lbl12.Text = "Enter valid Details";
             }
             else
             {
@@ -175,17 +175,29 @@ namespace TherapyReferralSystem
 
         private void getFields()
         {
-            t_c_num = cmbCNum.SelectedItem.ToString();
-            t_reason = cmbReason.SelectedItem.ToString();
-            t_refby = cmbRefBy.SelectedItem.ToString();
-            t_report = cmbReport.SelectedItem.ToString();
-            t_type = cmbType.SelectedItem.ToString();
-            t_status = cmbStatus.SelectedItem.ToString();
-            t_therapist = cmbTherapist.SelectedItem.ToString();
-            ref_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
-            start_date = dtpDateStart.Value.ToString("dd-MM-yyyy");
-            end_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
-            t_sessions =(int)nudSess.Value;
+            try
+            {
+                t_c_num = cmbCNum.SelectedItem.ToString();
+                t_reason = cmbReason.SelectedItem.ToString();
+                t_refby = cmbRefBy.SelectedItem.ToString();
+                t_report = cmbReport.SelectedItem.ToString();
+                t_type = cmbType.SelectedItem.ToString();
+                t_status = cmbStatus.SelectedItem.ToString();
+                t_therapist = cmbTherapist.SelectedItem.ToString();
+                ref_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+                start_date = dtpDateStart.Value.ToString("dd-MM-yyyy");
+                end_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
+                t_sessions = (int)nudSess.Value;
+            }
+            catch(NoNullAllowedException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch(Exception exa)
+            {
+                MessageBox.Show(exa.Message);
+            }
+           
         }
 
         private void insertFieldsIntoDB()

@@ -256,5 +256,10 @@ namespace TherapyReferralSystem
             rc.Show();
             this.Dispose();
         }
+
+        private void frmRegisterUser_Load(object sender, EventArgs e)
+        {
+            panel2.Hide();
+        }
     }
 }
