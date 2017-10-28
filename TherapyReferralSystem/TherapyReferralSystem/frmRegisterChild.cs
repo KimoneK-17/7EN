@@ -157,6 +157,21 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void txtFName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtMName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtLName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             updateChild();
@@ -363,86 +378,7 @@ namespace TherapyReferralSystem
         }//check if variables have values
 
 
-        /*public long IDValidation()
-        {
-            if (!txtID.Text.Equals(""))
-            {
-
-                if (txtID.Text.Length == 13)
-                {
-                    sm.IDValidation(txtID.Text);
-                }
-                else
-                {
-                    MessageBox.Show("ID Length must be 10");
-                }
-
-
-            }
-            return c_id;
-        }//ID Validation
-
-        public void checkID()
-        {
-            long tempID = c_id;
-            tempID = long.Parse(txtID.Text.Remove(txtID.Text.Length - 1, 1));
-
-            long oddSum = 0, evenSum = 0;
-            int evenSumP2 = 0;
-
-            int counter = 1;
-            string evenStr = "", oddStr = "";
-            while (tempID != 0)
-            {
-                if (counter % 2 == 0)
-                {
-                    oddSum += tempID % 10;
-                    oddStr = tempID % 10 + "" + oddStr;
-                    tempID /= 10;
-                }
-                else
-                {
-                    evenSum += tempID % 10;
-                    evenStr = tempID % 10 + "" + evenStr;
-                    tempID /= 10;
-
-                }
-                counter++;
-            }
-
-            int sum = 0;
-            evenSumP2 = int.Parse(evenStr) * 2;
-            while (evenSumP2 != 0)
-            {
-                sum += evenSumP2 % 10;
-                evenSumP2 /= 10;
-            }
-
-            long addSumandOdd = sum + oddSum;
-            long i = addSumandOdd;
-            long lastdigit = (addSumandOdd % 10);
-
-            long subFromTen = 10 - lastdigit;
-
-
-            /*MessageBox.Show("Even: " + evenSum + "\nEven String: " + evenStr);
-            MessageBox.Show("Odd: " + oddSum + "\nOdd String: " + oddStr);
-            MessageBox.Show("Even Sum: " + sum);
-            MessageBox.Show("Sum of odd number calc + sum of even number calc = " + addSumandOdd);
-            MessageBox.Show("Last digit of Sum: " + lastdigit);
-            MessageBox.Show("Sub from ten value: " + subFromTen);*/
-
-        /* if ((c_id % 10) == (subFromTen % 10))
-         {
-             validID = true;
-         }
-         else
-         {
-             validID = false;
-
-         }
-
-     }*/
+      
         public void checkSelected()
         {
             if (cmbBSF.SelectedIndex > -1 && cmbCluster.SelectedIndex > -1 && cmbGender.SelectedIndex > -1 && cmbHouse.SelectedIndex > -1 && cmbStatus.SelectedIndex > -1)

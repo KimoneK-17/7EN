@@ -133,7 +133,7 @@ namespace TherapyReferralSystem
                     phone = dbConnect.sqlDR["U_CONTACT"].ToString();
                     type = dbConnect.sqlDR["U_TYPE"].ToString();
                     id = dbConnect.sqlDR["U_ID"].ToString();
-                    byte[] images = (byte[])dbConnect.sqlDR["U_IMAGE"];
+                    byte[] images = dbConnect.sqlDR["U_IMAGE"] as byte[] ?? null;
 
                     if (images == null)
                     {
@@ -275,6 +275,25 @@ namespace TherapyReferralSystem
             frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
             this.Dispose();
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
+            {
+                e.Handled = true;
+            }
+            
         }
         //**********************************************************************************************
     }

@@ -224,6 +224,7 @@
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(273, 22);
             this.txtLName.TabIndex = 39;
+            this.txtLName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLName_KeyPress);
             // 
             // lblLName
             // 
@@ -243,6 +244,7 @@
             this.txtMName.Name = "txtMName";
             this.txtMName.Size = new System.Drawing.Size(273, 22);
             this.txtMName.TabIndex = 37;
+            this.txtMName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMName_KeyPress);
             // 
             // txtFName
             // 
@@ -251,6 +253,7 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(273, 22);
             this.txtFName.TabIndex = 36;
+            this.txtFName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFName_KeyPress);
             // 
             // lblMName
             // 

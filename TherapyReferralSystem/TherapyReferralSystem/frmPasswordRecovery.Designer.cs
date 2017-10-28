@@ -49,7 +49,7 @@
             // 
             this.txtEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAddress.Location = new System.Drawing.Point(225, 64);
-            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(333, 27);
             this.txtEmailAddress.TabIndex = 26;
@@ -115,7 +115,7 @@
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequestReset.Location = new System.Drawing.Point(300, 241);
-            this.btnRequestReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRequestReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequestReset.Name = "btnRequestReset";
             this.btnRequestReset.Size = new System.Drawing.Size(151, 31);
             this.btnRequestReset.TabIndex = 35;
@@ -143,7 +143,7 @@
             this.btnSubmitAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitAnswer.Location = new System.Drawing.Point(575, 142);
-            this.btnSubmitAnswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmitAnswer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmitAnswer.Name = "btnSubmitAnswer";
             this.btnSubmitAnswer.Size = new System.Drawing.Size(151, 27);
             this.btnSubmitAnswer.TabIndex = 33;
@@ -155,7 +155,7 @@
             // 
             this.txtAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer.Location = new System.Drawing.Point(225, 142);
-            this.txtAnswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAnswer.Margin = new System.Windows.Forms.Padding(4);
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(333, 27);
             this.txtAnswer.TabIndex = 32;
@@ -180,7 +180,7 @@
             this.btnGetQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGetQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetQuestion.Location = new System.Drawing.Point(575, 107);
-            this.btnGetQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetQuestion.Name = "btnGetQuestion";
             this.btnGetQuestion.Size = new System.Drawing.Size(151, 27);
             this.btnGetQuestion.TabIndex = 30;
@@ -192,8 +192,9 @@
             // 
             this.txtSecurityQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecurityQuestion.Location = new System.Drawing.Point(225, 103);
-            this.txtSecurityQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSecurityQuestion.Margin = new System.Windows.Forms.Padding(4);
             this.txtSecurityQuestion.Name = "txtSecurityQuestion";
+            this.txtSecurityQuestion.ReadOnly = true;
             this.txtSecurityQuestion.Size = new System.Drawing.Size(333, 27);
             this.txtSecurityQuestion.TabIndex = 29;
             // 
