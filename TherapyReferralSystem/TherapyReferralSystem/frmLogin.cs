@@ -13,7 +13,7 @@ namespace TherapyReferralSystem
 
         string username;
         string password;
-        bool found, checkValid;
+        bool found;
 
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
@@ -103,16 +103,15 @@ namespace TherapyReferralSystem
                 //assigning query to variable
                 if (int.Parse(checkVal) > 0)
                 {
-                    checkValid = true;
+                   
                     //in database
-
                     checkPword();
 
                     //this.Dispose();
                 }
                 else
                 {
-                    checkValid = false;
+                   
                     //not in database
                     MessageBox.Show("Invalid credentials");
                 }
@@ -147,7 +146,9 @@ namespace TherapyReferralSystem
 
                 if(pword.StartsWith("#"))
                 {
-                    MessageBox.Show("Please change your password");
+                    frmUserPasswordReset upr = new frmUserPasswordReset(username);
+                    upr.Show();
+                    this.Hide();
 
                 }
                 else

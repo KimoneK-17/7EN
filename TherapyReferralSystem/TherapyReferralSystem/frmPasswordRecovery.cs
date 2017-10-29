@@ -21,73 +21,36 @@ namespace TherapyReferralSystem
         }
 
         string username;
-        string password;
-        bool found, checkValid;
         string randomPassword;
-        string securityQues;
         string answer;
         string name;
-
+        string secQuestion;
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
         MailMessage email = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-        string secQuestion;
-           
-        private void CheckExisting()
-        {
-            try
-            {
-                string existName;
-                //checks to see if patient already exists in database
-                objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
-                //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
-                //parameter
-                existName = objDBConnect.sqlCmd.ExecuteScalar().ToString();
-                //assigning query to variable
-                if (int.Parse(existName) > 0)
-                {
-                    found = true;
-                    //in database
-                   
 
-                }
-                else
-                {
-                    found = false;
-                    //not in database
-                    MessageBox.Show("Email address invalid");
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Cannot Check If User  Exists In Database: " + ex.Message); // Shows an error message
-            }
-        }
+
 
         private void btnGetQuestion_Click(object sender, EventArgs e)
         {
+            username = txtEmailAddress.Text;
             getSecQuestion();
         }
 
-       
+
 
         private void btnSubmitAnswer_Click(object sender, EventArgs e)
         {
-            randomPassword=sm.getOTP();
+            username = txtEmailAddress.Text;
+            randomPassword = sm.getOTP();
 
             getAnswer();
 
         }
-        
-        
+
+
 
         private void mnuPassRecovReturn_Click(object sender, EventArgs e)
         {
@@ -111,7 +74,7 @@ namespace TherapyReferralSystem
 
                 objDBConnect.sqlCmd = new SqlCommand("SELECT u_sec_Ques FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
                 //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
 
 
                 secQuestion = (string)objDBConnect.sqlCmd.ExecuteScalar();
@@ -122,19 +85,20 @@ namespace TherapyReferralSystem
                 txtAnswer.Show();
                 btnSubmitAnswer.Show();
             }
-            catch(SqlException se)
+            catch (SqlException se)
             {
                 MessageBox.Show(se.Message);
             }
-            catch(Exception x)
+            catch (Exception x)
             {
                 MessageBox.Show(x.Message);
             }
 
-         }
+        }
 
         private void btnRequestReset_Click(object sender, EventArgs e)
         {
+            username = txtEmailAddress.Text;
             sendAdminEmail();
         }
 
@@ -146,12 +110,12 @@ namespace TherapyReferralSystem
 
                 objDBConnect.sqlCmd = new SqlCommand("SELECT U_FNAME +' '+ U_SNAME FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
                 //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
 
 
                 name = (string)objDBConnect.sqlCmd.ExecuteScalar();
 
-               
+
             }
             catch (SqlException se)
             {
@@ -171,7 +135,7 @@ namespace TherapyReferralSystem
                 email.From = new MailAddress("livotp@gmail.com");
                 email.To.Add("livotp@gmail.com");
                 email.Subject = "Reset User Password";
-                email.Body = "Hi There\n Kindly reset user: "+name+" password. \n Email Address: "+username;
+                email.Body = "Hi There\n Kindly reset user: " + name + " password. \n Email Address: " + username;
 
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("livotp@gmail.com", "passwordrecovery");
@@ -201,14 +165,14 @@ namespace TherapyReferralSystem
 
                 objDBConnect.sqlCmd = new SqlCommand("SELECT u_sec_Ans FROM tbl_user WHERE u_email LIKE @u_email;", objDBConnect.sqlConn);
                 //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", txtEmailAddress.Text);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
 
 
                 answer = (string)objDBConnect.sqlCmd.ExecuteScalar();
 
-                if(txtAnswer.Text == answer)
+                if (txtAnswer.Text == answer)
                 {
-                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your newly generated password: #" + randomPassword );
+                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your newly generated password: #" + randomPassword);
                     sm.updatePassword(txtEmailAddress.Text, randomPassword);
                 }
                 else
@@ -226,7 +190,7 @@ namespace TherapyReferralSystem
             }
         }
 
-       
+
 
 
     }

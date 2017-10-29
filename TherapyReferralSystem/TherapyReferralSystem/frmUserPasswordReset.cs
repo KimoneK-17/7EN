@@ -16,12 +16,18 @@ namespace TherapyReferralSystem
         {
             InitializeComponent();
         }
+
+        public frmUserPasswordReset(string username)
+        {
+            this.username = username;
+        }
+
         SharedMethods sm = new SharedMethods();
         DBConnect objDBConnect = new DBConnect();
 
         string email, otp, npword, cpword;
         bool found, valid = true;
-
+        private string username;
 
         private void btnChangePword_Click(object sender, EventArgs e)
         {
