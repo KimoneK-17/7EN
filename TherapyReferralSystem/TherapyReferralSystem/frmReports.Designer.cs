@@ -44,21 +44,19 @@
             this.lblTherID = new System.Windows.Forms.Label();
             this.lblChildID = new System.Windows.Forms.Label();
             this.lblCluster = new System.Windows.Forms.Label();
-            this.cboxCluster = new System.Windows.Forms.ComboBox();
-            this.cboxHouse = new System.Windows.Forms.ComboBox();
             this.lblHouse = new System.Windows.Forms.Label();
             this.cboxTherapyType = new System.Windows.Forms.ComboBox();
             this.lblTherapyType = new System.Windows.Forms.Label();
-            this.cboxDay = new System.Windows.Forms.ComboBox();
             this.lblDay = new System.Windows.Forms.Label();
-            this.cboxMonth = new System.Windows.Forms.ComboBox();
             this.lblMonth = new System.Windows.Forms.Label();
-            this.cboxYear = new System.Windows.Forms.ComboBox();
             this.lblYear = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.txtTherapistID = new System.Windows.Forms.TextBox();
             this.txtChildID = new System.Windows.Forms.TextBox();
-            this.cboxRefine = new System.Windows.Forms.CheckBox();
+            this.txtCluster = new System.Windows.Forms.TextBox();
+            this.txtHouse = new System.Windows.Forms.TextBox();
+            this.DTPYear = new System.Windows.Forms.DateTimePicker();
+            this.DTPMonth = new System.Windows.Forms.DateTimePicker();
+            this.DTPDay = new System.Windows.Forms.DateTimePicker();
             this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).BeginInit();
             this.SuspendLayout();
@@ -212,9 +210,9 @@
             this.lblChildID.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildID.Location = new System.Drawing.Point(307, 214);
             this.lblChildID.Name = "lblChildID";
-            this.lblChildID.Size = new System.Drawing.Size(118, 13);
+            this.lblChildID.Size = new System.Drawing.Size(117, 13);
             this.lblChildID.TabIndex = 11;
-            this.lblChildID.Text = "Search by child ID:";
+            this.lblChildID.Text = "Search by child Nr:";
             this.lblChildID.Visible = false;
             // 
             // lblCluster
@@ -228,35 +226,6 @@
             this.lblCluster.TabIndex = 22;
             this.lblCluster.Text = "Select Cluster";
             this.lblCluster.Visible = false;
-            // 
-            // cboxCluster
-            // 
-            this.cboxCluster.FormattingEnabled = true;
-            this.cboxCluster.Items.AddRange(new object[] {
-            "",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cboxCluster.Location = new System.Drawing.Point(309, 100);
-            this.cboxCluster.Name = "cboxCluster";
-            this.cboxCluster.Size = new System.Drawing.Size(121, 21);
-            this.cboxCluster.TabIndex = 24;
-            this.cboxCluster.Visible = false;
-            this.cboxCluster.SelectedIndexChanged += new System.EventHandler(this.cboxCluster_SelectedIndexChanged);
-            // 
-            // cboxHouse
-            // 
-            this.cboxHouse.FormattingEnabled = true;
-            this.cboxHouse.Location = new System.Drawing.Point(455, 100);
-            this.cboxHouse.Name = "cboxHouse";
-            this.cboxHouse.Size = new System.Drawing.Size(121, 21);
-            this.cboxHouse.TabIndex = 26;
-            this.cboxHouse.Visible = false;
             // 
             // lblHouse
             // 
@@ -291,98 +260,41 @@
             this.lblTherapyType.Text = "Select Therapy Type";
             this.lblTherapyType.Visible = false;
             // 
-            // cboxDay
-            // 
-            this.cboxDay.FormattingEnabled = true;
-            this.cboxDay.Location = new System.Drawing.Point(606, 155);
-            this.cboxDay.Name = "cboxDay";
-            this.cboxDay.Size = new System.Drawing.Size(121, 21);
-            this.cboxDay.TabIndex = 35;
-            this.cboxDay.Visible = false;
-            // 
             // lblDay
             // 
             this.lblDay.AutoSize = true;
             this.lblDay.BackColor = System.Drawing.Color.Transparent;
             this.lblDay.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(604, 138);
+            this.lblDay.Location = new System.Drawing.Point(602, 138);
             this.lblDay.Name = "lblDay";
             this.lblDay.Size = new System.Drawing.Size(69, 13);
             this.lblDay.TabIndex = 34;
             this.lblDay.Text = "Select Day";
             this.lblDay.Visible = false;
             // 
-            // cboxMonth
-            // 
-            this.cboxMonth.FormattingEnabled = true;
-            this.cboxMonth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "Desember"});
-            this.cboxMonth.Location = new System.Drawing.Point(455, 155);
-            this.cboxMonth.Name = "cboxMonth";
-            this.cboxMonth.Size = new System.Drawing.Size(121, 21);
-            this.cboxMonth.TabIndex = 33;
-            this.cboxMonth.Visible = false;
-            this.cboxMonth.SelectedIndexChanged += new System.EventHandler(this.cboxMonth_SelectedIndexChanged);
-            // 
             // lblMonth
             // 
             this.lblMonth.AutoSize = true;
             this.lblMonth.BackColor = System.Drawing.Color.Transparent;
             this.lblMonth.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(453, 138);
+            this.lblMonth.Location = new System.Drawing.Point(451, 140);
             this.lblMonth.Name = "lblMonth";
             this.lblMonth.Size = new System.Drawing.Size(80, 13);
             this.lblMonth.TabIndex = 32;
             this.lblMonth.Text = "Select Month";
             this.lblMonth.Visible = false;
             // 
-            // cboxYear
-            // 
-            this.cboxYear.FormattingEnabled = true;
-            this.cboxYear.Items.AddRange(new object[] {
-            "2001",
-            "2002",
-            "2003",
-            "2004",
-            "2005"});
-            this.cboxYear.Location = new System.Drawing.Point(309, 155);
-            this.cboxYear.Name = "cboxYear";
-            this.cboxYear.Size = new System.Drawing.Size(121, 21);
-            this.cboxYear.TabIndex = 31;
-            this.cboxYear.Visible = false;
-            this.cboxYear.SelectedIndexChanged += new System.EventHandler(this.cboxYear_SelectedIndexChanged);
-            // 
             // lblYear
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.BackColor = System.Drawing.Color.Transparent;
             this.lblYear.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(307, 138);
+            this.lblYear.Location = new System.Drawing.Point(307, 140);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(71, 13);
             this.lblYear.TabIndex = 30;
             this.lblYear.Text = "Select Year";
             this.lblYear.Visible = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(661, 179);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(133, 13);
-            this.label28.TabIndex = 36;
-            this.label28.Text = "Look at date picker maybe";
             // 
             // txtTherapistID
             // 
@@ -402,37 +314,70 @@
             this.txtChildID.Visible = false;
             this.txtChildID.TextChanged += new System.EventHandler(this.txtChildID_TextChanged);
             // 
-            // cboxRefine
+            // txtCluster
             // 
-            this.cboxRefine.AutoSize = true;
-            this.cboxRefine.BackColor = System.Drawing.Color.Transparent;
-            this.cboxRefine.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxRefine.Location = new System.Drawing.Point(48, 134);
-            this.cboxRefine.Name = "cboxRefine";
-            this.cboxRefine.Size = new System.Drawing.Size(106, 17);
-            this.cboxRefine.TabIndex = 39;
-            this.cboxRefine.Text = "Refine Search";
-            this.cboxRefine.UseVisualStyleBackColor = false;
-            this.cboxRefine.CheckedChanged += new System.EventHandler(this.cboxRefine_CheckedChanged);
+            this.txtCluster.Location = new System.Drawing.Point(309, 100);
+            this.txtCluster.Name = "txtCluster";
+            this.txtCluster.Size = new System.Drawing.Size(85, 20);
+            this.txtCluster.TabIndex = 40;
+            this.txtCluster.TextChanged += new System.EventHandler(this.txtCluster_TextChanged);
+            // 
+            // txtHouse
+            // 
+            this.txtHouse.Location = new System.Drawing.Point(454, 101);
+            this.txtHouse.Name = "txtHouse";
+            this.txtHouse.Size = new System.Drawing.Size(85, 20);
+            this.txtHouse.TabIndex = 41;
+            this.txtHouse.TextChanged += new System.EventHandler(this.txtHouse_TextChanged);
+            // 
+            // DTPYear
+            // 
+            this.DTPYear.CustomFormat = "yyyy";
+            this.DTPYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPYear.Location = new System.Drawing.Point(309, 156);
+            this.DTPYear.Name = "DTPYear";
+            this.DTPYear.ShowUpDown = true;
+            this.DTPYear.Size = new System.Drawing.Size(80, 20);
+            this.DTPYear.TabIndex = 42;
+            this.DTPYear.ValueChanged += new System.EventHandler(this.DTPYear_ValueChanged);
+            // 
+            // DTPMonth
+            // 
+            this.DTPMonth.CustomFormat = "MMMM";
+            this.DTPMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPMonth.Location = new System.Drawing.Point(454, 156);
+            this.DTPMonth.Name = "DTPMonth";
+            this.DTPMonth.ShowUpDown = true;
+            this.DTPMonth.Size = new System.Drawing.Size(79, 20);
+            this.DTPMonth.TabIndex = 43;
+            this.DTPMonth.ValueChanged += new System.EventHandler(this.DTPMonth_ValueChanged);
+            // 
+            // DTPDay
+            // 
+            this.DTPDay.CustomFormat = "dd";
+            this.DTPDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DTPDay.Location = new System.Drawing.Point(605, 156);
+            this.DTPDay.Name = "DTPDay";
+            this.DTPDay.ShowUpDown = true;
+            this.DTPDay.Size = new System.Drawing.Size(79, 20);
+            this.DTPDay.TabIndex = 44;
             // 
             // frmReports
             // 
             this.ClientSize = new System.Drawing.Size(861, 619);
-            this.Controls.Add(this.cboxRefine);
+            this.Controls.Add(this.DTPDay);
+            this.Controls.Add(this.DTPMonth);
+            this.Controls.Add(this.DTPYear);
+            this.Controls.Add(this.txtHouse);
+            this.Controls.Add(this.txtCluster);
             this.Controls.Add(this.txtChildID);
             this.Controls.Add(this.txtTherapistID);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.cboxDay);
             this.Controls.Add(this.lblDay);
-            this.Controls.Add(this.cboxMonth);
             this.Controls.Add(this.lblMonth);
-            this.Controls.Add(this.cboxYear);
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.cboxTherapyType);
             this.Controls.Add(this.lblTherapyType);
-            this.Controls.Add(this.cboxHouse);
             this.Controls.Add(this.lblHouse);
-            this.Controls.Add(this.cboxCluster);
             this.Controls.Add(this.lblCluster);
             this.Controls.Add(this.lblTherID);
             this.Controls.Add(this.lblChildID);
@@ -471,24 +416,22 @@
         private System.Windows.Forms.Label lblTherID;
         private System.Windows.Forms.Label lblChildID;
         private System.Windows.Forms.Label lblCluster;
-        private System.Windows.Forms.ComboBox cboxCluster;
-        private System.Windows.Forms.ComboBox cboxHouse;
         private System.Windows.Forms.Label lblHouse;
         private System.Windows.Forms.ComboBox cboxTherapyType;
         private System.Windows.Forms.Label lblTherapyType;
-        private System.Windows.Forms.ComboBox cboxDay;
         private System.Windows.Forms.Label lblDay;
-        private System.Windows.Forms.ComboBox cboxMonth;
         private System.Windows.Forms.Label lblMonth;
-        private System.Windows.Forms.ComboBox cboxYear;
         private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox txtTherapistID;
         private System.Windows.Forms.TextBox txtChildID;
-        private System.Windows.Forms.CheckBox cboxRefine;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsForm;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsTherRef;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsRegChild;
         private System.Windows.Forms.ToolStripMenuItem mnuReportsRegUser;
+        private System.Windows.Forms.TextBox txtCluster;
+        private System.Windows.Forms.TextBox txtHouse;
+        private System.Windows.Forms.DateTimePicker DTPYear;
+        private System.Windows.Forms.DateTimePicker DTPMonth;
+        private System.Windows.Forms.DateTimePicker DTPDay;
     }
 }
