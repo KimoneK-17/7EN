@@ -27,7 +27,6 @@ namespace TherapyReferralSystem
         string answer;
         string therapytype;
         string IE;
-        string other;
         string idnum;
         bool valid = false;
         bool checkempty = true;

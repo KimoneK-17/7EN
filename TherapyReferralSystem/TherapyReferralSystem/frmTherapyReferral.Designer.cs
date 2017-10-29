@@ -186,7 +186,7 @@
             this.panel1.Controls.Add(this.cmbStatus);
             this.panel1.Controls.Add(this.cmbType);
             this.panel1.Location = new System.Drawing.Point(379, 37);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 190);
             this.panel1.TabIndex = 32;
@@ -196,7 +196,7 @@
             this.cmbCNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCNum.FormattingEnabled = true;
             this.cmbCNum.Location = new System.Drawing.Point(16, 11);
-            this.cmbCNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCNum.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCNum.Name = "cmbCNum";
             this.cmbCNum.Size = new System.Drawing.Size(325, 24);
             this.cmbCNum.TabIndex = 0;
@@ -213,7 +213,7 @@
             // txtCondition
             // 
             this.txtCondition.Location = new System.Drawing.Point(16, 44);
-            this.txtCondition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCondition.Margin = new System.Windows.Forms.Padding(4);
             this.txtCondition.Name = "txtCondition";
             this.txtCondition.Size = new System.Drawing.Size(325, 22);
             this.txtCondition.TabIndex = 3;
@@ -223,7 +223,7 @@
             this.cmbReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReason.FormattingEnabled = true;
             this.cmbReason.Location = new System.Drawing.Point(15, 76);
-            this.cmbReason.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbReason.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReason.Name = "cmbReason";
             this.cmbReason.Size = new System.Drawing.Size(327, 24);
             this.cmbReason.TabIndex = 5;
@@ -233,7 +233,7 @@
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Location = new System.Drawing.Point(16, 110);
-            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(325, 24);
             this.cmbStatus.TabIndex = 8;
@@ -243,7 +243,7 @@
             this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(16, 143);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(325, 24);
             this.cmbType.TabIndex = 10;
@@ -257,7 +257,7 @@
             this.panel2.Controls.Add(this.dtpDateStart);
             this.panel2.Controls.Add(this.dtpDateEnd);
             this.panel2.Location = new System.Drawing.Point(379, 534);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 190);
             this.panel2.TabIndex = 33;
@@ -266,7 +266,7 @@
             // 
             this.chkWaitingList.AutoSize = true;
             this.chkWaitingList.Location = new System.Drawing.Point(16, 80);
-            this.chkWaitingList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkWaitingList.Margin = new System.Windows.Forms.Padding(4);
             this.chkWaitingList.Name = "chkWaitingList";
             this.chkWaitingList.Size = new System.Drawing.Size(18, 17);
             this.chkWaitingList.TabIndex = 17;
@@ -277,7 +277,7 @@
             this.cmbRefBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRefBy.FormattingEnabled = true;
             this.cmbRefBy.Location = new System.Drawing.Point(16, 11);
-            this.cmbRefBy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRefBy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRefBy.Name = "cmbRefBy";
             this.cmbRefBy.Size = new System.Drawing.Size(328, 24);
             this.cmbRefBy.TabIndex = 12;
@@ -285,7 +285,7 @@
             // dtpDateRef
             // 
             this.dtpDateRef.Location = new System.Drawing.Point(16, 44);
-            this.dtpDateRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDateRef.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateRef.Name = "dtpDateRef";
             this.dtpDateRef.Size = new System.Drawing.Size(328, 22);
             this.dtpDateRef.TabIndex = 13;
@@ -293,7 +293,7 @@
             // dtpDateStart
             // 
             this.dtpDateStart.Location = new System.Drawing.Point(16, 111);
-            this.dtpDateStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateStart.Name = "dtpDateStart";
             this.dtpDateStart.Size = new System.Drawing.Size(328, 22);
             this.dtpDateStart.TabIndex = 15;
@@ -301,7 +301,7 @@
             // dtpDateEnd
             // 
             this.dtpDateEnd.Location = new System.Drawing.Point(16, 149);
-            this.dtpDateEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateEnd.Name = "dtpDateEnd";
             this.dtpDateEnd.Size = new System.Drawing.Size(328, 22);
             this.dtpDateEnd.TabIndex = 16;
@@ -309,7 +309,7 @@
             // nudSess
             // 
             this.nudSess.Location = new System.Drawing.Point(16, 11);
-            this.nudSess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudSess.Margin = new System.Windows.Forms.Padding(4);
             this.nudSess.Name = "nudSess";
             this.nudSess.Size = new System.Drawing.Size(327, 22);
             this.nudSess.TabIndex = 0;
@@ -323,7 +323,7 @@
             this.panel3.Controls.Add(this.cmbTherapist);
             this.panel3.Controls.Add(this.nudSess);
             this.panel3.Location = new System.Drawing.Point(379, 245);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(364, 268);
             this.panel3.TabIndex = 34;
@@ -331,7 +331,7 @@
             // rtxtDetails
             // 
             this.rtxtDetails.Location = new System.Drawing.Point(16, 44);
-            this.rtxtDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtxtDetails.Margin = new System.Windows.Forms.Padding(4);
             this.rtxtDetails.Name = "rtxtDetails";
             this.rtxtDetails.Size = new System.Drawing.Size(325, 51);
             this.rtxtDetails.TabIndex = 43;
@@ -340,7 +340,7 @@
             // rtxtResult
             // 
             this.rtxtResult.Location = new System.Drawing.Point(16, 186);
-            this.rtxtResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtxtResult.Margin = new System.Windows.Forms.Padding(4);
             this.rtxtResult.Name = "rtxtResult";
             this.rtxtResult.Size = new System.Drawing.Size(325, 58);
             this.rtxtResult.TabIndex = 42;
@@ -351,7 +351,7 @@
             this.cmbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReport.FormattingEnabled = true;
             this.cmbReport.Location = new System.Drawing.Point(16, 146);
-            this.cmbReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbReport.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReport.Name = "cmbReport";
             this.cmbReport.Size = new System.Drawing.Size(325, 24);
             this.cmbReport.TabIndex = 20;
@@ -363,7 +363,7 @@
             this.cmbTherapist.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbTherapist.FormattingEnabled = true;
             this.cmbTherapist.Location = new System.Drawing.Point(16, 108);
-            this.cmbTherapist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTherapist.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTherapist.Name = "cmbTherapist";
             this.cmbTherapist.Size = new System.Drawing.Size(325, 24);
             this.cmbTherapist.TabIndex = 19;
@@ -457,8 +457,8 @@
             this.btnAddRef.BackColor = System.Drawing.Color.Snow;
             this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRef.Location = new System.Drawing.Point(799, 54);
-            this.btnAddRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddRef.Location = new System.Drawing.Point(827, 676);
+            this.btnAddRef.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRef.Name = "btnAddRef";
             this.btnAddRef.Size = new System.Drawing.Size(191, 33);
             this.btnAddRef.TabIndex = 42;
@@ -508,7 +508,7 @@
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(134, 26);
             this.mnuTherapyRefReturn.Text = "Return";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
@@ -525,7 +525,7 @@
             // mnuTherapyRefReports
             // 
             this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
-            this.mnuTherapyRefReports.Size = new System.Drawing.Size(181, 26);
+            this.mnuTherapyRefReports.Size = new System.Drawing.Size(143, 26);
             this.mnuTherapyRefReports.Text = "Reports";
             this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
             // 
@@ -568,8 +568,8 @@
             this.btnClearFields.BackColor = System.Drawing.Color.Snow;
             this.btnClearFields.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClearFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearFields.Location = new System.Drawing.Point(799, 95);
-            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearFields.Location = new System.Drawing.Point(827, 717);
+            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearFields.Name = "btnClearFields";
             this.btnClearFields.Size = new System.Drawing.Size(191, 33);
             this.btnClearFields.TabIndex = 55;
@@ -763,10 +763,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTherapyReferral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Therapy Referral";
+            this.Load += new System.EventHandler(this.frmTherapyReferral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

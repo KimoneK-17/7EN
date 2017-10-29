@@ -16,8 +16,9 @@ namespace TherapyReferralSystem
         String condition;
         String details;
         String result;
-        string t_c_num, t_refby,t_reason, t_report, t_type, t_status, t_therapist,ref_date, start_date, end_date;
+        string t_c_num, t_refby, t_reason, t_report, t_type, t_status, t_therapist, ref_date, start_date, end_date;
         int t_sessions;
+        DBConnect objDBConnect = new DBConnect();
         public frmTherapyReferral()
         {
             InitializeComponent();
@@ -149,6 +150,74 @@ namespace TherapyReferralSystem
                 return validText;
             }
         }
+
+        private void frmTherapyReferral_Load(object sender, EventArgs e)
+        {
+            populateChildNumberCMB();
+            populateTherapist();
+        }
+
+
+        public void populateTherapist()
+        {
+            objDBConnect.OpenConnection();
+
+            try
+            {
+                objDBConnect.sqlCmd = new SqlCommand("select U_ID, U_FNAME+' '+U_SNAME as name from tbl_user where U_TYPE like 'Therapist'", objDBConnect.sqlConn);
+
+
+                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("name", typeof(string));
+                dt.Load(objDBConnect.sqlDR);
+                cmbTherapist.DisplayMember = "name";
+                cmbTherapist.ValueMember = "U_ID";
+                cmbTherapist.DataSource = dt;
+
+
+            }
+            catch (SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
+            }
+        }
+        public void populateChildNumberCMB()
+        {
+
+            objDBConnect.OpenConnection();
+
+            try
+            {
+                objDBConnect.sqlCmd = new SqlCommand("select c_number from child", objDBConnect.sqlConn);
+                
+
+                objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("c_number", typeof(string));
+                dt.Load(objDBConnect.sqlDR);
+                cmbCNum.DisplayMember = "c_number";
+                cmbCNum.ValueMember = "c_number";
+                cmbCNum.DataSource = dt;
+
+               
+            }
+            catch(SqlException se)
+            {
+                MessageBox.Show(se.Message);
+            }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
+            }
+          
+
+        }
+
         public void validate()
         {
             condition = txtCondition.Text;
@@ -189,15 +258,15 @@ namespace TherapyReferralSystem
                 end_date = dtpDateRef.Value.ToString("dd-MM-yyyy");
                 t_sessions = (int)nudSess.Value;
             }
-            catch(NoNullAllowedException ex)
+            catch (NoNullAllowedException ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            catch(Exception exa)
+            catch (Exception exa)
             {
                 MessageBox.Show(exa.Message);
             }
-           
+
         }
 
         private void insertFieldsIntoDB()
@@ -211,13 +280,13 @@ namespace TherapyReferralSystem
 
                 objDBConnect.sqlCmd = new SqlCommand("INSERT INTO Therapy_Ref VALUES (@R_ID,@R_C_NUMBER,@R_DIAGNOSIS,@R_REASON,@R_STATUS,@R_SESSION,@R_REFFERED_BY,@R_DATE_REFFERED,@R_DATE_START,@R_DATE_ENDED,@R_DETAILS,@R_THERAPIST,@R_REPORT,@R_RESULT)", objDBConnect.sqlConn);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", " ");//auto increment
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_C_NUMBER", t_c_num); 
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_C_NUMBER", t_c_num);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DIAGNOSIS", condition);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REASON", t_reason); 
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REASON", t_reason);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_STATUS", t_status);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_SESSION", t_sessions);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REFFERED_BY", t_refby);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED DATE",ref_date);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED DATE", ref_date);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START DATE", start_date);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST DATE", " ");
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED DATE", end_date);
@@ -275,7 +344,7 @@ namespace TherapyReferralSystem
         {
             frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
-            this.Dispose(); 
+            this.Dispose();
         }
 
     }
