@@ -101,6 +101,7 @@
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAdminPWordReset";
             this.Text = "frmAdminPWordReset";

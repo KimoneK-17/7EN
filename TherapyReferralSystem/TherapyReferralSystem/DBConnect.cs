@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,13 @@ namespace TherapyReferralSystem
             public SqlCommand sqlCmd;
             public SqlDataReader sqlDR;
             public SqlDataAdapter sqlDA;
-            public void OpenConnection()
+        string livCon = ConfigurationManager.ConnectionStrings["livDB"].ConnectionString;
+        public void OpenConnection()
             {
                 try
                 {
                     sqlConn = new SqlConnection();
-                    sqlConn.ConnectionString = ("Server=tcp:livserver.database.windows.net,1433;Initial Catalog=LIVDatabase;Persist Security Info=False;User ID=LIV;Password=abcd1234$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                    sqlConn.ConnectionString = (livCon);
                     sqlConn.Open();
                
                 }
