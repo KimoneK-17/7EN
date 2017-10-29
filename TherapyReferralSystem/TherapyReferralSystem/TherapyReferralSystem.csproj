@@ -161,12 +161,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login-Button1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Form - Texture.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FormTexture.jpg" />
     <None Include="Resources\eye.jpg" />
   </ItemGroup>
