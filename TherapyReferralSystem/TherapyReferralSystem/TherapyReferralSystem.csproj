@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmUserPasswordReset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserPasswordReset.Designer.cs">
+      <DependentUpon>frmUserPasswordReset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +140,9 @@
     <EmbeddedResource Include="frmTherapyReferral.resx">
       <DependentUpon>frmTherapyReferral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUserPasswordReset.resx">
+      <DependentUpon>frmUserPasswordReset.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -150,12 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login-Button1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Form - Texture.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FormTexture.jpg" />

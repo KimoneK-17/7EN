@@ -34,11 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_fname = new System.Windows.Forms.Label();
-            this.lbl_mname = new System.Windows.Forms.Label();
             this.lblsurname = new System.Windows.Forms.Label();
             this.lblinitials = new System.Windows.Forms.Label();
             this.txtfname = new System.Windows.Forms.TextBox();
-            this.txtmname = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtsurname = new System.Windows.Forms.TextBox();
             this.txtinitials = new System.Windows.Forms.TextBox();
@@ -54,21 +52,21 @@
             this.lblanswer = new System.Windows.Forms.Label();
             this.txtanswer = new System.Windows.Forms.TextBox();
             this.lblthetype = new System.Windows.Forms.Label();
-            this.cmtherap = new System.Windows.Forms.ComboBox();
+            this.cmbtherap = new System.Windows.Forms.ComboBox();
             this.lblexternal = new System.Windows.Forms.Label();
             this.cmbinternal = new System.Windows.Forms.ComboBox();
-            this.rictxtother = new System.Windows.Forms.RichTextBox();
-            this.lblother = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnViewPword = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.lblidnum = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.mnuRegUser = new System.Windows.Forms.MenuStrip();
             this.mnuRegUserFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReports = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +74,17 @@
             this.mnuRegUserForm = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserTherRef = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserRegChild = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblRFname = new System.Windows.Forms.Label();
+            this.lblRID = new System.Windows.Forms.Label();
+            this.lblRPword = new System.Windows.Forms.Label();
+            this.lblRType = new System.Windows.Forms.Label();
+            this.lblRSQues = new System.Windows.Forms.Label();
+            this.lblRTherapy = new System.Windows.Forms.Label();
+            this.lblRIE = new System.Windows.Forms.Label();
+            this.lblRLname = new System.Windows.Forms.Label();
+            this.lblRContact = new System.Windows.Forms.Label();
+            this.lblREmail = new System.Windows.Forms.Label();
+            this.lblRAns = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mnuRegUser.SuspendLayout();
@@ -85,248 +94,149 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(0, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 66);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(0, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 17);
+            this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 98);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(0, 130);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(0, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 4;
             // 
             // lbl_fname
             // 
             this.lbl_fname.AutoSize = true;
-            this.lbl_fname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
-
-            this.lbl_fname.Location = new System.Drawing.Point(21, 15);
- 
-            this.lbl_fname.Location = new System.Drawing.Point(105, 20);
-            this.lbl_fname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lbl_fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fname.Location = new System.Drawing.Point(16, 15);
             this.lbl_fname.Name = "lbl_fname";
-            this.lbl_fname.Size = new System.Drawing.Size(111, 18);
+            this.lbl_fname.Size = new System.Drawing.Size(114, 20);
             this.lbl_fname.TabIndex = 14;
-            this.lbl_fname.Text = " FIRST NAME:";
-            // 
-            // lbl_mname
-            // 
-            this.lbl_mname.AutoSize = true;
-            this.lbl_mname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lbl_mname.Location = new System.Drawing.Point(24, 41);
- 
-            this.lbl_mname.Location = new System.Drawing.Point(93, 50);
-            this.lbl_mname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
-            this.lbl_mname.Name = "lbl_mname";
-            this.lbl_mname.Size = new System.Drawing.Size(120, 18);
-            this.lbl_mname.TabIndex = 15;
-            this.lbl_mname.Text = "MIDDLE NAME:";
+            this.lbl_fname.Text = "FIRST NAME:";
             // 
             // lblsurname
             // 
             this.lblsurname.AutoSize = true;
-            this.lblsurname.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblsurname.Location = new System.Drawing.Point(24, 67);
- 
-            this.lblsurname.Location = new System.Drawing.Point(129, 81);
-            this.lblsurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblsurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsurname.Location = new System.Drawing.Point(16, 43);
             this.lblsurname.Name = "lblsurname";
-            this.lblsurname.Size = new System.Drawing.Size(89, 18);
+            this.lblsurname.Size = new System.Drawing.Size(97, 20);
             this.lblsurname.TabIndex = 16;
             this.lblsurname.Text = "SURNAME:";
             // 
             // lblinitials
             // 
             this.lblinitials.AutoSize = true;
-            this.lblinitials.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblinitials.Location = new System.Drawing.Point(24, 93);
- 
-            this.lblinitials.Location = new System.Drawing.Point(137, 113);
-            this.lblinitials.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblinitials.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinitials.Location = new System.Drawing.Point(16, 71);
             this.lblinitials.Name = "lblinitials";
-            this.lblinitials.Size = new System.Drawing.Size(78, 18);
+            this.lblinitials.Size = new System.Drawing.Size(80, 20);
             this.lblinitials.TabIndex = 17;
             this.lblinitials.Text = "INITIALS:";
             // 
             // txtfname
             // 
-            this.txtfname.Location = new System.Drawing.Point(235, 12);
-            this.txtfname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtfname.Location = new System.Drawing.Point(234, 12);
             this.txtfname.Name = "txtfname";
- 
-            this.txtfname.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtfname.Size = new System.Drawing.Size(243, 22);
- 
+            this.txtfname.Size = new System.Drawing.Size(248, 26);
             this.txtfname.TabIndex = 18;
-            // 
-            // txtmname
-            // 
- 
-            this.txtmname.Location = new System.Drawing.Point(176, 36);
-            this.txtmname.Name = "txtmname";
-            this.txtmname.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtmname.Location = new System.Drawing.Point(235, 43);
-            this.txtmname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtmname.Name = "txtmname";
-            this.txtmname.Size = new System.Drawing.Size(243, 22);
- 
-            this.txtmname.TabIndex = 19;
+            this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged);
+            this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
             // 
             // txtemail
             // 
- 
-            this.txtemail.Location = new System.Drawing.Point(176, 140);
+            this.txtemail.Location = new System.Drawing.Point(233, 124);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtemail.Location = new System.Drawing.Point(235, 171);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(244, 22);
- 
+            this.txtemail.Size = new System.Drawing.Size(248, 26);
             this.txtemail.TabIndex = 20;
             // 
             // txtsurname
             // 
- 
-            this.txtsurname.Location = new System.Drawing.Point(176, 62);
+            this.txtsurname.Location = new System.Drawing.Point(233, 40);
             this.txtsurname.Name = "txtsurname";
-            this.txtsurname.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtsurname.Location = new System.Drawing.Point(235, 74);
-            this.txtsurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtsurname.Name = "txtsurname";
-            this.txtsurname.Size = new System.Drawing.Size(244, 22);
- 
+            this.txtsurname.Size = new System.Drawing.Size(248, 26);
             this.txtsurname.TabIndex = 21;
+            this.txtsurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsurname_KeyPress);
             // 
             // txtinitials
             // 
- 
-            this.txtinitials.Location = new System.Drawing.Point(176, 88);
+            this.txtinitials.Location = new System.Drawing.Point(233, 68);
             this.txtinitials.Name = "txtinitials";
-            this.txtinitials.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtinitials.Location = new System.Drawing.Point(235, 106);
-            this.txtinitials.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtinitials.Name = "txtinitials";
-            this.txtinitials.Size = new System.Drawing.Size(244, 22);
- 
+            this.txtinitials.Size = new System.Drawing.Size(248, 26);
             this.txtinitials.TabIndex = 22;
             // 
             // txtcontactnum
             // 
- 
-            this.txtcontactnum.Location = new System.Drawing.Point(176, 114);
-            this.txtcontactnum.Name = "txtcontactnum";
-            this.txtcontactnum.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtcontactnum.Location = new System.Drawing.Point(235, 138);
-            this.txtcontactnum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcontactnum.Location = new System.Drawing.Point(233, 96);
             this.txtcontactnum.MaxLength = 10;
             this.txtcontactnum.Name = "txtcontactnum";
-            this.txtcontactnum.Size = new System.Drawing.Size(244, 22);
- 
+            this.txtcontactnum.Size = new System.Drawing.Size(248, 26);
             this.txtcontactnum.TabIndex = 23;
+            this.txtcontactnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontactnum_KeyPress);
             // 
             // lblcnum
             // 
             this.lblcnum.AutoSize = true;
-            this.lblcnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblcnum.Location = new System.Drawing.Point(24, 119);
- 
-            this.lblcnum.Location = new System.Drawing.Point(57, 145);
-            this.lblcnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblcnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcnum.Location = new System.Drawing.Point(16, 99);
             this.lblcnum.Name = "lblcnum";
-            this.lblcnum.Size = new System.Drawing.Size(156, 18);
+            this.lblcnum.Size = new System.Drawing.Size(172, 20);
             this.lblcnum.TabIndex = 24;
             this.lblcnum.Text = "CONTACT NUMBER:";
             // 
             // lblemail
             // 
             this.lblemail.AutoSize = true;
-            this.lblemail.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblemail.Location = new System.Drawing.Point(24, 145);
- 
-            this.lblemail.Location = new System.Drawing.Point(159, 178);
-            this.lblemail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.Location = new System.Drawing.Point(16, 127);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(60, 18);
+            this.lblemail.Size = new System.Drawing.Size(64, 20);
             this.lblemail.TabIndex = 25;
             this.lblemail.Text = "EMAIL:";
             // 
             // lblpass
             // 
             this.lblpass.AutoSize = true;
-            this.lblpass.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblpass.Location = new System.Drawing.Point(24, 171);
- 
-            this.lblpass.Location = new System.Drawing.Point(113, 212);
-            this.lblpass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.Location = new System.Drawing.Point(16, 183);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(102, 18);
+            this.lblpass.Size = new System.Drawing.Size(112, 20);
             this.lblpass.TabIndex = 26;
             this.lblpass.Text = "PASSWORD:";
             // 
             // lbltype
             // 
             this.lbltype.AutoSize = true;
-            this.lbltype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lbltype.Location = new System.Drawing.Point(24, 197);
- 
-            this.lbltype.Location = new System.Drawing.Point(169, 246);
-            this.lbltype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lbltype.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltype.Location = new System.Drawing.Point(16, 211);
             this.lbltype.Name = "lbltype";
-            this.lbltype.Size = new System.Drawing.Size(51, 18);
+            this.lbltype.Size = new System.Drawing.Size(56, 20);
             this.lbltype.TabIndex = 27;
             this.lbltype.Text = "TYPE:";
             // 
@@ -339,30 +249,19 @@
             "Therapist",
             "Admin",
             "Social worker"});
- 
-            this.cmbtype.Location = new System.Drawing.Point(176, 192);
+            this.cmbtype.Location = new System.Drawing.Point(233, 208);
             this.cmbtype.Name = "cmbtype";
-            this.cmbtype.Size = new System.Drawing.Size(198, 21);
- 
-            this.cmbtype.Location = new System.Drawing.Point(235, 238);
-            this.cmbtype.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbtype.Name = "cmbtype";
-            this.cmbtype.Size = new System.Drawing.Size(244, 24);
- 
+            this.cmbtype.Size = new System.Drawing.Size(248, 28);
             this.cmbtype.TabIndex = 28;
+            this.cmbtype.SelectedIndexChanged += new System.EventHandler(this.cmbtype_SelectedIndexChanged);
             // 
             // lblsecurity
             // 
             this.lblsecurity.AutoSize = true;
-            this.lblsecurity.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblsecurity.Location = new System.Drawing.Point(24, 223);
- 
-            this.lblsecurity.Location = new System.Drawing.Point(35, 282);
-            this.lblsecurity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblsecurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsecurity.Location = new System.Drawing.Point(16, 239);
             this.lblsecurity.Name = "lblsecurity";
-            this.lblsecurity.Size = new System.Drawing.Size(173, 18);
+            this.lblsecurity.Size = new System.Drawing.Size(187, 20);
             this.lblsecurity.TabIndex = 29;
             this.lblsecurity.Text = "SECURITY QUESTION:";
             // 
@@ -378,156 +277,86 @@
             "What is your favourite fruit?",
             "What High School did you attend?",
             "What colour are your eyes?"});
- 
-            this.cmbsecurity.Location = new System.Drawing.Point(175, 219);
+            this.cmbsecurity.Location = new System.Drawing.Point(233, 238);
             this.cmbsecurity.Name = "cmbsecurity";
-            this.cmbsecurity.Size = new System.Drawing.Size(198, 21);
- 
-            this.cmbsecurity.Location = new System.Drawing.Point(233, 273);
-            this.cmbsecurity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbsecurity.Name = "cmbsecurity";
-            this.cmbsecurity.Size = new System.Drawing.Size(243, 24);
- 
+            this.cmbsecurity.Size = new System.Drawing.Size(248, 28);
             this.cmbsecurity.TabIndex = 30;
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(235, 204);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpassword.Location = new System.Drawing.Point(233, 180);
             this.txtpassword.Name = "txtpassword";
- 
-            this.txtpassword.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtpassword.Size = new System.Drawing.Size(244, 22);
- 
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(248, 26);
             this.txtpassword.TabIndex = 31;
             // 
             // lblanswer
             // 
             this.lblanswer.AutoSize = true;
-            this.lblanswer.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblanswer.Location = new System.Drawing.Point(24, 249);
- 
-            this.lblanswer.Location = new System.Drawing.Point(137, 314);
-            this.lblanswer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblanswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblanswer.Location = new System.Drawing.Point(16, 267);
             this.lblanswer.Name = "lblanswer";
-            this.lblanswer.Size = new System.Drawing.Size(80, 18);
+            this.lblanswer.Size = new System.Drawing.Size(87, 20);
             this.lblanswer.TabIndex = 32;
             this.lblanswer.Text = "ANSWER:";
             // 
             // txtanswer
             // 
- 
-            this.txtanswer.Location = new System.Drawing.Point(175, 246);
+            this.txtanswer.Location = new System.Drawing.Point(233, 268);
             this.txtanswer.Name = "txtanswer";
-            this.txtanswer.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtanswer.Location = new System.Drawing.Point(233, 306);
-            this.txtanswer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtanswer.Name = "txtanswer";
-            this.txtanswer.Size = new System.Drawing.Size(241, 22);
- 
+            this.txtanswer.Size = new System.Drawing.Size(248, 26);
             this.txtanswer.TabIndex = 33;
             // 
             // lblthetype
             // 
             this.lblthetype.AutoSize = true;
-            this.lblthetype.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblthetype.Location = new System.Drawing.Point(24, 15);
- 
-            this.lblthetype.Location = new System.Drawing.Point(91, 18);
-            this.lblthetype.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblthetype.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblthetype.Location = new System.Drawing.Point(17, 13);
             this.lblthetype.Name = "lblthetype";
-            this.lblthetype.Size = new System.Drawing.Size(123, 18);
+            this.lblthetype.Size = new System.Drawing.Size(139, 20);
             this.lblthetype.TabIndex = 34;
             this.lblthetype.Text = "THERAPY TYPE:";
             // 
-            // cmtherap
+            // cmbtherap
             // 
-            this.cmtherap.FormattingEnabled = true;
-            this.cmtherap.Location = new System.Drawing.Point(233, 10);
-            this.cmtherap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmtherap.Name = "cmtherap";
- 
-            this.cmtherap.Size = new System.Drawing.Size(198, 21);
- 
-            this.cmtherap.Size = new System.Drawing.Size(161, 24);
- 
-            this.cmtherap.TabIndex = 35;
+            this.cmbtherap.FormattingEnabled = true;
+            this.cmbtherap.Items.AddRange(new object[] {
+            "SNAP",
+            "EYE"});
+            this.cmbtherap.Location = new System.Drawing.Point(233, 10);
+            this.cmbtherap.Name = "cmbtherap";
+            this.cmbtherap.Size = new System.Drawing.Size(248, 28);
+            this.cmbtherap.TabIndex = 35;
             // 
             // lblexternal
             // 
             this.lblexternal.AutoSize = true;
-            this.lblexternal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblexternal.Location = new System.Drawing.Point(24, 42);
- 
-            this.lblexternal.Location = new System.Drawing.Point(37, 54);
-            this.lblexternal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
+            this.lblexternal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblexternal.Location = new System.Drawing.Point(17, 43);
             this.lblexternal.Name = "lblexternal";
-            this.lblexternal.Size = new System.Drawing.Size(171, 18);
+            this.lblexternal.Size = new System.Drawing.Size(189, 20);
             this.lblexternal.TabIndex = 36;
             this.lblexternal.Text = "INTERNAL/EXTERNAL:";
             // 
             // cmbinternal
             // 
             this.cmbinternal.FormattingEnabled = true;
- 
-            this.cmbinternal.Location = new System.Drawing.Point(176, 36);
+            this.cmbinternal.Items.AddRange(new object[] {
+            "I",
+            "E"});
+            this.cmbinternal.Location = new System.Drawing.Point(234, 40);
             this.cmbinternal.Name = "cmbinternal";
-            this.cmbinternal.Size = new System.Drawing.Size(198, 21);
- 
-            this.cmbinternal.Location = new System.Drawing.Point(235, 46);
-            this.cmbinternal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbinternal.Name = "cmbinternal";
-            this.cmbinternal.Size = new System.Drawing.Size(160, 24);
- 
+            this.cmbinternal.Size = new System.Drawing.Size(247, 28);
             this.cmbinternal.TabIndex = 37;
-            // 
-            // rictxtother
-            // 
- 
-            this.rictxtother.Location = new System.Drawing.Point(176, 64);
-            this.rictxtother.Name = "rictxtother";
-            this.rictxtother.Size = new System.Drawing.Size(198, 91);
- 
-            this.rictxtother.Location = new System.Drawing.Point(235, 80);
-            this.rictxtother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rictxtother.Name = "rictxtother";
-            this.rictxtother.Size = new System.Drawing.Size(188, 110);
- 
-            this.rictxtother.TabIndex = 38;
-            this.rictxtother.Text = "";
-            // 
-            // lblother
-            // 
-            this.lblother.AutoSize = true;
-            this.lblother.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblother.Location = new System.Drawing.Point(24, 69);
- 
-            this.lblother.Location = new System.Drawing.Point(153, 86);
-            this.lblother.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
- 
-            this.lblother.Name = "lblother";
-            this.lblother.Size = new System.Drawing.Size(66, 18);
-            this.lblother.TabIndex = 40;
-            this.lblother.Text = "OTHER:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnViewPword);
             this.panel1.Controls.Add(this.txtid);
             this.panel1.Controls.Add(this.lblidnum);
             this.panel1.Controls.Add(this.txtfname);
             this.panel1.Controls.Add(this.lbl_fname);
-            this.panel1.Controls.Add(this.txtmname);
-            this.panel1.Controls.Add(this.lbl_mname);
             this.panel1.Controls.Add(this.lblsurname);
             this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.txtanswer);
@@ -544,128 +373,83 @@
             this.panel1.Controls.Add(this.cmbtype);
             this.panel1.Controls.Add(this.lblemail);
             this.panel1.Controls.Add(this.lblpass);
-            this.panel1.Location = new System.Drawing.Point(8, 44);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(8, 42);
             this.panel1.Name = "panel1";
- 
-            this.panel1.Size = new System.Drawing.Size(435, 308);
- 
-            this.panel1.Size = new System.Drawing.Size(580, 367);
- 
+            this.panel1.Size = new System.Drawing.Size(510, 313);
             this.panel1.TabIndex = 41;
+            // 
+            // btnViewPword
+            // 
+            this.btnViewPword.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.eye;
+            this.btnViewPword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewPword.Location = new System.Drawing.Point(481, 180);
+            this.btnViewPword.Name = "btnViewPword";
+            this.btnViewPword.Size = new System.Drawing.Size(26, 27);
+            this.btnViewPword.TabIndex = 45;
+            this.btnViewPword.UseVisualStyleBackColor = true;
+            this.btnViewPword.Click += new System.EventHandler(this.btnViewPword_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(233, 152);
+            this.txtid.MaxLength = 13;
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(248, 26);
+            this.txtid.TabIndex = 44;
+            this.txtid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtid_KeyPress);
+            // 
+            // lblidnum
+            // 
+            this.lblidnum.AutoSize = true;
+            this.lblidnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidnum.Location = new System.Drawing.Point(16, 155);
+            this.lblidnum.Name = "lblidnum";
+            this.lblidnum.Size = new System.Drawing.Size(109, 20);
+            this.lblidnum.TabIndex = 43;
+            this.lblidnum.Text = "ID NUMBER:";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblthetype);
             this.panel2.Controls.Add(this.lblexternal);
-            this.panel2.Controls.Add(this.lblother);
-            this.panel2.Controls.Add(this.cmtherap);
+            this.panel2.Controls.Add(this.cmbtherap);
             this.panel2.Controls.Add(this.cmbinternal);
-            this.panel2.Controls.Add(this.rictxtother);
-            this.panel2.Location = new System.Drawing.Point(8, 443);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(12, 373);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(580, 242);
+            this.panel2.Size = new System.Drawing.Size(506, 95);
             this.panel2.TabIndex = 42;
-            // 
-            // txtid
-            // 
- 
-            this.txtid.Location = new System.Drawing.Point(175, 272);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(198, 20);
- 
-            this.txtid.Location = new System.Drawing.Point(235, 199);
-            this.txtid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtid.MaxLength = 13;
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(188, 22);
- 
-            this.txtid.TabIndex = 44;
-            // 
-            // lblidnum
-            // 
-            this.lblidnum.AutoSize = true;
-            this.lblidnum.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
- 
-            this.lblidnum.Location = new System.Drawing.Point(23, 275);
-            this.lblidnum.Name = "lblidnum";
-            this.lblidnum.Size = new System.Drawing.Size(82, 14);
- 
-            this.lblidnum.Location = new System.Drawing.Point(107, 207);
-            this.lblidnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblidnum.Name = "lblidnum";
-            this.lblidnum.Size = new System.Drawing.Size(110, 18);
- 
-            this.lblidnum.TabIndex = 43;
-            this.lblidnum.Text = "ID NUMBER:";
             // 
             // btnsubmit
             // 
-            this.btnsubmit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsubmit.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.Location = new System.Drawing.Point(608, 642);
-            this.btnsubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnsubmit.BackColor = System.Drawing.Color.Snow;
+            this.btnsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsubmit.Location = new System.Drawing.Point(613, 441);
+            this.btnsubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(99, 28);
+            this.btnsubmit.Size = new System.Drawing.Size(111, 27);
             this.btnsubmit.TabIndex = 43;
-            this.btnsubmit.Text = "SUBMIT";
+            this.btnsubmit.Text = "REGISTER";
             this.btnsubmit.UseVisualStyleBackColor = false;
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclear.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(608, 594);
-            this.btnclear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnclear.BackColor = System.Drawing.Color.Snow;
+            this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.Location = new System.Drawing.Point(613, 472);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(99, 43);
+            this.btnclear.Size = new System.Drawing.Size(111, 27);
             this.btnclear.TabIndex = 44;
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
- 
             // mnuRegUser
             // 
-            this.mnuRegUser.BackColor = System.Drawing.Color.LightSlateGray;
-            this.mnuRegUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuRegUserFile});
-            this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
-            this.mnuRegUser.Name = "mnuRegUser";
-            this.mnuRegUser.Size = new System.Drawing.Size(558, 26);
-            this.mnuRegUser.TabIndex = 45;
-            this.mnuRegUser.Text = "mnuRegUser";
-            // 
-            // mnuRegUserFile
-            // 
-            this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuRegUserSearch,
-            this.mnuRegUserUpdate});
-            this.mnuRegUserFile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
-            this.mnuRegUserFile.Name = "mnuRegUserFile";
-            this.mnuRegUserFile.Size = new System.Drawing.Size(44, 22);
-            this.mnuRegUserFile.Text = "File";
-            // 
-            // mnuRegUserSearch
-            // 
-            this.mnuRegUserSearch.Name = "mnuRegUserSearch";
-            this.mnuRegUserSearch.Size = new System.Drawing.Size(129, 22);
-            this.mnuRegUserSearch.Text = "Search";
-            // 
-            // mnuRegUserUpdate
-            // 
-            this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
-            this.mnuRegUserUpdate.Size = new System.Drawing.Size(129, 22);
-            this.mnuRegUserUpdate.Text = "Update";
- 
-            // mnuRegUser
-            // 
-            this.mnuRegUser.BackColor = System.Drawing.Color.DimGray;
+            this.mnuRegUser.BackColor = System.Drawing.Color.Teal;
+            this.mnuRegUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuRegUser.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuRegUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegUserFile,
@@ -675,37 +459,48 @@
             this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
             this.mnuRegUser.Name = "mnuRegUser";
             this.mnuRegUser.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuRegUser.Size = new System.Drawing.Size(744, 31);
+            this.mnuRegUser.Size = new System.Drawing.Size(744, 28);
             this.mnuRegUser.TabIndex = 45;
+            this.mnuRegUser.Text = "mnuRegUser";
             // 
             // mnuRegUserFile
             // 
             this.mnuRegUserFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegUserSearch,
             this.mnuRegUserUpdate,
+            this.deleteToolStripMenuItem,
             this.mnuRegUserReturn});
-            this.mnuRegUserFile.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuRegUserFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuRegUserFile.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserFile.Name = "mnuRegUserFile";
-            this.mnuRegUserFile.Size = new System.Drawing.Size(56, 27);
+            this.mnuRegUserFile.Size = new System.Drawing.Size(48, 24);
             this.mnuRegUserFile.Text = "File";
             // 
             // mnuRegUserSearch
             // 
             this.mnuRegUserSearch.Name = "mnuRegUserSearch";
-            this.mnuRegUserSearch.Size = new System.Drawing.Size(153, 28);
+            this.mnuRegUserSearch.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserSearch.Text = "Search";
+            this.mnuRegUserSearch.Click += new System.EventHandler(this.mnuRegUserSearch_Click);
             // 
             // mnuRegUserUpdate
             // 
             this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
-            this.mnuRegUserUpdate.Size = new System.Drawing.Size(153, 28);
+            this.mnuRegUserUpdate.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserUpdate.Text = "Update";
+            this.mnuRegUserUpdate.Click += new System.EventHandler(this.mnuRegUserUpdate_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // mnuRegUserReturn
             // 
             this.mnuRegUserReturn.Name = "mnuRegUserReturn";
-            this.mnuRegUserReturn.Size = new System.Drawing.Size(153, 28);
+            this.mnuRegUserReturn.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserReturn.Text = "Return";
             this.mnuRegUserReturn.Click += new System.EventHandler(this.mnuRegUserReturn_Click);
             // 
@@ -713,25 +508,25 @@
             // 
             this.mnuRegUserView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegUserReports});
-            this.mnuRegUserView.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuRegUserView.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserView.Name = "mnuRegUserView";
-            this.mnuRegUserView.Size = new System.Drawing.Size(68, 27);
+            this.mnuRegUserView.Size = new System.Drawing.Size(57, 24);
             this.mnuRegUserView.Text = "View";
             // 
             // mnuRegUserReports
             // 
             this.mnuRegUserReports.Name = "mnuRegUserReports";
-            this.mnuRegUserReports.Size = new System.Drawing.Size(159, 28);
+            this.mnuRegUserReports.Size = new System.Drawing.Size(143, 26);
             this.mnuRegUserReports.Text = "Reports";
             this.mnuRegUserReports.Click += new System.EventHandler(this.mnuRegUserReports_Click);
             // 
             // mnuRegUserHelp
             // 
-            this.mnuRegUserHelp.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuRegUserHelp.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserHelp.Name = "mnuRegUserHelp";
-            this.mnuRegUserHelp.Size = new System.Drawing.Size(65, 27);
+            this.mnuRegUserHelp.Size = new System.Drawing.Size(56, 24);
             this.mnuRegUserHelp.Text = "Help";
             this.mnuRegUserHelp.Click += new System.EventHandler(this.mnuRegUserHelp_Click);
             // 
@@ -740,39 +535,167 @@
             this.mnuRegUserForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuRegUserTherRef,
             this.mnuRegUserRegChild});
-            this.mnuRegUserForm.Font = new System.Drawing.Font("Verdana", 11.25F);
+            this.mnuRegUserForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuRegUserForm.ForeColor = System.Drawing.Color.White;
             this.mnuRegUserForm.Name = "mnuRegUserForm";
-            this.mnuRegUserForm.Size = new System.Drawing.Size(71, 27);
+            this.mnuRegUserForm.Size = new System.Drawing.Size(60, 24);
             this.mnuRegUserForm.Text = "Form";
             // 
             // mnuRegUserTherRef
             // 
             this.mnuRegUserTherRef.Name = "mnuRegUserTherRef";
-            this.mnuRegUserTherRef.Size = new System.Drawing.Size(245, 28);
+            this.mnuRegUserTherRef.Size = new System.Drawing.Size(209, 26);
             this.mnuRegUserTherRef.Text = "Therapy Referral";
             this.mnuRegUserTherRef.Click += new System.EventHandler(this.mnuRegUserTherRef_Click);
             // 
             // mnuRegUserRegChild
             // 
             this.mnuRegUserRegChild.Name = "mnuRegUserRegChild";
-            this.mnuRegUserRegChild.Size = new System.Drawing.Size(245, 28);
+            this.mnuRegUserRegChild.Size = new System.Drawing.Size(209, 26);
             this.mnuRegUserRegChild.Text = "Register Child";
             this.mnuRegUserRegChild.Click += new System.EventHandler(this.mnuRegUserRegChild_Click);
- 
+            // 
+            // lblRFname
+            // 
+            this.lblRFname.AutoSize = true;
+            this.lblRFname.BackColor = System.Drawing.Color.Transparent;
+            this.lblRFname.ForeColor = System.Drawing.Color.Red;
+            this.lblRFname.Location = new System.Drawing.Point(524, 60);
+            this.lblRFname.Name = "lblRFname";
+            this.lblRFname.Size = new System.Drawing.Size(15, 20);
+            this.lblRFname.TabIndex = 46;
+            this.lblRFname.Text = "*";
+            // 
+            // lblRID
+            // 
+            this.lblRID.AutoSize = true;
+            this.lblRID.BackColor = System.Drawing.Color.Transparent;
+            this.lblRID.ForeColor = System.Drawing.Color.Red;
+            this.lblRID.Location = new System.Drawing.Point(524, 202);
+            this.lblRID.Name = "lblRID";
+            this.lblRID.Size = new System.Drawing.Size(15, 20);
+            this.lblRID.TabIndex = 47;
+            this.lblRID.Text = "*";
+            // 
+            // lblRPword
+            // 
+            this.lblRPword.AutoSize = true;
+            this.lblRPword.BackColor = System.Drawing.Color.Transparent;
+            this.lblRPword.ForeColor = System.Drawing.Color.Red;
+            this.lblRPword.Location = new System.Drawing.Point(524, 231);
+            this.lblRPword.Name = "lblRPword";
+            this.lblRPword.Size = new System.Drawing.Size(15, 20);
+            this.lblRPword.TabIndex = 48;
+            this.lblRPword.Text = "*";
+            // 
+            // lblRType
+            // 
+            this.lblRType.AutoSize = true;
+            this.lblRType.BackColor = System.Drawing.Color.Transparent;
+            this.lblRType.ForeColor = System.Drawing.Color.Red;
+            this.lblRType.Location = new System.Drawing.Point(524, 260);
+            this.lblRType.Name = "lblRType";
+            this.lblRType.Size = new System.Drawing.Size(15, 20);
+            this.lblRType.TabIndex = 49;
+            this.lblRType.Text = "*";
+            // 
+            // lblRSQues
+            // 
+            this.lblRSQues.AutoSize = true;
+            this.lblRSQues.BackColor = System.Drawing.Color.Transparent;
+            this.lblRSQues.ForeColor = System.Drawing.Color.Red;
+            this.lblRSQues.Location = new System.Drawing.Point(524, 289);
+            this.lblRSQues.Name = "lblRSQues";
+            this.lblRSQues.Size = new System.Drawing.Size(15, 20);
+            this.lblRSQues.TabIndex = 50;
+            this.lblRSQues.Text = "*";
+            // 
+            // lblRTherapy
+            // 
+            this.lblRTherapy.AutoSize = true;
+            this.lblRTherapy.BackColor = System.Drawing.Color.Transparent;
+            this.lblRTherapy.ForeColor = System.Drawing.Color.Red;
+            this.lblRTherapy.Location = new System.Drawing.Point(524, 391);
+            this.lblRTherapy.Name = "lblRTherapy";
+            this.lblRTherapy.Size = new System.Drawing.Size(15, 20);
+            this.lblRTherapy.TabIndex = 52;
+            this.lblRTherapy.Text = "*";
+            // 
+            // lblRIE
+            // 
+            this.lblRIE.AutoSize = true;
+            this.lblRIE.BackColor = System.Drawing.Color.Transparent;
+            this.lblRIE.ForeColor = System.Drawing.Color.Red;
+            this.lblRIE.Location = new System.Drawing.Point(524, 421);
+            this.lblRIE.Name = "lblRIE";
+            this.lblRIE.Size = new System.Drawing.Size(15, 20);
+            this.lblRIE.TabIndex = 53;
+            this.lblRIE.Text = "*";
+            // 
+            // lblRLname
+            // 
+            this.lblRLname.AutoSize = true;
+            this.lblRLname.BackColor = System.Drawing.Color.Transparent;
+            this.lblRLname.ForeColor = System.Drawing.Color.Red;
+            this.lblRLname.Location = new System.Drawing.Point(524, 92);
+            this.lblRLname.Name = "lblRLname";
+            this.lblRLname.Size = new System.Drawing.Size(15, 20);
+            this.lblRLname.TabIndex = 55;
+            this.lblRLname.Text = "*";
+            // 
+            // lblRContact
+            // 
+            this.lblRContact.AutoSize = true;
+            this.lblRContact.BackColor = System.Drawing.Color.Transparent;
+            this.lblRContact.ForeColor = System.Drawing.Color.Red;
+            this.lblRContact.Location = new System.Drawing.Point(524, 144);
+            this.lblRContact.Name = "lblRContact";
+            this.lblRContact.Size = new System.Drawing.Size(15, 20);
+            this.lblRContact.TabIndex = 56;
+            this.lblRContact.Text = "*";
+            // 
+            // lblREmail
+            // 
+            this.lblREmail.AutoSize = true;
+            this.lblREmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblREmail.ForeColor = System.Drawing.Color.Red;
+            this.lblREmail.Location = new System.Drawing.Point(524, 173);
+            this.lblREmail.Name = "lblREmail";
+            this.lblREmail.Size = new System.Drawing.Size(15, 20);
+            this.lblREmail.TabIndex = 57;
+            this.lblREmail.Text = "*";
+            // 
+            // lblRAns
+            // 
+            this.lblRAns.AutoSize = true;
+            this.lblRAns.BackColor = System.Drawing.Color.Transparent;
+            this.lblRAns.ForeColor = System.Drawing.Color.Red;
+            this.lblRAns.Location = new System.Drawing.Point(524, 316);
+            this.lblRAns.Name = "lblRAns";
+            this.lblRAns.Size = new System.Drawing.Size(15, 20);
+            this.lblRAns.TabIndex = 58;
+            this.lblRAns.Text = "*";
             // 
             // frmRegisterUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
- 
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.FormTexture;
-            this.ClientSize = new System.Drawing.Size(558, 574);
-
-
-            this.ClientSize = new System.Drawing.Size(744, 706);
- 
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.RegisterForm;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(744, 539);
+            this.ControlBox = false;
+            this.Controls.Add(this.lblRAns);
+            this.Controls.Add(this.lblREmail);
+            this.Controls.Add(this.lblRContact);
+            this.Controls.Add(this.lblRLname);
+            this.Controls.Add(this.lblRIE);
+            this.Controls.Add(this.lblRTherapy);
+            this.Controls.Add(this.lblRSQues);
+            this.Controls.Add(this.lblRType);
+            this.Controls.Add(this.lblRPword);
+            this.Controls.Add(this.lblRID);
+            this.Controls.Add(this.lblRFname);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.panel2);
@@ -783,10 +706,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mnuRegUser);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.mnuRegUser;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegisterUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Form";
+            this.Load += new System.EventHandler(this.frmRegisterUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -806,11 +731,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_fname;
-        private System.Windows.Forms.Label lbl_mname;
         private System.Windows.Forms.Label lblsurname;
         private System.Windows.Forms.Label lblinitials;
         private System.Windows.Forms.TextBox txtfname;
-        private System.Windows.Forms.TextBox txtmname;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txtsurname;
         private System.Windows.Forms.TextBox txtinitials;
@@ -826,11 +749,9 @@
         private System.Windows.Forms.Label lblanswer;
         private System.Windows.Forms.TextBox txtanswer;
         private System.Windows.Forms.Label lblthetype;
-        private System.Windows.Forms.ComboBox cmtherap;
+        private System.Windows.Forms.ComboBox cmbtherap;
         private System.Windows.Forms.Label lblexternal;
         private System.Windows.Forms.ComboBox cmbinternal;
-        private System.Windows.Forms.RichTextBox rictxtother;
-        private System.Windows.Forms.Label lblother;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtid;
@@ -848,6 +769,19 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserForm;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserTherRef;
         private System.Windows.Forms.ToolStripMenuItem mnuRegUserRegChild;
+        private System.Windows.Forms.Label lblRFname;
+        private System.Windows.Forms.Label lblRID;
+        private System.Windows.Forms.Label lblRPword;
+        private System.Windows.Forms.Label lblRType;
+        private System.Windows.Forms.Label lblRSQues;
+        private System.Windows.Forms.Label lblRTherapy;
+        private System.Windows.Forms.Label lblRIE;
+        private System.Windows.Forms.Label lblRLname;
+        private System.Windows.Forms.Label lblRContact;
+        private System.Windows.Forms.Label lblREmail;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Label lblRAns;
+        private System.Windows.Forms.Button btnViewPword;
     }
 }
 

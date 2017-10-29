@@ -118,31 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FormTexture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FormTexture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RegisterForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RegisterForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoginBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoginBack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PasswordRec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PasswordRec.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Form_Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Form---Texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Get_Question_Button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Get-Question-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Request_Reset_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Request-Reset-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="therapyback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\therapyback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Get_Question_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Get-Question-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Submit_Answer_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Submit-Answer-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AdminReset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminReset.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TherapyReferral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TherapyReferral.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FormTexture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FormTexture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reports.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="therapyback" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\therapyback.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Get_Question_Button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Get-Question-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RegisterChild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RegisterChild.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Submit_Answer_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Submit-Answer-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Request_Reset_Button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Request-Reset-Button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DefaultPro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DefaultPro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -167,7 +167,7 @@ namespace TherapyReferralSystem
 
                 //updates these fields in the database
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", pword);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", "#"+pword);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
                 MessageBox.Show("Successfully Updated");
@@ -185,5 +185,7 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Error" + ex.Message);
             }
         }
+
+        
     }
 }
