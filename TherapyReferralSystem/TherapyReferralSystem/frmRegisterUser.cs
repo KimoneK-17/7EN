@@ -41,6 +41,7 @@ namespace TherapyReferralSystem
         public frmRegisterUser()
         {
             InitializeComponent();
+            mnuRegUserUpdate.Enabled = false;
         }
 
 
@@ -101,7 +102,8 @@ namespace TherapyReferralSystem
             txtemail.Text = "";
             txtcontactnum.Text = "";
             txtanswer.Text = "";
-            rictxtother.Text = "";
+
+            txtpassword.Text = "";
 
             cmbinternal.SelectedIndex = -1;
             cmbsecurity.SelectedIndex = -1;
@@ -147,7 +149,7 @@ namespace TherapyReferralSystem
                 IE = DBNull.Value.ToString();
             }
 
-            other = rictxtother.Text;
+
         }
         private void cmbtype_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -182,7 +184,7 @@ namespace TherapyReferralSystem
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             insertRecords();
-            clearFields();
+
         }
 
         private void txtcontactnum_KeyPress(object sender, KeyPressEventArgs e)
@@ -303,7 +305,7 @@ namespace TherapyReferralSystem
                     found = sm.CheckExisting("tbl_user", "U_EMAIL", email);
                     if (found == true)
                     {
-                        searchChild();
+                        searchUser();
 
                     }
                     else
@@ -326,7 +328,11 @@ namespace TherapyReferralSystem
                     found = sm.CheckExisting("tbl_user", "U_ID", idnum);
                     if (found == true)
                     {
-                        searchChild();
+                        searchUser();
+                    }
+                    else
+                    {
+                        lblRID.Text = "*Invalid ID";
                     }
 
                 }
@@ -339,7 +345,7 @@ namespace TherapyReferralSystem
             Cursor.Current = Cursors.Default;
         }
 
-        private void searchChild()
+        private void searchUser()
         {
 
 
@@ -349,7 +355,7 @@ namespace TherapyReferralSystem
                 string sqlquery = "SELECT  U_ID, U_FNAME, U_SNAME, U_CONTACT, U_EMAIL, U_TYPE, T_TYPE, T_IE FROM tbl_user WHERE U_EMAIL = @U_EMAIL OR U_ID like @U_ID";
 
                 objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", idnum);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_ID", txtid.Text);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
@@ -374,6 +380,8 @@ namespace TherapyReferralSystem
                     cmbinternal.SelectedIndex = iIE;
 
                 }
+
+                mnuRegUserUpdate.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -393,7 +401,7 @@ namespace TherapyReferralSystem
             if (!txtemail.Text.Equals(""))
             {
                 email = txtemail.Text;
-                searchChild();
+                searchUser();
 
                 DialogResult result = MessageBox.Show("Are you sure you want to delete this user?", "Confirmation", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
@@ -427,6 +435,75 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void btnViewPword_Click(object sender, EventArgs e)
+        {
+            if (!txtpassword.Equals(""))
+            {
+                if (txtpassword.PasswordChar.Equals('\0'))
+                {
+                    txtpassword.PasswordChar = '*';
+                }
+                else
+                {
+                    txtpassword.PasswordChar = '\0';
+                }
+            }
+        }
+
+        private void mnuRegUserUpdate_Click(object sender, EventArgs e)
+        {
+            updateUser();
+
+        }
+
+        public void updateUser()
+        {
+            resetRequired();
+
+            fname = txtfname.Text;
+            surname = txtsurname.Text;
+            contactnumber = txtcontactnum.Text;
+            email = txtemail.Text;
+            found = sm.CheckExisting("tbl_user", "U_EMAIL", email);
+
+            if (found == true)
+            {
+
+
+                try
+                {
+                    objDBConnect.OpenConnection();
+
+
+                    objDBConnect.sqlCmd = new SqlCommand("UPDATE tbl_user SET U_FNAME =@U_FNAME, U_SNAME = @U_SNAME, U_CONTACT=@U_CONTACT WHERE U_EMAIL = @U_EMAIL", objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@U_FNAME", fname);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@U_SNAME", surname);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@U_CONTACT", contactnumber);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@U_", email);
+
+                    objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
+
+                    MessageBox.Show("Successfully Updated");
+                    objDBConnect.sqlDR.Close();
+                    objDBConnect.sqlConn.Close();
+                    clearFields();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Error cannot update user details " + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Cannot UPDATE user Details: " + ex.Message + ex.Data + ex.StackTrace);
+                }
+            }
+            else
+            {
+                //MessageBox.Show("Please enter all fields before proceeding");
+            }
+        }
 
 
         public bool validate()

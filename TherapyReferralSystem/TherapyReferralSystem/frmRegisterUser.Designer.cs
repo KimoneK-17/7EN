@@ -55,9 +55,8 @@
             this.cmbtherap = new System.Windows.Forms.ComboBox();
             this.lblexternal = new System.Windows.Forms.Label();
             this.cmbinternal = new System.Windows.Forms.ComboBox();
-            this.rictxtother = new System.Windows.Forms.RichTextBox();
-            this.lblother = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnViewPword = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
             this.lblidnum = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -287,6 +286,7 @@
             // 
             this.txtpassword.Location = new System.Drawing.Point(233, 180);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(248, 26);
             this.txtpassword.TabIndex = 31;
             // 
@@ -320,6 +320,9 @@
             // cmbtherap
             // 
             this.cmbtherap.FormattingEnabled = true;
+            this.cmbtherap.Items.AddRange(new object[] {
+            "SNAP",
+            "EYE"});
             this.cmbtherap.Location = new System.Drawing.Point(233, 10);
             this.cmbtherap.Name = "cmbtherap";
             this.cmbtherap.Size = new System.Drawing.Size(248, 28);
@@ -338,32 +341,18 @@
             // cmbinternal
             // 
             this.cmbinternal.FormattingEnabled = true;
+            this.cmbinternal.Items.AddRange(new object[] {
+            "I",
+            "E"});
             this.cmbinternal.Location = new System.Drawing.Point(234, 40);
             this.cmbinternal.Name = "cmbinternal";
             this.cmbinternal.Size = new System.Drawing.Size(247, 28);
             this.cmbinternal.TabIndex = 37;
             // 
-            // rictxtother
-            // 
-            this.rictxtother.Location = new System.Drawing.Point(234, 70);
-            this.rictxtother.Name = "rictxtother";
-            this.rictxtother.Size = new System.Drawing.Size(247, 104);
-            this.rictxtother.TabIndex = 38;
-            this.rictxtother.Text = "";
-            // 
-            // lblother
-            // 
-            this.lblother.AutoSize = true;
-            this.lblother.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblother.Location = new System.Drawing.Point(17, 74);
-            this.lblother.Name = "lblother";
-            this.lblother.Size = new System.Drawing.Size(73, 20);
-            this.lblother.TabIndex = 40;
-            this.lblother.Text = "OTHER:";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnViewPword);
             this.panel1.Controls.Add(this.txtid);
             this.panel1.Controls.Add(this.lblidnum);
             this.panel1.Controls.Add(this.txtfname);
@@ -386,8 +375,19 @@
             this.panel1.Controls.Add(this.lblpass);
             this.panel1.Location = new System.Drawing.Point(8, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(491, 313);
+            this.panel1.Size = new System.Drawing.Size(510, 313);
             this.panel1.TabIndex = 41;
+            // 
+            // btnViewPword
+            // 
+            this.btnViewPword.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.eye;
+            this.btnViewPword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnViewPword.Location = new System.Drawing.Point(481, 180);
+            this.btnViewPword.Name = "btnViewPword";
+            this.btnViewPword.Size = new System.Drawing.Size(26, 27);
+            this.btnViewPword.TabIndex = 45;
+            this.btnViewPword.UseVisualStyleBackColor = true;
+            this.btnViewPword.Click += new System.EventHandler(this.btnViewPword_Click);
             // 
             // txtid
             // 
@@ -413,20 +413,18 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblthetype);
             this.panel2.Controls.Add(this.lblexternal);
-            this.panel2.Controls.Add(this.lblother);
             this.panel2.Controls.Add(this.cmbtherap);
             this.panel2.Controls.Add(this.cmbinternal);
-            this.panel2.Controls.Add(this.rictxtother);
             this.panel2.Location = new System.Drawing.Point(12, 373);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(491, 199);
+            this.panel2.Size = new System.Drawing.Size(506, 95);
             this.panel2.TabIndex = 42;
             // 
             // btnsubmit
             // 
             this.btnsubmit.BackColor = System.Drawing.Color.Snow;
             this.btnsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.Location = new System.Drawing.Point(613, 528);
+            this.btnsubmit.Location = new System.Drawing.Point(613, 441);
             this.btnsubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.Size = new System.Drawing.Size(111, 27);
@@ -439,7 +437,7 @@
             // 
             this.btnclear.BackColor = System.Drawing.Color.Snow;
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(613, 563);
+            this.btnclear.Location = new System.Drawing.Point(613, 472);
             this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(111, 27);
@@ -490,6 +488,7 @@
             this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
             this.mnuRegUserUpdate.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserUpdate.Text = "Update";
+            this.mnuRegUserUpdate.Click += new System.EventHandler(this.mnuRegUserUpdate_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -561,7 +560,7 @@
             this.lblRFname.AutoSize = true;
             this.lblRFname.BackColor = System.Drawing.Color.Transparent;
             this.lblRFname.ForeColor = System.Drawing.Color.Red;
-            this.lblRFname.Location = new System.Drawing.Point(505, 60);
+            this.lblRFname.Location = new System.Drawing.Point(524, 60);
             this.lblRFname.Name = "lblRFname";
             this.lblRFname.Size = new System.Drawing.Size(15, 20);
             this.lblRFname.TabIndex = 46;
@@ -572,7 +571,7 @@
             this.lblRID.AutoSize = true;
             this.lblRID.BackColor = System.Drawing.Color.Transparent;
             this.lblRID.ForeColor = System.Drawing.Color.Red;
-            this.lblRID.Location = new System.Drawing.Point(505, 202);
+            this.lblRID.Location = new System.Drawing.Point(524, 202);
             this.lblRID.Name = "lblRID";
             this.lblRID.Size = new System.Drawing.Size(15, 20);
             this.lblRID.TabIndex = 47;
@@ -583,7 +582,7 @@
             this.lblRPword.AutoSize = true;
             this.lblRPword.BackColor = System.Drawing.Color.Transparent;
             this.lblRPword.ForeColor = System.Drawing.Color.Red;
-            this.lblRPword.Location = new System.Drawing.Point(505, 231);
+            this.lblRPword.Location = new System.Drawing.Point(524, 231);
             this.lblRPword.Name = "lblRPword";
             this.lblRPword.Size = new System.Drawing.Size(15, 20);
             this.lblRPword.TabIndex = 48;
@@ -594,7 +593,7 @@
             this.lblRType.AutoSize = true;
             this.lblRType.BackColor = System.Drawing.Color.Transparent;
             this.lblRType.ForeColor = System.Drawing.Color.Red;
-            this.lblRType.Location = new System.Drawing.Point(505, 260);
+            this.lblRType.Location = new System.Drawing.Point(524, 260);
             this.lblRType.Name = "lblRType";
             this.lblRType.Size = new System.Drawing.Size(15, 20);
             this.lblRType.TabIndex = 49;
@@ -605,7 +604,7 @@
             this.lblRSQues.AutoSize = true;
             this.lblRSQues.BackColor = System.Drawing.Color.Transparent;
             this.lblRSQues.ForeColor = System.Drawing.Color.Red;
-            this.lblRSQues.Location = new System.Drawing.Point(505, 289);
+            this.lblRSQues.Location = new System.Drawing.Point(524, 289);
             this.lblRSQues.Name = "lblRSQues";
             this.lblRSQues.Size = new System.Drawing.Size(15, 20);
             this.lblRSQues.TabIndex = 50;
@@ -616,7 +615,7 @@
             this.lblRTherapy.AutoSize = true;
             this.lblRTherapy.BackColor = System.Drawing.Color.Transparent;
             this.lblRTherapy.ForeColor = System.Drawing.Color.Red;
-            this.lblRTherapy.Location = new System.Drawing.Point(505, 391);
+            this.lblRTherapy.Location = new System.Drawing.Point(524, 391);
             this.lblRTherapy.Name = "lblRTherapy";
             this.lblRTherapy.Size = new System.Drawing.Size(15, 20);
             this.lblRTherapy.TabIndex = 52;
@@ -627,7 +626,7 @@
             this.lblRIE.AutoSize = true;
             this.lblRIE.BackColor = System.Drawing.Color.Transparent;
             this.lblRIE.ForeColor = System.Drawing.Color.Red;
-            this.lblRIE.Location = new System.Drawing.Point(505, 421);
+            this.lblRIE.Location = new System.Drawing.Point(524, 421);
             this.lblRIE.Name = "lblRIE";
             this.lblRIE.Size = new System.Drawing.Size(15, 20);
             this.lblRIE.TabIndex = 53;
@@ -638,7 +637,7 @@
             this.lblRLname.AutoSize = true;
             this.lblRLname.BackColor = System.Drawing.Color.Transparent;
             this.lblRLname.ForeColor = System.Drawing.Color.Red;
-            this.lblRLname.Location = new System.Drawing.Point(505, 92);
+            this.lblRLname.Location = new System.Drawing.Point(524, 92);
             this.lblRLname.Name = "lblRLname";
             this.lblRLname.Size = new System.Drawing.Size(15, 20);
             this.lblRLname.TabIndex = 55;
@@ -649,7 +648,7 @@
             this.lblRContact.AutoSize = true;
             this.lblRContact.BackColor = System.Drawing.Color.Transparent;
             this.lblRContact.ForeColor = System.Drawing.Color.Red;
-            this.lblRContact.Location = new System.Drawing.Point(505, 144);
+            this.lblRContact.Location = new System.Drawing.Point(524, 144);
             this.lblRContact.Name = "lblRContact";
             this.lblRContact.Size = new System.Drawing.Size(15, 20);
             this.lblRContact.TabIndex = 56;
@@ -660,7 +659,7 @@
             this.lblREmail.AutoSize = true;
             this.lblREmail.BackColor = System.Drawing.Color.Transparent;
             this.lblREmail.ForeColor = System.Drawing.Color.Red;
-            this.lblREmail.Location = new System.Drawing.Point(505, 173);
+            this.lblREmail.Location = new System.Drawing.Point(524, 173);
             this.lblREmail.Name = "lblREmail";
             this.lblREmail.Size = new System.Drawing.Size(15, 20);
             this.lblREmail.TabIndex = 57;
@@ -671,7 +670,7 @@
             this.lblRAns.AutoSize = true;
             this.lblRAns.BackColor = System.Drawing.Color.Transparent;
             this.lblRAns.ForeColor = System.Drawing.Color.Red;
-            this.lblRAns.Location = new System.Drawing.Point(505, 316);
+            this.lblRAns.Location = new System.Drawing.Point(524, 316);
             this.lblRAns.Name = "lblRAns";
             this.lblRAns.Size = new System.Drawing.Size(15, 20);
             this.lblRAns.TabIndex = 58;
@@ -684,7 +683,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.RegisterForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(744, 640);
+            this.ClientSize = new System.Drawing.Size(744, 539);
             this.ControlBox = false;
             this.Controls.Add(this.lblRAns);
             this.Controls.Add(this.lblREmail);
@@ -753,8 +752,6 @@
         private System.Windows.Forms.ComboBox cmbtherap;
         private System.Windows.Forms.Label lblexternal;
         private System.Windows.Forms.ComboBox cmbinternal;
-        private System.Windows.Forms.RichTextBox rictxtother;
-        private System.Windows.Forms.Label lblother;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtid;
@@ -784,6 +781,7 @@
         private System.Windows.Forms.Label lblREmail;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.Label lblRAns;
+        private System.Windows.Forms.Button btnViewPword;
     }
 }
 
