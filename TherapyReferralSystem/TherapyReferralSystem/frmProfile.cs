@@ -255,7 +255,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral();
+            frmTherapyReferral tf = new frmTherapyReferral(type);
             tf.Show();
             this.Dispose();
         }
@@ -263,7 +263,7 @@ namespace TherapyReferralSystem
         private void mnuProfileRegChild_Click(object sender, EventArgs e)
         {
 
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(type);
             rc.Show();
             this.Dispose();
 
@@ -272,10 +272,11 @@ namespace TherapyReferralSystem
 
         private void mnuProfileRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(type);
             ru.Show();
             this.Dispose();
         }
+
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {

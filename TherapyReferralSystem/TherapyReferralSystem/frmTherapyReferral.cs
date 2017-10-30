@@ -19,8 +19,16 @@ namespace TherapyReferralSystem
         string t_c_num, t_refby, t_reason, t_report, t_type, t_status, t_therapist, ref_date, start_date, end_date;
         int t_sessions;
         DBConnect objDBConnect = new DBConnect();
+        private string type;
+
         public frmTherapyReferral()
         {
+            
+        }
+
+        public frmTherapyReferral(string type)
+        {
+            this.type = type;
             InitializeComponent();
         }
 
@@ -155,6 +163,13 @@ namespace TherapyReferralSystem
         {
             populateChildNumberCMB();
             populateTherapist();
+            if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
+            {
+                mnuTherapyRefRegChild.Enabled = false;
+                mnuTherapyRefRegUser.Enabled = false;
+               
+            }
+          
         }
 
 
@@ -321,7 +336,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(type);
             rep.Show();
             this.Dispose();
         }
@@ -335,7 +350,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(type);
             rc.Show();
             this.Dispose();
         }
@@ -346,6 +361,7 @@ namespace TherapyReferralSystem
             ru.Show();
             this.Dispose();
         }
+
 
     }
 }

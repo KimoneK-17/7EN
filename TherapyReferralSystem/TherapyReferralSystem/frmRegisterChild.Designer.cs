@@ -650,6 +650,7 @@
             this.Name = "frmRegisterChild";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Child";
+            this.Load += new System.EventHandler(this.frmRegisterChild_Load);
             this.mnuRegChild.ResumeLayout(false);
             this.mnuRegChild.PerformLayout();
             this.ResumeLayout(false);

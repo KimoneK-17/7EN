@@ -39,11 +39,15 @@ namespace TherapyReferralSystem
 
         public frmRegisterUser()
         {
+           
+        }
+
+        public frmRegisterUser(string type)
+        {
+            this.type = type;
             InitializeComponent();
             mnuRegUserUpdate.Enabled = false;
         }
-
-
 
         private void mnuRegUserReturn_Click(object sender, EventArgs e)
         {

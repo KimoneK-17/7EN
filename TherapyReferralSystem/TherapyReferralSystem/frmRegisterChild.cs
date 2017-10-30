@@ -15,8 +15,15 @@ namespace TherapyReferralSystem
     {
         public frmRegisterChild()
         {
+            
+        }
+
+        public frmRegisterChild(string type)
+        {
+            this.type = type;
             InitializeComponent();
         }
+
         //Variable Declaration
 
         string c_num, c_fname, c_mname, c_sname, c_consid, c_admin_date, c_idNum, c_id;
@@ -38,7 +45,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildTherapyRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tr = new frmTherapyReferral();
+            frmTherapyReferral tr = new frmTherapyReferral(type);
             tr.Show();
             this.Close();
         }
@@ -46,7 +53,7 @@ namespace TherapyReferralSystem
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
 
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(type);
             ru.Show();
             this.Dispose();
 
@@ -54,7 +61,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(type);
             rep.Show();
             this.Dispose();
         }
@@ -67,6 +74,7 @@ namespace TherapyReferralSystem
         }
 
         bool c_empty;
+        private string type;
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -170,6 +178,23 @@ namespace TherapyReferralSystem
         private void txtLName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void frmRegisterChild_Load(object sender, EventArgs e)
+        {
+            if (type.Equals("Therapist"))
+            {
+                mnuRegChildRegUser.Enabled = false;
+                mnuRegChildTherapyRef.Enabled = false;
+            }
+            else if (type.Equals("Teacher"))
+            {
+                mnuRegChildRegUser.Enabled = false;
+            }
+            else if (type.Equals("Clinic"))
+            {
+                mnuRegChildRegUser.Enabled = false;
+            }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)

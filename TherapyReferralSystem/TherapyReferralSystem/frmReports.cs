@@ -34,19 +34,19 @@ namespace TherapyReferralSystem
         //menu navigations
         private void mnuReportsTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral();
+            frmTherapyReferral tf = new frmTherapyReferral(type);
             tf.Show();
             this.Dispose();
         }
         private void mnuReportsRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(type);
             rc.Show();
             this.Dispose();
         }
         private void mnuReportsRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(type);
             ru.Show();
             this.Dispose();
         }
@@ -523,6 +523,17 @@ namespace TherapyReferralSystem
             {
                 MessageBox.Show("Please provide number only");
             }
+        }
+
+        private void frmReports_Load(object sender, EventArgs e)
+        {
+            if (type.Equals("Therapist")|| type.Equals("Teacher")|| type.Equals("Clinic"))
+            {
+                mnuReportsRegChild.Enabled = false;
+                mnuReportsRegUser.Enabled = false;
+
+            }
+           
         }
         //**********************************************************************************
     }
