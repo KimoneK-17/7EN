@@ -85,6 +85,10 @@
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl11 = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
+            this.chbEnd = new System.Windows.Forms.CheckBox();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -222,6 +226,24 @@
             // 
             this.cmbReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReason.FormattingEnabled = true;
+            this.cmbReason.Items.AddRange(new object[] {
+            "OT",
+            "Clinical Psych/Psychiatry",
+            "Educational Psych",
+            "Medical Assess",
+            "ADD",
+            "Play",
+            "Physiotherapy",
+            "Academic",
+            "SALT",
+            "Mentor",
+            "Optometry",
+            "Audiology",
+            "Social Background Summary",
+            "SNAP",
+            "NCBT",
+            "Art",
+            "Abbbas Lounge"});
             this.cmbReason.Location = new System.Drawing.Point(15, 76);
             this.cmbReason.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReason.Name = "cmbReason";
@@ -232,6 +254,11 @@
             // 
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Open",
+            "Closed",
+            "Assessment",
+            "Waiting List"});
             this.cmbStatus.Location = new System.Drawing.Point(16, 110);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
@@ -242,6 +269,10 @@
             // 
             this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.FormattingEnabled = true;
+            this.cmbType.Items.AddRange(new object[] {
+            "Assessment",
+            "Treatment",
+            "Intervention"});
             this.cmbType.Location = new System.Drawing.Point(16, 143);
             this.cmbType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbType.Name = "cmbType";
@@ -251,6 +282,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.chbEnd);
             this.panel2.Controls.Add(this.chkWaitingList);
             this.panel2.Controls.Add(this.cmbRefBy);
             this.panel2.Controls.Add(this.dtpDateRef);
@@ -259,7 +291,7 @@
             this.panel2.Location = new System.Drawing.Point(379, 534);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(364, 190);
+            this.panel2.Size = new System.Drawing.Size(364, 216);
             this.panel2.TabIndex = 33;
             // 
             // chkWaitingList
@@ -271,11 +303,18 @@
             this.chkWaitingList.Size = new System.Drawing.Size(18, 17);
             this.chkWaitingList.TabIndex = 17;
             this.chkWaitingList.UseVisualStyleBackColor = true;
+            this.chkWaitingList.CheckedChanged += new System.EventHandler(this.chkWaitingList_CheckedChanged);
             // 
             // cmbRefBy
             // 
             this.cmbRefBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRefBy.FormattingEnabled = true;
+            this.cmbRefBy.Items.AddRange(new object[] {
+            "School",
+            "Social",
+            "Medical",
+            "Therapy",
+            "Mum"});
             this.cmbRefBy.Location = new System.Drawing.Point(16, 11);
             this.cmbRefBy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRefBy.Name = "cmbRefBy";
@@ -286,9 +325,11 @@
             // 
             this.dtpDateRef.Location = new System.Drawing.Point(16, 44);
             this.dtpDateRef.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDateRef.MaxDate = new System.DateTime(2017, 10, 30, 0, 0, 0, 0);
             this.dtpDateRef.Name = "dtpDateRef";
             this.dtpDateRef.Size = new System.Drawing.Size(328, 22);
             this.dtpDateRef.TabIndex = 13;
+            this.dtpDateRef.Value = new System.DateTime(2017, 10, 30, 0, 0, 0, 0);
             // 
             // dtpDateStart
             // 
@@ -297,14 +338,16 @@
             this.dtpDateStart.Name = "dtpDateStart";
             this.dtpDateStart.Size = new System.Drawing.Size(328, 22);
             this.dtpDateStart.TabIndex = 15;
+            this.dtpDateStart.ValueChanged += new System.EventHandler(this.dtpDateStart_ValueChanged);
             // 
             // dtpDateEnd
             // 
-            this.dtpDateEnd.Location = new System.Drawing.Point(16, 149);
+            this.dtpDateEnd.Location = new System.Drawing.Point(13, 183);
             this.dtpDateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateEnd.Name = "dtpDateEnd";
             this.dtpDateEnd.Size = new System.Drawing.Size(328, 22);
             this.dtpDateEnd.TabIndex = 16;
+            this.dtpDateEnd.ValueChanged += new System.EventHandler(this.dtpDateEnd_ValueChanged);
             // 
             // nudSess
             // 
@@ -350,6 +393,9 @@
             // 
             this.cmbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReport.FormattingEnabled = true;
+            this.cmbReport.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
             this.cmbReport.Location = new System.Drawing.Point(16, 146);
             this.cmbReport.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReport.Name = "cmbReport";
@@ -373,7 +419,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 684);
+            this.label1.Location = new System.Drawing.Point(16, 717);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 20);
@@ -421,7 +467,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 369);
+            this.label12.Location = new System.Drawing.Point(13, 357);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(136, 20);
@@ -433,7 +479,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 410);
+            this.label13.Location = new System.Drawing.Point(12, 398);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(116, 20);
@@ -445,7 +491,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 453);
+            this.label14.Location = new System.Drawing.Point(13, 441);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(107, 20);
@@ -498,7 +544,10 @@
             // mnuTherapyRefFile
             // 
             this.mnuTherapyRefFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTherapyRefReturn});
+            this.mnuTherapyRefReturn,
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.searchToolStripMenuItem});
             this.mnuTherapyRefFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuTherapyRefFile.ForeColor = System.Drawing.Color.White;
             this.mnuTherapyRefFile.Name = "mnuTherapyRefFile";
@@ -720,6 +769,38 @@
             this.lbl12.TabIndex = 71;
             this.lbl12.Text = "*";
             // 
+            // chbEnd
+            // 
+            this.chbEnd.AutoSize = true;
+            this.chbEnd.Location = new System.Drawing.Point(16, 150);
+            this.chbEnd.Name = "chbEnd";
+            this.chbEnd.Size = new System.Drawing.Size(71, 21);
+            this.chbEnd.TabIndex = 18;
+            this.chbEnd.Text = "Ended";
+            this.chbEnd.UseVisualStyleBackColor = true;
+            this.chbEnd.CheckedChanged += new System.EventHandler(this.chbEnd_CheckedChanged);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
             // frmTherapyReferral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -840,5 +921,9 @@
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.Label lbl11;
         private System.Windows.Forms.Label lbl12;
+        private System.Windows.Forms.CheckBox chbEnd;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
     }
 }

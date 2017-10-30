@@ -96,25 +96,33 @@ namespace TherapyReferralSystem
 
         private void frmProfile_Load(object sender, EventArgs e)
         {
-            getFromDatabase();
-            
-            if (type.Equals("Therapist"))
+            try
             {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
-                mnuProfileTherRef.Enabled = false;
+                getFromDatabase();
+
+                if (type.Equals("Therapist"))
+                {
+                    mnuProfileRegChild.Enabled = false;
+                    mnuProfileRegUser.Enabled = false;
+                    mnuProfileTherRef.Enabled = false;
+                }
+                else if (type.Equals("Teacher"))
+                {
+                    mnuProfileRegChild.Enabled = false;
+                    mnuProfileRegUser.Enabled = false;
+                }
+                else if (type.Equals("Clinic"))
+                {
+                    mnuProfileRegChild.Enabled = false;
+                    mnuProfileRegUser.Enabled = false;
+                }
             }
-            else if (type.Equals("Teacher"))
+            catch(Exception ex)
             {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
+                MessageBox.Show("Cannot Login at this time. Please try again later");
             }
-            else if (type.Equals("Clinic"))
-            {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
-            }
-            
+
+
         }
         //method gets information from the database table user and displays in form
         public void getFromDatabase()
@@ -290,11 +298,11 @@ namespace TherapyReferralSystem
 
         private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-            
+
         }
         //**********************************************************************************************
     }
