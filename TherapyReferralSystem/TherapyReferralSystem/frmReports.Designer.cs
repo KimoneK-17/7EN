@@ -319,7 +319,7 @@
             // 
             // txtCluster
             // 
-            this.txtCluster.Location = new System.Drawing.Point(239, 31);
+            this.txtCluster.Location = new System.Drawing.Point(231, 32);
             this.txtCluster.Name = "txtCluster";
             this.txtCluster.Size = new System.Drawing.Size(85, 20);
             this.txtCluster.TabIndex = 40;
@@ -337,7 +337,7 @@
             // 
             this.DTPYear.CustomFormat = "yyyy";
             this.DTPYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTPYear.Location = new System.Drawing.Point(239, 79);
+            this.DTPYear.Location = new System.Drawing.Point(231, 79);
             this.DTPYear.Name = "DTPYear";
             this.DTPYear.ShowUpDown = true;
             this.DTPYear.Size = new System.Drawing.Size(80, 20);
