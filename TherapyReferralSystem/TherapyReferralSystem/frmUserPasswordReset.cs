@@ -14,12 +14,13 @@ namespace TherapyReferralSystem
     {
         public frmUserPasswordReset()
         {
-            InitializeComponent();
+            
         }
 
         public frmUserPasswordReset(string username)
         {
             this.username = username;
+            InitializeComponent();
         }
 
         SharedMethods sm = new SharedMethods();
@@ -28,6 +29,18 @@ namespace TherapyReferralSystem
         string email, otp, npword, cpword;
         bool found, valid = true;
         private string username;
+
+        private void backToLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin1 log = new frmLogin1();
+            log.Show();
+            this.Hide();
+        }
+
+        private void frmUserPasswordReset_Load(object sender, EventArgs e)
+        {
+           // MessageBox.Show(type);
+        }
 
         private void btnChangePword_Click(object sender, EventArgs e)
         {

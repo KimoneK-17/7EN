@@ -58,7 +58,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(type);
             rep.Show();
             this.Dispose();
         }
@@ -72,23 +72,31 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral();
+            frmTherapyReferral tf = new frmTherapyReferral(type);
             tf.Show();
             this.Dispose();
         }
 
         private void mnuRegUserRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(type);
             rc.Show();
             this.Dispose();
         }
 
         private void frmRegisterUser_Load(object sender, EventArgs e)
         {
-            panel2.Hide();
+
+
+            if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
+            {
+                mnuRegUserRegChild.Visible = false;
+                
+            }
+                panel2.Hide();
             lblRIE.Hide();
             lblRTherapy.Hide();
+            MessageBox.Show(type);
         }
 
         private void btnclear_Click(object sender, EventArgs e)

@@ -146,9 +146,27 @@ namespace TherapyReferralSystem
 
                 if(pword.StartsWith("#"))
                 {
-                    frmUserPasswordReset upr = new frmUserPasswordReset(username);
-                    upr.Show();
-                    this.Hide();
+
+                    DialogResult result = MessageBox.Show("Password Reset Is Neccessary. Please click OK to reset now or cancel to proceed to profile", "Reset Password",
+               MessageBoxButtons.OKCancel);
+                    switch (result)
+                    {
+                        case DialogResult.OK:
+                            {
+                                frmUserPasswordReset upr = new frmUserPasswordReset(username);
+                                upr.Show();
+                                this.Hide();
+                                break;
+                            }
+                        case DialogResult.Cancel:
+                            {
+                                frmProfile pr = new frmProfile(username);
+                                pr.Show();
+                                this.Hide();
+                                break;
+                            }
+                    }
+                    
 
                 }
                 else
@@ -173,6 +191,13 @@ namespace TherapyReferralSystem
 
 
 
+        }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            frmPasswordRecovery pr = new frmPasswordRecovery();
+            pr.Show();
+            this.Hide();
         }
     }
 }

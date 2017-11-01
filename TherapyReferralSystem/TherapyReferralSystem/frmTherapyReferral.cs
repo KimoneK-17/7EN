@@ -175,7 +175,7 @@ namespace TherapyReferralSystem
 
             label1.Hide();
             dtpDateEnd.Hide();
-
+            MessageBox.Show(type);
 
         }
 
@@ -696,7 +696,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(type);
             ru.Show();
             this.Dispose();
         }

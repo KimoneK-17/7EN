@@ -100,24 +100,16 @@ namespace TherapyReferralSystem
             {
                 getFromDatabase();
 
-                if (type.Equals("Therapist"))
+
+                if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
                 {
-                    mnuProfileRegChild.Enabled = false;
-                    mnuProfileRegUser.Enabled = false;
-                    mnuProfileTherRef.Enabled = false;
-                }
-                else if (type.Equals("Teacher"))
-                {
-                    mnuProfileRegChild.Enabled = false;
-                    mnuProfileRegUser.Enabled = false;
-                }
-                else if (type.Equals("Clinic"))
-                {
-                    mnuProfileRegChild.Enabled = false;
-                    mnuProfileRegUser.Enabled = false;
+                    mnuProfileRegChild.Visible = false;
+                    mnuProfileRegUser.Visible = false;
+                    resetUserPasswordToolStripMenuItem.Visible = false;
+
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Cannot Login at this time. Please try again later");
             }
@@ -303,6 +295,20 @@ namespace TherapyReferralSystem
                 e.Handled = true;
             }
 
+        }
+
+        private void resetUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdminPWordReset apr = new frmAdminPWordReset(type);
+            apr.Show();
+            this.Dispose();
+        }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserPasswordReset upr = new frmUserPasswordReset(type);
+            upr.Show();
+            this.Dispose();
         }
         //**********************************************************************************************
     }

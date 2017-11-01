@@ -182,19 +182,15 @@ namespace TherapyReferralSystem
 
         private void frmRegisterChild_Load(object sender, EventArgs e)
         {
-            if (type.Equals("Therapist"))
+
+            if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
             {
-                mnuRegChildRegUser.Enabled = false;
-                mnuRegChildTherapyRef.Enabled = false;
+
+                mnuRegChildRegUser.Visible = false;
+               
             }
-            else if (type.Equals("Teacher"))
-            {
-                mnuRegChildRegUser.Enabled = false;
-            }
-            else if (type.Equals("Clinic"))
-            {
-                mnuRegChildRegUser.Enabled = false;
-            }
+
+            MessageBox.Show(type);
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)

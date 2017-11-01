@@ -43,6 +43,7 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.cmbType = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chbEnd = new System.Windows.Forms.CheckBox();
             this.chkWaitingList = new System.Windows.Forms.CheckBox();
             this.cmbRefBy = new System.Windows.Forms.ComboBox();
             this.dtpDateRef = new System.Windows.Forms.DateTimePicker();
@@ -66,6 +67,9 @@
             this.mnuTherapyRef = new System.Windows.Forms.MenuStrip();
             this.mnuTherapyRefFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,10 +89,8 @@
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl11 = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
-            this.chbEnd = new System.Windows.Forms.CheckBox();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -100,11 +102,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(16, 585);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 20);
+            this.label7.Size = new System.Drawing.Size(219, 20);
             this.label7.TabIndex = 31;
             this.label7.Text = "Select Date Referred:";
             // 
@@ -112,11 +114,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(16, 553);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 20);
+            this.label8.Size = new System.Drawing.Size(129, 20);
             this.label8.TabIndex = 30;
             this.label8.Text = "Referred By:";
             // 
@@ -124,11 +126,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(16, 186);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 20);
+            this.label6.Size = new System.Drawing.Size(129, 20);
             this.label6.TabIndex = 29;
             this.label6.Text = "Select Type:";
             // 
@@ -136,11 +138,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(16, 153);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 20);
+            this.label5.Size = new System.Drawing.Size(149, 20);
             this.label5.TabIndex = 28;
             this.label5.Text = "Select Status:";
             // 
@@ -148,11 +150,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(16, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 20);
+            this.label4.Size = new System.Drawing.Size(149, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Select Reason:";
             // 
@@ -160,11 +162,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(16, 86);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(261, 20);
+            this.label3.Size = new System.Drawing.Size(339, 20);
             this.label3.TabIndex = 26;
             this.label3.Text = "Enter Childs Diagnosis/Condition:";
             // 
@@ -172,11 +174,11 @@
             // 
             this.lblChildNumber.AutoSize = true;
             this.lblChildNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblChildNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChildNumber.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildNumber.Location = new System.Drawing.Point(16, 54);
             this.lblChildNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChildNumber.Name = "lblChildNumber";
-            this.lblChildNumber.Size = new System.Drawing.Size(168, 20);
+            this.lblChildNumber.Size = new System.Drawing.Size(209, 20);
             this.lblChildNumber.TabIndex = 25;
             this.lblChildNumber.Text = "Select Child Number:";
             // 
@@ -189,6 +191,7 @@
             this.panel1.Controls.Add(this.cmbReason);
             this.panel1.Controls.Add(this.cmbStatus);
             this.panel1.Controls.Add(this.cmbType);
+            this.panel1.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(379, 37);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -202,7 +205,7 @@
             this.cmbCNum.Location = new System.Drawing.Point(16, 11);
             this.cmbCNum.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCNum.Name = "cmbCNum";
-            this.cmbCNum.Size = new System.Drawing.Size(325, 24);
+            this.cmbCNum.Size = new System.Drawing.Size(325, 28);
             this.cmbCNum.TabIndex = 0;
             // 
             // lblDsplyName
@@ -211,7 +214,7 @@
             this.lblDsplyName.Location = new System.Drawing.Point(185, 21);
             this.lblDsplyName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDsplyName.Name = "lblDsplyName";
-            this.lblDsplyName.Size = new System.Drawing.Size(0, 17);
+            this.lblDsplyName.Size = new System.Drawing.Size(0, 20);
             this.lblDsplyName.TabIndex = 2;
             // 
             // txtCondition
@@ -219,7 +222,7 @@
             this.txtCondition.Location = new System.Drawing.Point(16, 44);
             this.txtCondition.Margin = new System.Windows.Forms.Padding(4);
             this.txtCondition.Name = "txtCondition";
-            this.txtCondition.Size = new System.Drawing.Size(325, 22);
+            this.txtCondition.Size = new System.Drawing.Size(325, 29);
             this.txtCondition.TabIndex = 3;
             // 
             // cmbReason
@@ -247,7 +250,7 @@
             this.cmbReason.Location = new System.Drawing.Point(15, 76);
             this.cmbReason.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReason.Name = "cmbReason";
-            this.cmbReason.Size = new System.Drawing.Size(327, 24);
+            this.cmbReason.Size = new System.Drawing.Size(327, 28);
             this.cmbReason.TabIndex = 5;
             // 
             // cmbStatus
@@ -262,7 +265,7 @@
             this.cmbStatus.Location = new System.Drawing.Point(16, 110);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(325, 24);
+            this.cmbStatus.Size = new System.Drawing.Size(325, 28);
             this.cmbStatus.TabIndex = 8;
             // 
             // cmbType
@@ -276,7 +279,7 @@
             this.cmbType.Location = new System.Drawing.Point(16, 143);
             this.cmbType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(325, 24);
+            this.cmbType.Size = new System.Drawing.Size(325, 28);
             this.cmbType.TabIndex = 10;
             // 
             // panel2
@@ -288,11 +291,23 @@
             this.panel2.Controls.Add(this.dtpDateRef);
             this.panel2.Controls.Add(this.dtpDateStart);
             this.panel2.Controls.Add(this.dtpDateEnd);
+            this.panel2.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(379, 534);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 216);
             this.panel2.TabIndex = 33;
+            // 
+            // chbEnd
+            // 
+            this.chbEnd.AutoSize = true;
+            this.chbEnd.Location = new System.Drawing.Point(16, 150);
+            this.chbEnd.Name = "chbEnd";
+            this.chbEnd.Size = new System.Drawing.Size(81, 24);
+            this.chbEnd.TabIndex = 18;
+            this.chbEnd.Text = "Ended";
+            this.chbEnd.UseVisualStyleBackColor = true;
+            this.chbEnd.CheckedChanged += new System.EventHandler(this.chbEnd_CheckedChanged);
             // 
             // chkWaitingList
             // 
@@ -318,7 +333,7 @@
             this.cmbRefBy.Location = new System.Drawing.Point(16, 11);
             this.cmbRefBy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRefBy.Name = "cmbRefBy";
-            this.cmbRefBy.Size = new System.Drawing.Size(328, 24);
+            this.cmbRefBy.Size = new System.Drawing.Size(328, 28);
             this.cmbRefBy.TabIndex = 12;
             // 
             // dtpDateRef
@@ -327,7 +342,7 @@
             this.dtpDateRef.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateRef.MaxDate = new System.DateTime(2017, 10, 30, 0, 0, 0, 0);
             this.dtpDateRef.Name = "dtpDateRef";
-            this.dtpDateRef.Size = new System.Drawing.Size(328, 22);
+            this.dtpDateRef.Size = new System.Drawing.Size(328, 29);
             this.dtpDateRef.TabIndex = 13;
             this.dtpDateRef.Value = new System.DateTime(2017, 10, 30, 0, 0, 0, 0);
             // 
@@ -336,7 +351,7 @@
             this.dtpDateStart.Location = new System.Drawing.Point(16, 111);
             this.dtpDateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateStart.Name = "dtpDateStart";
-            this.dtpDateStart.Size = new System.Drawing.Size(328, 22);
+            this.dtpDateStart.Size = new System.Drawing.Size(328, 29);
             this.dtpDateStart.TabIndex = 15;
             this.dtpDateStart.ValueChanged += new System.EventHandler(this.dtpDateStart_ValueChanged);
             // 
@@ -345,7 +360,7 @@
             this.dtpDateEnd.Location = new System.Drawing.Point(13, 183);
             this.dtpDateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDateEnd.Name = "dtpDateEnd";
-            this.dtpDateEnd.Size = new System.Drawing.Size(328, 22);
+            this.dtpDateEnd.Size = new System.Drawing.Size(328, 29);
             this.dtpDateEnd.TabIndex = 16;
             this.dtpDateEnd.ValueChanged += new System.EventHandler(this.dtpDateEnd_ValueChanged);
             // 
@@ -354,7 +369,7 @@
             this.nudSess.Location = new System.Drawing.Point(16, 11);
             this.nudSess.Margin = new System.Windows.Forms.Padding(4);
             this.nudSess.Name = "nudSess";
-            this.nudSess.Size = new System.Drawing.Size(327, 22);
+            this.nudSess.Size = new System.Drawing.Size(327, 29);
             this.nudSess.TabIndex = 0;
             // 
             // panel3
@@ -365,6 +380,7 @@
             this.panel3.Controls.Add(this.cmbReport);
             this.panel3.Controls.Add(this.cmbTherapist);
             this.panel3.Controls.Add(this.nudSess);
+            this.panel3.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(379, 245);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
@@ -399,7 +415,7 @@
             this.cmbReport.Location = new System.Drawing.Point(16, 146);
             this.cmbReport.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReport.Name = "cmbReport";
-            this.cmbReport.Size = new System.Drawing.Size(325, 24);
+            this.cmbReport.Size = new System.Drawing.Size(325, 28);
             this.cmbReport.TabIndex = 20;
             // 
             // cmbTherapist
@@ -411,18 +427,18 @@
             this.cmbTherapist.Location = new System.Drawing.Point(16, 108);
             this.cmbTherapist.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTherapist.Name = "cmbTherapist";
-            this.cmbTherapist.Size = new System.Drawing.Size(325, 24);
+            this.cmbTherapist.Size = new System.Drawing.Size(325, 28);
             this.cmbTherapist.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 717);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.Size = new System.Drawing.Size(169, 20);
             this.label1.TabIndex = 35;
             this.label1.Text = "Select End Date:";
             // 
@@ -430,11 +446,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(16, 651);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 20);
+            this.label9.Size = new System.Drawing.Size(189, 20);
             this.label9.TabIndex = 36;
             this.label9.Text = "Select Start Date:";
             // 
@@ -442,11 +458,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(16, 257);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(218, 20);
+            this.label10.Size = new System.Drawing.Size(269, 20);
             this.label10.TabIndex = 37;
             this.label10.Text = "Select Number of Sessions:";
             // 
@@ -454,11 +470,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(16, 298);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 20);
+            this.label11.Size = new System.Drawing.Size(149, 20);
             this.label11.TabIndex = 38;
             this.label11.Text = "Enter Details:";
             // 
@@ -466,11 +482,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(13, 357);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 20);
+            this.label12.Size = new System.Drawing.Size(179, 20);
             this.label12.TabIndex = 39;
             this.label12.Text = "Select Therapist:";
             // 
@@ -478,11 +494,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(12, 398);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(116, 20);
+            this.label13.Size = new System.Drawing.Size(149, 20);
             this.label13.TabIndex = 40;
             this.label13.Text = "Select Report:";
             // 
@@ -490,11 +506,11 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(13, 441);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 20);
+            this.label14.Size = new System.Drawing.Size(139, 20);
             this.label14.TabIndex = 41;
             this.label14.Text = "Enter Result:";
             // 
@@ -502,7 +518,7 @@
             // 
             this.btnAddRef.BackColor = System.Drawing.Color.Snow;
             this.btnAddRef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRef.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRef.Location = new System.Drawing.Point(827, 676);
             this.btnAddRef.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRef.Name = "btnAddRef";
@@ -516,18 +532,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(16, 618);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(139, 20);
             this.label2.TabIndex = 43;
             this.label2.Text = "Waiting List:";
             // 
             // mnuTherapyRef
             // 
             this.mnuTherapyRef.BackColor = System.Drawing.Color.Teal;
-            this.mnuTherapyRef.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTherapyRef.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuTherapyRef.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuTherapyRef.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuTherapyRefFile,
@@ -544,241 +560,24 @@
             // mnuTherapyRefFile
             // 
             this.mnuTherapyRefFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTherapyRefReturn,
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.searchToolStripMenuItem});
-            this.mnuTherapyRefFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.myProfileToolStripMenuItem,
+            this.mnuTherapyRefReturn});
+            this.mnuTherapyRefFile.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuTherapyRefFile.ForeColor = System.Drawing.Color.White;
             this.mnuTherapyRefFile.Name = "mnuTherapyRefFile";
-            this.mnuTherapyRefFile.Size = new System.Drawing.Size(48, 24);
+            this.mnuTherapyRefFile.Size = new System.Drawing.Size(61, 24);
             this.mnuTherapyRefFile.Text = "File";
             // 
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(134, 26);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
             this.mnuTherapyRefReturn.Text = "Return";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
-            // 
-            // mnuTherapyRefView
-            // 
-            this.mnuTherapyRefView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTherapyRefReports});
-            this.mnuTherapyRefView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuTherapyRefView.ForeColor = System.Drawing.Color.White;
-            this.mnuTherapyRefView.Name = "mnuTherapyRefView";
-            this.mnuTherapyRefView.Size = new System.Drawing.Size(57, 24);
-            this.mnuTherapyRefView.Text = "View";
-            // 
-            // mnuTherapyRefReports
-            // 
-            this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
-            this.mnuTherapyRefReports.Size = new System.Drawing.Size(143, 26);
-            this.mnuTherapyRefReports.Text = "Reports";
-            this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
-            // 
-            // mnuTherapyRefHelp
-            // 
-            this.mnuTherapyRefHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuTherapyRefHelp.ForeColor = System.Drawing.Color.White;
-            this.mnuTherapyRefHelp.Name = "mnuTherapyRefHelp";
-            this.mnuTherapyRefHelp.Size = new System.Drawing.Size(56, 24);
-            this.mnuTherapyRefHelp.Text = "Help";
-            this.mnuTherapyRefHelp.Click += new System.EventHandler(this.mnuTherapyRefHelp_Click);
-            // 
-            // mnuTherapyRefForm
-            // 
-            this.mnuTherapyRefForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuTherapyRefRegChild,
-            this.mnuTherapyRefRegUser});
-            this.mnuTherapyRefForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuTherapyRefForm.ForeColor = System.Drawing.Color.White;
-            this.mnuTherapyRefForm.Name = "mnuTherapyRefForm";
-            this.mnuTherapyRefForm.Size = new System.Drawing.Size(60, 24);
-            this.mnuTherapyRefForm.Text = "Form";
-            // 
-            // mnuTherapyRefRegChild
-            // 
-            this.mnuTherapyRefRegChild.Name = "mnuTherapyRefRegChild";
-            this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(190, 26);
-            this.mnuTherapyRefRegChild.Text = "Register Child";
-            this.mnuTherapyRefRegChild.Click += new System.EventHandler(this.mnuTherapyRefRegChild_Click);
-            // 
-            // mnuTherapyRefRegUser
-            // 
-            this.mnuTherapyRefRegUser.Name = "mnuTherapyRefRegUser";
-            this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(190, 26);
-            this.mnuTherapyRefRegUser.Text = "Register User";
-            this.mnuTherapyRefRegUser.Click += new System.EventHandler(this.mnuTherapyRefRegUser_Click);
-            // 
-            // btnClearFields
-            // 
-            this.btnClearFields.BackColor = System.Drawing.Color.Snow;
-            this.btnClearFields.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClearFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearFields.Location = new System.Drawing.Point(827, 717);
-            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClearFields.Name = "btnClearFields";
-            this.btnClearFields.Size = new System.Drawing.Size(191, 33);
-            this.btnClearFields.TabIndex = 55;
-            this.btnClearFields.Text = "CLEAR FIELDS";
-            this.btnClearFields.UseVisualStyleBackColor = false;
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Red;
-            this.lbl1.Location = new System.Drawing.Point(750, 48);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(18, 24);
-            this.lbl1.TabIndex = 56;
-            this.lbl1.Text = "*";
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.ForeColor = System.Drawing.Color.Red;
-            this.lbl2.Location = new System.Drawing.Point(750, 79);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(18, 24);
-            this.lbl2.TabIndex = 60;
-            this.lbl2.Text = "*";
-            // 
-            // lbl3
-            // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.ForeColor = System.Drawing.Color.Red;
-            this.lbl3.Location = new System.Drawing.Point(750, 115);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(18, 24);
-            this.lbl3.TabIndex = 61;
-            this.lbl3.Text = "*";
-            // 
-            // lbl4
-            // 
-            this.lbl4.AutoSize = true;
-            this.lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.ForeColor = System.Drawing.Color.Red;
-            this.lbl4.Location = new System.Drawing.Point(750, 156);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(18, 24);
-            this.lbl4.TabIndex = 62;
-            this.lbl4.Text = "*";
-            // 
-            // lbl5
-            // 
-            this.lbl5.AutoSize = true;
-            this.lbl5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.ForeColor = System.Drawing.Color.Red;
-            this.lbl5.Location = new System.Drawing.Point(750, 189);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(18, 24);
-            this.lbl5.TabIndex = 63;
-            this.lbl5.Text = "*";
-            // 
-            // lbl6
-            // 
-            this.lbl6.AutoSize = true;
-            this.lbl6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl6.ForeColor = System.Drawing.Color.Red;
-            this.lbl6.Location = new System.Drawing.Point(750, 261);
-            this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(18, 24);
-            this.lbl6.TabIndex = 64;
-            this.lbl6.Text = "*";
-            // 
-            // lbl7
-            // 
-            this.lbl7.AutoSize = true;
-            this.lbl7.BackColor = System.Drawing.Color.Transparent;
-            this.lbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl7.ForeColor = System.Drawing.Color.Red;
-            this.lbl7.Location = new System.Drawing.Point(750, 360);
-            this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(18, 24);
-            this.lbl7.TabIndex = 65;
-            this.lbl7.Text = "*";
-            // 
-            // lbl8
-            // 
-            this.lbl8.AutoSize = true;
-            this.lbl8.BackColor = System.Drawing.Color.Transparent;
-            this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl8.ForeColor = System.Drawing.Color.Red;
-            this.lbl8.Location = new System.Drawing.Point(750, 398);
-            this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(18, 24);
-            this.lbl8.TabIndex = 66;
-            this.lbl8.Text = "*";
-            // 
-            // lbl9
-            // 
-            this.lbl9.AutoSize = true;
-            this.lbl9.BackColor = System.Drawing.Color.Transparent;
-            this.lbl9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.ForeColor = System.Drawing.Color.Red;
-            this.lbl9.Location = new System.Drawing.Point(750, 548);
-            this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(18, 24);
-            this.lbl9.TabIndex = 67;
-            this.lbl9.Text = "*";
-            // 
-            // lbl10
-            // 
-            this.lbl10.AutoSize = true;
-            this.lbl10.BackColor = System.Drawing.Color.Transparent;
-            this.lbl10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl10.ForeColor = System.Drawing.Color.Red;
-            this.lbl10.Location = new System.Drawing.Point(750, 583);
-            this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(18, 24);
-            this.lbl10.TabIndex = 68;
-            this.lbl10.Text = "*";
-            // 
-            // lbl11
-            // 
-            this.lbl11.AutoSize = true;
-            this.lbl11.BackColor = System.Drawing.Color.Transparent;
-            this.lbl11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl11.ForeColor = System.Drawing.Color.Red;
-            this.lbl11.Location = new System.Drawing.Point(750, 650);
-            this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(18, 24);
-            this.lbl11.TabIndex = 70;
-            this.lbl11.Text = "*";
-            // 
-            // lbl12
-            // 
-            this.lbl12.AutoSize = true;
-            this.lbl12.BackColor = System.Drawing.Color.Transparent;
-            this.lbl12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl12.ForeColor = System.Drawing.Color.Red;
-            this.lbl12.Location = new System.Drawing.Point(750, 298);
-            this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(18, 24);
-            this.lbl12.TabIndex = 71;
-            this.lbl12.Text = "*";
-            // 
-            // chbEnd
-            // 
-            this.chbEnd.AutoSize = true;
-            this.chbEnd.Location = new System.Drawing.Point(16, 150);
-            this.chbEnd.Name = "chbEnd";
-            this.chbEnd.Size = new System.Drawing.Size(71, 21);
-            this.chbEnd.TabIndex = 18;
-            this.chbEnd.Text = "Ended";
-            this.chbEnd.UseVisualStyleBackColor = true;
-            this.chbEnd.CheckedChanged += new System.EventHandler(this.chbEnd_CheckedChanged);
             // 
             // updateToolStripMenuItem
             // 
@@ -800,6 +599,225 @@
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
+            // mnuTherapyRefView
+            // 
+            this.mnuTherapyRefView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTherapyRefReports});
+            this.mnuTherapyRefView.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTherapyRefView.ForeColor = System.Drawing.Color.White;
+            this.mnuTherapyRefView.Name = "mnuTherapyRefView";
+            this.mnuTherapyRefView.Size = new System.Drawing.Size(61, 24);
+            this.mnuTherapyRefView.Text = "View";
+            // 
+            // mnuTherapyRefReports
+            // 
+            this.mnuTherapyRefReports.Name = "mnuTherapyRefReports";
+            this.mnuTherapyRefReports.Size = new System.Drawing.Size(154, 26);
+            this.mnuTherapyRefReports.Text = "Reports";
+            this.mnuTherapyRefReports.Click += new System.EventHandler(this.mnuTherapyRefReports_Click);
+            // 
+            // mnuTherapyRefHelp
+            // 
+            this.mnuTherapyRefHelp.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTherapyRefHelp.ForeColor = System.Drawing.Color.White;
+            this.mnuTherapyRefHelp.Name = "mnuTherapyRefHelp";
+            this.mnuTherapyRefHelp.Size = new System.Drawing.Size(61, 24);
+            this.mnuTherapyRefHelp.Text = "Help";
+            this.mnuTherapyRefHelp.Click += new System.EventHandler(this.mnuTherapyRefHelp_Click);
+            // 
+            // mnuTherapyRefForm
+            // 
+            this.mnuTherapyRefForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuTherapyRefRegChild,
+            this.mnuTherapyRefRegUser});
+            this.mnuTherapyRefForm.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuTherapyRefForm.ForeColor = System.Drawing.Color.White;
+            this.mnuTherapyRefForm.Name = "mnuTherapyRefForm";
+            this.mnuTherapyRefForm.Size = new System.Drawing.Size(61, 24);
+            this.mnuTherapyRefForm.Text = "Form";
+            // 
+            // mnuTherapyRefRegChild
+            // 
+            this.mnuTherapyRefRegChild.Name = "mnuTherapyRefRegChild";
+            this.mnuTherapyRefRegChild.Size = new System.Drawing.Size(224, 26);
+            this.mnuTherapyRefRegChild.Text = "Register Child";
+            this.mnuTherapyRefRegChild.Click += new System.EventHandler(this.mnuTherapyRefRegChild_Click);
+            // 
+            // mnuTherapyRefRegUser
+            // 
+            this.mnuTherapyRefRegUser.Name = "mnuTherapyRefRegUser";
+            this.mnuTherapyRefRegUser.Size = new System.Drawing.Size(224, 26);
+            this.mnuTherapyRefRegUser.Text = "Register User";
+            this.mnuTherapyRefRegUser.Click += new System.EventHandler(this.mnuTherapyRefRegUser_Click);
+            // 
+            // btnClearFields
+            // 
+            this.btnClearFields.BackColor = System.Drawing.Color.Snow;
+            this.btnClearFields.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClearFields.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearFields.Location = new System.Drawing.Point(827, 717);
+            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearFields.Name = "btnClearFields";
+            this.btnClearFields.Size = new System.Drawing.Size(191, 33);
+            this.btnClearFields.TabIndex = 55;
+            this.btnClearFields.Text = "CLEAR FIELDS";
+            this.btnClearFields.UseVisualStyleBackColor = false;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.Red;
+            this.lbl1.Location = new System.Drawing.Point(750, 48);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(19, 20);
+            this.lbl1.TabIndex = 56;
+            this.lbl1.Text = "*";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.ForeColor = System.Drawing.Color.Red;
+            this.lbl2.Location = new System.Drawing.Point(750, 79);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(19, 20);
+            this.lbl2.TabIndex = 60;
+            this.lbl2.Text = "*";
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.ForeColor = System.Drawing.Color.Red;
+            this.lbl3.Location = new System.Drawing.Point(750, 115);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(19, 20);
+            this.lbl3.TabIndex = 61;
+            this.lbl3.Text = "*";
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.ForeColor = System.Drawing.Color.Red;
+            this.lbl4.Location = new System.Drawing.Point(750, 156);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(19, 20);
+            this.lbl4.TabIndex = 62;
+            this.lbl4.Text = "*";
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.ForeColor = System.Drawing.Color.Red;
+            this.lbl5.Location = new System.Drawing.Point(750, 189);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(19, 20);
+            this.lbl5.TabIndex = 63;
+            this.lbl5.Text = "*";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.ForeColor = System.Drawing.Color.Red;
+            this.lbl6.Location = new System.Drawing.Point(750, 261);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(19, 20);
+            this.lbl6.TabIndex = 64;
+            this.lbl6.Text = "*";
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl7.ForeColor = System.Drawing.Color.Red;
+            this.lbl7.Location = new System.Drawing.Point(750, 360);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(19, 20);
+            this.lbl7.TabIndex = 65;
+            this.lbl7.Text = "*";
+            // 
+            // lbl8
+            // 
+            this.lbl8.AutoSize = true;
+            this.lbl8.BackColor = System.Drawing.Color.Transparent;
+            this.lbl8.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl8.ForeColor = System.Drawing.Color.Red;
+            this.lbl8.Location = new System.Drawing.Point(750, 398);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(19, 20);
+            this.lbl8.TabIndex = 66;
+            this.lbl8.Text = "*";
+            // 
+            // lbl9
+            // 
+            this.lbl9.AutoSize = true;
+            this.lbl9.BackColor = System.Drawing.Color.Transparent;
+            this.lbl9.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl9.ForeColor = System.Drawing.Color.Red;
+            this.lbl9.Location = new System.Drawing.Point(750, 548);
+            this.lbl9.Name = "lbl9";
+            this.lbl9.Size = new System.Drawing.Size(19, 20);
+            this.lbl9.TabIndex = 67;
+            this.lbl9.Text = "*";
+            // 
+            // lbl10
+            // 
+            this.lbl10.AutoSize = true;
+            this.lbl10.BackColor = System.Drawing.Color.Transparent;
+            this.lbl10.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl10.ForeColor = System.Drawing.Color.Red;
+            this.lbl10.Location = new System.Drawing.Point(750, 583);
+            this.lbl10.Name = "lbl10";
+            this.lbl10.Size = new System.Drawing.Size(19, 20);
+            this.lbl10.TabIndex = 68;
+            this.lbl10.Text = "*";
+            // 
+            // lbl11
+            // 
+            this.lbl11.AutoSize = true;
+            this.lbl11.BackColor = System.Drawing.Color.Transparent;
+            this.lbl11.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl11.ForeColor = System.Drawing.Color.Red;
+            this.lbl11.Location = new System.Drawing.Point(750, 650);
+            this.lbl11.Name = "lbl11";
+            this.lbl11.Size = new System.Drawing.Size(19, 20);
+            this.lbl11.TabIndex = 70;
+            this.lbl11.Text = "*";
+            // 
+            // lbl12
+            // 
+            this.lbl12.AutoSize = true;
+            this.lbl12.BackColor = System.Drawing.Color.Transparent;
+            this.lbl12.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl12.ForeColor = System.Drawing.Color.Red;
+            this.lbl12.Location = new System.Drawing.Point(750, 298);
+            this.lbl12.Name = "lbl12";
+            this.lbl12.Size = new System.Drawing.Size(19, 20);
+            this.lbl12.TabIndex = 71;
+            this.lbl12.Text = "*";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
             // 
             // frmTherapyReferral
             // 
@@ -925,5 +943,7 @@
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
     }
 }
