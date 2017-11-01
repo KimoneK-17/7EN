@@ -49,7 +49,7 @@
             this.lblUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsername.Font = new System.Drawing.Font("Verily Serif Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblUsername.Location = new System.Drawing.Point(88, 87);
+            this.lblUsername.Location = new System.Drawing.Point(107, 90);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(138, 28);
@@ -63,7 +63,7 @@
             this.lblPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPassword.Font = new System.Drawing.Font("Verily Serif Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblPassword.Location = new System.Drawing.Point(88, 136);
+            this.lblPassword.Location = new System.Drawing.Point(107, 139);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(138, 28);
@@ -73,8 +73,8 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(234, 90);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(253, 90);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(275, 29);
             this.txtUsername.TabIndex = 2;
@@ -82,8 +82,8 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(234, 138);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(253, 138);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(275, 29);
@@ -94,8 +94,8 @@
             this.btnLogin.BackColor = System.Drawing.Color.Snow;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Font = new System.Drawing.Font("Verily Serif Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(307, 190);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Location = new System.Drawing.Point(278, 190);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(128, 39);
             this.btnLogin.TabIndex = 4;
@@ -108,7 +108,7 @@
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblForgotPassword.Font = new System.Drawing.Font("Verily Serif Mono", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPassword.Location = new System.Drawing.Point(278, 246);
+            this.lblForgotPassword.Location = new System.Drawing.Point(249, 246);
             this.lblForgotPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(186, 22);
@@ -127,7 +127,7 @@
             this.mnuLogin.Location = new System.Drawing.Point(0, 0);
             this.mnuLogin.Name = "mnuLogin";
             this.mnuLogin.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuLogin.Size = new System.Drawing.Size(743, 28);
+            this.mnuLogin.Size = new System.Drawing.Size(684, 28);
             this.mnuLogin.TabIndex = 28;
             this.mnuLogin.Text = "MENU";
             // 
@@ -161,7 +161,7 @@
             // 
             this.btnViewPword.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.eye;
             this.btnViewPword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnViewPword.Location = new System.Drawing.Point(516, 140);
+            this.btnViewPword.Location = new System.Drawing.Point(535, 138);
             this.btnViewPword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewPword.Name = "btnViewPword";
             this.btnViewPword.Size = new System.Drawing.Size(29, 27);
@@ -176,7 +176,7 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.LoginBack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(743, 314);
+            this.ClientSize = new System.Drawing.Size(684, 314);
             this.ControlBox = false;
             this.Controls.Add(this.btnViewPword);
             this.Controls.Add(this.mnuLogin);
@@ -186,7 +186,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";

@@ -14,6 +14,7 @@ namespace TherapyReferralSystem
 {
     public partial class frmTherapyReferral : Form
     {
+
         String condition;
         String details;
         String result;
@@ -21,19 +22,25 @@ namespace TherapyReferralSystem
         int t_sessions;
         string therapyid;
         DBConnect objDBConnect = new DBConnect();
+     
+
+
+        SharedMethods sm = new SharedMethods();
+        private string username;
         private string type;
 
         public frmTherapyReferral()
         {
-
+            
         }
 
-        public frmTherapyReferral(string type)
+        public frmTherapyReferral(string username, string type)
         {
+            this.username = username;
             this.type = type;
             InitializeComponent();
         }
-        SharedMethods sm = new SharedMethods();
+
         public bool checkComboBoxes()
         {
             bool valid;
@@ -500,6 +507,13 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfile pr = new frmProfile(username);
+            pr.Show();
+            this.Dispose();
+        }
+
         private void chkWaitingList_CheckedChanged(object sender, EventArgs e)
         {
             if (chkWaitingList.Checked == true)
@@ -682,21 +696,21 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp(username,type);
             help.Show();
             this.Dispose();
         }
 
         private void mnuTherapyRefRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild(type);
+            frmRegisterChild rc = new frmRegisterChild(username,type);
             rc.Show();
             this.Dispose();
         }
 
         private void mnuTherapyRefRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser(type);
+            frmRegisterUser ru = new frmRegisterUser(username,type);
             ru.Show();
             this.Dispose();
         }

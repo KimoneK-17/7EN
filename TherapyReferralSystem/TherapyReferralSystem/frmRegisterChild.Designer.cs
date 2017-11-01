@@ -442,6 +442,7 @@
             this.userProfileToolStripMenuItem.Name = "userProfileToolStripMenuItem";
             this.userProfileToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.userProfileToolStripMenuItem.Text = "User Profile";
+            this.userProfileToolStripMenuItem.Click += new System.EventHandler(this.userProfileToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 

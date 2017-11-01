@@ -14,17 +14,18 @@ namespace TherapyReferralSystem
 {
     public partial class frmProfile : Form
     {
-        private string username;
+        
 
         public frmProfile()
         {
-
+            
+           
         }
 
         public frmProfile(string username)
         {
-            InitializeComponent();
             this.username = username;
+            InitializeComponent();
         }
 
         DBConnect dbConnect = new DBConnect();
@@ -33,6 +34,8 @@ namespace TherapyReferralSystem
         string phone;
         string type;
         string id;
+        string imgLocation = "";
+        private string username;
 
         //**********************************************************************************************
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
@@ -82,20 +85,21 @@ namespace TherapyReferralSystem
 
         private void mnuProfileReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports(type);
+            frmReports rep = new frmReports();
             rep.Show();
             this.Dispose();
         }
 
         private void mnuProfileHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp(username,type);
             help.Show();
             this.Dispose();
         }
 
         private void frmProfile_Load(object sender, EventArgs e)
         {
+            //username = frmLogin1.username;
             try
             {
                 getFromDatabase();
@@ -218,8 +222,7 @@ namespace TherapyReferralSystem
             updateInfo();
         }
 
-        string imgLocation = "";
-
+        
 
         private void btnChangePic_Click(object sender, EventArgs e)
         {
@@ -255,7 +258,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral(type);
+            frmTherapyReferral tf = new frmTherapyReferral(username,type);
             tf.Show();
             this.Dispose();
         }
@@ -263,7 +266,7 @@ namespace TherapyReferralSystem
         private void mnuProfileRegChild_Click(object sender, EventArgs e)
         {
 
-            frmRegisterChild rc = new frmRegisterChild(type);
+            frmRegisterChild rc = new frmRegisterChild(username,type);
             rc.Show();
             this.Dispose();
 
@@ -272,7 +275,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser(type);
+            frmRegisterUser ru = new frmRegisterUser(username,type);
             ru.Show();
             this.Dispose();
         }
@@ -299,14 +302,13 @@ namespace TherapyReferralSystem
 
         private void resetUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdminPWordReset apr = new frmAdminPWordReset(type);
+            frmAdminPWordReset apr = new frmAdminPWordReset();
             apr.Show();
-            this.Dispose();
         }
 
         private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserPasswordReset upr = new frmUserPasswordReset(type);
+            frmUserPasswordReset upr = new frmUserPasswordReset(username,type);
             upr.Show();
             this.Dispose();
         }

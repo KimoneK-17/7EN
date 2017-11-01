@@ -66,10 +66,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mnuTherapyRef = new System.Windows.Forms.MenuStrip();
             this.mnuTherapyRefFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTherapyRefReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTherapyRefReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,8 +91,6 @@
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl11 = new System.Windows.Forms.Label();
             this.lbl12 = new System.Windows.Forms.Label();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -572,13 +572,6 @@
             this.mnuTherapyRefFile.Size = new System.Drawing.Size(61, 24);
             this.mnuTherapyRefFile.Text = "File";
             // 
-            // mnuTherapyRefReturn
-            // 
-            this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
-            this.mnuTherapyRefReturn.Text = "Return";
-            this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
-            // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
@@ -599,6 +592,25 @@
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
+            this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
+            // 
+            // mnuTherapyRefReturn
+            // 
+            this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
+            this.mnuTherapyRefReturn.Text = "Logout";
+            this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
             // mnuTherapyRefView
             // 
@@ -807,17 +819,6 @@
             this.lbl12.Size = new System.Drawing.Size(19, 20);
             this.lbl12.TabIndex = 71;
             this.lbl12.Text = "*";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
-            // 
-            // myProfileToolStripMenuItem
-            // 
-            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.myProfileToolStripMenuItem.Text = "My Profile";
             // 
             // frmTherapyReferral
             // 

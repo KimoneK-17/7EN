@@ -12,14 +12,15 @@ namespace TherapyReferralSystem
 {
     public partial class frmUserPasswordReset : Form
     {
+        
         public frmUserPasswordReset()
         {
-            
         }
 
-        public frmUserPasswordReset(string username)
+        public frmUserPasswordReset(string username, string type)
         {
             this.username = username;
+            this.type = type;
             InitializeComponent();
         }
 
@@ -29,6 +30,7 @@ namespace TherapyReferralSystem
         string email, otp, npword, cpword;
         bool found, valid = true;
         private string username;
+        private string type;
 
         private void backToLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -57,6 +59,9 @@ namespace TherapyReferralSystem
                 {
 
                     sm.updatePassword(email, npword);
+                    frmProfile pr = new frmProfile();
+                    pr.Show();
+                    this.Dispose();
 
                 }
                 else

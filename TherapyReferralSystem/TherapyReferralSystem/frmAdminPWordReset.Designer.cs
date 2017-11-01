@@ -36,13 +36,7 @@
             this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuAdminPRReturn = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRView = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRReports = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAdminPRHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRForm = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRTherRef = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRRegChild = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAdminPRRegUser = new System.Windows.Forms.ToolStripMenuItem();
             this.lblR = new System.Windows.Forms.Label();
             this.lblREmail = new System.Windows.Forms.Label();
             this.mnuAdminPR.SuspendLayout();
@@ -87,9 +81,7 @@
             this.mnuAdminPR.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuAdminPR.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAdminPRFile,
-            this.mnuAdminPRView,
-            this.mnuAdminPRHelp,
-            this.mnuAdminPRForm});
+            this.mnuAdminPRHelp});
             this.mnuAdminPR.Location = new System.Drawing.Point(0, 0);
             this.mnuAdminPR.Name = "mnuAdminPR";
             this.mnuAdminPR.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
@@ -128,23 +120,6 @@
             this.mnuAdminPRReturn.Text = "Logout";
             this.mnuAdminPRReturn.Click += new System.EventHandler(this.mnuAdminPRReturn_Click);
             // 
-            // mnuAdminPRView
-            // 
-            this.mnuAdminPRView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuAdminPRReports});
-            this.mnuAdminPRView.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuAdminPRView.ForeColor = System.Drawing.Color.White;
-            this.mnuAdminPRView.Name = "mnuAdminPRView";
-            this.mnuAdminPRView.Size = new System.Drawing.Size(61, 24);
-            this.mnuAdminPRView.Text = "View";
-            // 
-            // mnuAdminPRReports
-            // 
-            this.mnuAdminPRReports.Name = "mnuAdminPRReports";
-            this.mnuAdminPRReports.Size = new System.Drawing.Size(154, 26);
-            this.mnuAdminPRReports.Text = "Reports";
-            this.mnuAdminPRReports.Click += new System.EventHandler(this.mnuAdminPRReports_Click);
-            // 
             // mnuAdminPRHelp
             // 
             this.mnuAdminPRHelp.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,39 +128,6 @@
             this.mnuAdminPRHelp.Size = new System.Drawing.Size(61, 24);
             this.mnuAdminPRHelp.Text = "Help";
             this.mnuAdminPRHelp.Click += new System.EventHandler(this.mnuAdminPRHelp_Click);
-            // 
-            // mnuAdminPRForm
-            // 
-            this.mnuAdminPRForm.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuAdminPRTherRef,
-            this.mnuAdminPRRegChild,
-            this.mnuAdminPRRegUser});
-            this.mnuAdminPRForm.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuAdminPRForm.ForeColor = System.Drawing.Color.White;
-            this.mnuAdminPRForm.Name = "mnuAdminPRForm";
-            this.mnuAdminPRForm.Size = new System.Drawing.Size(61, 24);
-            this.mnuAdminPRForm.Text = "Form";
-            // 
-            // mnuAdminPRTherRef
-            // 
-            this.mnuAdminPRTherRef.Name = "mnuAdminPRTherRef";
-            this.mnuAdminPRTherRef.Size = new System.Drawing.Size(244, 26);
-            this.mnuAdminPRTherRef.Text = "Therapy Referral";
-            this.mnuAdminPRTherRef.Click += new System.EventHandler(this.mnuAdminPRTherRef_Click);
-            // 
-            // mnuAdminPRRegChild
-            // 
-            this.mnuAdminPRRegChild.Name = "mnuAdminPRRegChild";
-            this.mnuAdminPRRegChild.Size = new System.Drawing.Size(244, 26);
-            this.mnuAdminPRRegChild.Text = "Register Child";
-            this.mnuAdminPRRegChild.Click += new System.EventHandler(this.mnuAdminPRRegChild_Click);
-            // 
-            // mnuAdminPRRegUser
-            // 
-            this.mnuAdminPRRegUser.Name = "mnuAdminPRRegUser";
-            this.mnuAdminPRRegUser.Size = new System.Drawing.Size(244, 26);
-            this.mnuAdminPRRegUser.Text = "Register User";
-            this.mnuAdminPRRegUser.Click += new System.EventHandler(this.mnuAdminPRRegUser_Click);
             // 
             // lblR
             // 
@@ -218,6 +160,7 @@
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.AdminReset;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(570, 192);
+            this.ControlBox = false;
             this.Controls.Add(this.mnuAdminPR);
             this.Controls.Add(this.lblREmail);
             this.Controls.Add(this.lblR);
@@ -246,13 +189,7 @@
         private System.Windows.Forms.MenuStrip mnuAdminPR;
         private System.Windows.Forms.ToolStripMenuItem mnuAdminPRFile;
         private System.Windows.Forms.ToolStripMenuItem mnuAdminPRReturn;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRView;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRReports;
         private System.Windows.Forms.ToolStripMenuItem mnuAdminPRHelp;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRForm;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRTherRef;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRRegChild;
-        private System.Windows.Forms.ToolStripMenuItem mnuAdminPRRegUser;
  
         private System.Windows.Forms.Label lblR;
         private System.Windows.Forms.Label lblREmail;

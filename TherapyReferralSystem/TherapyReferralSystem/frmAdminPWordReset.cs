@@ -14,21 +14,17 @@ namespace TherapyReferralSystem
     {
         public frmAdminPWordReset()
         {
-
-        }
-
-        public frmAdminPWordReset(string type)
-        {
-
-            this.type = type;
             InitializeComponent();
         }
+
+
 
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
         string randomPassword;
         bool found;
         private string type;
+        private string type1;
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -42,6 +38,7 @@ namespace TherapyReferralSystem
                         randomPassword = sm.getOTP();
                         sm.sendOTPEmail(txtEmail.Text, "Hi There\n Please use the following password the next time you login\n OTP: #" + randomPassword);
                         sm.updatePassword(txtEmail.Text, randomPassword);
+                        this.Dispose();
                     }
                     else
                     {
@@ -85,30 +82,11 @@ namespace TherapyReferralSystem
             this.Dispose();
         }
 
-        private void mnuAdminPRTherRef_Click(object sender, EventArgs e)
-        {
-            frmTherapyReferral tf = new frmTherapyReferral(type);
-            tf.Show();
-            this.Dispose();
-        }
 
-        private void mnuAdminPRRegChild_Click(object sender, EventArgs e)
-        {
-            frmRegisterChild rc = new frmRegisterChild(type);
-            rc.Show();
-            this.Dispose();
-        }
-
-        private void mnuAdminPRRegUser_Click(object sender, EventArgs e)
-        {
-            frmRegisterUser ru = new frmRegisterUser(type);
-            ru.Show();
-            this.Dispose();
-        }
 
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProfile pr = new frmProfile(type);
+            frmProfile pr = new frmProfile();
             pr.Show();
             this.Hide();
         }

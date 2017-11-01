@@ -67,6 +67,8 @@
             this.mnuRegUserSearch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegUserReports = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,8 +87,6 @@
             this.lblRContact = new System.Windows.Forms.Label();
             this.lblREmail = new System.Windows.Forms.Label();
             this.lblRAns = new System.Windows.Forms.Label();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.mnuRegUser.SuspendLayout();
@@ -516,6 +516,18 @@
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            // 
+            // myProfileToolStripMenuItem
+            // 
+            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myProfileToolStripMenuItem.Text = "My Profile";
+            this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
+            // 
             // mnuRegUserReturn
             // 
             this.mnuRegUserReturn.Name = "mnuRegUserReturn";
@@ -705,17 +717,6 @@
             this.lblRAns.Size = new System.Drawing.Size(19, 20);
             this.lblRAns.TabIndex = 58;
             this.lblRAns.Text = "*";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
-            // 
-            // myProfileToolStripMenuItem
-            // 
-            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.myProfileToolStripMenuItem.Text = "My Profile";
             // 
             // frmRegisterUser
             // 

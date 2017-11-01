@@ -34,19 +34,19 @@ namespace TherapyReferralSystem
         //menu navigations
         private void mnuReportsTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral(type);
+            frmTherapyReferral tf = new frmTherapyReferral();
             tf.Show();
             this.Dispose();
         }
         private void mnuReportsRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild(type);
+            frmRegisterChild rc = new frmRegisterChild();
             rc.Show();
             this.Dispose();
         }
         private void mnuReportsRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser(type);
+            frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
             this.Dispose();
         }

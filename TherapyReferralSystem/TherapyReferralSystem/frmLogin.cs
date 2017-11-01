@@ -11,9 +11,10 @@ namespace TherapyReferralSystem
             InitializeComponent();
         }
 
-        string username;
+        public static string username = "";
         string password;
         bool found;
+        //public string type;
 
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
@@ -59,7 +60,7 @@ namespace TherapyReferralSystem
         {
             frmHelp help = new frmHelp();
             help.Show();
-            this.Dispose();
+            this.Hide();
         }
 
 
@@ -153,7 +154,7 @@ namespace TherapyReferralSystem
                     {
                         case DialogResult.OK:
                             {
-                                frmUserPasswordReset upr = new frmUserPasswordReset(username);
+                                frmUserPasswordReset upr = new frmUserPasswordReset();
                                 upr.Show();
                                 this.Hide();
                                 break;
@@ -171,6 +172,7 @@ namespace TherapyReferralSystem
                 }
                 else
                 {
+                   
                     frmProfile pr = new frmProfile(username);
                     pr.Show();
                     this.Hide();

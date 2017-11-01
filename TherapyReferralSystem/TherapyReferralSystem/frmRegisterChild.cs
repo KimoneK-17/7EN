@@ -13,16 +13,25 @@ namespace TherapyReferralSystem
 {
     public partial class frmRegisterChild : Form
     {
+        //public static string username = "";
+        //public static string type = "";
         public frmRegisterChild()
         {
-            
+            //username = frmLogin1.username;
+            //type = frmProfile.type;
+           
         }
 
-        public frmRegisterChild(string type)
+        public frmRegisterChild(string username, string type)
         {
+            this.username = username;
             this.type = type;
             InitializeComponent();
         }
+
+
+
+
 
         //Variable Declaration
 
@@ -45,7 +54,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildTherapyRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tr = new frmTherapyReferral(type);
+            frmTherapyReferral tr = new frmTherapyReferral();
             tr.Show();
             this.Close();
         }
@@ -53,7 +62,7 @@ namespace TherapyReferralSystem
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
 
-            frmRegisterUser ru = new frmRegisterUser(type);
+            frmRegisterUser ru = new frmRegisterUser();
             ru.Show();
             this.Dispose();
 
@@ -74,6 +83,9 @@ namespace TherapyReferralSystem
         }
 
         bool c_empty;
+        private string username1;
+        private string type1;
+        private string username;
         private string type;
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,6 +203,13 @@ namespace TherapyReferralSystem
             }
 
             MessageBox.Show(type);
+        }
+
+        private void userProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfile pr = new frmProfile(username);
+            pr.Show();
+            this.Dispose();
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
