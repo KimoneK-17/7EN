@@ -17,13 +17,6 @@ namespace TherapyReferralSystem
 
         public frmHelp()
         {
-          
-        }
-
-        public frmHelp(string username, string type)
-        {
-            this.username = username;
-            this.type = type;
             InitializeComponent();
         }
 

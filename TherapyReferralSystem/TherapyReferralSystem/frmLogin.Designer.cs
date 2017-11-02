@@ -144,8 +144,8 @@
             // mnuLoginLogout
             // 
             this.mnuLoginLogout.Name = "mnuLoginLogout";
-            this.mnuLoginLogout.Size = new System.Drawing.Size(144, 26);
-            this.mnuLoginLogout.Text = "Logout";
+            this.mnuLoginLogout.Size = new System.Drawing.Size(181, 26);
+            this.mnuLoginLogout.Text = "Exit";
             this.mnuLoginLogout.Click += new System.EventHandler(this.mnuLoginLogout_Click);
             // 
             // mnuLoginHelp

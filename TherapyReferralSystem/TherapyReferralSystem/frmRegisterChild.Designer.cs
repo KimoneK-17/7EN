@@ -80,7 +80,9 @@
             this.lblRHouse = new System.Windows.Forms.Label();
             this.lblRDOA = new System.Windows.Forms.Label();
             this.ttChild = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.mnuRegChild.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
@@ -88,7 +90,7 @@
             this.btnClear.BackColor = System.Drawing.Color.Snow;
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClear.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(345, 600);
+            this.btnClear.Location = new System.Drawing.Point(21, 611);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -103,7 +105,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.Snow;
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSubmit.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(345, 560);
+            this.btnSubmit.Location = new System.Drawing.Point(21, 574);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(168, 33);
@@ -127,7 +129,7 @@
             this.lblSpecCon.AutoSize = true;
             this.lblSpecCon.BackColor = System.Drawing.Color.Transparent;
             this.lblSpecCon.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecCon.Location = new System.Drawing.Point(17, 460);
+            this.lblSpecCon.Location = new System.Drawing.Point(7, 410);
             this.lblSpecCon.Name = "lblSpecCon";
             this.lblSpecCon.Size = new System.Drawing.Size(239, 20);
             this.lblSpecCon.TabIndex = 48;
@@ -136,7 +138,7 @@
             // dtpDOA
             // 
             this.dtpDOA.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDOA.Location = new System.Drawing.Point(280, 425);
+            this.dtpDOA.Location = new System.Drawing.Point(270, 375);
             this.dtpDOA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDOA.Name = "dtpDOA";
             this.dtpDOA.Size = new System.Drawing.Size(271, 29);
@@ -147,7 +149,7 @@
             this.lblDOF.AutoSize = true;
             this.lblDOF.BackColor = System.Drawing.Color.Transparent;
             this.lblDOF.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOF.Location = new System.Drawing.Point(17, 427);
+            this.lblDOF.Location = new System.Drawing.Point(7, 377);
             this.lblDOF.Name = "lblDOF";
             this.lblDOF.Size = new System.Drawing.Size(189, 20);
             this.lblDOF.TabIndex = 46;
@@ -156,7 +158,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(280, 389);
+            this.txtID.Location = new System.Drawing.Point(270, 339);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.MaxLength = 13;
             this.txtID.Name = "txtID";
@@ -169,7 +171,7 @@
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(17, 394);
+            this.lblID.Location = new System.Drawing.Point(7, 344);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(109, 20);
             this.lblID.TabIndex = 44;
@@ -182,7 +184,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cmbGender.Location = new System.Drawing.Point(280, 351);
+            this.cmbGender.Location = new System.Drawing.Point(270, 301);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(273, 28);
@@ -193,7 +195,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.BackColor = System.Drawing.Color.Transparent;
             this.lblGender.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(17, 357);
+            this.lblGender.Location = new System.Drawing.Point(7, 307);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(79, 20);
             this.lblGender.TabIndex = 42;
@@ -207,7 +209,7 @@
             "B",
             "S",
             "F"});
-            this.cmbBSF.Location = new System.Drawing.Point(280, 204);
+            this.cmbBSF.Location = new System.Drawing.Point(270, 154);
             this.cmbBSF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbBSF.Name = "cmbBSF";
             this.cmbBSF.Size = new System.Drawing.Size(273, 28);
@@ -218,7 +220,7 @@
             this.lblBSF.AutoSize = true;
             this.lblBSF.BackColor = System.Drawing.Color.Transparent;
             this.lblBSF.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBSF.Location = new System.Drawing.Point(17, 210);
+            this.lblBSF.Location = new System.Drawing.Point(7, 160);
             this.lblBSF.Name = "lblBSF";
             this.lblBSF.Size = new System.Drawing.Size(69, 20);
             this.lblBSF.TabIndex = 40;
@@ -227,7 +229,7 @@
             // txtLName
             // 
             this.txtLName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLName.Location = new System.Drawing.Point(280, 315);
+            this.txtLName.Location = new System.Drawing.Point(270, 265);
             this.txtLName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(273, 29);
@@ -239,7 +241,7 @@
             this.lblLName.AutoSize = true;
             this.lblLName.BackColor = System.Drawing.Color.Transparent;
             this.lblLName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLName.Location = new System.Drawing.Point(17, 320);
+            this.lblLName.Location = new System.Drawing.Point(7, 270);
             this.lblLName.Name = "lblLName";
             this.lblLName.Size = new System.Drawing.Size(109, 20);
             this.lblLName.TabIndex = 38;
@@ -248,7 +250,7 @@
             // txtMName
             // 
             this.txtMName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMName.Location = new System.Drawing.Point(280, 279);
+            this.txtMName.Location = new System.Drawing.Point(270, 229);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMName.Name = "txtMName";
             this.txtMName.Size = new System.Drawing.Size(273, 29);
@@ -258,7 +260,7 @@
             // txtFName
             // 
             this.txtFName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFName.Location = new System.Drawing.Point(280, 242);
+            this.txtFName.Location = new System.Drawing.Point(270, 192);
             this.txtFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(273, 29);
@@ -270,7 +272,7 @@
             this.lblMName.AutoSize = true;
             this.lblMName.BackColor = System.Drawing.Color.Transparent;
             this.lblMName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMName.Location = new System.Drawing.Point(17, 284);
+            this.lblMName.Location = new System.Drawing.Point(7, 234);
             this.lblMName.Name = "lblMName";
             this.lblMName.Size = new System.Drawing.Size(129, 20);
             this.lblMName.TabIndex = 35;
@@ -281,7 +283,7 @@
             this.lblFName.AutoSize = true;
             this.lblFName.BackColor = System.Drawing.Color.Transparent;
             this.lblFName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFName.Location = new System.Drawing.Point(17, 247);
+            this.lblFName.Location = new System.Drawing.Point(7, 197);
             this.lblFName.Name = "lblFName";
             this.lblFName.Size = new System.Drawing.Size(119, 20);
             this.lblFName.TabIndex = 34;
@@ -295,7 +297,7 @@
             "1",
             "2",
             "3"});
-            this.cmbHouse.Location = new System.Drawing.Point(280, 167);
+            this.cmbHouse.Location = new System.Drawing.Point(270, 117);
             this.cmbHouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbHouse.Name = "cmbHouse";
             this.cmbHouse.Size = new System.Drawing.Size(273, 28);
@@ -306,7 +308,7 @@
             this.lblHouse.AutoSize = true;
             this.lblHouse.BackColor = System.Drawing.Color.Transparent;
             this.lblHouse.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHouse.Location = new System.Drawing.Point(17, 174);
+            this.lblHouse.Location = new System.Drawing.Point(7, 124);
             this.lblHouse.Name = "lblHouse";
             this.lblHouse.Size = new System.Drawing.Size(69, 20);
             this.lblHouse.TabIndex = 32;
@@ -321,7 +323,7 @@
             "2",
             "3",
             ""});
-            this.cmbCluster.Location = new System.Drawing.Point(280, 129);
+            this.cmbCluster.Location = new System.Drawing.Point(270, 79);
             this.cmbCluster.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCluster.Name = "cmbCluster";
             this.cmbCluster.Size = new System.Drawing.Size(273, 28);
@@ -332,7 +334,7 @@
             this.lblCluster.AutoSize = true;
             this.lblCluster.BackColor = System.Drawing.Color.Transparent;
             this.lblCluster.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCluster.Location = new System.Drawing.Point(17, 135);
+            this.lblCluster.Location = new System.Drawing.Point(7, 85);
             this.lblCluster.Name = "lblCluster";
             this.lblCluster.Size = new System.Drawing.Size(89, 20);
             this.lblCluster.TabIndex = 30;
@@ -346,7 +348,7 @@
             "A",
             "B",
             "C"});
-            this.cmbStatus.Location = new System.Drawing.Point(280, 91);
+            this.cmbStatus.Location = new System.Drawing.Point(270, 41);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(271, 28);
@@ -357,7 +359,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(17, 97);
+            this.lblStatus.Location = new System.Drawing.Point(7, 47);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(79, 20);
             this.lblStatus.TabIndex = 28;
@@ -368,7 +370,7 @@
             this.lblNumber.AutoSize = true;
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.Location = new System.Drawing.Point(17, 60);
+            this.lblNumber.Location = new System.Drawing.Point(7, 10);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(79, 20);
             this.lblNumber.TabIndex = 27;
@@ -377,7 +379,7 @@
             // txtNumber
             // 
             this.txtNumber.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(280, 55);
+            this.txtNumber.Location = new System.Drawing.Point(270, 5);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(271, 29);
@@ -514,7 +516,7 @@
             this.lblRNum.BackColor = System.Drawing.Color.Transparent;
             this.lblRNum.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRNum.ForeColor = System.Drawing.Color.Red;
-            this.lblRNum.Location = new System.Drawing.Point(569, 60);
+            this.lblRNum.Location = new System.Drawing.Point(559, 10);
             this.lblRNum.Name = "lblRNum";
             this.lblRNum.Size = new System.Drawing.Size(16, 16);
             this.lblRNum.TabIndex = 54;
@@ -526,7 +528,7 @@
             this.lblRStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblRStatus.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRStatus.ForeColor = System.Drawing.Color.Red;
-            this.lblRStatus.Location = new System.Drawing.Point(569, 96);
+            this.lblRStatus.Location = new System.Drawing.Point(559, 46);
             this.lblRStatus.Name = "lblRStatus";
             this.lblRStatus.Size = new System.Drawing.Size(16, 16);
             this.lblRStatus.TabIndex = 55;
@@ -538,7 +540,7 @@
             this.lblRCluster.BackColor = System.Drawing.Color.Transparent;
             this.lblRCluster.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRCluster.ForeColor = System.Drawing.Color.Red;
-            this.lblRCluster.Location = new System.Drawing.Point(569, 134);
+            this.lblRCluster.Location = new System.Drawing.Point(559, 84);
             this.lblRCluster.Name = "lblRCluster";
             this.lblRCluster.Size = new System.Drawing.Size(16, 16);
             this.lblRCluster.TabIndex = 56;
@@ -550,7 +552,7 @@
             this.lblRID.BackColor = System.Drawing.Color.Transparent;
             this.lblRID.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRID.ForeColor = System.Drawing.Color.Red;
-            this.lblRID.Location = new System.Drawing.Point(569, 393);
+            this.lblRID.Location = new System.Drawing.Point(559, 343);
             this.lblRID.Name = "lblRID";
             this.lblRID.Size = new System.Drawing.Size(16, 16);
             this.lblRID.TabIndex = 57;
@@ -562,7 +564,7 @@
             this.lblRGender.BackColor = System.Drawing.Color.Transparent;
             this.lblRGender.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRGender.ForeColor = System.Drawing.Color.Red;
-            this.lblRGender.Location = new System.Drawing.Point(569, 356);
+            this.lblRGender.Location = new System.Drawing.Point(559, 306);
             this.lblRGender.Name = "lblRGender";
             this.lblRGender.Size = new System.Drawing.Size(16, 16);
             this.lblRGender.TabIndex = 58;
@@ -574,7 +576,7 @@
             this.lblRLname.BackColor = System.Drawing.Color.Transparent;
             this.lblRLname.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRLname.ForeColor = System.Drawing.Color.Red;
-            this.lblRLname.Location = new System.Drawing.Point(569, 319);
+            this.lblRLname.Location = new System.Drawing.Point(559, 269);
             this.lblRLname.Name = "lblRLname";
             this.lblRLname.Size = new System.Drawing.Size(16, 16);
             this.lblRLname.TabIndex = 59;
@@ -586,7 +588,7 @@
             this.lblRFname.BackColor = System.Drawing.Color.Transparent;
             this.lblRFname.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRFname.ForeColor = System.Drawing.Color.Red;
-            this.lblRFname.Location = new System.Drawing.Point(569, 245);
+            this.lblRFname.Location = new System.Drawing.Point(559, 195);
             this.lblRFname.Name = "lblRFname";
             this.lblRFname.Size = new System.Drawing.Size(16, 16);
             this.lblRFname.TabIndex = 60;
@@ -598,7 +600,7 @@
             this.lblRBSF.BackColor = System.Drawing.Color.Transparent;
             this.lblRBSF.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRBSF.ForeColor = System.Drawing.Color.Red;
-            this.lblRBSF.Location = new System.Drawing.Point(569, 209);
+            this.lblRBSF.Location = new System.Drawing.Point(559, 159);
             this.lblRBSF.Name = "lblRBSF";
             this.lblRBSF.Size = new System.Drawing.Size(16, 16);
             this.lblRBSF.TabIndex = 61;
@@ -610,7 +612,7 @@
             this.lblRHouse.BackColor = System.Drawing.Color.Transparent;
             this.lblRHouse.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRHouse.ForeColor = System.Drawing.Color.Red;
-            this.lblRHouse.Location = new System.Drawing.Point(569, 172);
+            this.lblRHouse.Location = new System.Drawing.Point(559, 122);
             this.lblRHouse.Name = "lblRHouse";
             this.lblRHouse.Size = new System.Drawing.Size(16, 16);
             this.lblRHouse.TabIndex = 62;
@@ -622,11 +624,52 @@
             this.lblRDOA.BackColor = System.Drawing.Color.Transparent;
             this.lblRDOA.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRDOA.ForeColor = System.Drawing.Color.Red;
-            this.lblRDOA.Location = new System.Drawing.Point(569, 428);
+            this.lblRDOA.Location = new System.Drawing.Point(559, 378);
             this.lblRDOA.Name = "lblRDOA";
             this.lblRDOA.Size = new System.Drawing.Size(16, 16);
             this.lblRDOA.TabIndex = 63;
             this.lblRDOA.Text = "*";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.lblRDOA);
+            this.panel1.Controls.Add(this.lblRHouse);
+            this.panel1.Controls.Add(this.lblRBSF);
+            this.panel1.Controls.Add(this.lblRFname);
+            this.panel1.Controls.Add(this.lblRLname);
+            this.panel1.Controls.Add(this.lblRGender);
+            this.panel1.Controls.Add(this.lblRID);
+            this.panel1.Controls.Add(this.lblRCluster);
+            this.panel1.Controls.Add(this.lblRStatus);
+            this.panel1.Controls.Add(this.lblRNum);
+            this.panel1.Controls.Add(this.lblSpecCon);
+            this.panel1.Controls.Add(this.dtpDOA);
+            this.panel1.Controls.Add(this.lblDOF);
+            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.lblID);
+            this.panel1.Controls.Add(this.cmbGender);
+            this.panel1.Controls.Add(this.lblGender);
+            this.panel1.Controls.Add(this.cmbBSF);
+            this.panel1.Controls.Add(this.lblBSF);
+            this.panel1.Controls.Add(this.txtLName);
+            this.panel1.Controls.Add(this.lblLName);
+            this.panel1.Controls.Add(this.txtMName);
+            this.panel1.Controls.Add(this.txtFName);
+            this.panel1.Controls.Add(this.lblMName);
+            this.panel1.Controls.Add(this.lblFName);
+            this.panel1.Controls.Add(this.cmbHouse);
+            this.panel1.Controls.Add(this.lblHouse);
+            this.panel1.Controls.Add(this.cmbCluster);
+            this.panel1.Controls.Add(this.lblCluster);
+            this.panel1.Controls.Add(this.cmbStatus);
+            this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Controls.Add(this.lblNumber);
+            this.panel1.Controls.Add(this.txtNumber);
+            this.panel1.Location = new System.Drawing.Point(10, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(610, 525);
+            this.panel1.TabIndex = 64;
             // 
             // frmRegisterChild
             // 
@@ -637,43 +680,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(859, 644);
             this.ControlBox = false;
-            this.Controls.Add(this.lblRDOA);
-            this.Controls.Add(this.lblRHouse);
-            this.Controls.Add(this.lblRBSF);
-            this.Controls.Add(this.lblRFname);
-            this.Controls.Add(this.lblRLname);
-            this.Controls.Add(this.lblRGender);
-            this.Controls.Add(this.lblRID);
-            this.Controls.Add(this.lblRCluster);
-            this.Controls.Add(this.lblRStatus);
-            this.Controls.Add(this.lblRNum);
             this.Controls.Add(this.mnuRegChild);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.rtbxSpecCon);
-            this.Controls.Add(this.lblSpecCon);
-            this.Controls.Add(this.dtpDOA);
-            this.Controls.Add(this.lblDOF);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblID);
-            this.Controls.Add(this.cmbGender);
-            this.Controls.Add(this.lblGender);
-            this.Controls.Add(this.cmbBSF);
-            this.Controls.Add(this.lblBSF);
-            this.Controls.Add(this.txtLName);
-            this.Controls.Add(this.lblLName);
-            this.Controls.Add(this.txtMName);
-            this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.lblMName);
-            this.Controls.Add(this.lblFName);
-            this.Controls.Add(this.cmbHouse);
-            this.Controls.Add(this.lblHouse);
-            this.Controls.Add(this.cmbCluster);
-            this.Controls.Add(this.lblCluster);
-            this.Controls.Add(this.cmbStatus);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblNumber);
-            this.Controls.Add(this.txtNumber);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmRegisterChild";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -681,6 +692,8 @@
             this.Load += new System.EventHandler(this.frmRegisterChild_Load);
             this.mnuRegChild.ResumeLayout(false);
             this.mnuRegChild.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -739,5 +752,6 @@
         private System.Windows.Forms.ToolTip ttChild;
         private System.Windows.Forms.ToolStripMenuItem userProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -167,7 +167,7 @@
             this.txtfname.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfname.Location = new System.Drawing.Point(233, 12);
             this.txtfname.Name = "txtfname";
-            this.txtfname.Size = new System.Drawing.Size(287, 29);
+            this.txtfname.Size = new System.Drawing.Size(320, 29);
             this.txtfname.TabIndex = 18;
             this.txtfname.TextChanged += new System.EventHandler(this.txtfname_TextChanged);
             this.txtfname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtfname_KeyPress);
@@ -177,7 +177,7 @@
             this.txtemail.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtemail.Location = new System.Drawing.Point(233, 140);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(287, 29);
+            this.txtemail.Size = new System.Drawing.Size(320, 29);
             this.txtemail.TabIndex = 20;
             // 
             // txtsurname
@@ -185,7 +185,7 @@
             this.txtsurname.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsurname.Location = new System.Drawing.Point(233, 44);
             this.txtsurname.Name = "txtsurname";
-            this.txtsurname.Size = new System.Drawing.Size(287, 29);
+            this.txtsurname.Size = new System.Drawing.Size(320, 29);
             this.txtsurname.TabIndex = 21;
             this.txtsurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsurname_KeyPress);
             // 
@@ -194,7 +194,7 @@
             this.txtinitials.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtinitials.Location = new System.Drawing.Point(233, 76);
             this.txtinitials.Name = "txtinitials";
-            this.txtinitials.Size = new System.Drawing.Size(287, 29);
+            this.txtinitials.Size = new System.Drawing.Size(320, 29);
             this.txtinitials.TabIndex = 22;
             // 
             // txtcontactnum
@@ -203,7 +203,7 @@
             this.txtcontactnum.Location = new System.Drawing.Point(233, 108);
             this.txtcontactnum.MaxLength = 10;
             this.txtcontactnum.Name = "txtcontactnum";
-            this.txtcontactnum.Size = new System.Drawing.Size(287, 29);
+            this.txtcontactnum.Size = new System.Drawing.Size(320, 29);
             this.txtcontactnum.TabIndex = 23;
             this.txtcontactnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontactnum_KeyPress);
             // 
@@ -259,7 +259,7 @@
             "Social worker"});
             this.cmbtype.Location = new System.Drawing.Point(233, 236);
             this.cmbtype.Name = "cmbtype";
-            this.cmbtype.Size = new System.Drawing.Size(287, 28);
+            this.cmbtype.Size = new System.Drawing.Size(320, 28);
             this.cmbtype.TabIndex = 28;
             this.cmbtype.SelectedIndexChanged += new System.EventHandler(this.cmbtype_SelectedIndexChanged);
             // 
@@ -288,7 +288,7 @@
             "What colour are your eyes?"});
             this.cmbsecurity.Location = new System.Drawing.Point(233, 267);
             this.cmbsecurity.Name = "cmbsecurity";
-            this.cmbsecurity.Size = new System.Drawing.Size(287, 28);
+            this.cmbsecurity.Size = new System.Drawing.Size(320, 28);
             this.cmbsecurity.TabIndex = 30;
             // 
             // txtpassword
@@ -297,7 +297,7 @@
             this.txtpassword.Location = new System.Drawing.Point(233, 204);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(287, 29);
+            this.txtpassword.Size = new System.Drawing.Size(320, 29);
             this.txtpassword.TabIndex = 31;
             // 
             // lblanswer
@@ -315,7 +315,7 @@
             this.txtanswer.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtanswer.Location = new System.Drawing.Point(233, 298);
             this.txtanswer.Name = "txtanswer";
-            this.txtanswer.Size = new System.Drawing.Size(287, 29);
+            this.txtanswer.Size = new System.Drawing.Size(320, 29);
             this.txtanswer.TabIndex = 33;
             // 
             // lblthetype
@@ -337,7 +337,7 @@
             "EYE"});
             this.cmbtherap.Location = new System.Drawing.Point(229, 10);
             this.cmbtherap.Name = "cmbtherap";
-            this.cmbtherap.Size = new System.Drawing.Size(287, 28);
+            this.cmbtherap.Size = new System.Drawing.Size(320, 28);
             this.cmbtherap.TabIndex = 35;
             // 
             // lblexternal
@@ -359,7 +359,7 @@
             "E"});
             this.cmbinternal.Location = new System.Drawing.Point(229, 43);
             this.cmbinternal.Name = "cmbinternal";
-            this.cmbinternal.Size = new System.Drawing.Size(287, 28);
+            this.cmbinternal.Size = new System.Drawing.Size(320, 28);
             this.cmbinternal.TabIndex = 37;
             // 
             // panel1
@@ -389,7 +389,7 @@
             this.panel1.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(8, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 356);
+            this.panel1.Size = new System.Drawing.Size(583, 356);
             this.panel1.TabIndex = 41;
             // 
             // btnViewPword
@@ -397,7 +397,7 @@
             this.btnViewPword.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.eye;
             this.btnViewPword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnViewPword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewPword.Location = new System.Drawing.Point(520, 177);
+            this.btnViewPword.Location = new System.Drawing.Point(554, 172);
             this.btnViewPword.Name = "btnViewPword";
             this.btnViewPword.Size = new System.Drawing.Size(26, 27);
             this.btnViewPword.TabIndex = 45;
@@ -410,7 +410,7 @@
             this.txtid.Location = new System.Drawing.Point(233, 172);
             this.txtid.MaxLength = 13;
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(287, 29);
+            this.txtid.Size = new System.Drawing.Size(320, 29);
             this.txtid.TabIndex = 44;
             this.txtid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtid_KeyPress);
             // 
@@ -434,17 +434,17 @@
             this.panel2.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(12, 421);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(549, 95);
+            this.panel2.Size = new System.Drawing.Size(579, 95);
             this.panel2.TabIndex = 42;
             // 
             // btnsubmit
             // 
             this.btnsubmit.BackColor = System.Drawing.Color.Snow;
             this.btnsubmit.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsubmit.Location = new System.Drawing.Point(12, 521);
+            this.btnsubmit.Location = new System.Drawing.Point(12, 538);
             this.btnsubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(156, 27);
+            this.btnsubmit.Size = new System.Drawing.Size(156, 35);
             this.btnsubmit.TabIndex = 43;
             this.btnsubmit.Text = "REGISTER";
             this.btnsubmit.UseVisualStyleBackColor = false;
@@ -454,10 +454,10 @@
             // 
             this.btnclear.BackColor = System.Drawing.Color.Snow;
             this.btnclear.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(12, 552);
+            this.btnclear.Location = new System.Drawing.Point(12, 576);
             this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(156, 27);
+            this.btnclear.Size = new System.Drawing.Size(156, 35);
             this.btnclear.TabIndex = 44;
             this.btnclear.Text = "CLEAR";
             this.btnclear.UseVisualStyleBackColor = false;
@@ -476,7 +476,7 @@
             this.mnuRegUser.Location = new System.Drawing.Point(0, 0);
             this.mnuRegUser.Name = "mnuRegUser";
             this.mnuRegUser.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuRegUser.Size = new System.Drawing.Size(802, 28);
+            this.mnuRegUser.Size = new System.Drawing.Size(897, 28);
             this.mnuRegUser.TabIndex = 45;
             this.mnuRegUser.Text = "mnuRegUser";
             // 
@@ -592,7 +592,7 @@
             this.lblRFname.BackColor = System.Drawing.Color.Transparent;
             this.lblRFname.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRFname.ForeColor = System.Drawing.Color.Red;
-            this.lblRFname.Location = new System.Drawing.Point(567, 63);
+            this.lblRFname.Location = new System.Drawing.Point(597, 67);
             this.lblRFname.Name = "lblRFname";
             this.lblRFname.Size = new System.Drawing.Size(16, 16);
             this.lblRFname.TabIndex = 46;
@@ -604,7 +604,7 @@
             this.lblRID.BackColor = System.Drawing.Color.Transparent;
             this.lblRID.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRID.ForeColor = System.Drawing.Color.Red;
-            this.lblRID.Location = new System.Drawing.Point(567, 221);
+            this.lblRID.Location = new System.Drawing.Point(597, 225);
             this.lblRID.Name = "lblRID";
             this.lblRID.Size = new System.Drawing.Size(16, 16);
             this.lblRID.TabIndex = 47;
@@ -616,7 +616,7 @@
             this.lblRPword.BackColor = System.Drawing.Color.Transparent;
             this.lblRPword.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRPword.ForeColor = System.Drawing.Color.Red;
-            this.lblRPword.Location = new System.Drawing.Point(567, 252);
+            this.lblRPword.Location = new System.Drawing.Point(597, 256);
             this.lblRPword.Name = "lblRPword";
             this.lblRPword.Size = new System.Drawing.Size(16, 16);
             this.lblRPword.TabIndex = 48;
@@ -628,7 +628,7 @@
             this.lblRType.BackColor = System.Drawing.Color.Transparent;
             this.lblRType.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRType.ForeColor = System.Drawing.Color.Red;
-            this.lblRType.Location = new System.Drawing.Point(567, 283);
+            this.lblRType.Location = new System.Drawing.Point(597, 287);
             this.lblRType.Name = "lblRType";
             this.lblRType.Size = new System.Drawing.Size(16, 16);
             this.lblRType.TabIndex = 49;
@@ -640,7 +640,7 @@
             this.lblRSQues.BackColor = System.Drawing.Color.Transparent;
             this.lblRSQues.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRSQues.ForeColor = System.Drawing.Color.Red;
-            this.lblRSQues.Location = new System.Drawing.Point(567, 314);
+            this.lblRSQues.Location = new System.Drawing.Point(597, 318);
             this.lblRSQues.Name = "lblRSQues";
             this.lblRSQues.Size = new System.Drawing.Size(16, 16);
             this.lblRSQues.TabIndex = 50;
@@ -652,7 +652,7 @@
             this.lblRTherapy.BackColor = System.Drawing.Color.Transparent;
             this.lblRTherapy.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRTherapy.ForeColor = System.Drawing.Color.Red;
-            this.lblRTherapy.Location = new System.Drawing.Point(567, 439);
+            this.lblRTherapy.Location = new System.Drawing.Point(597, 443);
             this.lblRTherapy.Name = "lblRTherapy";
             this.lblRTherapy.Size = new System.Drawing.Size(16, 16);
             this.lblRTherapy.TabIndex = 52;
@@ -664,7 +664,7 @@
             this.lblRIE.BackColor = System.Drawing.Color.Transparent;
             this.lblRIE.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRIE.ForeColor = System.Drawing.Color.Red;
-            this.lblRIE.Location = new System.Drawing.Point(567, 469);
+            this.lblRIE.Location = new System.Drawing.Point(597, 473);
             this.lblRIE.Name = "lblRIE";
             this.lblRIE.Size = new System.Drawing.Size(16, 16);
             this.lblRIE.TabIndex = 53;
@@ -676,7 +676,7 @@
             this.lblRLname.BackColor = System.Drawing.Color.Transparent;
             this.lblRLname.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRLname.ForeColor = System.Drawing.Color.Red;
-            this.lblRLname.Location = new System.Drawing.Point(567, 95);
+            this.lblRLname.Location = new System.Drawing.Point(597, 99);
             this.lblRLname.Name = "lblRLname";
             this.lblRLname.Size = new System.Drawing.Size(16, 16);
             this.lblRLname.TabIndex = 55;
@@ -688,7 +688,7 @@
             this.lblRContact.BackColor = System.Drawing.Color.Transparent;
             this.lblRContact.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRContact.ForeColor = System.Drawing.Color.Red;
-            this.lblRContact.Location = new System.Drawing.Point(567, 159);
+            this.lblRContact.Location = new System.Drawing.Point(597, 163);
             this.lblRContact.Name = "lblRContact";
             this.lblRContact.Size = new System.Drawing.Size(16, 16);
             this.lblRContact.TabIndex = 56;
@@ -700,7 +700,7 @@
             this.lblREmail.BackColor = System.Drawing.Color.Transparent;
             this.lblREmail.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREmail.ForeColor = System.Drawing.Color.Red;
-            this.lblREmail.Location = new System.Drawing.Point(567, 190);
+            this.lblREmail.Location = new System.Drawing.Point(597, 194);
             this.lblREmail.Name = "lblREmail";
             this.lblREmail.Size = new System.Drawing.Size(16, 16);
             this.lblREmail.TabIndex = 57;
@@ -712,7 +712,7 @@
             this.lblRAns.BackColor = System.Drawing.Color.Transparent;
             this.lblRAns.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRAns.ForeColor = System.Drawing.Color.Red;
-            this.lblRAns.Location = new System.Drawing.Point(567, 345);
+            this.lblRAns.Location = new System.Drawing.Point(597, 349);
             this.lblRAns.Name = "lblRAns";
             this.lblRAns.Size = new System.Drawing.Size(16, 16);
             this.lblRAns.TabIndex = 58;
@@ -725,7 +725,7 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.RegisterForm;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(802, 608);
+            this.ClientSize = new System.Drawing.Size(897, 640);
             this.ControlBox = false;
             this.Controls.Add(this.lblRAns);
             this.Controls.Add(this.lblREmail);

@@ -668,8 +668,6 @@ namespace TherapyReferralSystem
             }
         }
 
-<<<<<<< HEAD
-=======
         private void frmReports_Load(object sender, EventArgs e)
         {
             if (type.Equals("Therapist")|| type.Equals("Teacher")|| type.Equals("Clinic"))
@@ -680,7 +678,7 @@ namespace TherapyReferralSystem
             }
            
         }
->>>>>>> 63751920446e4ded311eeb65c68730b616879d27
+
         //**********************************************************************************
     }
 }
