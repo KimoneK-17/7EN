@@ -14,17 +14,18 @@ namespace TherapyReferralSystem
 {
     public partial class frmProfile : Form
     {
-        private string username;
+        
 
         public frmProfile()
         {
-
+            
+           
         }
 
         public frmProfile(string username)
         {
-            InitializeComponent();
             this.username = username;
+            InitializeComponent();
         }
 
         DBConnect dbConnect = new DBConnect();
@@ -33,6 +34,8 @@ namespace TherapyReferralSystem
         string phone;
         string type;
         string id;
+        string imgLocation = "";
+        private string username;
 
         //**********************************************************************************************
         private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
@@ -82,39 +85,40 @@ namespace TherapyReferralSystem
 
         private void mnuProfileReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports(type);
+            frmReports rep = new frmReports();
             rep.Show();
             this.Dispose();
         }
 
         private void mnuProfileHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp(username,type);
             help.Show();
             this.Dispose();
         }
 
         private void frmProfile_Load(object sender, EventArgs e)
         {
-            getFromDatabase();
-            
-            if (type.Equals("Therapist"))
+            //username = frmLogin1.username;
+            try
             {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
-                mnuProfileTherRef.Enabled = false;
+                getFromDatabase();
+
+
+                if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
+                {
+                    mnuProfileRegChild.Visible = false;
+                    mnuProfileRegUser.Visible = false;
+                    resetUserPasswordToolStripMenuItem.Visible = false;
+
+                }
             }
-            else if (type.Equals("Teacher"))
+            catch (Exception ex)
             {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
+                MessageBox.Show("Cannot Login at this time. Please try again later");
             }
-            else if (type.Equals("Clinic"))
-            {
-                mnuProfileRegChild.Enabled = false;
-                mnuProfileRegUser.Enabled = false;
-            }
-            
+
+
         }
         //method gets information from the database table user and displays in form
         public void getFromDatabase()
@@ -218,8 +222,7 @@ namespace TherapyReferralSystem
             updateInfo();
         }
 
-        string imgLocation = "";
-
+        
 
         private void btnChangePic_Click(object sender, EventArgs e)
         {
@@ -255,7 +258,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral();
+            frmTherapyReferral tf = new frmTherapyReferral(username,type);
             tf.Show();
             this.Dispose();
         }
@@ -263,7 +266,7 @@ namespace TherapyReferralSystem
         private void mnuProfileRegChild_Click(object sender, EventArgs e)
         {
 
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(username,type);
             rc.Show();
             this.Dispose();
 
@@ -272,10 +275,11 @@ namespace TherapyReferralSystem
 
         private void mnuProfileRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(username,type);
             ru.Show();
             this.Dispose();
         }
+
 
         private void txtName_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -289,11 +293,24 @@ namespace TherapyReferralSystem
 
         private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) )
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
-            
+
+        }
+
+        private void resetUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdminPWordReset apr = new frmAdminPWordReset();
+            apr.Show();
+        }
+
+        private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserPasswordReset upr = new frmUserPasswordReset(username,type);
+            upr.Show();
+            this.Dispose();
         }
         //**********************************************************************************************
     }

@@ -22,7 +22,6 @@ namespace TherapyReferralSystem
         string contactnumber;
         string email;
         string password;
-        string type;
         string squestion;
         string answer;
         string therapytype;
@@ -33,17 +32,24 @@ namespace TherapyReferralSystem
         bool found, exist;
 
 
-
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
+        private string username;
+        private string type;
 
         public frmRegisterUser()
         {
+
+            
+        }
+
+        public frmRegisterUser(string username, string type)
+        {
+            this.username = username;
+            this.type = type;
             InitializeComponent();
             mnuRegUserUpdate.Enabled = false;
         }
-
-
 
         private void mnuRegUserReturn_Click(object sender, EventArgs e)
         {
@@ -61,30 +67,38 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp(username,type);
             help.Show();
             this.Dispose();
         }
 
         private void mnuRegUserTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral();
+            frmTherapyReferral tf = new frmTherapyReferral(username,type);
             tf.Show();
             this.Dispose();
         }
 
         private void mnuRegUserRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild();
+            frmRegisterChild rc = new frmRegisterChild(username,type);
             rc.Show();
             this.Dispose();
         }
 
         private void frmRegisterUser_Load(object sender, EventArgs e)
         {
-            panel2.Hide();
+
+
+            if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
+            {
+                mnuRegUserRegChild.Visible = false;
+                
+            }
+                panel2.Hide();
             lblRIE.Hide();
             lblRTherapy.Hide();
+            MessageBox.Show(type);
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -504,6 +518,12 @@ namespace TherapyReferralSystem
             }
         }
 
+        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfile pr = new frmProfile(username);
+            pr.Show();
+            this.Dispose();
+        }
 
         public bool validate()
         {

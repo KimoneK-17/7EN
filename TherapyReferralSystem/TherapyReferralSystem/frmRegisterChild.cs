@@ -13,10 +13,26 @@ namespace TherapyReferralSystem
 {
     public partial class frmRegisterChild : Form
     {
+        //public static string username = "";
+        //public static string type = "";
         public frmRegisterChild()
         {
+            //username = frmLogin1.username;
+            //type = frmProfile.type;
+           
+        }
+
+        public frmRegisterChild(string username, string type)
+        {
+            this.username = username;
+            this.type = type;
             InitializeComponent();
         }
+
+
+
+
+
         //Variable Declaration
 
         string c_num, c_fname, c_mname, c_sname, c_consid, c_admin_date, c_idNum, c_id;
@@ -54,7 +70,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(type);
             rep.Show();
             this.Dispose();
         }
@@ -67,6 +83,10 @@ namespace TherapyReferralSystem
         }
 
         bool c_empty;
+        private string username1;
+        private string type1;
+        private string username;
+        private string type;
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -170,6 +190,26 @@ namespace TherapyReferralSystem
         private void txtLName_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back);
+        }
+
+        private void frmRegisterChild_Load(object sender, EventArgs e)
+        {
+
+            if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
+            {
+
+                mnuRegChildRegUser.Visible = false;
+               
+            }
+
+            MessageBox.Show(type);
+        }
+
+        private void userProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfile pr = new frmProfile(username);
+            pr.Show();
+            this.Dispose();
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
