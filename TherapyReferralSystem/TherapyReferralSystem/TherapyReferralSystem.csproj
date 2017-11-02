@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutUs.designer.cs">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserPasswordReset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAboutUs.resx">
+      <DependentUpon>frmAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminPWordReset.resx">
       <DependentUpon>frmAdminPWordReset.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +180,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\therapyback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserPasswordReset.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutUsGradient21.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

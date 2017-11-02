@@ -182,7 +182,7 @@ namespace TherapyReferralSystem
 
             label1.Hide();
             dtpDateEnd.Hide();
-            MessageBox.Show(type);
+            
 
         }
 

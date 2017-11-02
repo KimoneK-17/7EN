@@ -62,7 +62,7 @@ namespace TherapyReferralSystem
         private void mnuRegChildRegUser_Click(object sender, EventArgs e)
         {
 
-            frmRegisterUser ru = new frmRegisterUser();
+            frmRegisterUser ru = new frmRegisterUser(username,type);
             ru.Show();
             this.Dispose();
 
@@ -202,7 +202,7 @@ namespace TherapyReferralSystem
                
             }
 
-            MessageBox.Show(type);
+         
         }
 
         private void userProfileToolStripMenuItem_Click(object sender, EventArgs e)

@@ -312,6 +312,13 @@ namespace TherapyReferralSystem
             upr.Show();
             this.Dispose();
         }
+
+        private void mnu7EN_Click(object sender, EventArgs e)
+        {
+            frmAboutUs abu = new frmAboutUs();
+            abu.Show();
+
+        }
         //**********************************************************************************************
     }
 }

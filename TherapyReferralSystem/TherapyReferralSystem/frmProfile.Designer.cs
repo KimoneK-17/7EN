@@ -30,6 +30,9 @@
         {
             this.mnuProfile = new System.Windows.Forms.MenuStrip();
             this.mnuProfileFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetUserPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuProfileReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfileReports = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +56,7 @@
             this.btnChangePic = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.picbxProfilePic = new System.Windows.Forms.PictureBox();
-            this.resetUserPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.resetPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu7EN = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxProfilePic)).BeginInit();
             this.SuspendLayout();
@@ -69,11 +70,12 @@
             this.mnuProfileFile,
             this.mnuProfileView,
             this.mnuProfileHelp,
-            this.mnuProfileForm});
+            this.mnuProfileForm,
+            this.mnu7EN});
             this.mnuProfile.Location = new System.Drawing.Point(0, 0);
             this.mnuProfile.Name = "mnuProfile";
             this.mnuProfile.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuProfile.Size = new System.Drawing.Size(637, 28);
+            this.mnuProfile.Size = new System.Drawing.Size(773, 28);
             this.mnuProfile.TabIndex = 0;
             this.mnuProfile.Text = "MENU";
             // 
@@ -89,6 +91,25 @@
             this.mnuProfileFile.Name = "mnuProfileFile";
             this.mnuProfileFile.Size = new System.Drawing.Size(61, 24);
             this.mnuProfileFile.Text = "File";
+            // 
+            // resetUserPasswordToolStripMenuItem
+            // 
+            this.resetUserPasswordToolStripMenuItem.Name = "resetUserPasswordToolStripMenuItem";
+            this.resetUserPasswordToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.resetUserPasswordToolStripMenuItem.Text = "Reset User Password";
+            this.resetUserPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetUserPasswordToolStripMenuItem_Click);
+            // 
+            // resetPasswordToolStripMenuItem
+            // 
+            this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
+            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.resetPasswordToolStripMenuItem.Text = "Reset Your Password";
+            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // mnuProfileReturn
             // 
@@ -110,7 +131,7 @@
             // mnuProfileReports
             // 
             this.mnuProfileReports.Name = "mnuProfileReports";
-            this.mnuProfileReports.Size = new System.Drawing.Size(181, 26);
+            this.mnuProfileReports.Size = new System.Drawing.Size(154, 26);
             this.mnuProfileReports.Text = "Reports";
             this.mnuProfileReports.Click += new System.EventHandler(this.mnuProfileReports_Click);
             // 
@@ -161,7 +182,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verily Serif Mono", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(268, 46);
+            this.label1.Location = new System.Drawing.Point(336, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 23);
@@ -173,7 +194,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 98);
+            this.label2.Location = new System.Drawing.Point(60, 359);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
@@ -185,7 +206,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 143);
+            this.label3.Location = new System.Drawing.Point(60, 404);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
@@ -197,7 +218,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 188);
+            this.label4.Location = new System.Drawing.Point(60, 449);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 20);
@@ -209,7 +230,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 233);
+            this.label5.Location = new System.Drawing.Point(60, 494);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 20);
@@ -221,7 +242,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 278);
+            this.label6.Location = new System.Drawing.Point(60, 539);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 20);
@@ -231,7 +252,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(175, 89);
+            this.txtName.Location = new System.Drawing.Point(222, 350);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(242, 29);
@@ -242,7 +263,7 @@
             // txtSurname
             // 
             this.txtSurname.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.Location = new System.Drawing.Point(175, 134);
+            this.txtSurname.Location = new System.Drawing.Point(222, 395);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(242, 29);
@@ -253,7 +274,7 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(175, 179);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(222, 440);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.MaxLength = 10;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
@@ -265,7 +286,7 @@
             // txtPosition
             // 
             this.txtPosition.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(175, 224);
+            this.txtPosition.Location = new System.Drawing.Point(222, 485);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(4);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.ReadOnly = true;
@@ -275,7 +296,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(175, 269);
+            this.txtID.Location = new System.Drawing.Point(222, 530);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -286,7 +307,7 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Snow;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(17, 333);
+            this.btnUpdate.Location = new System.Drawing.Point(229, 595);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(235, 28);
@@ -299,7 +320,7 @@
             // 
             this.btnChangePic.BackColor = System.Drawing.Color.Snow;
             this.btnChangePic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePic.Location = new System.Drawing.Point(425, 297);
+            this.btnChangePic.Location = new System.Drawing.Point(288, 132);
             this.btnChangePic.Margin = new System.Windows.Forms.Padding(4);
             this.btnChangePic.Name = "btnChangePic";
             this.btnChangePic.Size = new System.Drawing.Size(203, 28);
@@ -312,7 +333,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.Snow;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(425, 333);
+            this.btnSave.Location = new System.Drawing.Point(288, 198);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(203, 28);
@@ -326,7 +347,7 @@
             this.picbxProfilePic.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.DefaultPro;
             this.picbxProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picbxProfilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picbxProfilePic.Location = new System.Drawing.Point(425, 77);
+            this.picbxProfilePic.Location = new System.Drawing.Point(53, 84);
             this.picbxProfilePic.Margin = new System.Windows.Forms.Padding(4);
             this.picbxProfilePic.Name = "picbxProfilePic";
             this.picbxProfilePic.Size = new System.Drawing.Size(199, 212);
@@ -334,24 +355,17 @@
             this.picbxProfilePic.TabIndex = 2;
             this.picbxProfilePic.TabStop = false;
             // 
-            // resetUserPasswordToolStripMenuItem
+            // mnu7EN
             // 
-            this.resetUserPasswordToolStripMenuItem.Name = "resetUserPasswordToolStripMenuItem";
-            this.resetUserPasswordToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.resetUserPasswordToolStripMenuItem.Text = "Reset User Password";
-            this.resetUserPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetUserPasswordToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
-            // 
-            // resetPasswordToolStripMenuItem
-            // 
-            this.resetPasswordToolStripMenuItem.Name = "resetPasswordToolStripMenuItem";
-            this.resetPasswordToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.resetPasswordToolStripMenuItem.Text = "Reset Your Password";
-            this.resetPasswordToolStripMenuItem.Click += new System.EventHandler(this.resetPasswordToolStripMenuItem_Click);
+            this.mnu7EN.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.mnu7EN.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.mnu7EN.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnu7EN.ForeColor = System.Drawing.Color.White;
+            this.mnu7EN.Name = "mnu7EN";
+            this.mnu7EN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mnu7EN.Size = new System.Drawing.Size(111, 24);
+            this.mnu7EN.Text = "About 7EN";
+            this.mnu7EN.Click += new System.EventHandler(this.mnu7EN_Click);
             // 
             // frmProfile
             // 
@@ -360,7 +374,7 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Profile;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(637, 376);
+            this.ClientSize = new System.Drawing.Size(773, 658);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnChangePic);
@@ -422,5 +436,6 @@
         private System.Windows.Forms.ToolStripMenuItem resetUserPasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu7EN;
     }
 }

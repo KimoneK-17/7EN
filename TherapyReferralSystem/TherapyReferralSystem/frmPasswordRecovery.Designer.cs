@@ -110,7 +110,7 @@
             // 
             // btnRequestReset
             // 
-            this.btnRequestReset.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRequestReset.BackColor = System.Drawing.Color.Snow;
             this.btnRequestReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRequestReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequestReset.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,7 +120,7 @@
             this.btnRequestReset.Size = new System.Drawing.Size(151, 31);
             this.btnRequestReset.TabIndex = 35;
             this.btnRequestReset.Text = "REQUEST RESET";
-            this.btnRequestReset.UseVisualStyleBackColor = true;
+            this.btnRequestReset.UseVisualStyleBackColor = false;
             this.btnRequestReset.Click += new System.EventHandler(this.btnRequestReset_Click);
             // 
             // label1
@@ -218,7 +218,7 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.PasswordRec;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(741, 294);
+            this.ClientSize = new System.Drawing.Size(741, 311);
             this.ControlBox = false;
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblEmailUsername);

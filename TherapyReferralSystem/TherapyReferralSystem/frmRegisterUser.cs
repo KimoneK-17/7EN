@@ -98,7 +98,7 @@ namespace TherapyReferralSystem
                 panel2.Hide();
             lblRIE.Hide();
             lblRTherapy.Hide();
-            MessageBox.Show(type);
+            
         }
 
         private void btnclear_Click(object sender, EventArgs e)

@@ -63,6 +63,16 @@ namespace TherapyReferralSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AboutUsGradient2 {
+            get {
+                object obj = ResourceManager.GetObject("AboutUsGradient2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ADDADHD {
             get {
                 object obj = ResourceManager.GetObject("ADDADHD", resourceCulture);
@@ -246,6 +256,16 @@ namespace TherapyReferralSystem.Properties {
         internal static System.Drawing.Bitmap TherapyReferral {
             get {
                 object obj = ResourceManager.GetObject("TherapyReferral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserPasswordReset {
+            get {
+                object obj = ResourceManager.GetObject("UserPasswordReset", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

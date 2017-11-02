@@ -64,14 +64,16 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.Snow;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Verily Serif Mono", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(235, 132);
+            this.btnReset.Location = new System.Drawing.Point(234, 143);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(100, 38);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "RESET";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // mnuAdminPR
@@ -85,7 +87,7 @@
             this.mnuAdminPR.Location = new System.Drawing.Point(0, 0);
             this.mnuAdminPR.Name = "mnuAdminPR";
             this.mnuAdminPR.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnuAdminPR.Size = new System.Drawing.Size(570, 28);
+            this.mnuAdminPR.Size = new System.Drawing.Size(558, 28);
             this.mnuAdminPR.TabIndex = 4;
             this.mnuAdminPR.Text = "MENU";
             // 
@@ -104,19 +106,19 @@
             // myProfileToolStripMenuItem
             // 
             this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.myProfileToolStripMenuItem.Text = "My Profile";
             this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
             // 
             // mnuAdminPRReturn
             // 
             this.mnuAdminPRReturn.Name = "mnuAdminPRReturn";
-            this.mnuAdminPRReturn.Size = new System.Drawing.Size(181, 26);
+            this.mnuAdminPRReturn.Size = new System.Drawing.Size(174, 26);
             this.mnuAdminPRReturn.Text = "Logout";
             this.mnuAdminPRReturn.Click += new System.EventHandler(this.mnuAdminPRReturn_Click);
             // 
@@ -147,7 +149,7 @@
             this.lblREmail.AutoSize = true;
             this.lblREmail.Font = new System.Drawing.Font("Verily Serif Mono", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREmail.ForeColor = System.Drawing.Color.Red;
-            this.lblREmail.Location = new System.Drawing.Point(12, 112);
+            this.lblREmail.Location = new System.Drawing.Point(21, 107);
             this.lblREmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblREmail.Name = "lblREmail";
             this.lblREmail.Size = new System.Drawing.Size(0, 22);
@@ -157,9 +159,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.AdminReset;
+            this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.UserPasswordReset;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(570, 192);
+            this.ClientSize = new System.Drawing.Size(558, 218);
             this.ControlBox = false;
             this.Controls.Add(this.mnuAdminPR);
             this.Controls.Add(this.lblREmail);

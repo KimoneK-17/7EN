@@ -41,7 +41,7 @@ namespace TherapyReferralSystem
 
         private void frmUserPasswordReset_Load(object sender, EventArgs e)
         {
-           // MessageBox.Show(type);
+           // 
         }
 
         private void btnChangePword_Click(object sender, EventArgs e)
