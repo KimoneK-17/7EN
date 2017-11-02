@@ -76,7 +76,7 @@
             this.mnuReportsForm});
             this.mnuReports.Location = new System.Drawing.Point(0, 0);
             this.mnuReports.Name = "mnuReports";
-            this.mnuReports.Size = new System.Drawing.Size(861, 28);
+            this.mnuReports.Size = new System.Drawing.Size(861, 24);
             this.mnuReports.TabIndex = 0;
             this.mnuReports.Text = "Menu";
             // 
@@ -87,13 +87,13 @@
             this.mnuReportsFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuReportsFile.ForeColor = System.Drawing.Color.White;
             this.mnuReportsFile.Name = "mnuReportsFile";
-            this.mnuReportsFile.Size = new System.Drawing.Size(48, 24);
+            this.mnuReportsFile.Size = new System.Drawing.Size(42, 20);
             this.mnuReportsFile.Text = "File";
             // 
             // mnuReportsReturn
             // 
             this.mnuReportsReturn.Name = "mnuReportsReturn";
-            this.mnuReportsReturn.Size = new System.Drawing.Size(134, 26);
+            this.mnuReportsReturn.Size = new System.Drawing.Size(115, 22);
             this.mnuReportsReturn.Text = "Return";
             this.mnuReportsReturn.Click += new System.EventHandler(this.ezitToolStripMenuItem_Click);
             // 
@@ -102,7 +102,7 @@
             this.mnuReportsPrintRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuReportsPrintRep.ForeColor = System.Drawing.Color.White;
             this.mnuReportsPrintRep.Name = "mnuReportsPrintRep";
-            this.mnuReportsPrintRep.Size = new System.Drawing.Size(111, 24);
+            this.mnuReportsPrintRep.Size = new System.Drawing.Size(90, 20);
             this.mnuReportsPrintRep.Text = "Print Report";
             this.mnuReportsPrintRep.Click += new System.EventHandler(this.mnuReportsPrintRep_Click);
             // 
@@ -111,7 +111,7 @@
             this.mnuReportsHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuReportsHelp.ForeColor = System.Drawing.Color.White;
             this.mnuReportsHelp.Name = "mnuReportsHelp";
-            this.mnuReportsHelp.Size = new System.Drawing.Size(56, 24);
+            this.mnuReportsHelp.Size = new System.Drawing.Size(49, 20);
             this.mnuReportsHelp.Text = "Help";
             this.mnuReportsHelp.Click += new System.EventHandler(this.mnuReportsHelp_Click);
             // 
@@ -124,27 +124,27 @@
             this.mnuReportsForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuReportsForm.ForeColor = System.Drawing.Color.White;
             this.mnuReportsForm.Name = "mnuReportsForm";
-            this.mnuReportsForm.Size = new System.Drawing.Size(60, 24);
+            this.mnuReportsForm.Size = new System.Drawing.Size(51, 20);
             this.mnuReportsForm.Text = "Form";
             // 
             // mnuReportsTherRef
             // 
             this.mnuReportsTherRef.Name = "mnuReportsTherRef";
-            this.mnuReportsTherRef.Size = new System.Drawing.Size(209, 26);
+            this.mnuReportsTherRef.Size = new System.Drawing.Size(178, 22);
             this.mnuReportsTherRef.Text = "Therapy Referral";
             this.mnuReportsTherRef.Click += new System.EventHandler(this.mnuReportsTherRef_Click);
             // 
             // mnuReportsRegChild
             // 
             this.mnuReportsRegChild.Name = "mnuReportsRegChild";
-            this.mnuReportsRegChild.Size = new System.Drawing.Size(209, 26);
+            this.mnuReportsRegChild.Size = new System.Drawing.Size(178, 22);
             this.mnuReportsRegChild.Text = "Register Child";
             this.mnuReportsRegChild.Click += new System.EventHandler(this.mnuReportsRegChild_Click);
             // 
             // mnuReportsRegUser
             // 
             this.mnuReportsRegUser.Name = "mnuReportsRegUser";
-            this.mnuReportsRegUser.Size = new System.Drawing.Size(209, 26);
+            this.mnuReportsRegUser.Size = new System.Drawing.Size(178, 22);
             this.mnuReportsRegUser.Text = "Register User";
             this.mnuReportsRegUser.Click += new System.EventHandler(this.mnuReportsRegUser_Click);
             // 
@@ -155,7 +155,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(383, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.Size = new System.Drawing.Size(100, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "REPORTS";
             // 
@@ -171,7 +171,7 @@
             "Waiting on outside resource"});
             this.cboxReport.Location = new System.Drawing.Point(8, 41);
             this.cboxReport.Name = "cboxReport";
-            this.cboxReport.Size = new System.Drawing.Size(184, 24);
+            this.cboxReport.Size = new System.Drawing.Size(184, 21);
             this.cboxReport.TabIndex = 2;
             this.cboxReport.SelectedIndexChanged += new System.EventHandler(this.cboxReport_SelectedIndexChanged);
             // 
@@ -180,9 +180,9 @@
             this.lblReportSelect.AutoSize = true;
             this.lblReportSelect.BackColor = System.Drawing.Color.Transparent;
             this.lblReportSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportSelect.Location = new System.Drawing.Point(5, 19);
+            this.lblReportSelect.Location = new System.Drawing.Point(5, 22);
             this.lblReportSelect.Name = "lblReportSelect";
-            this.lblReportSelect.Size = new System.Drawing.Size(275, 20);
+            this.lblReportSelect.Size = new System.Drawing.Size(221, 16);
             this.lblReportSelect.TabIndex = 3;
             this.lblReportSelect.Text = "SELECT YOUR REPORT TO VIEW";
             // 
@@ -200,9 +200,9 @@
             this.lblTherID.AutoSize = true;
             this.lblTherID.BackColor = System.Drawing.Color.Transparent;
             this.lblTherID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTherID.Location = new System.Drawing.Point(228, 115);
+            this.lblTherID.Location = new System.Drawing.Point(246, 124);
             this.lblTherID.Name = "lblTherID";
-            this.lblTherID.Size = new System.Drawing.Size(231, 20);
+            this.lblTherID.Size = new System.Drawing.Size(184, 16);
             this.lblTherID.TabIndex = 12;
             this.lblTherID.Text = "SEARCH BY THERAPIST ID:";
             this.lblTherID.Visible = false;
@@ -212,9 +212,9 @@
             this.lblChildID.AutoSize = true;
             this.lblChildID.BackColor = System.Drawing.Color.Transparent;
             this.lblChildID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChildID.Location = new System.Drawing.Point(228, 145);
+            this.lblChildID.Location = new System.Drawing.Point(246, 154);
             this.lblChildID.Name = "lblChildID";
-            this.lblChildID.Size = new System.Drawing.Size(190, 20);
+            this.lblChildID.Size = new System.Drawing.Size(146, 16);
             this.lblChildID.TabIndex = 11;
             this.lblChildID.Text = "SEARCH BY CHILD ID:";
             this.lblChildID.Visible = false;
@@ -224,9 +224,9 @@
             this.lblCluster.AutoSize = true;
             this.lblCluster.BackColor = System.Drawing.Color.Transparent;
             this.lblCluster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCluster.Location = new System.Drawing.Point(228, 12);
+            this.lblCluster.Location = new System.Drawing.Point(246, 21);
             this.lblCluster.Name = "lblCluster";
-            this.lblCluster.Size = new System.Drawing.Size(157, 20);
+            this.lblCluster.Size = new System.Drawing.Size(126, 16);
             this.lblCluster.TabIndex = 22;
             this.lblCluster.Text = "SELECT CLUSTER";
             this.lblCluster.Visible = false;
@@ -236,9 +236,9 @@
             this.lblHouse.AutoSize = true;
             this.lblHouse.BackColor = System.Drawing.Color.Transparent;
             this.lblHouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHouse.Location = new System.Drawing.Point(414, 12);
+            this.lblHouse.Location = new System.Drawing.Point(432, 21);
             this.lblHouse.Name = "lblHouse";
-            this.lblHouse.Size = new System.Drawing.Size(139, 20);
+            this.lblHouse.Size = new System.Drawing.Size(111, 16);
             this.lblHouse.TabIndex = 25;
             this.lblHouse.Text = "SELECT HOUSE";
             this.lblHouse.Visible = false;
@@ -246,9 +246,9 @@
             // cboxTherapyType
             // 
             this.cboxTherapyType.FormattingEnabled = true;
-            this.cboxTherapyType.Location = new System.Drawing.Point(598, 31);
+            this.cboxTherapyType.Location = new System.Drawing.Point(599, 41);
             this.cboxTherapyType.Name = "cboxTherapyType";
-            this.cboxTherapyType.Size = new System.Drawing.Size(121, 24);
+            this.cboxTherapyType.Size = new System.Drawing.Size(121, 21);
             this.cboxTherapyType.TabIndex = 28;
             this.cboxTherapyType.Visible = false;
             // 
@@ -257,9 +257,9 @@
             this.lblTherapyType.AutoSize = true;
             this.lblTherapyType.BackColor = System.Drawing.Color.Transparent;
             this.lblTherapyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTherapyType.Location = new System.Drawing.Point(595, 12);
+            this.lblTherapyType.Location = new System.Drawing.Point(596, 22);
             this.lblTherapyType.Name = "lblTherapyType";
-            this.lblTherapyType.Size = new System.Drawing.Size(204, 20);
+            this.lblTherapyType.Size = new System.Drawing.Size(167, 16);
             this.lblTherapyType.TabIndex = 27;
             this.lblTherapyType.Text = "SELECT THERAPY TYPE";
             this.lblTherapyType.Visible = false;
@@ -269,9 +269,9 @@
             this.lblDay.AutoSize = true;
             this.lblDay.BackColor = System.Drawing.Color.Transparent;
             this.lblDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(595, 60);
+            this.lblDay.Location = new System.Drawing.Point(596, 70);
             this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(113, 20);
+            this.lblDay.Size = new System.Drawing.Size(91, 16);
             this.lblDay.TabIndex = 34;
             this.lblDay.Text = "SELECT DAY";
             this.lblDay.Visible = false;
@@ -281,9 +281,9 @@
             this.lblMonth.AutoSize = true;
             this.lblMonth.BackColor = System.Drawing.Color.Transparent;
             this.lblMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonth.Location = new System.Drawing.Point(416, 60);
+            this.lblMonth.Location = new System.Drawing.Point(434, 69);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(141, 20);
+            this.lblMonth.Size = new System.Drawing.Size(113, 16);
             this.lblMonth.TabIndex = 32;
             this.lblMonth.Text = "SELECT MONTH";
             this.lblMonth.Visible = false;
@@ -293,44 +293,44 @@
             this.lblYear.AutoSize = true;
             this.lblYear.BackColor = System.Drawing.Color.Transparent;
             this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(228, 60);
+            this.lblYear.Location = new System.Drawing.Point(246, 69);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(123, 20);
+            this.lblYear.Size = new System.Drawing.Size(100, 16);
             this.lblYear.TabIndex = 30;
             this.lblYear.Text = "SELECT YEAR";
             this.lblYear.Visible = false;
             // 
             // txtTherapistID
             // 
-            this.txtTherapistID.Location = new System.Drawing.Point(417, 114);
+            this.txtTherapistID.Location = new System.Drawing.Point(435, 123);
             this.txtTherapistID.Name = "txtTherapistID";
-            this.txtTherapistID.Size = new System.Drawing.Size(121, 22);
+            this.txtTherapistID.Size = new System.Drawing.Size(121, 20);
             this.txtTherapistID.TabIndex = 37;
             this.txtTherapistID.Visible = false;
             this.txtTherapistID.TextChanged += new System.EventHandler(this.txtTherapistID_TextChanged);
             // 
             // txtChildID
             // 
-            this.txtChildID.Location = new System.Drawing.Point(417, 144);
+            this.txtChildID.Location = new System.Drawing.Point(435, 153);
             this.txtChildID.Name = "txtChildID";
-            this.txtChildID.Size = new System.Drawing.Size(121, 22);
+            this.txtChildID.Size = new System.Drawing.Size(121, 20);
             this.txtChildID.TabIndex = 38;
             this.txtChildID.Visible = false;
             this.txtChildID.TextChanged += new System.EventHandler(this.txtChildID_TextChanged);
             // 
             // txtCluster
             // 
-            this.txtCluster.Location = new System.Drawing.Point(231, 32);
+            this.txtCluster.Location = new System.Drawing.Point(249, 41);
             this.txtCluster.Name = "txtCluster";
-            this.txtCluster.Size = new System.Drawing.Size(85, 22);
+            this.txtCluster.Size = new System.Drawing.Size(85, 20);
             this.txtCluster.TabIndex = 40;
             this.txtCluster.TextChanged += new System.EventHandler(this.txtCluster_TextChanged);
             // 
             // txtHouse
             // 
-            this.txtHouse.Location = new System.Drawing.Point(417, 31);
+            this.txtHouse.Location = new System.Drawing.Point(435, 40);
             this.txtHouse.Name = "txtHouse";
-            this.txtHouse.Size = new System.Drawing.Size(85, 22);
+            this.txtHouse.Size = new System.Drawing.Size(85, 20);
             this.txtHouse.TabIndex = 41;
             this.txtHouse.TextChanged += new System.EventHandler(this.txtHouse_TextChanged);
             // 
@@ -338,10 +338,10 @@
             // 
             this.DTPYear.CustomFormat = "yyyy";
             this.DTPYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTPYear.Location = new System.Drawing.Point(231, 79);
+            this.DTPYear.Location = new System.Drawing.Point(249, 88);
             this.DTPYear.Name = "DTPYear";
             this.DTPYear.ShowUpDown = true;
-            this.DTPYear.Size = new System.Drawing.Size(80, 22);
+            this.DTPYear.Size = new System.Drawing.Size(80, 20);
             this.DTPYear.TabIndex = 42;
             this.DTPYear.ValueChanged += new System.EventHandler(this.DTPYear_ValueChanged);
             // 
@@ -349,10 +349,10 @@
             // 
             this.DTPMonth.CustomFormat = "MM";
             this.DTPMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTPMonth.Location = new System.Drawing.Point(419, 79);
+            this.DTPMonth.Location = new System.Drawing.Point(437, 88);
             this.DTPMonth.Name = "DTPMonth";
             this.DTPMonth.ShowUpDown = true;
-            this.DTPMonth.Size = new System.Drawing.Size(79, 22);
+            this.DTPMonth.Size = new System.Drawing.Size(79, 20);
             this.DTPMonth.TabIndex = 43;
             this.DTPMonth.ValueChanged += new System.EventHandler(this.DTPMonth_ValueChanged);
             // 
@@ -360,10 +360,10 @@
             // 
             this.DTPDay.CustomFormat = "dd";
             this.DTPDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTPDay.Location = new System.Drawing.Point(598, 79);
+            this.DTPDay.Location = new System.Drawing.Point(599, 89);
             this.DTPDay.Name = "DTPDay";
             this.DTPDay.ShowUpDown = true;
-            this.DTPDay.Size = new System.Drawing.Size(79, 22);
+            this.DTPDay.Size = new System.Drawing.Size(79, 20);
             this.DTPDay.TabIndex = 44;
             // 
             // panel1
