@@ -14,7 +14,7 @@ namespace TherapyReferralSystem
     public partial class frmReports : Form
     {
         //declarations
-        private string type;
+        private string type;    //position availible - Teacher Clinic Therapist   Admin   Social worker
         DBConnect objDBConnect = new DBConnect();
 
         public frmReports()
@@ -25,11 +25,15 @@ namespace TherapyReferralSystem
         {
             InitializeComponent();
             this.type = type;
-            // find out about theraphy type????? then add if statements for them as well
-            // 
             //based on position, add items to report drop down on what is accessible for the person
-            //reports availible Theraphy, ADD & ADHD Theraphy, Child Information, Therapist Information, Referals, Interventions, Waiting on outside resource
+            if (type == "Admin" || type == "Social worker")
+            {
+                cboxReport.Items.Add("Child Information");
+                cboxReport.Items.Add("Therapist Information");
+            }
+            //reports availible Theraphy, ADD & ADHD Theraphy, Child Information, Therapist Information, Referals, Waiting on outside resource
         }
+
         //******************************************************************
         //menu navigations
         private void mnuReportsTherRef_Click(object sender, EventArgs e)
@@ -62,6 +66,7 @@ namespace TherapyReferralSystem
             help.Show();
             this.Dispose();
         }
+
         //******************************************************************
         //print of report
         private void mnuReportsPrintRep_Click(object sender, EventArgs e)
@@ -70,14 +75,15 @@ namespace TherapyReferralSystem
         }
 
         //*********************************************************************************
-        //report selection , which report is being selected, and what information should be called from db
+        //report selection , which report is being selected
         private void cboxReport_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try {
-                //make all values null and hidden then visible when one is selected in below if statements
+            try
+            {
+                //make all values null and hidden then visible when selection made in report to view
                 lblCluster.Visible = false;
                 txtCluster.Visible = false;
-                txtCluster = null;
+                txtCluster.Text = null;
 
                 lblYear.Visible = false;
                 DTPYear.Visible = false;
@@ -85,12 +91,12 @@ namespace TherapyReferralSystem
 
                 lblTherID.Visible = false;
                 txtTherapistID.Visible = false;
-                txtTherapistID = null;
+                txtTherapistID.Text = null;
 
 
                 lblChildID.Visible = false;
                 txtChildID.Visible = false;
-                txtChildID = null;
+                txtChildID.Text = null;
 
                 lblTherapyType.Visible = false;
                 cboxTherapyType.Visible = false;
@@ -98,7 +104,7 @@ namespace TherapyReferralSystem
 
                 lblHouse.Visible = false;
                 txtHouse.Visible = false;
-                txtHouse = null;
+                txtHouse.Text = null;
 
                 lblMonth.Visible = false;
                 DTPMonth.Visible = false;
@@ -108,310 +114,433 @@ namespace TherapyReferralSystem
                 DTPDay.Visible = false;
                 DTPDay = null;
 
-                DGVReport.DataSource = getReportList();
+                //depends on report, only certain fields will become visible
+                if (cboxReport.SelectedIndex.ToString() == "Child Information")
+                {
+                    lblCluster.Visible = true;
+                    txtCluster.Visible = true;
+
+                    lblChildID.Visible = true;
+                    txtChildID.Visible = true;
+                }
+                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy")
+                {
+                    lblYear.Visible = true;
+                    DTPYear.Visible = true;
+
+                    lblTherID.Visible = true;
+                    txtTherapistID.Visible = true;
+                }
+                else if (cboxReport.SelectedIndex.ToString() == "Therapist Information")
+                {
+                    lblTherID.Visible = true;
+                    txtTherapistID.Visible = true;
+
+                    lblTherapyType.Visible = true;
+                    cboxTherapyType.Visible = true;
+                }
+                else if (cboxReport.SelectedIndex.ToString() == "Referals")
+                {
+                    lblChildID.Visible = true;
+                    txtChildID.Visible = true;
+
+                    lblYear.Visible = true;
+                    DTPYear.Visible = true;
+                }
+                else if (cboxReport.SelectedIndex.ToString() == "Theraphies")
+                {
+                    lblCluster.Visible = true;
+                    txtCluster.Visible = true;
+
+                    lblChildID.Visible = true;
+                    txtChildID.Visible = true;
+
+                    lblYear.Visible = true;
+                    DTPYear.Visible = true;
+
+                    lblTherID.Visible = true;
+                    txtTherapistID.Visible = true;
+
+                    lblTherapyType.Visible = true;
+                    cboxTherapyType.Visible = true;
+                }
             }
             catch(Exception error)
             {
-                Console.WriteLine("An error occurred: '{0}'", error);
+                MessageBox.Show("Error : " + error.Message);
             }
         }
 
         //**********************************************************************************
-        private DataTable getReportList()
+        //display information in datagrid view based on selections on what to search, and what information should be called from db
+        private void btnShowReport_Click(object sender, EventArgs e)
+        {
+            //declarations
+            String Report = cboxReport.Text;
+            String Cluster = txtCluster.Text;
+            String House = txtHouse.Text;
+            String TheraphyType = cboxTherapyType.Text;
+            String Year = DTPYear.Text;
+            String Month = DTPMonth.Text;
+            String Day = DTPDay.Text;
+            String TherapistID = txtTherapistID.Text;
+            String ChildID = txtChildID.Text;
+            String SelectStatement = null;
+
+            if (Report == "Child Information")
+            {
+                SelectStatement = @"SELECT C_NUMBER,C_STATUS,C_CLUSTER,C_HOUSE,C_BSF,C_FNAME,C_MNAME,C_SNAME,C_ID,C_GENDER,C_ADM_DATE,C_CONSIDER
+                                    FROM THERAPY_REF
+                                    INNER JOIN CHILD on R_C_NUMBER = C_NUMBER";
+            }
+
+            else if (Report == "ADD & ADHD Theraphy")
+            {
+                SelectStatement = @"SELECT A_ID, A_STATUS,A_TYPE,A_DATE_REF,A_DATE_START,A_DATE_END,A_NUM_OF_SESSIONS,A_DETAILS,A_THERAPIST,A_REPORT,A_RESULT
+                                    FROM THERAPY_REF
+                                    INNER JOIN TBL_USER on R_THERAPIST = T_ID
+                                    INNER JOIN ADD_ADHD on T_ID = A_THERAPIST";
+            }
+
+            else if (Report == "Therapist Information")
+            {
+                SelectStatement = @"SELECT U_ID, U_FNAME, U_SNAME, U_CONTACT, U_EMAIL, T_ID, T_TYPE, T_IE 
+                                    FROM THERAPY_REF
+                                    INNER JOIN TBL_USER on R_THERAPIST = T_ID";
+            }
+
+            else if (Report == "Referals")
+            {
+                SelectStatement = @"SELECT R_ID, R_C_NUMBER, R_REASON, R_REFFERED_BY, R_DATE_REFFERED DATE 
+                                    FROM THERAPY_REF
+                                    INNER JOIN CHILD on R_C_NUMBER = C_NUMBER
+                                    INNER JOIN TBL_USER on R_THERAPIST = T_ID";
+            }
+
+            else if (Report == "Theraphies")
+            {
+                SelectStatement = @"SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_STATUS, R_SESSION, R_DATE_START, R_DATE_ENDED, R_DETAILS, R_THERAPIST, R_REPORT, R_RESULT 
+                                    FROM THERAPY_REF
+                                    INNER JOIN CHILD on R_C_NUMBER = C_NUMBER
+                                    INNER JOIN TBL_USER on R_THERAPIST = T_ID";
+            }
+
+            else if (Report == "Waiting on outside resource")
+            {
+                SelectStatement = @"SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_STATUS, R_WAITING_LIST 
+                                    FROM THERAPY_REF
+                                    WHERE R_WAITING_LIST > NOW()";  //special consideration on waiting date, thus where clause part of this declaration
+            }
+
+            DGVReport.DataSource = getReportList(Report,Cluster,House,TheraphyType,Year,Month,Day,TherapistID,ChildID,SelectStatement);
+
+        }
+        //**********************************************************************************
+        private DataTable getReportList(String Report, String Cluster, String House, String TheraphyType,
+            String Year, String Month, String Day,
+            String TherapistID, String ChildID,  String SelectStatement)
         {
 
             DataTable report = new DataTable();
             objDBConnect.OpenConnection();
 
-        
-
-
             /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "Child Information")
+            if (Report != null)
             {
-                lblCluster.Visible = true;
-                txtCluster.Visible = true;
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                lblChildID.Visible = true;
-                txtChildID.Visible = true;
-
-                if (cboxReport.SelectedIndex.ToString() == "Child Information" && txtCluster != null && txtHouse != null && txtChildID != null)
+                if (Report == "Child Information" && Cluster != null && House != null && ChildID != null)
                 {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM CHILD 
-                        WHERE C_CLUSTER = " + txtCluster.Text + " && C_HOUSE = " + txtHouse.Text + " && C_NUMBER = " + txtChildID.Text ,objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(@""+SelectStatement +
+                        "WHERE C_CLUSTER = " + Cluster + " && C_HOUSE = " + House + " && C_NUMBER = " + ChildID, objDBConnect.sqlConn);
                 }
 
-                else if (cboxReport.SelectedIndex.ToString() == "Child Information" && txtCluster != null && txtChildID != null)
+                else if (Report == "Child Information" && Cluster != null && ChildID != null)
                 {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM CHILD 
-                        WHERE C_CLUSTER = " + txtCluster.Text + " && C_NUMBER = " + txtChildID.Text, objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                        "WHERE C_CLUSTER = " +Cluster+ " && C_NUMBER = " +ChildID, objDBConnect.sqlConn);
                 }
 
-                else if (cboxReport.SelectedIndex.ToString() == "Child Information" && txtCluster != null && txtHouse != null)
+                else if (Report == "Child Information" && Cluster != null && House != null)
                 {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM CHILD 
-                        WHERE C_CLUSTER = " + txtCluster.Text + " && C_HOUSE = " + txtHouse.Text, objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                        "WHERE C_CLUSTER = " + Cluster + " && C_HOUSE = " + House, objDBConnect.sqlConn);
                 }
 
-                else if (cboxReport.SelectedIndex.ToString() == "Child Information" && txtCluster != null )
+                else if (Report == "Child Information" && Cluster != null)
                 {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM CHILD 
-                        WHERE C_CLUSTER = " + txtCluster.Text, objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                        "WHERE C_CLUSTER = " + Cluster, objDBConnect.sqlConn);
                 }
 
-                else if (cboxReport.SelectedIndex.ToString() == "Child Information" && txtChildID != null)
+                else if (Report == "Child Information" && ChildID != null)
                 {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM CHILD 
-                        WHERE C_NUMBER = " + txtChildID.Text, objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                        "WHERE C_NUMBER = " + ChildID, objDBConnect.sqlConn);
+                }
+
+                ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null && Month != null && Day != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(A_DATE_REF as date) = '" + Year + "-" + Month + "-" + Day + "' && A_THERAPIST =" + TherapistID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null && Month != null && Day != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(A_DATE_REF as date) = '" + Year + "-" + Month + "-" + Day + "'", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null && Month != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(A_DATE_REF) = year(" + Year + ") && month(A_DATE_REF) = month(" + Month + ") && A_THERAPIST =" + TherapistID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null && Month != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(A_DATE_REF) = year(" + Year + ") && month(A_DATE_REF) = month(" + Month + ")", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(A_DATE_REF) = year(" + Year + ") && A_THERAPIST =" + TherapistID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && Year != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(A_DATE_REF) = year(" + Year + ")", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "ADD & ADHD Theraphy" && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE A_THERAPIST =" + TherapistID, objDBConnect.sqlConn);
+                }
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                else if (Report == "Waiting on outside resource")
+                    objDBConnect.sqlCmd = new SqlCommand(SelectStatement, objDBConnect.sqlConn);
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                else if (Report == "Therapist Information" && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@""+SelectStatement+ 
+                    "WHERE T_ID =" + TherapistID+ " && T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Therapist Information" && TherapistID != null )
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE T_ID =" + TherapistID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Therapist Information"  && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                else if (Report == "Referals" && Year != null && Month != null && Day != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year + "-" + Month + "-" + Day + "' && R_C_NUMBER =" + ChildID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && Year != null && Month != null && Day != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year + "-" + Month + "-" + Day + "'", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && Year != null && Month != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && month(R_DATE_REFFERED) = month(" + Month + ") && R_C_NUMBER = " + ChildID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && Year != null && Month != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && month(R_DATE_REFFERED) = month(" + Month + ")", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && Year != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && R_C_NUMBER = " + ChildID, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && Year != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ")", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Referals" && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE R_C_NUMBER = " + ChildID, objDBConnect.sqlConn);
+                }
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                else if (Report == "Theraphies" && Year != null && Month != null && Day != null && ChildID != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year + "-" + Month + "-" + Day + "' && R_C_NUMBER =" + ChildID + " && R_THERAPIST =" + TherapistID+"&& T_TYPE ="+ TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && Day != null && ChildID != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year  + "-" + Month  + "-" + Day  + "' && R_C_NUMBER =" + ChildID  + " && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && Day != null && ChildID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year + "-" + Month + "-" + Day + "' && R_C_NUMBER =" + ChildID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && Day != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year  + "-" + Month  + "-" + Day  + "' && R_C_NUMBER =" + ChildID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && Day != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year + "-" + Month + "-" + Day + "' && R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && Month != null && Day != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE cast(R_DATE_REFFERED as date) = '" + Year  + "-" + Month  + "-" + Day  + "' && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && ChildID != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && month(R_DATE_REFFERED) = month(" + Month + ") && R_C_NUMBER =" + ChildID + " && R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && Month != null && ChildID != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && month(R_DATE_REFFERED) = month(" + Month  + ") && R_C_NUMBER =" + ChildID  + " && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && ChildID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && month(R_DATE_REFFERED) = month(" + Month + ") && R_C_NUMBER =" + ChildID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && Month != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && month(R_DATE_REFFERED) = month(" + Month  + ") && R_C_NUMBER =" + ChildID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && Month != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                   " WHERE year(R_DATE_REFFERED) = year(" + Year + ") && month(R_DATE_REFFERED) = month(" + Month + ") && R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && Month != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                   " WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && month(R_DATE_REFFERED) = month(" + Month  + ") && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && ChildID != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && R_C_NUMBER =" + ChildID + " && R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && ChildID != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && R_C_NUMBER =" + ChildID  + " && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && ChildID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && R_C_NUMBER =" + ChildID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && R_C_NUMBER =" + ChildID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ") && R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ") && R_THERAPIST =" + TherapistID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && Year != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year + ")" + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && Year != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE year(R_DATE_REFFERED) = year(" + Year  + ")", objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && ChildID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE R_C_NUMBER =" + ChildID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && ChildID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE R_C_NUMBER =" + ChildID , objDBConnect.sqlConn);
+                }
+
+                else if (Report == "Theraphies" && TherapistID != null && TheraphyType != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE R_THERAPIST =" + TherapistID + "&& T_TYPE =" + TheraphyType, objDBConnect.sqlConn);
+                }
+
+                else if (Report =="Theraphies" && TherapistID != null)
+                {
+                    objDBConnect.sqlCmd = new SqlCommand(@"" + SelectStatement +
+                    "WHERE R_THERAPIST =" + TherapistID, objDBConnect.sqlConn);
                 }
 
                 else
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM CHILD", objDBConnect.sqlConn);
+                    objDBConnect.sqlCmd = new SqlCommand(SelectStatement, objDBConnect.sqlConn);
             }
-
-
-
-
-
-
-            /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy")
-            {
-                lblYear.Visible = true;
-                DTPYear.Visible = true;
-
-                lblTherID.Visible = true;
-                txtTherapistID.Visible = true;
-
-                if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null && DTPMonth != null && DTPDay != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE cast(A_DATE_REF as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "' && A_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null && DTPMonth != null && DTPDay != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE cast(A_DATE_REF as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "'", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null && DTPMonth != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE year(A_DATE_REF) = year(" + DTPYear.Text + ") && month(A_DATE_REF) = month(" + DTPMonth.Text + ") && A_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null && DTPMonth != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE year(A_DATE_REF) = year(" + DTPYear.Text + ") && month(A_DATE_REF) = month(" + DTPMonth.Text + ")", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE year(A_DATE_REF) = year(" + DTPYear.Text + ") && A_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && DTPYear != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE year(A_DATE_REF) = year(" + DTPYear.Text + ")", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "ADD & ADHD Theraphy" && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT * FROM ADD_ADHD
-                    WHERE A_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM ADD_ADHD", objDBConnect.sqlConn);
-            }
-
-
-
-
-
-            /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "Waiting on outside resource")
-                objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF   WHERE R_WAITING_LIST < CURRENT_DATE()", objDBConnect.sqlConn);
-
-
-
-
-
-
-            /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "Therapist Information")
-            {
-                lblTherID.Visible = true;
-                txtTherapistID.Visible = true;
-
-                if (cboxReport.SelectedIndex.ToString() == "Therapist Information" && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT U_ID,U_FNAME,U_SNAME,U_CONTACT,U_EMAIL,T_ID,T_TYPE,T_IE   FROM TBL_USER   WHERE T_ID =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-                else
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT U_ID,U_FNAME,U_SNAME,U_CONTACT,U_EMAIL,T_ID,T_TYPE,T_IE   FROM TBL_USER   WHERE T_ID != null", objDBConnect.sqlConn);
-            }
-
-
-
-
-
-
-
-            /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "Referals")
-            {
-                lblChildID.Visible = true;
-                txtChildID.Visible = true;
-
-                lblYear.Visible = true;
-                DTPYear.Visible = true;
-
-                if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null && DTPMonth != null && DTPDay != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE cast(R_DATE_REFFERED as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "' && R_C_NUMBER =" + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null && DTPMonth != null && DTPDay != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE cast(R_DATE_REFFERED as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "'", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null && DTPMonth != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && month(R_DATE_REFFERED) = month(" + DTPMonth.Text + ") && R_C_NUMBER = " + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null && DTPMonth != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && month(R_DATE_REFFERED) = month(" + DTPMonth.Text + ")", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && R_C_NUMBER = " + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && DTPYear != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ")", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Referals" && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF
-                    WHERE R_C_NUMBER = " + txtChildID.Text, objDBConnect.sqlConn);
-                }
-                else
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT R_ID, R_C_NUMBER, R_CHILD_NAME, R_REASON, R_STATUS, R_REFFERED_BY, R_DATE_REFFERED, R_DATE_START, R_DATE_ENDED, R_DETAILS FROM THERAPY_REF", objDBConnect.sqlConn);
-            }
-
-
-
-
-
-
-
-
-            /////////////////////////////////////////////////////////////////
-            if (cboxReport.SelectedIndex.ToString() == "Theraphies")
-            {
-                lblChildID.Visible = true;
-                txtChildID.Visible = true;
-
-                lblYear.Visible = true;
-                DTPYear.Visible = true;
-
-                lblTherID.Visible = true;
-                txtTherapistID.Visible = true;
-
-                if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && DTPDay != null && txtChildID != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE cast(R_DATE_REFFERED as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "' && R_C_NUMBER =" + txtChildID.Text + " && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && DTPDay != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE cast(R_DATE_REFFERED as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "' && R_C_NUMBER =" + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && DTPDay != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE cast(R_DATE_REFFERED as date) = '" + DTPYear.Text + "-" + DTPMonth.Text + "-" + DTPDay.Text + "' && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && txtChildID != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && month(R_DATE_REFFERED) = month(" + DTPMonth.Text + ") && R_C_NUMBER =" + txtChildID.Text + " && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && month(R_DATE_REFFERED) = month(" + DTPMonth.Text + ") && R_C_NUMBER =" + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && DTPMonth != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && month(R_DATE_REFFERED) = month(" + DTPMonth.Text + ") && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && txtChildID != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && R_C_NUMBER =" + txtChildID.Text + " && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && R_C_NUMBER =" + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ") && R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && DTPYear != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE year(R_DATE_REFFERED) = year(" + DTPYear.Text + ")", objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && txtChildID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE R_C_NUMBER =" + txtChildID.Text, objDBConnect.sqlConn);
-                }
-
-                else if (cboxReport.SelectedIndex.ToString() == "Theraphies" && txtTherapistID != null)
-                {
-                    objDBConnect.sqlCmd = new SqlCommand(@"SELECT *   FROM THERAPY_REF
-                    WHERE R_THERAPIST =" + txtTherapistID.Text, objDBConnect.sqlConn);
-                }
-
-                else
-                    objDBConnect.sqlCmd = new SqlCommand("SELECT *   FROM THERAPY_REF", objDBConnect.sqlConn);
-            }
-            /////////////////////////////////////////////////////////////////
-
 
             objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
@@ -444,7 +573,7 @@ namespace TherapyReferralSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Please provide number only");
+                MessageBox.Show("Please provide number only for cluster");
             }
         }
 
@@ -459,7 +588,7 @@ namespace TherapyReferralSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Please provide number only");
+                MessageBox.Show("Please provide number only for house");
             }
         }
 
@@ -467,16 +596,23 @@ namespace TherapyReferralSystem
         //enable/disable month values if a year value is entered
         private void DTPYear_ValueChanged(object sender, EventArgs e)
         {
-            if (DTPYear != null)
+            try
             {
-                lblMonth.Visible = true;
-                DTPMonth.Visible = true;
+                if (DTPYear != null)
+                {
+                    lblMonth.Visible = true;
+                    DTPMonth.Visible = true;
+                }
+                else
+                {
+                    lblMonth.Visible = false;
+                    DTPMonth.Visible = false;
+                    DTPMonth = null;
+                }
             }
-            else
+            catch (Exception)
             {
-                lblMonth.Visible = false;
-                DTPMonth.Visible = false;
-                DTPMonth = null;
+                MessageBox.Show("Please insure year is selected");
             }
         }
 
@@ -484,16 +620,23 @@ namespace TherapyReferralSystem
         //enable/disable day values if a month value is entered
         private void DTPMonth_ValueChanged(object sender, EventArgs e)
         {
-            if (DTPYear != null)
+            try
             {
-                lblDay.Visible = true;
-                DTPDay.Visible = true;
+                if (DTPYear != null)
+                {
+                    lblDay.Visible = true;
+                    DTPDay.Visible = true;
+                }
+                 else
+                {
+                    lblDay.Visible = false;
+                    DTPDay.Visible = false;
+                    DTPDay = null;
+                }
             }
-            else
+            catch (Exception)
             {
-                lblDay.Visible = false;
-                DTPDay.Visible = false;
-                DTPDay = null;
+                MessageBox.Show("Please insure month is selected");
             }
         }
 
@@ -507,7 +650,7 @@ namespace TherapyReferralSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Please provide number only");
+                MessageBox.Show("Please provide number only for therapist ID");
             }
         }
 
@@ -521,9 +664,10 @@ namespace TherapyReferralSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("Please provide number only");
+                MessageBox.Show("Please provide number only for child ID");
             }
         }
+
         //**********************************************************************************
     }
 }

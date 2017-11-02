@@ -58,6 +58,7 @@
             this.DTPMonth = new System.Windows.Forms.DateTimePicker();
             this.DTPDay = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShowReport = new System.Windows.Forms.Button();
             this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).BeginInit();
             this.panel1.SuspendLayout();
@@ -166,7 +167,6 @@
             "Child Information",
             "Therapist Information",
             "Referals",
-            "Interventions",
             "Waiting on outside resource"});
             this.cboxReport.Location = new System.Drawing.Point(8, 41);
             this.cboxReport.Name = "cboxReport";
@@ -346,7 +346,7 @@
             // 
             // DTPMonth
             // 
-            this.DTPMonth.CustomFormat = "MMMM";
+            this.DTPMonth.CustomFormat = "MM";
             this.DTPMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPMonth.Location = new System.Drawing.Point(419, 79);
             this.DTPMonth.Name = "DTPMonth";
@@ -369,6 +369,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnShowReport);
             this.panel1.Controls.Add(this.DTPDay);
             this.panel1.Controls.Add(this.DTPMonth);
             this.panel1.Controls.Add(this.cboxReport);
@@ -391,6 +392,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(768, 196);
             this.panel1.TabIndex = 40;
+            // 
+            // btnShowReport
+            // 
+            this.btnShowReport.Location = new System.Drawing.Point(53, 91);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.Size = new System.Drawing.Size(97, 23);
+            this.btnShowReport.TabIndex = 45;
+            this.btnShowReport.Text = "Display Report";
+            this.btnShowReport.UseVisualStyleBackColor = true;
+            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click);
             // 
             // frmReports
             // 
@@ -455,6 +466,6 @@
         private System.Windows.Forms.DateTimePicker DTPDay;
  
         private System.Windows.Forms.Panel panel1;
- 
+        private System.Windows.Forms.Button btnShowReport;
     }
 }
