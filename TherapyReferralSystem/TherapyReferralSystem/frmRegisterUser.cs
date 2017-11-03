@@ -88,7 +88,7 @@ namespace TherapyReferralSystem
 
         private void frmRegisterUser_Load(object sender, EventArgs e)
         {
-
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
 
             if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
             {
@@ -196,8 +196,9 @@ namespace TherapyReferralSystem
 
         private void btnsubmit_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             insertRecords();
-
+            Cursor.Current = Cursors.Default;
         }
 
         private void txtcontactnum_KeyPress(object sender, KeyPressEventArgs e)
@@ -465,7 +466,10 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserUpdate_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            searchUser();
             updateUser();
+            Cursor.Current = Cursors.WaitCursor;
 
         }
 

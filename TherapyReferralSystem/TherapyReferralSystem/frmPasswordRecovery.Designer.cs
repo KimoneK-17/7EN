@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPasswordRecovery));
             this.txtEmailAddress = new System.Windows.Forms.TextBox();
             this.lblEmailUsername = new System.Windows.Forms.Label();
             this.mnuPassRecov = new System.Windows.Forms.MenuStrip();
@@ -231,6 +232,7 @@
             this.Controls.Add(this.btnGetQuestion);
             this.Controls.Add(this.txtSecurityQuestion);
             this.Controls.Add(this.lblSecurityQuestion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPasswordRecovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

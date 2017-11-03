@@ -25,6 +25,7 @@ namespace TherapyReferralSystem
         string answer;
         string name;
         string secQuestion;
+        bool found;
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
         MailMessage email = new MailMessage();
@@ -35,18 +36,75 @@ namespace TherapyReferralSystem
 
         private void btnGetQuestion_Click(object sender, EventArgs e)
         {
-            username = txtEmailAddress.Text;
-            getSecQuestion();
+            if (!txtEmailAddress.Text.Equals(""))
+            {
+                if (txtEmailAddress.Text.Contains("@") && txtEmailAddress.Text.Contains("."))
+                {
+                    username = txtEmailAddress.Text;
+
+                    found = sm.CheckExisting("tbl_user", "U_EMAIL", username);
+                    if (found == true)
+                    {
+                        Cursor.Current = Cursors.WaitCursor;
+
+                        getSecQuestion();
+                        Cursor.Current = Cursors.Default;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid User");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect format for email address.\nExample: sample@company.com");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Enter Email Address");
+            }
+
+
         }
 
 
 
         private void btnSubmitAnswer_Click(object sender, EventArgs e)
         {
-            username = txtEmailAddress.Text;
-            randomPassword = sm.getOTP();
+            if (!txtEmailAddress.Text.Equals(""))
+            {
+                if (txtEmailAddress.Text.Contains("@") && txtEmailAddress.Text.Contains("."))
+                {
+                    username = txtEmailAddress.Text;
 
-            getAnswer();
+                    found = sm.CheckExisting("tbl_user", "U_EMAIL", username);
+                    if (found == true)
+                    {
+                        Cursor.Current = Cursors.WaitCursor;
+                        randomPassword = sm.getOTP();
+
+                        getAnswer();
+                        Cursor.Current = Cursors.Default;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid User");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect format for email address.\nExample: sample@company.com");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Enter Email Address");
+            }
 
         }
 
@@ -68,6 +126,7 @@ namespace TherapyReferralSystem
 
         public void getSecQuestion()
         {
+
             try
             {
                 objDBConnect.OpenConnection();
@@ -98,8 +157,36 @@ namespace TherapyReferralSystem
 
         private void btnRequestReset_Click(object sender, EventArgs e)
         {
-            username = txtEmailAddress.Text;
-            sendAdminEmail();
+
+            if (!txtEmailAddress.Text.Equals(""))
+            {
+                if (txtEmailAddress.Text.Contains("@") && txtEmailAddress.Text.Contains("."))
+                {
+                    username = txtEmailAddress.Text;
+
+                    found = sm.CheckExisting("tbl_user", "U_EMAIL", username);
+                    if (found == true)
+                    {
+                        Cursor.Current = Cursors.WaitCursor;
+                        sendAdminEmail();
+                        Cursor.Current = Cursors.Default;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid User");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect format for email address.\nExample: sample@company.com");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Enter Email Address");
+            }
         }
 
         public void getName()
@@ -152,6 +239,7 @@ namespace TherapyReferralSystem
 
         private void frmPasswordRecovery_Load(object sender, EventArgs e)
         {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             lblAnswer.Hide();
             txtAnswer.Hide();
             btnSubmitAnswer.Hide();

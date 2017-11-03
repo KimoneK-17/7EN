@@ -256,7 +256,7 @@
             "Clinic",
             "Therapist",
             "Admin",
-            "Social worker"});
+            "Social Worker"});
             this.cmbtype.Location = new System.Drawing.Point(233, 236);
             this.cmbtype.Name = "cmbtype";
             this.cmbtype.Size = new System.Drawing.Size(320, 28);
@@ -498,40 +498,40 @@
             // mnuRegUserSearch
             // 
             this.mnuRegUserSearch.Name = "mnuRegUserSearch";
-            this.mnuRegUserSearch.Size = new System.Drawing.Size(174, 26);
+            this.mnuRegUserSearch.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserSearch.Text = "Search";
             this.mnuRegUserSearch.Click += new System.EventHandler(this.mnuRegUserSearch_Click);
             // 
             // mnuRegUserUpdate
             // 
             this.mnuRegUserUpdate.Name = "mnuRegUserUpdate";
-            this.mnuRegUserUpdate.Size = new System.Drawing.Size(174, 26);
+            this.mnuRegUserUpdate.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserUpdate.Text = "Update";
             this.mnuRegUserUpdate.Click += new System.EventHandler(this.mnuRegUserUpdate_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // myProfileToolStripMenuItem
             // 
             this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.myProfileToolStripMenuItem.Text = "My Profile";
             this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
             // 
             // mnuRegUserReturn
             // 
             this.mnuRegUserReturn.Name = "mnuRegUserReturn";
-            this.mnuRegUserReturn.Size = new System.Drawing.Size(174, 26);
+            this.mnuRegUserReturn.Size = new System.Drawing.Size(181, 26);
             this.mnuRegUserReturn.Text = "Logout";
             this.mnuRegUserReturn.Click += new System.EventHandler(this.mnuRegUserReturn_Click);
             // 

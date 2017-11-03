@@ -170,6 +170,7 @@ namespace TherapyReferralSystem
 
         private void frmTherapyReferral_Load(object sender, EventArgs e)
         {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             updateToolStripMenuItem.Enabled = false;
             populateChildNumberCMB();
             populateTherapist();
@@ -332,7 +333,7 @@ namespace TherapyReferralSystem
             {
                 int d = int.Parse(str);
             }
-            catch (FormatException nfe)
+            catch (FormatException)
             {
                 return false;
             }

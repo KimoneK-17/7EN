@@ -64,7 +64,7 @@
             this.txtOTP.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOTP.Location = new System.Drawing.Point(190, 116);
             this.txtOTP.Name = "txtOTP";
-            this.txtOTP.Size = new System.Drawing.Size(237, 29);
+            this.txtOTP.Size = new System.Drawing.Size(307, 29);
             this.txtOTP.TabIndex = 1;
             // 
             // lblNewPword
@@ -83,14 +83,14 @@
             this.txtNPword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNPword.Location = new System.Drawing.Point(190, 153);
             this.txtNPword.Name = "txtNPword";
-            this.txtNPword.Size = new System.Drawing.Size(237, 29);
+            this.txtNPword.Size = new System.Drawing.Size(307, 29);
             this.txtNPword.TabIndex = 3;
             // 
             // btnChangePword
             // 
             this.btnChangePword.BackColor = System.Drawing.Color.Snow;
             this.btnChangePword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePword.Location = new System.Drawing.Point(205, 238);
+            this.btnChangePword.Location = new System.Drawing.Point(304, 238);
             this.btnChangePword.Name = "btnChangePword";
             this.btnChangePword.Size = new System.Drawing.Size(192, 28);
             this.btnChangePword.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.txtConPword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConPword.Location = new System.Drawing.Point(190, 190);
             this.txtConPword.Name = "txtConPword";
-            this.txtConPword.Size = new System.Drawing.Size(237, 29);
+            this.txtConPword.Size = new System.Drawing.Size(307, 29);
             this.txtConPword.TabIndex = 6;
             // 
             // lblEmail
@@ -133,7 +133,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(190, 79);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(237, 29);
+            this.txtEmail.Size = new System.Drawing.Size(307, 29);
             this.txtEmail.TabIndex = 8;
             // 
             // lblREmail
@@ -142,7 +142,7 @@
             this.lblREmail.BackColor = System.Drawing.Color.Transparent;
             this.lblREmail.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblREmail.ForeColor = System.Drawing.Color.Red;
-            this.lblREmail.Location = new System.Drawing.Point(433, 82);
+            this.lblREmail.Location = new System.Drawing.Point(503, 82);
             this.lblREmail.Name = "lblREmail";
             this.lblREmail.Size = new System.Drawing.Size(19, 20);
             this.lblREmail.TabIndex = 9;
@@ -154,7 +154,7 @@
             this.lblROTP.BackColor = System.Drawing.Color.Transparent;
             this.lblROTP.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblROTP.ForeColor = System.Drawing.Color.Red;
-            this.lblROTP.Location = new System.Drawing.Point(433, 118);
+            this.lblROTP.Location = new System.Drawing.Point(503, 118);
             this.lblROTP.Name = "lblROTP";
             this.lblROTP.Size = new System.Drawing.Size(19, 20);
             this.lblROTP.TabIndex = 10;
@@ -166,7 +166,7 @@
             this.lblRNPword.BackColor = System.Drawing.Color.Transparent;
             this.lblRNPword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRNPword.ForeColor = System.Drawing.Color.Red;
-            this.lblRNPword.Location = new System.Drawing.Point(433, 154);
+            this.lblRNPword.Location = new System.Drawing.Point(503, 154);
             this.lblRNPword.Name = "lblRNPword";
             this.lblRNPword.Size = new System.Drawing.Size(19, 20);
             this.lblRNPword.TabIndex = 11;
@@ -178,7 +178,7 @@
             this.lblRCPword.BackColor = System.Drawing.Color.Transparent;
             this.lblRCPword.Font = new System.Drawing.Font("Verily Serif Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRCPword.ForeColor = System.Drawing.Color.Red;
-            this.lblRCPword.Location = new System.Drawing.Point(433, 190);
+            this.lblRCPword.Location = new System.Drawing.Point(503, 190);
             this.lblRCPword.Name = "lblRCPword";
             this.lblRCPword.Size = new System.Drawing.Size(19, 20);
             this.lblRCPword.TabIndex = 12;
@@ -194,7 +194,7 @@
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(615, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -229,7 +229,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.therapyback;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(615, 307);
+            this.ClientSize = new System.Drawing.Size(800, 307);
             this.ControlBox = false;
             this.Controls.Add(this.lblRCPword);
             this.Controls.Add(this.lblRNPword);

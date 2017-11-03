@@ -17,10 +17,9 @@ namespace TherapyReferralSystem
         {
         }
 
-        public frmUserPasswordReset(string username, string type)
+        public frmUserPasswordReset(string username)
         {
             this.username = username;
-            this.type = type;
             InitializeComponent();
         }
 
@@ -30,7 +29,6 @@ namespace TherapyReferralSystem
         string email, otp, npword, cpword;
         bool found, valid = true;
         private string username;
-        private string type;
 
         private void backToLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,11 +39,14 @@ namespace TherapyReferralSystem
 
         private void frmUserPasswordReset_Load(object sender, EventArgs e)
         {
-           // 
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            // 
         }
 
         private void btnChangePword_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            valid = true;
             clearRequired();
             getFields();
             valid = check();
@@ -59,7 +60,7 @@ namespace TherapyReferralSystem
                 {
 
                     sm.updatePassword(email, npword);
-                    frmProfile pr = new frmProfile();
+                    frmProfile pr = new frmProfile(username);
                     pr.Show();
                     this.Dispose();
 
@@ -74,7 +75,7 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Invalid");
             }
 
-
+            Cursor.Current = Cursors.Default;
         }
 
         public void getFields()

@@ -19,23 +19,21 @@ namespace TherapyReferralSystem
             InitializeComponent();
         }
 
-        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmProfile pr = new frmProfile();
-            pr.Show();
-            this.Dispose();
-
-        }
+       
 
         private void frmHelp_Load(object sender, EventArgs e)
         {
-            
-            
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

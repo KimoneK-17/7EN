@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin1));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -144,7 +145,7 @@
             // mnuLoginLogout
             // 
             this.mnuLoginLogout.Name = "mnuLoginLogout";
-            this.mnuLoginLogout.Size = new System.Drawing.Size(181, 26);
+            this.mnuLoginLogout.Size = new System.Drawing.Size(124, 26);
             this.mnuLoginLogout.Text = "Exit";
             this.mnuLoginLogout.Click += new System.EventHandler(this.mnuLoginLogout_Click);
             // 
@@ -186,11 +187,11 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
-            this.Load += new System.EventHandler(this.frmLogin1_Load);
             this.mnuLogin.ResumeLayout(false);
             this.mnuLogin.PerformLayout();
             this.ResumeLayout(false);

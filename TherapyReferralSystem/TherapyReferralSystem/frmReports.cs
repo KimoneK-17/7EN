@@ -670,6 +670,7 @@ namespace TherapyReferralSystem
 
         private void frmReports_Load(object sender, EventArgs e)
         {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             if (type.Equals("Therapist")|| type.Equals("Teacher")|| type.Equals("Clinic"))
             {
                 mnuReportsRegChild.Enabled = false;

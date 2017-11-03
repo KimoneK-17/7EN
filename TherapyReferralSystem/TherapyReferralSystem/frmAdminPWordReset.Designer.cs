@@ -175,6 +175,7 @@
             this.Name = "frmAdminPWordReset";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Password Reset";
+            this.Load += new System.EventHandler(this.frmAdminPWordReset_Load);
             this.mnuAdminPR.ResumeLayout(false);
             this.mnuAdminPR.PerformLayout();
             this.ResumeLayout(false);

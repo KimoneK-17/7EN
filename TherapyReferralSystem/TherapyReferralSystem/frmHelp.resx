@@ -117,19 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="richTextBox6.Text" xml:space="preserve">
-    <value>1. Enter email address
-
-2. Click get question to receive security question associated with your profile
-
-3. Enter your answer , Submit answer will send you an email with a one time password
-
-4. Request Reset - This sends the admin an email to reset the password for you.
-</value>
-  </data>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>
 1. Enter username (Email Address) and corresponding password
@@ -194,6 +181,16 @@
 6. User Profile - goes to user profile
 
 7. Logout - goes back to login form
+</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>1. Enter email address
+
+2. Click get question to receive security question associated with your profile
+
+3. Enter your answer , Submit answer will send you an email with a one time password
+
+4. Request Reset - This sends the admin an email to reset the password for you.
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

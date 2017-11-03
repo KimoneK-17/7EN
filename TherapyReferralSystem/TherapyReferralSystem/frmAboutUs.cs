@@ -21,5 +21,10 @@ namespace TherapyReferralSystem
         {
             this.Dispose();
         }
+
+        private void frmAboutUs_Load(object sender, EventArgs e)
+        {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+        }
     }
 }

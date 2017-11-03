@@ -14,12 +14,12 @@ namespace TherapyReferralSystem
 {
     public partial class frmProfile : Form
     {
-        
+
 
         public frmProfile()
         {
-            
-           
+
+
         }
 
         public frmProfile(string username)
@@ -99,6 +99,7 @@ namespace TherapyReferralSystem
 
         private void frmProfile_Load(object sender, EventArgs e)
         {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
             //username = frmLogin1.username;
             try
             {
@@ -113,7 +114,7 @@ namespace TherapyReferralSystem
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Cannot Login at this time. Please try again later");
             }
@@ -219,46 +220,67 @@ namespace TherapyReferralSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             updateInfo();
+            Cursor.Current = Cursors.Default;
         }
 
-        
+
 
         private void btnChangePic_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            Cursor.Current = Cursors.WaitCursor;
+            try
             {
-                imgLocation = dialog.FileName.ToString();
-                picbxProfilePic.ImageLocation = imgLocation;
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    imgLocation = dialog.FileName.ToString();
+                    picbxProfilePic.ImageLocation = imgLocation;
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot change picture at the moment. Please try again later.");
+            }
+
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            byte[] images = null;
-            FileStream Stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-            BinaryReader brs = new BinaryReader(Stream);
-            images = brs.ReadBytes((int)Stream.Length);
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                byte[] images = null;
+                FileStream Stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(Stream);
+                images = brs.ReadBytes((int)Stream.Length);
 
-            dbConnect.OpenConnection();
-            string sqlQuery = "UPDATE TBL_USER SET U_IMAGE = @U_IMAGE WHERE U_EMAIL LIKE @U_EMAIL";
-            dbConnect.sqlCmd = new SqlCommand(sqlQuery, dbConnect.sqlConn);
+                dbConnect.OpenConnection();
+                string sqlQuery = "UPDATE TBL_USER SET U_IMAGE = @U_IMAGE WHERE U_EMAIL LIKE @U_EMAIL";
+                dbConnect.sqlCmd = new SqlCommand(sqlQuery, dbConnect.sqlConn);
 
-            dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_IMAGE", images));
-            dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_EMAIL", username));
-            int N = dbConnect.sqlCmd.ExecuteNonQuery();
-            dbConnect.sqlConn.Close();
-            MessageBox.Show(N.ToString() + "Image Saved Successfully");
+                dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_IMAGE", images));
+                dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_EMAIL", username));
+                int N = dbConnect.sqlCmd.ExecuteNonQuery();
+                dbConnect.sqlConn.Close();
+                MessageBox.Show("Image Saved Successfully");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot save image at this time. Please try again later");
+            }
 
+            Cursor.Current = Cursors.Default;
 
         }
 
         private void mnuProfileTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral(username,type);
+            frmTherapyReferral tf = new frmTherapyReferral(username, type);
             tf.Show();
             this.Dispose();
         }
@@ -266,7 +288,7 @@ namespace TherapyReferralSystem
         private void mnuProfileRegChild_Click(object sender, EventArgs e)
         {
 
-            frmRegisterChild rc = new frmRegisterChild(username,type);
+            frmRegisterChild rc = new frmRegisterChild(username, type);
             rc.Show();
             this.Dispose();
 
@@ -275,7 +297,7 @@ namespace TherapyReferralSystem
 
         private void mnuProfileRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser(username,type);
+            frmRegisterUser ru = new frmRegisterUser(username, type);
             ru.Show();
             this.Dispose();
         }
@@ -302,13 +324,13 @@ namespace TherapyReferralSystem
 
         private void resetUserPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdminPWordReset apr = new frmAdminPWordReset();
+            frmAdminPWordReset apr = new frmAdminPWordReset(username, type);
             apr.Show();
         }
 
         private void resetPasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUserPasswordReset upr = new frmUserPasswordReset(username,type);
+            frmUserPasswordReset upr = new frmUserPasswordReset(username);
             upr.Show();
             this.Dispose();
         }

@@ -14,20 +14,27 @@ namespace TherapyReferralSystem
     {
         public frmAdminPWordReset()
         {
-            InitializeComponent();
+           
         }
 
-
+        public frmAdminPWordReset(string username, string type)
+        {
+            this.username = username;
+            this.type = type;
+            InitializeComponent();
+        }
 
         DBConnect objDBConnect = new DBConnect();
         SharedMethods sm = new SharedMethods();
         string randomPassword;
         bool found;
+        private string username;
         private string type;
-        private string type1;
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+
+            Cursor.Current = Cursors.WaitCursor;
             if (!txtEmail.Text.Equals(""))
             {
                 if (txtEmail.Text.Contains("@") && txtEmail.Text.Contains("."))
@@ -56,7 +63,7 @@ namespace TherapyReferralSystem
             {
                 lblREmail.Text = "*Enter an email address";
             }
-
+            Cursor.Current = Cursors.Default;
 
         }
 
@@ -67,14 +74,7 @@ namespace TherapyReferralSystem
             login.Show();
             this.Dispose();
         }
-
-        private void mnuAdminPRReports_Click(object sender, EventArgs e)
-        {
-            frmReports rep = new frmReports(type);
-            rep.Show();
-            this.Dispose();
-        }
-
+        
         private void mnuAdminPRHelp_Click(object sender, EventArgs e)
         {
             frmHelp help = new frmHelp();
@@ -86,9 +86,16 @@ namespace TherapyReferralSystem
 
         private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProfile pr = new frmProfile();
+            Cursor.Current = Cursors.WaitCursor;
+            frmProfile pr = new frmProfile(type);
             pr.Show();
+            Cursor.Current = Cursors.Default;
             this.Hide();
+        }
+
+        private void frmAdminPWordReset_Load(object sender, EventArgs e)
+        {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
         }
     }
 }

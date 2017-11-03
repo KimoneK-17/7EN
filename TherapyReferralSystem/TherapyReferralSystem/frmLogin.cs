@@ -20,6 +20,7 @@ namespace TherapyReferralSystem
         SharedMethods sm = new SharedMethods();
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (!txtUsername.Text.Equals(""))
             {
                 username = txtUsername.Text;
@@ -41,12 +42,17 @@ namespace TherapyReferralSystem
                         MessageBox.Show("Enter Password");
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Incorrect format for email address.\n Example: sample@company.com");
+                }
 
             }
             else
             {
                 MessageBox.Show("Ënter Username");
             }
+            Cursor.Current = Cursors.Default;
         }
 
 
@@ -64,10 +70,6 @@ namespace TherapyReferralSystem
         }
 
 
-        private void frmLogin1_Load(object sender, EventArgs e)
-        {
-        }
-
 
         private void btnViewPword_Click(object sender, EventArgs e)
         {
@@ -83,7 +85,7 @@ namespace TherapyReferralSystem
                     txtPassword.PasswordChar = '\0';
                 }
             }
-            
+
         }
 
         private void CheckValid()
@@ -104,7 +106,7 @@ namespace TherapyReferralSystem
                 //assigning query to variable
                 if (int.Parse(checkVal) > 0)
                 {
-                   
+
                     //in database
                     checkPword();
 
@@ -112,7 +114,7 @@ namespace TherapyReferralSystem
                 }
                 else
                 {
-                   
+
                     //not in database
                     MessageBox.Show("Invalid credentials");
                 }
@@ -145,7 +147,7 @@ namespace TherapyReferralSystem
 
                 pword = (string)objDBConnect.sqlCmd.ExecuteScalar();
 
-                if(pword.StartsWith("#"))
+                if (pword.StartsWith("#"))
                 {
 
                     DialogResult result = MessageBox.Show("Password Reset Is Neccessary. Please click OK to reset now or cancel to proceed to profile", "Reset Password",
@@ -154,7 +156,7 @@ namespace TherapyReferralSystem
                     {
                         case DialogResult.OK:
                             {
-                                frmUserPasswordReset upr = new frmUserPasswordReset();
+                                frmUserPasswordReset upr = new frmUserPasswordReset(username);
                                 upr.Show();
                                 this.Hide();
                                 break;
@@ -167,12 +169,12 @@ namespace TherapyReferralSystem
                                 break;
                             }
                     }
-                    
+
 
                 }
                 else
                 {
-                   
+
                     frmProfile pr = new frmProfile(username);
                     pr.Show();
                     this.Hide();
