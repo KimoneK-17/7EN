@@ -21,8 +21,9 @@ namespace TherapyReferralSystem
         string t_c_num, t_c_name, t_refby, t_reason, t_report, t_type, t_status, t_therapist, ref_date, start_date, end_date, w_list;
         int t_sessions;
         string therapyid;
+        bool valid,fieldPop;
         DBConnect objDBConnect = new DBConnect();
-     
+
 
 
         SharedMethods sm = new SharedMethods();
@@ -31,7 +32,7 @@ namespace TherapyReferralSystem
 
         public frmTherapyReferral()
         {
-            
+
         }
 
         public frmTherapyReferral(string username, string type)
@@ -41,132 +42,59 @@ namespace TherapyReferralSystem
             InitializeComponent();
         }
 
-        public bool checkComboBoxes()
+        public bool validateFields()
         {
-            bool valid;
-            Boolean validCNum = false;
-            Boolean validReason = false;
-            Boolean validRef = false;
-            Boolean validReport = false;
-            Boolean validType = false;
-            Boolean validStatus = false;
-            Boolean validTherapist = false;
-            if (cmbCNum.SelectedIndex > -1)
+            bool empty = false;
+            if (cmbCNum.SelectedIndex == -1)
             {
-                validCNum = true;
+                lblRCNum.Text = "*Required";
+                empty = true;
             }
-            if (cmbReason.SelectedIndex > -1)
+            if (cmbReason.SelectedIndex == -1)
             {
-                validReason = true;
+                lblRReason.Text = "*Required";
+                empty = true;
             }
-            if (cmbRefBy.SelectedIndex > -1)
+            if (cmbRefBy.SelectedIndex == -1)
             {
-                validRef = true;
+                lblRRefBy.Text = "*Required";
+                empty = true;
             }
-            if (cmbReport.SelectedIndex > -1)
+            if (cmbReport.SelectedIndex == -1)
             {
-                validReport = true;
+                lblRReport.Text = "*Required";
+                empty = true;
             }
-            if (cmbType.SelectedIndex > -1)
+            if (cmbStatus.SelectedIndex == -1)
             {
-                validType = true;
+                lblRStatus.Text = "*Required";
+                empty = true;
             }
-            if (cmbStatus.SelectedIndex > -1)
+            if (cmbTherapist.SelectedIndex == -1)
             {
-                validStatus = true;
+                lblRTherapist.Text = "*Required";
+                empty = true;
             }
-            if (cmbTherapist.SelectedIndex > -1)
+            if (cmbType.SelectedIndex == -1)
             {
-                validTherapist = true;
-            }
-
-            if (validCNum == false)
-            {
-                lbl1.Text = "Select a childs name";
-            }
-            if (validReason == false)
-            {
-                lbl3.Text = "Select a reason";
-            }
-            if (validRef == false)
-            {
-                lbl9.Text = "Select a reference";
-            }
-            if (validReport == false)
-            {
-                lbl8.Text = "Select a Report";
-            }
-            if (validType == false)
-            {
-                lbl5.Text = "Select a session";
-            }
-            if (validStatus == false)
-            {
-                lbl4.Text = "Select a status";
-            }
-            if (validTherapist == false)
-            {
-                lbl7.Text = "Select a Therapist";
+                lblRType.Text = "*Required";
+                empty = true;
             }
 
-            if (validCNum == true && validReason == true && validRef == true && validReport == true && validType == true && validStatus == true && validTherapist == true)
+            if (txtCondition.Text.Equals(""))
             {
-                valid = true;
+                lblRDiagnosis.Text = "*Required";
+                empty = true;
             }
-            else
+            if (rtxtDetails.Text.Equals(""))
             {
-                valid = false;
+                lblRDetails.Text = "*Required";
+                empty = true;
             }
 
-            return valid;
+            return empty;
         }
-        public bool checkText(String con, String det, String res)
-        {
-            bool validText = false;
-            Boolean validCon = false;
-            Boolean validDet = false;
-            Boolean validRes = false;
-            if (!con.Any(char.IsLetter) || con.Any(char.IsDigit) || con.Equals(""))
-            {
-                validCon = false;
-                lbl2.Text = "Enter a valid Condition";
-            }
-            else
-            {
-                validCon = true;
-            }
 
-            if (!det.Any(char.IsLetter) || det.Any(char.IsDigit) || det.Equals(""))
-            {
-                validDet = false;
-                lbl12.Text = "Enter valid Details";
-            }
-            else
-            {
-                validDet = true;
-            }
-
-            if (!res.Any(char.IsLetter) || res.Any(char.IsDigit) || res.Equals(""))
-            {
-                validRes = false;
-                MessageBox.Show("Enter a valid result");
-            }
-            else
-            {
-                validRes = true;
-            }
-
-            if (validCon == false || validDet == false || validRes == false)
-            {
-                validText = false;
-                return validText;
-            }
-            else
-            {
-                validText = true;
-                return validText;
-            }
-        }
 
         private void frmTherapyReferral_Load(object sender, EventArgs e)
         {
@@ -183,7 +111,7 @@ namespace TherapyReferralSystem
 
             label1.Hide();
             dtpDateEnd.Hide();
-            
+
 
         }
 
@@ -401,7 +329,7 @@ namespace TherapyReferralSystem
             try
             {
                 objDBConnect.OpenConnection();
-                string sqlquery = "select (select c_number from child c where c.c_number = r.r_c_number) as c_num,R_DIAGNOSIS,R_REASON,R_STATUS,R_SESSION,R_REFFERED_BY,R_DATE_REFFERED,R_DATE_START,R_WAITING_LIST,R_DATE_ENDED,R_NUM_OF_SESSION,R_DETAILS,(select U_FNAME+' '+U_SNAME from tbl_user u where u.u_id = r.r_therapist) as u_name,R_REPORT,R_RESULT from therapy_ref r WHERE R_ID = @R_ID";
+                string sqlquery = "select R_C_NUMBER,R_DIAGNOSIS,R_REASON,R_STATUS,R_SESSION,R_REFFERED_BY,R_DATE_REFFERED,R_DATE_START,R_WAITING_LIST,R_DATE_ENDED,R_NUM_OF_SESSION,R_DETAILS,(select U_FNAME+' '+U_SNAME from tbl_user u where u.u_id = r.r_therapist) as u_name,R_REPORT,R_RESULT from therapy_ref r WHERE R_ID = @R_ID";
 
                 objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", therapyid);
@@ -415,12 +343,12 @@ namespace TherapyReferralSystem
                     rtxtResult.Text = objDBConnect.sqlDR["R_RESULT"].ToString();
                     w_list = objDBConnect.sqlDR["R_WAITING_LIST"].ToString();
 
-                    int iNumber = cmbCNum.Items.IndexOf(objDBConnect.sqlDR["c_num"].ToString());
+                    int iNumber = cmbCNum.Items.IndexOf(objDBConnect.sqlDR["R_C_NUMBER"].ToString());
                     cmbCNum.SelectedIndex = iNumber;
                     int iReason = cmbReason.Items.IndexOf(objDBConnect.sqlDR["R_REASON"].ToString());
                     cmbReason.SelectedIndex = iReason;
-                    int iStaus = cmbStatus.Items.IndexOf(objDBConnect.sqlDR["R_STATUS"].ToString());
-                    cmbStatus.SelectedIndex = iStaus;
+                    int iStatus = cmbRefBy.Items.IndexOf(objDBConnect.sqlDR["R_STATUS"].ToString().ToLower());
+                    cmbStatus.SelectedIndex = iStatus;
                     int iSession = cmbType.Items.IndexOf(objDBConnect.sqlDR["R_SESSION"].ToString());
                     cmbType.SelectedIndex = iSession;
                     int iNumSess;
@@ -456,12 +384,15 @@ namespace TherapyReferralSystem
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            updateTherapy();
+            getFields();
+            if (fieldPop == true)
+            {
+                updateTherapy();
+            }
         }
 
         public void updateTherapy()
         {
-            validate();
             getFields();
             try
             {
@@ -476,14 +407,32 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_SESSION", t_type);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REFFERED_BY", t_refby);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED", DateTime.Parse(ref_date));
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
+
+                if (chkWaitingList.Checked == true)
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", DBNull.Value);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", DBNull.Value);
+                }
+                else
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", start_date);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+                }
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_NUM_OF_SESSION", t_sessions);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DETAILS", details);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_THERAPIST", t_therapist);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REPORT", t_report);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", result);
+
+                if (string.IsNullOrEmpty(result))
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", DBNull.Value);
+                }
+                else
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", result);
+
+                }
 
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
@@ -536,72 +485,83 @@ namespace TherapyReferralSystem
             }
         }
 
-        public void validate()
-        {
-            condition = txtCondition.Text;
-            details = rtxtDetails.Text;
-            result = rtxtResult.Text;
-            if (checkComboBoxes() == false && checkText(condition, details, result) == false)
-            {
-                MessageBox.Show("valid");
-            }
-            else
-            {
-                MessageBox.Show("not valid");
-            }
-        }
+
 
         private void btnAddRef_Click(object sender, EventArgs e)
         {
-            validate();
-            getFields();
-            insertFieldsIntoDB();
 
-            MessageBox.Show(" " + t_c_num + "\n" + t_refby + "\n" + t_report + "\n" + t_type + "\n" + t_status + "\n" + t_therapist + "\n" + ref_date + "\n" + start_date + "\n" + end_date);
+            Cursor.Current = Cursors.WaitCursor;
+
+            getFields();
+            if (fieldPop == true)
+            {
+                insertFieldsIntoDB();
+            }
+
+            Cursor.Current = Cursors.Default;
 
         }
 
         private void getFields()
         {
-            try
-            {
-                t_c_num = cmbCNum.SelectedValue.ToString();
-                t_reason = cmbReason.SelectedItem.ToString();
-                t_refby = cmbRefBy.SelectedItem.ToString();
-                t_report = cmbReport.SelectedItem.ToString();
-                t_type = cmbType.SelectedItem.ToString();
-                t_status = cmbStatus.SelectedItem.ToString();
-                t_therapist = cmbTherapist.SelectedValue.ToString();
-                t_sessions = (int)nudSess.Value;
-            }
+            valid = validateFields();
 
-            catch (Exception exa)
-            {
-                MessageBox.Show(exa.Message);
-            }
-            ref_date = dtpDateRef.Value.ToString("yyyy-MM-dd");
-
-            if (chkWaitingList.Checked == true)
+            if (valid == false)
             {
 
-                start_date = DBNull.Value.ToString();
-                end_date = DBNull.Value.ToString();
-            }
-            else
-            {
-                w_list = "NO";
-                start_date = dtpDateStart.Value.ToString("yyyy-MM-dd");
-            }
 
-            if (chbEnd.Checked == false)
-            {
-                end_date = DBNull.Value.ToString();
-            }
-            else
-            {
-                end_date = dtpDateEnd.Value.ToString("yyyy-MM-dd");
-            }
+                try
+                {
+                    t_c_num = cmbCNum.SelectedValue.ToString();
+                    t_reason = cmbReason.SelectedItem.ToString();
+                    t_refby = cmbRefBy.SelectedItem.ToString();
+                    t_report = cmbReport.SelectedItem.ToString();
+                    t_type = cmbType.SelectedItem.ToString();
+                    t_status = cmbStatus.SelectedItem.ToString();
+                    t_therapist = cmbTherapist.SelectedValue.ToString();
+                    t_sessions = (int)nudSess.Value;
+                    condition = txtCondition.Text;
+                    details = rtxtDetails.Text;
+                    result = rtxtResult.Text;
+                    ref_date = dtpDateRef.Value.ToString("yyyy-MM-dd");
+                    if (chkWaitingList.Checked == true)
+                    {
 
+                        start_date = DBNull.Value.ToString();
+                        end_date = DBNull.Value.ToString();
+
+                    }
+                    else
+                    {
+
+
+                        w_list = "NO";
+                        start_date = dtpDateStart.Value.ToString("yyyy-MM-dd");
+                    }
+
+                    if (chbEnd.Checked == false)
+                    {
+                        end_date = DBNull.Value.ToString();
+                    }
+                    else
+                    {
+                        end_date = dtpDateEnd.Value.ToString("yyyy-MM-dd");
+                    }
+                    fieldPop = true;
+
+              
+                }
+
+                catch (Exception exa)
+                {
+                    MessageBox.Show(exa.Message);
+                    fieldPop = false;
+                }
+                
+
+
+                
+            }
         }
 
         public void getChildName()
@@ -650,19 +610,28 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_STATUS", t_status);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_SESSION", t_type);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REFFERED_BY", t_refby);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED", DateTime.Parse(ref_date));
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED", ref_date);
 
 
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", start_date);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
 
-
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_NUM_OF_SESSION", t_sessions);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DETAILS", details);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_THERAPIST", t_therapist);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_REPORT", t_report);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", result);
+
+                if (string.IsNullOrEmpty(result))
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", DBNull.Value);
+                }
+                else
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_RESULT", result);
+
+                }
+
 
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
@@ -704,14 +673,14 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild(username,type);
+            frmRegisterChild rc = new frmRegisterChild(username, type);
             rc.Show();
             this.Dispose();
         }
 
         private void mnuTherapyRefRegUser_Click(object sender, EventArgs e)
         {
-            frmRegisterUser ru = new frmRegisterUser(username,type);
+            frmRegisterUser ru = new frmRegisterUser(username, type);
             ru.Show();
             this.Dispose();
         }

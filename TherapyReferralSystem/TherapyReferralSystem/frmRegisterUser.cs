@@ -40,7 +40,7 @@ namespace TherapyReferralSystem
         public frmRegisterUser()
         {
 
-            
+
         }
 
         public frmRegisterUser(string username, string type)
@@ -74,14 +74,14 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserTherRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tf = new frmTherapyReferral(username,type);
+            frmTherapyReferral tf = new frmTherapyReferral(username, type);
             tf.Show();
             this.Dispose();
         }
 
         private void mnuRegUserRegChild_Click(object sender, EventArgs e)
         {
-            frmRegisterChild rc = new frmRegisterChild(username,type);
+            frmRegisterChild rc = new frmRegisterChild(username, type);
             rc.Show();
             this.Dispose();
         }
@@ -93,12 +93,12 @@ namespace TherapyReferralSystem
             if (type.Equals("Therapist") || type.Equals("Teacher") || type.Equals("Clinic"))
             {
                 mnuRegUserRegChild.Visible = false;
-                
+
             }
-                panel2.Hide();
+            panel2.Hide();
             lblRIE.Hide();
             lblRTherapy.Hide();
-            
+
         }
 
         private void btnclear_Click(object sender, EventArgs e)
@@ -405,7 +405,9 @@ namespace TherapyReferralSystem
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             deleteChild();
+            Cursor.Current = Cursors.Default;
         }
 
         public void deleteChild()
@@ -467,7 +469,7 @@ namespace TherapyReferralSystem
         private void mnuRegUserUpdate_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            searchUser();
+
             updateUser();
             Cursor.Current = Cursors.WaitCursor;
 

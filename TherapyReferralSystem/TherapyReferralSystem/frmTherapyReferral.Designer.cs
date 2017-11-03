@@ -79,18 +79,18 @@
             this.mnuTherapyRefRegChild = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefRegUser = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClearFields = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.lbl2 = new System.Windows.Forms.Label();
-            this.lbl3 = new System.Windows.Forms.Label();
-            this.lbl4 = new System.Windows.Forms.Label();
-            this.lbl5 = new System.Windows.Forms.Label();
-            this.lbl6 = new System.Windows.Forms.Label();
-            this.lbl7 = new System.Windows.Forms.Label();
-            this.lbl8 = new System.Windows.Forms.Label();
-            this.lbl9 = new System.Windows.Forms.Label();
-            this.lbl10 = new System.Windows.Forms.Label();
-            this.lbl11 = new System.Windows.Forms.Label();
-            this.lbl12 = new System.Windows.Forms.Label();
+            this.lblRCNum = new System.Windows.Forms.Label();
+            this.lblRDiagnosis = new System.Windows.Forms.Label();
+            this.lblRReason = new System.Windows.Forms.Label();
+            this.lblRStatus = new System.Windows.Forms.Label();
+            this.lblRType = new System.Windows.Forms.Label();
+            this.lblRNumSes = new System.Windows.Forms.Label();
+            this.lblRTherapist = new System.Windows.Forms.Label();
+            this.lblRReport = new System.Windows.Forms.Label();
+            this.lblRRefBy = new System.Windows.Forms.Label();
+            this.lblRDateRef = new System.Windows.Forms.Label();
+            this.lblRStartDate = new System.Windows.Forms.Label();
+            this.lblRDetails = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSess)).BeginInit();
@@ -258,10 +258,10 @@
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
-            "Open",
-            "Closed",
-            "Assessment",
-            "Waiting List"});
+            "open",
+            "closed",
+            "assessment",
+            "waiting list"});
             this.cmbStatus.Location = new System.Drawing.Point(16, 110);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
@@ -410,8 +410,8 @@
             this.cmbReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbReport.FormattingEnabled = true;
             this.cmbReport.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
+            "YES",
+            "NO"});
             this.cmbReport.Location = new System.Drawing.Point(16, 146);
             this.cmbReport.Margin = new System.Windows.Forms.Padding(4);
             this.cmbReport.Name = "cmbReport";
@@ -560,9 +560,9 @@
             // mnuTherapyRefFile
             // 
             this.mnuTherapyRefFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchToolStripMenuItem,
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.searchToolStripMenuItem,
             this.toolStripSeparator1,
             this.myProfileToolStripMenuItem,
             this.mnuTherapyRefReturn});
@@ -575,40 +575,40 @@
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.searchToolStripMenuItem.Text = "Search";
             this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // myProfileToolStripMenuItem
             // 
             this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.myProfileToolStripMenuItem.Text = "My Profile";
             this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
             // 
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(174, 26);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
             this.mnuTherapyRefReturn.Text = "Logout";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
@@ -676,149 +676,149 @@
             this.btnClearFields.Text = "CLEAR FIELDS";
             this.btnClearFields.UseVisualStyleBackColor = false;
             // 
-            // lbl1
+            // lblRCNum
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Red;
-            this.lbl1.Location = new System.Drawing.Point(750, 48);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(16, 16);
-            this.lbl1.TabIndex = 56;
-            this.lbl1.Text = "*";
+            this.lblRCNum.AutoSize = true;
+            this.lblRCNum.BackColor = System.Drawing.Color.Transparent;
+            this.lblRCNum.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRCNum.ForeColor = System.Drawing.Color.Red;
+            this.lblRCNum.Location = new System.Drawing.Point(750, 48);
+            this.lblRCNum.Name = "lblRCNum";
+            this.lblRCNum.Size = new System.Drawing.Size(16, 16);
+            this.lblRCNum.TabIndex = 56;
+            this.lblRCNum.Text = "*";
             // 
-            // lbl2
+            // lblRDiagnosis
             // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl2.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.ForeColor = System.Drawing.Color.Red;
-            this.lbl2.Location = new System.Drawing.Point(750, 79);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(16, 16);
-            this.lbl2.TabIndex = 60;
-            this.lbl2.Text = "*";
+            this.lblRDiagnosis.AutoSize = true;
+            this.lblRDiagnosis.BackColor = System.Drawing.Color.Transparent;
+            this.lblRDiagnosis.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRDiagnosis.ForeColor = System.Drawing.Color.Red;
+            this.lblRDiagnosis.Location = new System.Drawing.Point(750, 79);
+            this.lblRDiagnosis.Name = "lblRDiagnosis";
+            this.lblRDiagnosis.Size = new System.Drawing.Size(16, 16);
+            this.lblRDiagnosis.TabIndex = 60;
+            this.lblRDiagnosis.Text = "*";
             // 
-            // lbl3
+            // lblRReason
             // 
-            this.lbl3.AutoSize = true;
-            this.lbl3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.ForeColor = System.Drawing.Color.Red;
-            this.lbl3.Location = new System.Drawing.Point(750, 115);
-            this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(16, 16);
-            this.lbl3.TabIndex = 61;
-            this.lbl3.Text = "*";
+            this.lblRReason.AutoSize = true;
+            this.lblRReason.BackColor = System.Drawing.Color.Transparent;
+            this.lblRReason.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRReason.ForeColor = System.Drawing.Color.Red;
+            this.lblRReason.Location = new System.Drawing.Point(750, 115);
+            this.lblRReason.Name = "lblRReason";
+            this.lblRReason.Size = new System.Drawing.Size(16, 16);
+            this.lblRReason.TabIndex = 61;
+            this.lblRReason.Text = "*";
             // 
-            // lbl4
+            // lblRStatus
             // 
-            this.lbl4.AutoSize = true;
-            this.lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.ForeColor = System.Drawing.Color.Red;
-            this.lbl4.Location = new System.Drawing.Point(750, 156);
-            this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(16, 16);
-            this.lbl4.TabIndex = 62;
-            this.lbl4.Text = "*";
+            this.lblRStatus.AutoSize = true;
+            this.lblRStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblRStatus.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRStatus.ForeColor = System.Drawing.Color.Red;
+            this.lblRStatus.Location = new System.Drawing.Point(750, 156);
+            this.lblRStatus.Name = "lblRStatus";
+            this.lblRStatus.Size = new System.Drawing.Size(16, 16);
+            this.lblRStatus.TabIndex = 62;
+            this.lblRStatus.Text = "*";
             // 
-            // lbl5
+            // lblRType
             // 
-            this.lbl5.AutoSize = true;
-            this.lbl5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl5.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.ForeColor = System.Drawing.Color.Red;
-            this.lbl5.Location = new System.Drawing.Point(750, 189);
-            this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(16, 16);
-            this.lbl5.TabIndex = 63;
-            this.lbl5.Text = "*";
+            this.lblRType.AutoSize = true;
+            this.lblRType.BackColor = System.Drawing.Color.Transparent;
+            this.lblRType.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRType.ForeColor = System.Drawing.Color.Red;
+            this.lblRType.Location = new System.Drawing.Point(750, 189);
+            this.lblRType.Name = "lblRType";
+            this.lblRType.Size = new System.Drawing.Size(16, 16);
+            this.lblRType.TabIndex = 63;
+            this.lblRType.Text = "*";
             // 
-            // lbl6
+            // lblRNumSes
             // 
-            this.lbl6.AutoSize = true;
-            this.lbl6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl6.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl6.ForeColor = System.Drawing.Color.Red;
-            this.lbl6.Location = new System.Drawing.Point(750, 261);
-            this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(16, 16);
-            this.lbl6.TabIndex = 64;
-            this.lbl6.Text = "*";
+            this.lblRNumSes.AutoSize = true;
+            this.lblRNumSes.BackColor = System.Drawing.Color.Transparent;
+            this.lblRNumSes.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRNumSes.ForeColor = System.Drawing.Color.Red;
+            this.lblRNumSes.Location = new System.Drawing.Point(750, 261);
+            this.lblRNumSes.Name = "lblRNumSes";
+            this.lblRNumSes.Size = new System.Drawing.Size(16, 16);
+            this.lblRNumSes.TabIndex = 64;
+            this.lblRNumSes.Text = "*";
             // 
-            // lbl7
+            // lblRTherapist
             // 
-            this.lbl7.AutoSize = true;
-            this.lbl7.BackColor = System.Drawing.Color.Transparent;
-            this.lbl7.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl7.ForeColor = System.Drawing.Color.Red;
-            this.lbl7.Location = new System.Drawing.Point(750, 360);
-            this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(16, 16);
-            this.lbl7.TabIndex = 65;
-            this.lbl7.Text = "*";
+            this.lblRTherapist.AutoSize = true;
+            this.lblRTherapist.BackColor = System.Drawing.Color.Transparent;
+            this.lblRTherapist.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRTherapist.ForeColor = System.Drawing.Color.Red;
+            this.lblRTherapist.Location = new System.Drawing.Point(750, 360);
+            this.lblRTherapist.Name = "lblRTherapist";
+            this.lblRTherapist.Size = new System.Drawing.Size(16, 16);
+            this.lblRTherapist.TabIndex = 65;
+            this.lblRTherapist.Text = "*";
             // 
-            // lbl8
+            // lblRReport
             // 
-            this.lbl8.AutoSize = true;
-            this.lbl8.BackColor = System.Drawing.Color.Transparent;
-            this.lbl8.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl8.ForeColor = System.Drawing.Color.Red;
-            this.lbl8.Location = new System.Drawing.Point(750, 398);
-            this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(16, 16);
-            this.lbl8.TabIndex = 66;
-            this.lbl8.Text = "*";
+            this.lblRReport.AutoSize = true;
+            this.lblRReport.BackColor = System.Drawing.Color.Transparent;
+            this.lblRReport.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRReport.ForeColor = System.Drawing.Color.Red;
+            this.lblRReport.Location = new System.Drawing.Point(750, 398);
+            this.lblRReport.Name = "lblRReport";
+            this.lblRReport.Size = new System.Drawing.Size(16, 16);
+            this.lblRReport.TabIndex = 66;
+            this.lblRReport.Text = "*";
             // 
-            // lbl9
+            // lblRRefBy
             // 
-            this.lbl9.AutoSize = true;
-            this.lbl9.BackColor = System.Drawing.Color.Transparent;
-            this.lbl9.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl9.ForeColor = System.Drawing.Color.Red;
-            this.lbl9.Location = new System.Drawing.Point(750, 548);
-            this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(16, 16);
-            this.lbl9.TabIndex = 67;
-            this.lbl9.Text = "*";
+            this.lblRRefBy.AutoSize = true;
+            this.lblRRefBy.BackColor = System.Drawing.Color.Transparent;
+            this.lblRRefBy.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRRefBy.ForeColor = System.Drawing.Color.Red;
+            this.lblRRefBy.Location = new System.Drawing.Point(750, 548);
+            this.lblRRefBy.Name = "lblRRefBy";
+            this.lblRRefBy.Size = new System.Drawing.Size(16, 16);
+            this.lblRRefBy.TabIndex = 67;
+            this.lblRRefBy.Text = "*";
             // 
-            // lbl10
+            // lblRDateRef
             // 
-            this.lbl10.AutoSize = true;
-            this.lbl10.BackColor = System.Drawing.Color.Transparent;
-            this.lbl10.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl10.ForeColor = System.Drawing.Color.Red;
-            this.lbl10.Location = new System.Drawing.Point(750, 583);
-            this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(16, 16);
-            this.lbl10.TabIndex = 68;
-            this.lbl10.Text = "*";
+            this.lblRDateRef.AutoSize = true;
+            this.lblRDateRef.BackColor = System.Drawing.Color.Transparent;
+            this.lblRDateRef.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRDateRef.ForeColor = System.Drawing.Color.Red;
+            this.lblRDateRef.Location = new System.Drawing.Point(750, 583);
+            this.lblRDateRef.Name = "lblRDateRef";
+            this.lblRDateRef.Size = new System.Drawing.Size(16, 16);
+            this.lblRDateRef.TabIndex = 68;
+            this.lblRDateRef.Text = "*";
             // 
-            // lbl11
+            // lblRStartDate
             // 
-            this.lbl11.AutoSize = true;
-            this.lbl11.BackColor = System.Drawing.Color.Transparent;
-            this.lbl11.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl11.ForeColor = System.Drawing.Color.Red;
-            this.lbl11.Location = new System.Drawing.Point(750, 650);
-            this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(16, 16);
-            this.lbl11.TabIndex = 70;
-            this.lbl11.Text = "*";
+            this.lblRStartDate.AutoSize = true;
+            this.lblRStartDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblRStartDate.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRStartDate.ForeColor = System.Drawing.Color.Red;
+            this.lblRStartDate.Location = new System.Drawing.Point(750, 650);
+            this.lblRStartDate.Name = "lblRStartDate";
+            this.lblRStartDate.Size = new System.Drawing.Size(16, 16);
+            this.lblRStartDate.TabIndex = 70;
+            this.lblRStartDate.Text = "*";
             // 
-            // lbl12
+            // lblRDetails
             // 
-            this.lbl12.AutoSize = true;
-            this.lbl12.BackColor = System.Drawing.Color.Transparent;
-            this.lbl12.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl12.ForeColor = System.Drawing.Color.Red;
-            this.lbl12.Location = new System.Drawing.Point(750, 298);
-            this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(16, 16);
-            this.lbl12.TabIndex = 71;
-            this.lbl12.Text = "*";
+            this.lblRDetails.AutoSize = true;
+            this.lblRDetails.BackColor = System.Drawing.Color.Transparent;
+            this.lblRDetails.Font = new System.Drawing.Font("Verily Serif Mono", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRDetails.ForeColor = System.Drawing.Color.Red;
+            this.lblRDetails.Location = new System.Drawing.Point(750, 298);
+            this.lblRDetails.Name = "lblRDetails";
+            this.lblRDetails.Size = new System.Drawing.Size(16, 16);
+            this.lblRDetails.TabIndex = 71;
+            this.lblRDetails.Text = "*";
             // 
             // frmTherapyReferral
             // 
@@ -829,18 +829,18 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1031, 878);
             this.ControlBox = false;
-            this.Controls.Add(this.lbl12);
-            this.Controls.Add(this.lbl11);
-            this.Controls.Add(this.lbl10);
-            this.Controls.Add(this.lbl9);
-            this.Controls.Add(this.lbl8);
-            this.Controls.Add(this.lbl7);
-            this.Controls.Add(this.lbl6);
-            this.Controls.Add(this.lbl5);
-            this.Controls.Add(this.lbl4);
-            this.Controls.Add(this.lbl3);
-            this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.lblRDetails);
+            this.Controls.Add(this.lblRStartDate);
+            this.Controls.Add(this.lblRDateRef);
+            this.Controls.Add(this.lblRRefBy);
+            this.Controls.Add(this.lblRReport);
+            this.Controls.Add(this.lblRTherapist);
+            this.Controls.Add(this.lblRNumSes);
+            this.Controls.Add(this.lblRType);
+            this.Controls.Add(this.lblRStatus);
+            this.Controls.Add(this.lblRReason);
+            this.Controls.Add(this.lblRDiagnosis);
+            this.Controls.Add(this.lblRCNum);
             this.Controls.Add(this.btnClearFields);
             this.Controls.Add(this.mnuTherapyRef);
             this.Controls.Add(this.label2);
@@ -928,18 +928,18 @@
         private System.Windows.Forms.ToolStripMenuItem mnuTherapyRefRegChild;
         private System.Windows.Forms.ToolStripMenuItem mnuTherapyRefRegUser;
         private System.Windows.Forms.Button btnClearFields;
-        private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Label lbl3;
-        private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.Label lbl6;
-        private System.Windows.Forms.Label lbl7;
-        private System.Windows.Forms.Label lbl8;
-        private System.Windows.Forms.Label lbl9;
-        private System.Windows.Forms.Label lbl10;
-        private System.Windows.Forms.Label lbl11;
-        private System.Windows.Forms.Label lbl12;
+        private System.Windows.Forms.Label lblRCNum;
+        private System.Windows.Forms.Label lblRDiagnosis;
+        private System.Windows.Forms.Label lblRReason;
+        private System.Windows.Forms.Label lblRStatus;
+        private System.Windows.Forms.Label lblRType;
+        private System.Windows.Forms.Label lblRNumSes;
+        private System.Windows.Forms.Label lblRTherapist;
+        private System.Windows.Forms.Label lblRReport;
+        private System.Windows.Forms.Label lblRRefBy;
+        private System.Windows.Forms.Label lblRDateRef;
+        private System.Windows.Forms.Label lblRStartDate;
+        private System.Windows.Forms.Label lblRDetails;
         private System.Windows.Forms.CheckBox chbEnd;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
