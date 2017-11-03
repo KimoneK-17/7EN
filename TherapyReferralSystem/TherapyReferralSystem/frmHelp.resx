@@ -120,4 +120,83 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>1. Enter email address
+
+2. Click get question to receive security question associated with your profile
+
+3. Enter your answer , Submit answer will send you an email with a one time password
+
+4. Request Reset - This sends the admin an email to reset the password for you.
+</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>
+1. Enter username (Email Address) and corresponding password
+
+2. If you forget your password click on “Forgot Password”, this will redirect you to the password recovery screen
+
+3. Click login button to go to the user profile
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>1. This screen shows information about you (the user).
+
+2. Change Picture - This opens a file dialog that will allow you to select the image you want to add to associate to your profile
+
+3. Save - will allow you to save the new image to the profile
+
+4. Update Information - this will allow you to update your name, surname and mobile number
+</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>1. Capture Child - Adds new child record to database
+
+2. Clear - Clears all fields 
+
+3. Search - Search for child using Child Number or Child ID
+
+4. Update - update certain child  information
+
+5. Delete - delete child from database using child number
+
+6. User Profile - goes to user profile
+
+7. Logout - goes back to login form</value>
+  </data>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>1. Register - Adds new user record to database
+
+2. Clear - Clears all fields 
+
+3. Search - Search for user using ID Number
+
+4. Update - update certain user information
+
+5. Delete - delete user from database using user ID
+
+6. User Profile - goes to user profile
+
+7. Logout - goes back to login form
+</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>1. Capture Therapy - Adds new referral record to database
+
+2. Clear - Clears all fields 
+
+3. Search - Search for user using Therapy ID
+
+4. Update - update certain therapy information
+
+5. Delete - delete therapy referral from database using therapy ID
+
+6. User Profile - goes to user profile
+
+7. Logout - goes back to login form
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>34</value>
+  </metadata>
 </root>

@@ -12,8 +12,7 @@ namespace TherapyReferralSystem
 {
     public partial class frmHelp : Form
     {
-        private string type;
-        private string username;
+    
 
         public frmHelp()
         {
@@ -29,6 +28,12 @@ namespace TherapyReferralSystem
         }
 
         private void frmHelp_Load(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
