@@ -19,6 +19,7 @@ namespace TherapyReferralSystem
         String details;
         String result;
         string t_c_num, t_c_name, t_refby, t_reason, t_report, t_type, t_status, t_therapist, ref_date, start_date, end_date, w_list;
+       
         int t_sessions;
         string therapyid;
         bool valid,fieldPop;
@@ -329,7 +330,7 @@ namespace TherapyReferralSystem
             try
             {
                 objDBConnect.OpenConnection();
-                string sqlquery = "select R_C_NUMBER,R_DIAGNOSIS,R_REASON,R_STATUS,R_SESSION,R_REFFERED_BY,R_DATE_REFFERED,R_DATE_START,R_WAITING_LIST,R_DATE_ENDED,R_NUM_OF_SESSION,R_DETAILS,(select U_FNAME+' '+U_SNAME from tbl_user u where u.u_id = r.r_therapist) as u_name,R_REPORT,R_RESULT from therapy_ref r WHERE R_ID = @R_ID";
+                string sqlquery = "select (select c_number from child where c_number like r_c_number) as c_num,R_DIAGNOSIS,R_REASON,R_STATUS,R_SESSION,R_REFFERED_BY,R_DATE_REFFERED,R_DATE_START,R_WAITING_LIST,R_DATE_ENDED,R_NUM_OF_SESSION,R_DETAILS,(select U_ID from tbl_user where u_id = r_therapist) as u_name,R_REPORT,R_RESULT from therapy_ref r WHERE R_ID = @R_ID";
 
                 objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", therapyid);
@@ -343,7 +344,7 @@ namespace TherapyReferralSystem
                     rtxtResult.Text = objDBConnect.sqlDR["R_RESULT"].ToString();
                     w_list = objDBConnect.sqlDR["R_WAITING_LIST"].ToString();
 
-                    int iNumber = cmbCNum.Items.IndexOf(objDBConnect.sqlDR["R_C_NUMBER"].ToString());
+                    int iNumber = cmbCNum.Items.IndexOf(objDBConnect.sqlDR["c_num"].ToString());
                     cmbCNum.SelectedIndex = iNumber;
                     int iReason = cmbReason.Items.IndexOf(objDBConnect.sqlDR["R_REASON"].ToString());
                     cmbReason.SelectedIndex = iReason;
@@ -367,18 +368,45 @@ namespace TherapyReferralSystem
                     if (w_list.Equals("YES"))
                     {
                         chkWaitingList.Checked = true;
+
+                        if(chkWaitingList.Checked == true)
+                        {
+                            chbEnd.Checked = false;
+                        }
+                       
                     }
                     else
                     {
                         dtpDateStart.Value = Convert.ToDateTime(objDBConnect.sqlDR["R_DATE_START"].ToString());
-                        dtpDateEnd.Value = Convert.ToDateTime(objDBConnect.sqlDR["R_DATE_END"].ToString());
+
+                        DateTime? datetime = null;
+                        datetime = Convert.ToDateTime(objDBConnect.sqlDR["R_DATE_ENDED"].ToString());
+
+                        if (datetime.HasValue)
+                        {
+                           chbEnd.Checked = true;
+                            dtpDateEnd.Value = Convert.ToDateTime(objDBConnect.sqlDR["R_DATE_ENDED"].ToString());
+                        }
+                        else
+                        {
+                            chbEnd.Checked = false;
+                        }
+                        
                     }
 
+                    
+                   
+                    
+                 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("fail: " + ex.Message);
+                MessageBox.Show("fail: " + ex.Message +"\n\n "+ ex.StackTrace);
+            }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
             }
         }
 

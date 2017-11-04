@@ -241,7 +241,7 @@ namespace TherapyReferralSystem
 
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Cannot change picture at the moment. Please try again later.");
             }
