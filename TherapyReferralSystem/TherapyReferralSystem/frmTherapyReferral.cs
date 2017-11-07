@@ -690,8 +690,16 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_REFFERED", ref_date);
 
 
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", start_date);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+                if (chkWaitingList.Checked == true)
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", DBNull.Value);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", DBNull.Value);
+                }
+                else
+                {
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+                }
 
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_NUM_OF_SESSION", t_sessions);
