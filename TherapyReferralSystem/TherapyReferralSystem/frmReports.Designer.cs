@@ -59,6 +59,8 @@
             this.DTPDay = new System.Windows.Forms.DateTimePicker();
             this.btnShowReport = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.mnuReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +165,7 @@
             "Waiting on outside resource"});
             this.cboxReport.Location = new System.Drawing.Point(370, 45);
             this.cboxReport.Name = "cboxReport";
-            this.cboxReport.Size = new System.Drawing.Size(259, 31);
+            this.cboxReport.Size = new System.Drawing.Size(468, 31);
             this.cboxReport.TabIndex = 2;
             this.cboxReport.SelectedIndexChanged += new System.EventHandler(this.cboxReport_SelectedIndexChanged);
             // 
@@ -411,6 +413,15 @@
             this.lblSearch.Text = "SEARCH BY :";
             this.lblSearch.Visible = false;
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.BeginPrint += new System.Drawing.Printing.PrintEventHandler(this.printDocument1_BeginPrint);
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // frmReports
             // 
             this.BackgroundImage = global::TherapyReferralSystem.Properties.Resources.Reports;
@@ -488,5 +499,7 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
