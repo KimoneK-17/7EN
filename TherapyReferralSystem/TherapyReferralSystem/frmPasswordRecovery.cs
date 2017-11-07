@@ -80,19 +80,28 @@ namespace TherapyReferralSystem
                 {
                     username = txtEmailAddress.Text;
 
-                    found = sm.CheckExisting("tbl_user", "U_EMAIL", username);
-                    if (found == true)
+                    if (!username.Equals(""))
                     {
-                        Cursor.Current = Cursors.WaitCursor;
-                        randomPassword = sm.getOTP();
+                        found = sm.CheckExisting("tbl_user", "U_EMAIL", username);
+                        if (found == true)
+                        {
+                            Cursor.Current = Cursors.WaitCursor;
+                            randomPassword = sm.getOTP();
 
-                        getAnswer();
-                        Cursor.Current = Cursors.Default;
+                            getAnswer();
+                            Cursor.Current = Cursors.Default;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid User");
+                        }
+
                     }
                     else
                     {
-                        MessageBox.Show("Invalid User");
+                        MessageBox.Show("Enter Answer or request admin reset");
                     }
+
                 }
                 else
                 {
@@ -121,7 +130,7 @@ namespace TherapyReferralSystem
         {
             frmHelp help = new frmHelp("PwordRecover");
             help.Show();
-            
+
         }
 
         public void getSecQuestion()
@@ -229,7 +238,7 @@ namespace TherapyReferralSystem
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(email);
-                MessageBox.Show("Please check your email");
+                MessageBox.Show("Your request is being processed. If urgent, please speak to the admin/social worker directly.");
             }
             catch (Exception ex)
             {
@@ -260,7 +269,7 @@ namespace TherapyReferralSystem
 
                 if (txtAnswer.Text == answer)
                 {
-                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your One Time Password(OTP): #" + randomPassword+" .\n Please use this the next time you login");
+                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your One Time Password(OTP): #" + randomPassword + " .\n Please use this the next time you login");
                     sm.updatePassword(txtEmailAddress.Text, randomPassword);
                 }
                 else

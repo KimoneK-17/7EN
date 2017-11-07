@@ -121,7 +121,7 @@ namespace TherapyReferralSystem
                     Query = Query + " R_C_NUMBER = " + txtChildID.Text + " and";
                 }
 
-                if (DTPDay.Checked==true)
+                if (DTPDay.Checked == true)
                 {
                     Query = Query + " DAY(R_DATE_START) = " + DTPDay.Text + " and";
                 }
@@ -139,7 +139,7 @@ namespace TherapyReferralSystem
         }
         public void childInformationReport()
         {
-            
+
             if (cboxReport.SelectedItem.ToString().ToUpper().Equals("CHILD INFORMATION"))
             {
                 txtTherapistID.Visible = false;
@@ -192,7 +192,7 @@ namespace TherapyReferralSystem
 
         public void therapistInformationReport()
         {
-            
+
             if (cboxReport.SelectedItem.ToString().ToUpper().Equals("THERAPIST INFORMATION"))
             {
                 lblTherapyType.Visible = false;
@@ -248,7 +248,11 @@ namespace TherapyReferralSystem
                 txtHouse.Visible = false;
                 lblChildID.Visible = false;
                 txtChildID.Visible = false;
-                Query = "SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_STATUS, R_WAITING_LIST FROM THERAPY_REF";
+                Query = @"SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_WAITING_LIST, U_FNAME+' '+U_SNAME as Therapist FROM THERAPY_REF r
+                            inner join tbl_user t
+                            on r.R_THERAPIST = t.U_ID
+                            where t.T_IE like 'E'
+                            and R_WAITING_LIST like 'YES'";
 
             }
         }
@@ -281,7 +285,7 @@ namespace TherapyReferralSystem
                                     INNER JOIN TBL_USER on R_THERAPIST = U_ID ";
 
 
-                if (!txtTherapistID.Text.Equals("") || !txtChildID.Text.Equals("") || cboxTherapyType.SelectedIndex > -1|| DTPDay.Checked == true || DTPMonth.Checked == true || DTPYear.Checked == true)
+                if (!txtTherapistID.Text.Equals("") || !txtChildID.Text.Equals("") || cboxTherapyType.SelectedIndex > -1 || DTPDay.Checked == true || DTPMonth.Checked == true || DTPYear.Checked == true)
                 {
                     Query = Query + " where";
                 }
@@ -290,13 +294,13 @@ namespace TherapyReferralSystem
                     Query = Query + " R_THERAPIST = " + txtTherapistID.Text + " and";
                 }
 
-                if (!txtTherapistID.Text.Equals(""))
+                if (!txtChildID.Text.Equals(""))
                 {
-                    Query = Query + " R_C_NUMBER = " + txtChildID.Text + " and";
+                    Query = Query + " R_C_NUMBER like '" + txtChildID.Text + "' and";
                 }
-                if(cboxTherapyType.SelectedIndex>-1)
+                if (cboxTherapyType.SelectedIndex > -1)
                 {
-                    Query = Query + " R_REASON = " + cboxTherapyType.SelectedItem.ToString() + " and";
+                    Query = Query + " R_REASON like '" + cboxTherapyType.SelectedItem.ToString() + "' and";
                 }
                 if (DTPDay.Checked == true)
                 {
@@ -317,7 +321,7 @@ namespace TherapyReferralSystem
 
         public void displayReport()
         {
-            
+
             childInformationReport();
             therapistInformationReport();
             therapyRef();
@@ -339,6 +343,7 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlDA.Fill(datatable);
                 DGVReport.DataSource = datatable;
                 DGVReport.AutoResizeColumns();
+                this.DGVReport.Columns[0].Frozen = true;
 
             }
             catch (SqlException se)
