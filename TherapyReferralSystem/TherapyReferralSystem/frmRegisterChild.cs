@@ -54,7 +54,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegChildTherapyRef_Click(object sender, EventArgs e)
         {
-            frmTherapyReferral tr = new frmTherapyReferral();
+            frmTherapyReferral tr = new frmTherapyReferral(username,type);
             tr.Show();
             this.Close();
         }
