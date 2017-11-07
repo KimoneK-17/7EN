@@ -267,7 +267,7 @@ namespace TherapyReferralSystem
                 dbConnect.sqlCmd.Parameters.Add(new SqlParameter("@U_EMAIL", username));
                 int N = dbConnect.sqlCmd.ExecuteNonQuery();
                 dbConnect.sqlConn.Close();
-                MessageBox.Show("Image Saved Successfully");
+                MessageBox.Show("Your Image Saved Successfully");
             }
             catch (Exception)
             {

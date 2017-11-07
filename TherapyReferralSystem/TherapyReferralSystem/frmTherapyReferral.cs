@@ -24,7 +24,7 @@ namespace TherapyReferralSystem
         string therapyid;
         bool valid, fieldPop;
         DBConnect objDBConnect = new DBConnect();
-        
+
         SharedMethods sm = new SharedMethods();
         private string username;
         private string type;
@@ -96,7 +96,7 @@ namespace TherapyReferralSystem
 
         public void resetVariables()
         {
-            t_c_num = ""; t_c_name ="";t_refby ="";t_reason ="";t_report ="";t_type ="";t_status ="";t_therapist ="";ref_date ="";start_date ="";end_date ="";w_list="";
+            t_c_num = ""; t_c_name = ""; t_refby = ""; t_reason = ""; t_report = ""; t_type = ""; t_status = ""; t_therapist = ""; ref_date = ""; start_date = ""; end_date = ""; w_list = "";
 
         }
 
@@ -349,7 +349,7 @@ namespace TherapyReferralSystem
                     rtxtResult.Text = objDBConnect.sqlDR["R_RESULT"].ToString();
                     w_list = objDBConnect.sqlDR["R_WAITING_LIST"].ToString();
 
-              
+
 
                     try
                     {
@@ -362,7 +362,7 @@ namespace TherapyReferralSystem
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    
+
                     int iReason = cmbReason.Items.IndexOf(objDBConnect.sqlDR["R_REASON"].ToString());
                     cmbReason.SelectedIndex = iReason;
                     int iStatus = cmbStatus.Items.IndexOf(objDBConnect.sqlDR["R_STATUS"].ToString());
@@ -386,7 +386,7 @@ namespace TherapyReferralSystem
                     {
                         MessageBox.Show(ex.Message);
                     }
-                   
+
                     int iReport = cmbReport.Items.IndexOf(objDBConnect.sqlDR["R_REPORT"].ToString());
                     cmbReport.SelectedIndex = iReport;
                     int iRefBy = cmbRefBy.Items.IndexOf(objDBConnect.sqlDR["R_REFFERED_BY"].ToString());
@@ -492,7 +492,15 @@ namespace TherapyReferralSystem
                 else
                 {
                     objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+
+                    if (chbEnd.Checked == true)
+                    {
+                        objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+                    }
+                    else
+                    {
+                        objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", DBNull.Value);
+                    }
                 }
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_NUM_OF_SESSION", t_sessions);
@@ -614,15 +622,17 @@ namespace TherapyReferralSystem
 
                         w_list = "NO";
                         start_date = dtpDateStart.Value.ToString("yyyy-MM-dd");
-                    }
-
-                    if (chbEnd.Checked == false)
-                    {
-                        end_date = DBNull.Value.ToString();
-                    }
-                    else
-                    {
-                        end_date = dtpDateEnd.Value.ToString("yyyy-MM-dd");
+                        if (chbEnd.Checked == true)
+                        {
+                            end_date = dtpDateEnd.Value.ToString("yyyy-MM-dd");
+                        }
+                        else
+                        {
+                            if (chbEnd.Checked == false)
+                            {
+                                end_date = DBNull.Value.ToString();
+                            }
+                        }
                     }
                     fieldPop = true;
 
@@ -697,8 +707,18 @@ namespace TherapyReferralSystem
                 }
                 else
                 {
+
                     objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+
+                    if (chbEnd.Checked == true)
+                    {
+                        objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
+                    }
+                    else
+                    {
+                        objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", DBNull.Value);
+                    }
+
                 }
 
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
@@ -745,7 +765,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports(username,type);
+            frmReports rep = new frmReports(username, type);
             rep.Show();
             this.Dispose();
         }

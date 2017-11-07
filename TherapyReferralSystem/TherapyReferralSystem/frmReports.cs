@@ -23,7 +23,7 @@ namespace TherapyReferralSystem
 
 
         public frmReports()
-        { 
+        {
         }
 
         public frmReports(string username, string type)
@@ -80,16 +80,23 @@ namespace TherapyReferralSystem
         private void cboxReport_SelectedIndexChanged(object sender, EventArgs e)
         {
             displayReport();
+
         }
 
         //**********************************************************************************
         //display information in datagrid view based on selections on what to search, and what information should be called from db
         public void addReport()
         {
+
             if (cboxReport.SelectedItem.ToString().Equals("ADD & ADHD Therapy"))
             {
-                lblChildID.Visible = false;
-                txtChildID.Visible = false;
+                lblHouse.Visible = false;
+                lblCluster.Visible = false;
+                txtCluster.Visible = false;
+                txtHouse.Visible = false;
+
+                lblChildID.Visible = true;
+                txtChildID.Visible = true;
                 lblTherID.Visible = true;
                 txtTherapistID.Visible = true;
                 lblYear.Visible = true;
@@ -108,31 +115,49 @@ namespace TherapyReferralSystem
                 {
                     Query = Query + " R_THERAPIST = " + txtTherapistID.Text + " and";
                 }
-                /*if (!DTPDay.Text.Equals(""))
+
+                if (!txtTherapistID.Text.Equals(""))
+                {
+                    Query = Query + " R_C_NUMBER = " + txtChildID.Text + " and";
+                }
+
+                if (DTPDay.Checked==true)
                 {
                     Query = Query + " DAY(R_DATE_START) = " + DTPDay.Text + " and";
                 }
-                if (!DTPMonth.Text.Equals(""))
+
+                if (DTPMonth.Checked == true)
                 {
                     Query = Query + " MONTH(R_DATE_START) = " + DTPMonth.Text + " and";
                 }
 
-                if (!DTPYear.Text.Equals(""))
+                if (DTPYear.Checked == true)
                 {
-                    Query = Query + " year(R_DATE_START) = year(" + DTPYear.Text + ")  and";
-                }*/
+                    Query = Query + " year(R_DATE_START) = " + DTPYear.Text + " and";
+                }
             }
         }
         public void childInformationReport()
         {
+            
             if (cboxReport.SelectedItem.ToString().ToUpper().Equals("CHILD INFORMATION"))
             {
-                lblCluster.Show();
-                lblHouse.Show();
-                txtCluster.Show();
-                txtHouse.Show();
-                lblChildID.Show();
-                txtChildID.Show();
+                txtTherapistID.Visible = false;
+                lblTherID.Visible = false;
+                lblTherapyType.Visible = false;
+                cboxTherapyType.Visible = false;
+                lblDay.Visible = false;
+                lblMonth.Visible = false;
+                lblYear.Visible = false;
+                DTPDay.Visible = false;
+                DTPMonth.Visible = false;
+                DTPYear.Visible = false;
+                lblCluster.Visible = true;
+                lblHouse.Visible = true;
+                txtCluster.Visible = true;
+                txtHouse.Visible = true;
+                lblChildID.Visible = true;
+                txtChildID.Visible = true;
 
                 btnShowReport.Visible = true;
                 Query = @"SELECT C_NUMBER,C_STATUS,C_CLUSTER,C_HOUSE,C_BSF,C_FNAME,C_MNAME,C_SNAME,C_ID,C_GENDER,C_ADM_DATE,C_CONSIDER
@@ -167,17 +192,36 @@ namespace TherapyReferralSystem
 
         public void therapistInformationReport()
         {
+            
             if (cboxReport.SelectedItem.ToString().ToUpper().Equals("THERAPIST INFORMATION"))
             {
-                lblTherID.Show();
-                txtTherapistID.Show();
+                lblTherapyType.Visible = false;
+                cboxTherapyType.Visible = false;
+                lblDay.Visible = false;
+                lblMonth.Visible = false;
+                lblYear.Visible = false;
+                DTPDay.Visible = false;
+                DTPMonth.Visible = false;
+                DTPYear.Visible = false;
+                lblCluster.Visible = false;
+                lblHouse.Visible = false;
+                txtCluster.Visible = false;
+                txtHouse.Visible = false;
+                lblChildID.Visible = false;
+                txtChildID.Visible = false;
+                lblTherID.Visible = true;
+                txtTherapistID.Visible = true;
 
                 btnShowReport.Visible = true;
-                Query = "Select * from tbl_user where u_type like 'Therapist'";
+
 
                 if (!txtTherapistID.Text.Equals(""))
                 {
-                    Query = Query + " and u_id = " + txtTherapistID.Text;
+                    Query = @"Select * from tbl_user where u_type like 'Therapist' and u_id like '" + txtTherapistID.Text + "'";
+                }
+                else
+                {
+                    Query = @"Select * from tbl_user where u_type like 'Therapist'";
                 }
             }
 
@@ -185,9 +229,25 @@ namespace TherapyReferralSystem
 
         public void outsideResource()
         {
+
             if (cboxReport.SelectedItem.ToString().Equals("Waiting on outside resource"))
             {
-
+                lblTherID.Visible = false;
+                txtTherapistID.Visible = false;
+                lblTherapyType.Visible = false;
+                cboxTherapyType.Visible = false;
+                lblDay.Visible = false;
+                lblMonth.Visible = false;
+                lblYear.Visible = false;
+                DTPDay.Visible = false;
+                DTPMonth.Visible = false;
+                DTPYear.Visible = false;
+                lblCluster.Visible = false;
+                lblHouse.Visible = false;
+                txtCluster.Visible = false;
+                txtHouse.Visible = false;
+                lblChildID.Visible = false;
+                txtChildID.Visible = false;
                 Query = "SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_STATUS, R_WAITING_LIST FROM THERAPY_REF";
 
             }
@@ -196,10 +256,17 @@ namespace TherapyReferralSystem
         {
             if (cboxReport.SelectedItem.ToString().ToUpper().Equals("THERAPY"))
             {
-                lblTherID.Show();
-                txtTherapistID.Show();
-                lblTherapyType.Show();
-                cboxTherapyType.Show();
+
+                lblHouse.Visible = false;
+                lblCluster.Visible = false;
+                txtCluster.Visible = false;
+                txtHouse.Visible = false;
+                lblTherID.Visible = true;
+                txtTherapistID.Visible = true;
+                lblChildID.Visible = true;
+                txtChildID.Visible = true;
+                lblTherapyType.Visible = true;
+                cboxTherapyType.Visible = true;
                 lblYear.Visible = true;
                 DTPYear.Visible = true;
                 DTPDay.Visible = true;
@@ -230,14 +297,27 @@ namespace TherapyReferralSystem
                 {
                     Query = Query + " R_REASON like '" + cboxTherapyType.SelectedItem.ToString() + "' and";
                 }
+                if (DTPDay.Checked == true)
+                {
+                    Query = Query + " DAY(R_DATE_START) = " + DTPDay.Text + " and";
+                }
 
+                if (DTPMonth.Checked == true)
+                {
+                    Query = Query + " MONTH(R_DATE_START) = " + DTPMonth.Text + " and";
+                }
+
+                if (DTPYear.Checked == true)
+                {
+                    Query = Query + " year(R_DATE_START) = " + DTPYear.Text + " and";
+                }
 
             }
         }
 
         public void displayReport()
         {
-      
+            
             childInformationReport();
             therapistInformationReport();
             therapyRef();
@@ -259,7 +339,7 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlDA.Fill(datatable);
                 DGVReport.DataSource = datatable;
                 DGVReport.AutoResizeColumns();
-                resetFields();
+
             }
             catch (SqlException se)
             {
@@ -279,6 +359,7 @@ namespace TherapyReferralSystem
         private void btnShowReport_Click(object sender, EventArgs e)
         {
             displayReport();
+            resetFields();
         }
 
         public void resetFields()
@@ -287,10 +368,15 @@ namespace TherapyReferralSystem
             txtCluster.Text = "";
             txtHouse.Text = "";
             txtTherapistID.Text = "";
-
             cboxTherapyType.SelectedIndex = -1;
-            DTPDay.Value = DateTime.Now;
+            /*DTPDay.Value = DateTime.Now;
 
+
+            DTPMonth.Value = DateTime.Now;
+            DTPYear.Value = DateTime.Now;*/
+
+
+            Query = "";
         }
         //**********************************************************************************
     }

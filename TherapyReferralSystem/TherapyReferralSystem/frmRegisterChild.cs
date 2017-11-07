@@ -470,11 +470,11 @@ namespace TherapyReferralSystem
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Error cannot add child details " + ex.Message);
+                    MessageBox.Show("Error cannot add child details:\n" + ex.Message);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error Cannot UPDATE child Details: " + ex.Message + ex.Data + ex.StackTrace);
+                    MessageBox.Show("Error Cannot UPDATE child Details:\n" + ex.Message);
                 }
             }
             else
@@ -502,7 +502,7 @@ namespace TherapyReferralSystem
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: \n" + ex.Message);
                 }
                 finally
                 {

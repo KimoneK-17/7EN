@@ -121,11 +121,11 @@ namespace TherapyReferralSystem
             }
             catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error Cannot Check Validation of Users In Database: \n"+ex.Message);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Cannot Check Validation of Users In Database: " + ex.Message); // Shows an error message
+                MessageBox.Show("Error Cannot Check Validation of Users In Database: \n" + ex.Message); // Shows an error message
             }
             finally
             {

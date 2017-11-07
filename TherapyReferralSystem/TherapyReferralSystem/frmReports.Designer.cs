@@ -201,9 +201,9 @@
             this.lblChildID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChildID.Location = new System.Drawing.Point(849, 370);
             this.lblChildID.Name = "lblChildID";
-            this.lblChildID.Size = new System.Drawing.Size(88, 20);
+            this.lblChildID.Size = new System.Drawing.Size(144, 20);
             this.lblChildID.TabIndex = 11;
-            this.lblChildID.Text = "CHILD ID:";
+            this.lblChildID.Text = "CHILD NUMBER:";
             this.lblChildID.Visible = false;
             // 
             // lblCluster
@@ -340,6 +340,7 @@
             this.DTPYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPYear.Location = new System.Drawing.Point(994, 182);
             this.DTPYear.Name = "DTPYear";
+            this.DTPYear.ShowCheckBox = true;
             this.DTPYear.ShowUpDown = true;
             this.DTPYear.Size = new System.Drawing.Size(135, 22);
             this.DTPYear.TabIndex = 42;
@@ -351,6 +352,7 @@
             this.DTPMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPMonth.Location = new System.Drawing.Point(994, 217);
             this.DTPMonth.Name = "DTPMonth";
+            this.DTPMonth.ShowCheckBox = true;
             this.DTPMonth.ShowUpDown = true;
             this.DTPMonth.Size = new System.Drawing.Size(135, 22);
             this.DTPMonth.TabIndex = 43;
@@ -362,6 +364,7 @@
             this.DTPDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPDay.Location = new System.Drawing.Point(994, 255);
             this.DTPDay.Name = "DTPDay";
+            this.DTPDay.ShowCheckBox = true;
             this.DTPDay.ShowUpDown = true;
             this.DTPDay.Size = new System.Drawing.Size(135, 22);
             this.DTPDay.TabIndex = 44;

@@ -260,7 +260,7 @@ namespace TherapyReferralSystem
 
                 if (txtAnswer.Text == answer)
                 {
-                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your newly generated password: #" + randomPassword);
+                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your One Time Password(OTP): #" + randomPassword+" .\n Please use this the next time you login");
                     sm.updatePassword(txtEmailAddress.Text, randomPassword);
                 }
                 else

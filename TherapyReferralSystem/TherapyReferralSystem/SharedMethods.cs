@@ -141,7 +141,7 @@ namespace TherapyReferralSystem
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(email);
-                MessageBox.Show("Email Sent");
+                MessageBox.Show("Please check your email for your one time password.");
             }
             catch (Exception ex)
             {
@@ -163,7 +163,7 @@ namespace TherapyReferralSystem
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", "#"+pword);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
-                MessageBox.Show("Successfully Updated");
+                //MessageBox.Show("Successfully Updated");
                 objDBConnect.sqlDR.Close();
                 objDBConnect.sqlConn.Close();
 
