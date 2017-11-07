@@ -151,11 +151,10 @@
             this.cboxReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxReport.FormattingEnabled = true;
             this.cboxReport.Items.AddRange(new object[] {
-            "Theraphy",
-            "ADD & ADHD Theraphy",
+            "Therapy",
+            "ADD & ADHD Therapy",
             "Child Information",
             "Therapist Information",
-            "Referals",
             "Waiting on outside resource"});
             this.cboxReport.Location = new System.Drawing.Point(370, 45);
             this.cboxReport.Name = "cboxReport";
@@ -310,7 +309,6 @@
             this.txtTherapistID.Size = new System.Drawing.Size(135, 22);
             this.txtTherapistID.TabIndex = 37;
             this.txtTherapistID.Visible = false;
-            this.txtTherapistID.TextChanged += new System.EventHandler(this.txtTherapistID_TextChanged);
             // 
             // txtChildID
             // 
@@ -319,7 +317,6 @@
             this.txtChildID.Size = new System.Drawing.Size(135, 22);
             this.txtChildID.TabIndex = 38;
             this.txtChildID.Visible = false;
-            this.txtChildID.TextChanged += new System.EventHandler(this.txtChildID_TextChanged);
             // 
             // txtCluster
             // 
@@ -328,7 +325,6 @@
             this.txtCluster.Size = new System.Drawing.Size(135, 22);
             this.txtCluster.TabIndex = 40;
             this.txtCluster.Visible = false;
-            this.txtCluster.TextChanged += new System.EventHandler(this.txtCluster_TextChanged);
             // 
             // txtHouse
             // 
@@ -337,7 +333,6 @@
             this.txtHouse.Size = new System.Drawing.Size(135, 22);
             this.txtHouse.TabIndex = 41;
             this.txtHouse.Visible = false;
-            this.txtHouse.TextChanged += new System.EventHandler(this.txtHouse_TextChanged);
             // 
             // DTPYear
             // 
@@ -349,7 +344,6 @@
             this.DTPYear.Size = new System.Drawing.Size(135, 22);
             this.DTPYear.TabIndex = 42;
             this.DTPYear.Visible = false;
-            this.DTPYear.ValueChanged += new System.EventHandler(this.DTPYear_ValueChanged);
             // 
             // DTPMonth
             // 
@@ -361,7 +355,6 @@
             this.DTPMonth.Size = new System.Drawing.Size(135, 22);
             this.DTPMonth.TabIndex = 43;
             this.DTPMonth.Visible = false;
-            this.DTPMonth.ValueChanged += new System.EventHandler(this.DTPMonth_ValueChanged);
             // 
             // DTPDay
             // 
@@ -430,7 +423,6 @@
             this.Name = "frmReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
-            this.Load += new System.EventHandler(this.frmReports_Load);
             this.mnuReports.ResumeLayout(false);
             this.mnuReports.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).EndInit();

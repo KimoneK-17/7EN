@@ -15,6 +15,7 @@ namespace TherapyReferralSystem
             public SqlConnection sqlConn;
             public SqlCommand sqlCmd;
             public SqlDataReader sqlDR;
+        public SqlDataAdapter sqlDA;
             //public SqlDataAdapter sqlDA;
         string livCon = ConfigurationManager.ConnectionStrings["livDB"].ConnectionString;
         public void OpenConnection()
