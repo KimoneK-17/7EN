@@ -422,10 +422,12 @@
             this.Controls.Add(this.mnuReports);
             this.Controls.Add(this.lblTherapyType);
             this.Controls.Add(this.cboxTherapyType);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.mnuReports;
             this.Name = "frmReports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.frmReports_Load);
             this.mnuReports.ResumeLayout(false);
             this.mnuReports.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVReport)).EndInit();

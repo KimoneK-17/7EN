@@ -278,10 +278,10 @@ namespace TherapyReferralSystem
                 Query = @"SELECT R_ID, R_C_NUMBER, R_DIAGNOSIS, R_REASON, R_STATUS, R_SESSION, R_DATE_START, R_DATE_ENDED, R_DETAILS, R_THERAPIST, R_REPORT, R_RESULT 
                                     FROM THERAPY_REF
                                     INNER JOIN CHILD on R_C_NUMBER = C_NUMBER
-                                    INNER JOIN TBL_USER on R_THERAPIST = U_ID";
+                                    INNER JOIN TBL_USER on R_THERAPIST = U_ID ";
 
 
-                if (!txtTherapistID.Text.Equals("") || !txtChildID.Text.Equals("") || cboxTherapyType.SelectedIndex > -1)
+                if (!txtTherapistID.Text.Equals("") || !txtChildID.Text.Equals("") || cboxTherapyType.SelectedIndex > -1|| DTPDay.Checked == true || DTPMonth.Checked == true || DTPYear.Checked == true)
                 {
                     Query = Query + " where";
                 }
@@ -289,13 +289,14 @@ namespace TherapyReferralSystem
                 {
                     Query = Query + " R_THERAPIST = " + txtTherapistID.Text + " and";
                 }
-                if (!txtChildID.Text.Equals(""))
+
+                if (!txtTherapistID.Text.Equals(""))
                 {
-                    Query = Query + " R_C_NUMBER like '" + txtChildID.Text + "' and";
+                    Query = Query + " R_C_NUMBER = " + txtChildID.Text + " and";
                 }
-                if (cboxTherapyType.SelectedIndex > -1)
+                if(cboxTherapyType.SelectedIndex>-1)
                 {
-                    Query = Query + " R_REASON like '" + cboxTherapyType.SelectedItem.ToString() + "' and";
+                    Query = Query + " R_REASON = " + cboxTherapyType.SelectedItem.ToString() + " and";
                 }
                 if (DTPDay.Checked == true)
                 {
@@ -311,7 +312,6 @@ namespace TherapyReferralSystem
                 {
                     Query = Query + " year(R_DATE_START) = " + DTPYear.Text + " and";
                 }
-
             }
         }
 
@@ -377,6 +377,11 @@ namespace TherapyReferralSystem
 
 
             Query = "";
+        }
+
+        private void frmReports_Load(object sender, EventArgs e)
+        {
+            this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
         }
         //**********************************************************************************
     }
