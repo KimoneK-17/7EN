@@ -72,6 +72,12 @@
     <Compile Include="frmAboutUs.designer.cs">
       <DependentUpon>frmAboutUs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUserPasswordReset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +132,6 @@
     </Compile>
     <Compile Include="frmRegisterUser.designer.cs">
       <DependentUpon>frmRegisterUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReports.Designer.cs">
-      <DependentUpon>frmReports.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTherapyReferral.cs">
       <SubType>Form</SubType>

@@ -745,7 +745,7 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports(type);
+            frmReports rep = new frmReports(username,type);
             rep.Show();
             this.Dispose();
         }

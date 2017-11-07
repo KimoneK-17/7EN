@@ -60,7 +60,7 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserReports_Click(object sender, EventArgs e)
         {
-            frmReports rep = new frmReports();
+            frmReports rep = new frmReports(username,type);
             rep.Show();
             this.Dispose();
         }
