@@ -67,9 +67,8 @@ namespace TherapyReferralSystem
 
         private void mnuRegUserHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp("User");
             help.Show();
-            this.Dispose();
         }
 
         private void mnuRegUserTherRef_Click(object sender, EventArgs e)

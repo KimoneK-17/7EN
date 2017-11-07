@@ -92,9 +92,9 @@ namespace TherapyReferralSystem
 
         private void mnuProfileHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp("Profile");
             help.Show();
-            this.Dispose();
+          
         }
 
         private void frmProfile_Load(object sender, EventArgs e)

@@ -42,9 +42,9 @@ namespace TherapyReferralSystem
         bool found, validID;
         private void mnuRegChildHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp("Child");
             help.Show();
-            this.Dispose();
+            
         }
 
         private void mnuRegChildForm_Click(object sender, EventArgs e)

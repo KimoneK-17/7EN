@@ -119,9 +119,9 @@ namespace TherapyReferralSystem
 
         private void mnuPassRecovHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp("PwordRecover");
             help.Show();
-            this.Dispose();
+            
         }
 
         public void getSecQuestion()

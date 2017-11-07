@@ -19,14 +19,12 @@ namespace TherapyReferralSystem
         String details;
         String result;
         string t_c_num, t_c_name, t_refby, t_reason, t_report, t_type, t_status, t_therapist, ref_date, start_date, end_date, w_list;
-       
+
         int t_sessions;
         string therapyid;
-        bool valid,fieldPop;
+        bool valid, fieldPop;
         DBConnect objDBConnect = new DBConnect();
-
-
-
+        
         SharedMethods sm = new SharedMethods();
         private string username;
         private string type;
@@ -96,6 +94,11 @@ namespace TherapyReferralSystem
             return empty;
         }
 
+        public void resetVariables()
+        {
+            t_c_num = ""; t_c_name ="";t_refby ="";t_reason ="";t_report ="";t_type ="";t_status ="";t_therapist ="";ref_date ="";start_date ="";end_date ="";w_list="";
+
+        }
 
         private void frmTherapyReferral_Load(object sender, EventArgs e)
         {
@@ -160,6 +163,7 @@ namespace TherapyReferralSystem
                 dt.Columns.Add("c_number", typeof(string));
                 dt.Load(objDBConnect.sqlDR);
                 cmbCNum.ValueMember = "c_number";
+                cmbCNum.DisplayMember = "c_number";
                 cmbCNum.DataSource = dt;
 
 
@@ -327,10 +331,11 @@ namespace TherapyReferralSystem
 
         private void searchTherapy()
         {
+            clearFields();
             try
             {
                 objDBConnect.OpenConnection();
-                string sqlquery = "select (select c_number from child where c_number like r_c_number) as c_num,R_DIAGNOSIS,R_REASON,R_STATUS,R_SESSION,R_REFFERED_BY,R_DATE_REFFERED,R_DATE_START,R_WAITING_LIST,R_DATE_ENDED,R_NUM_OF_SESSION,R_DETAILS,(select U_ID from tbl_user where u_id = r_therapist) as u_name,R_REPORT,R_RESULT from therapy_ref r WHERE R_ID = @R_ID";
+                string sqlquery = " SELECT * FROM ref_search(@R_ID)";
 
                 objDBConnect.sqlCmd = new SqlCommand(sqlquery, objDBConnect.sqlConn);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_ID", therapyid);
@@ -344,11 +349,23 @@ namespace TherapyReferralSystem
                     rtxtResult.Text = objDBConnect.sqlDR["R_RESULT"].ToString();
                     w_list = objDBConnect.sqlDR["R_WAITING_LIST"].ToString();
 
-                    int iNumber = cmbCNum.Items.IndexOf(objDBConnect.sqlDR["c_num"].ToString());
-                    cmbCNum.SelectedIndex = iNumber;
+              
+
+                    try
+                    {
+                        t_c_num = objDBConnect.sqlDR["R_C_NUMBER"].ToString();
+
+                        cmbCNum.SelectedIndex = cmbCNum.FindStringExact(t_c_num);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    
                     int iReason = cmbReason.Items.IndexOf(objDBConnect.sqlDR["R_REASON"].ToString());
                     cmbReason.SelectedIndex = iReason;
-                    int iStatus = cmbRefBy.Items.IndexOf(objDBConnect.sqlDR["R_STATUS"].ToString().ToLower());
+                    int iStatus = cmbStatus.Items.IndexOf(objDBConnect.sqlDR["R_STATUS"].ToString());
                     cmbStatus.SelectedIndex = iStatus;
                     int iSession = cmbType.Items.IndexOf(objDBConnect.sqlDR["R_SESSION"].ToString());
                     cmbType.SelectedIndex = iSession;
@@ -357,8 +374,19 @@ namespace TherapyReferralSystem
                     {
                         nudSess.Value = iNumSess;
                     }
-                    int iTherapist = cmbTherapist.Items.IndexOf(objDBConnect.sqlDR["u_name"].ToString());
-                    cmbTherapist.SelectedIndex = iTherapist;
+
+                    try
+                    {
+                        t_therapist = objDBConnect.sqlDR["R_THERAPIST"].ToString();
+
+                        cmbTherapist.SelectedValue = t_therapist;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                   
                     int iReport = cmbReport.Items.IndexOf(objDBConnect.sqlDR["R_REPORT"].ToString());
                     cmbReport.SelectedIndex = iReport;
                     int iRefBy = cmbRefBy.Items.IndexOf(objDBConnect.sqlDR["R_REFFERED_BY"].ToString());
@@ -369,11 +397,11 @@ namespace TherapyReferralSystem
                     {
                         chkWaitingList.Checked = true;
 
-                        if(chkWaitingList.Checked == true)
+                        if (chkWaitingList.Checked == true)
                         {
                             chbEnd.Checked = false;
                         }
-                       
+
                     }
                     else
                     {
@@ -384,25 +412,22 @@ namespace TherapyReferralSystem
 
                         if (datetime.HasValue)
                         {
-                           chbEnd.Checked = true;
+                            chbEnd.Checked = true;
                             dtpDateEnd.Value = Convert.ToDateTime(objDBConnect.sqlDR["R_DATE_ENDED"].ToString());
                         }
                         else
                         {
                             chbEnd.Checked = false;
                         }
-                        
-                    }
 
-                    
-                   
-                    
-                 
+                    }
                 }
+
+                resetVariables();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("fail: " + ex.Message +"\n\n "+ ex.StackTrace);
+                MessageBox.Show("fail: " + ex.Message + "\n\n " + ex.StackTrace);
             }
             finally
             {
@@ -417,6 +442,29 @@ namespace TherapyReferralSystem
             {
                 updateTherapy();
             }
+        }
+
+        private void btnClearFields_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void clearFields()
+        {
+            txtCondition.Text = "";
+            rtxtDetails.Text = "";
+            rtxtResult.Text = "";
+
+            cmbTherapist.SelectedIndex = -1;
+            cmbCNum.SelectedIndex = -1;
+            cmbReason.SelectedIndex = -1;
+            cmbRefBy.SelectedIndex = -1;
+            cmbReport.SelectedIndex = -1;
+            cmbStatus.SelectedIndex = -1;
+            cmbType.SelectedIndex = -1;
+
+            chkWaitingList.Checked = false;
+            chbEnd.Checked = false;
         }
 
         public void updateTherapy()
@@ -443,7 +491,7 @@ namespace TherapyReferralSystem
                 }
                 else
                 {
-                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", start_date);
+                    objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_START", start_date);
                     objDBConnect.sqlCmd.Parameters.AddWithValue("@R_DATE_ENDED", end_date);
                 }
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@R_WAITING_LIST", w_list);
@@ -467,6 +515,7 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Successfully Updated");
 
                 updateToolStripMenuItem.Enabled = false;
+                clearFields();
 
             }
             catch (SqlException ex)
@@ -577,7 +626,7 @@ namespace TherapyReferralSystem
                     }
                     fieldPop = true;
 
-              
+
                 }
 
                 catch (Exception exa)
@@ -585,10 +634,10 @@ namespace TherapyReferralSystem
                     MessageBox.Show(exa.Message);
                     fieldPop = false;
                 }
-                
 
 
-                
+
+
             }
         }
 
@@ -666,6 +715,7 @@ namespace TherapyReferralSystem
                 MessageBox.Show("Successfully Inserted");
                 objDBConnect.sqlDR.Close();
                 objDBConnect.sqlConn.Close();
+                clearFields();
 
             }
             catch (SqlException ex)
@@ -694,9 +744,8 @@ namespace TherapyReferralSystem
 
         private void mnuTherapyRefHelp_Click(object sender, EventArgs e)
         {
-            frmHelp help = new frmHelp();
+            frmHelp help = new frmHelp("TheRef");
             help.Show();
-            this.Dispose();
         }
 
         private void mnuTherapyRefRegChild_Click(object sender, EventArgs e)

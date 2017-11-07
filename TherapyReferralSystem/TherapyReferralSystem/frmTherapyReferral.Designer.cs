@@ -66,9 +66,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mnuTherapyRef = new System.Windows.Forms.MenuStrip();
             this.mnuTherapyRefFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTherapyRefReturn = new System.Windows.Forms.ToolStripMenuItem();
@@ -258,10 +258,9 @@
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
-            "open",
-            "closed",
-            "assessment",
-            "waiting list"});
+            "Open",
+            "CLOSED",
+            "WAITING"});
             this.cmbStatus.Location = new System.Drawing.Point(16, 110);
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStatus.Name = "cmbStatus";
@@ -572,43 +571,43 @@
             this.mnuTherapyRefFile.Size = new System.Drawing.Size(61, 24);
             this.mnuTherapyRefFile.Text = "File";
             // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
+            this.searchToolStripMenuItem.Text = "Search";
+            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.searchToolStripMenuItem.Text = "Search";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(171, 6);
             // 
             // myProfileToolStripMenuItem
             // 
             this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.myProfileToolStripMenuItem.Text = "My Profile";
             this.myProfileToolStripMenuItem.Click += new System.EventHandler(this.myProfileToolStripMenuItem_Click);
             // 
             // mnuTherapyRefReturn
             // 
             this.mnuTherapyRefReturn.Name = "mnuTherapyRefReturn";
-            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(181, 26);
+            this.mnuTherapyRefReturn.Size = new System.Drawing.Size(174, 26);
             this.mnuTherapyRefReturn.Text = "Logout";
             this.mnuTherapyRefReturn.Click += new System.EventHandler(this.mnuTherapyRefReturn_Click);
             // 
@@ -675,6 +674,7 @@
             this.btnClearFields.TabIndex = 55;
             this.btnClearFields.Text = "CLEAR FIELDS";
             this.btnClearFields.UseVisualStyleBackColor = false;
+            this.btnClearFields.Click += new System.EventHandler(this.btnClearFields_Click);
             // 
             // lblRCNum
             // 
