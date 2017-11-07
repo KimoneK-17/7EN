@@ -88,15 +88,17 @@ namespace TherapyReferralSystem
 
         }
 
+       
         private void CheckValid()
         {
+            
             try
             {
                 string checkVal;
                 //checks to see if patient already exists in database
                 objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_user WHERE u_email LIKE @u_email AND u_pword LIKE @u_pword;", objDBConnect.sqlConn);
+                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM tbl_user WHERE u_email LIKE @u_email AND u_pword LIKE @u_pword", objDBConnect.sqlConn);
                 //query
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@u_email", username);
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@u_pword", password);
@@ -109,7 +111,7 @@ namespace TherapyReferralSystem
 
                     //in database
                     checkPword();
-
+                   
                     //this.Dispose();
                 }
                 else

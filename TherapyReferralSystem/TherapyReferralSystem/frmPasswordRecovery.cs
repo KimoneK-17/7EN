@@ -269,7 +269,7 @@ namespace TherapyReferralSystem
 
                 if (txtAnswer.Text == answer)
                 {
-                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your One Time Password(OTP): #" + randomPassword + " .\n Please use this the next time you login");
+                    sm.sendOTPEmail(txtEmailAddress.Text, "Hi user, this is your One Time Password(OTP): #" + randomPassword + " .\n Please use this the next time you login","Your password has been reset. Please check your email for your OTP.");
                     sm.updatePassword(txtEmailAddress.Text, randomPassword);
                 }
                 else

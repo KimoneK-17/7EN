@@ -16,7 +16,7 @@ namespace TherapyReferralSystem
         //declarations
         private string type;    //position availible - Teacher Clinic Therapist   Admin   Social worker
         DBConnect objDBConnect = new DBConnect();
-        DataSet dataset;
+       
         DataTable datatable;
         string Query;
         private string username;
@@ -61,12 +61,7 @@ namespace TherapyReferralSystem
             login.Show();
             this.Dispose();
         }
-        private void mnuReportsHelp_Click(object sender, EventArgs e)
-        {
-            frmHelp help = new frmHelp();
-            help.Show();
-            this.Dispose();
-        }
+        
 
         //******************************************************************
         //print of report
@@ -374,19 +369,20 @@ namespace TherapyReferralSystem
             txtHouse.Text = "";
             txtTherapistID.Text = "";
             cboxTherapyType.SelectedIndex = -1;
-            /*DTPDay.Value = DateTime.Now;
-
-
-            DTPMonth.Value = DateTime.Now;
-            DTPYear.Value = DateTime.Now;*/
-
-
+            
             Query = "";
         }
 
         private void frmReports_Load(object sender, EventArgs e)
         {
             this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfile pr = new frmProfile(type);
+            pr.Show();
+            this.Hide();
         }
         //**********************************************************************************
     }

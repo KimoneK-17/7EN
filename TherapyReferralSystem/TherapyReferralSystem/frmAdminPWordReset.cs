@@ -43,7 +43,7 @@ namespace TherapyReferralSystem
                     if (found == true)
                     {
                         randomPassword = sm.getOTP();
-                        sm.sendOTPEmail(txtEmail.Text, "Hi There\n Please use the following password the next time you login\n OTP: #" + randomPassword);
+                        sm.sendOTPEmail(txtEmail.Text, "Hi There\n Please use the following password the next time you login\n OTP: #" + randomPassword,"Thank You. Password for user: "+username+" has been reset");
                         sm.updatePassword(txtEmail.Text, randomPassword);
                         this.Dispose();
                     }
@@ -96,6 +96,11 @@ namespace TherapyReferralSystem
         private void frmAdminPWordReset_Load(object sender, EventArgs e)
         {
             this.Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

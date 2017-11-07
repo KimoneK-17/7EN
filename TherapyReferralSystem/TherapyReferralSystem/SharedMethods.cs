@@ -9,11 +9,11 @@ namespace TherapyReferralSystem
     class SharedMethods
     {
         DBConnect objDBConnect = new DBConnect();
-        bool found,valid;
+        bool found, valid;
         string randomPassword;
         MailMessage email = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-        public  bool CheckExisting(string table, string item, string variable)
+        public bool CheckExisting(string table, string item, string variable)
         {
 
             try
@@ -22,9 +22,9 @@ namespace TherapyReferralSystem
                 //checks to see if patient already exists in database
                 objDBConnect.OpenConnection();
 
-                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM "+table+" WHERE "+item+" LIKE @"+item+";", objDBConnect.sqlConn);
+                objDBConnect.sqlCmd = new SqlCommand("SELECT COUNT(*) FROM " + table + " WHERE " + item + " LIKE @" + item + ";", objDBConnect.sqlConn);
                 //query
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@"+item, variable);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@" + item, variable);
                 //parameter
                 itemExist = objDBConnect.sqlCmd.ExecuteScalar().ToString();
                 //assigning query to variable
@@ -32,7 +32,7 @@ namespace TherapyReferralSystem
                 {
                     found = true;
                     //in database
-                    
+
                 }
                 else
                 {
@@ -40,7 +40,7 @@ namespace TherapyReferralSystem
                     //not in database
                     //MessageBox.Show("Unable to carry out command");
                 }
-              
+
             }
             catch (SqlException ex)
             {
@@ -118,14 +118,14 @@ namespace TherapyReferralSystem
 
         public string getOTP()
         {
-            
+
             randomPassword = Path.GetRandomFileName();
             randomPassword = randomPassword.Replace(".", "");
 
             return randomPassword;
         }
 
-        public void sendOTPEmail(string emailAdd,string message)
+        public void sendOTPEmail(string emailAdd, string message,string popupmess)
         {
             try
             {
@@ -141,7 +141,7 @@ namespace TherapyReferralSystem
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(email);
-                MessageBox.Show("Please check your email for your one time password.");
+                MessageBox.Show(popupmess);
             }
             catch (Exception ex)
             {
@@ -149,10 +149,37 @@ namespace TherapyReferralSystem
             }
         }
 
-        public void updatePassword(string email,string pword)
+       /* public string decryptData(string table, string item,string variable, string whereClause)
+        {
+            string decryptedValue = "";
+            try
+            {
+                objDBConnect.OpenConnection();
+                var sql = "SELECT CAST(DECRYPTBYPASSPHRASE('**********',@" + item + ") AS VARCHAR(8000)) FROM " + table + " " + whereClause;
+                using (var cmd = new SqlCommand(sql, objDBConnect.sqlConn))
+                {
+                    cmd.Parameters.AddWithValue("@" + item, variable);
+                    objDBConnect.sqlConn.Open();
+                    decryptedValue = (string)cmd.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                objDBConnect.sqlConn.Close();
+            }
+
+
+
+            return decryptedValue;
+        }*/
+        public void updatePassword(string email, string pword)
         {
 
-            
+
             try
             {
                 objDBConnect.OpenConnection();
@@ -160,7 +187,7 @@ namespace TherapyReferralSystem
 
                 //updates these fields in the database
                 objDBConnect.sqlCmd.Parameters.AddWithValue("@U_EMAIL", email);
-                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", "#"+pword);
+                objDBConnect.sqlCmd.Parameters.AddWithValue("@U_PWORD", "#" + pword);
                 objDBConnect.sqlDR = objDBConnect.sqlCmd.ExecuteReader();
 
                 //MessageBox.Show("Successfully Updated");
@@ -179,6 +206,6 @@ namespace TherapyReferralSystem
             }
         }
 
-        
+
     }
 }
